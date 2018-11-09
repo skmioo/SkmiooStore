@@ -1,12 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor", "UnityEditor.csproj", "{7BAE60B0-E400-11D8-8D5E-77E5AB5727C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.Editor", "UnityEditor.Editor.csproj", "{4810A17F-E9FC-B326-68EA-5252DE498F1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BAE60B0-E400-11D8-8D5E-77E5AB5727C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BAE60B0-E400-11D8-8D5E-77E5AB5727C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BAE60B0-E400-11D8-8D5E-77E5AB5727C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BAE60B0-E400-11D8-8D5E-77E5AB5727C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4810A17F-E9FC-B326-68EA-5252DE498F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4810A17F-E9FC-B326-68EA-5252DE498F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4810A17F-E9FC-B326-68EA-5252DE498F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4810A17F-E9FC-B326-68EA-5252DE498F1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
