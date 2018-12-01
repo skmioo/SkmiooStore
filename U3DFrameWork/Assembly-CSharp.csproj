@@ -58,7 +58,6 @@
     <Compile Include="Assets\Frame\MsgBase.cs" />
     <Compile Include="Assets\Frame\Protobuf\IProtoTools.cs" />
     <Compile Include="Assets\Frame\Test.cs" />
-    <Compile Include="Assets\git测试.cs" />
     <Compile Include="Assets\protobuf-net\BclHelpers.cs" />
     <Compile Include="Assets\protobuf-net\BufferExtension.cs" />
     <Compile Include="Assets\protobuf-net\BufferPool.cs" />
