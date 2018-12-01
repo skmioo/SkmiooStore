@@ -1,0 +1,5 @@
+1.拷贝smcs.rsp文件(-unsafe编译)
+2.拷贝protobuf-net文件夹
+3.Unity中:
+	File->BuildSettings->Player Setting->Other Setting -> AOptimization
+							Api Compatibility Level (.Net 2.0 Subset) 
