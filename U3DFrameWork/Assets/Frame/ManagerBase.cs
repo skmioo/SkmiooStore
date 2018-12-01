@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class EventNode
 {
@@ -106,5 +107,25 @@ public class ManagerBase : MonoBase
 			}
 		}
 	}
+
+    /// <summary>
+    /// 通过key 找到链表 然后全部通知
+    /// </summary>
+    /// <param name="tmpMsg"></param>
+    public override void ProcessEvent(MsgBase tmpMsg)
+    {
+        if (!eventTree.ContainsKey(tmpMsg.msgId))
+        {
+            Debug.LogError("ManagerBase : msg not contain msgId ==" + tmpMsg.msgId);
+        }
+        else {
+            EventNode tmp = eventTree[tmpMsg.msgId];
+            do
+            {
+                //策略模式
+                tmp.data.ProcessEvent(tmpMsg);
+            } while (tmp != null);
+        }
+    }
 }
 

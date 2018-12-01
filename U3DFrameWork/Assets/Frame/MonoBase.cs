@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-public class MonoBase : MonoBehaviour
+public abstract class MonoBase : MonoBehaviour
 {
-
+    public abstract void ProcessEvent(MsgBase tmpMsg);
 }
 
