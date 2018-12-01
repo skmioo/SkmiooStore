@@ -119,6 +119,7 @@ public class ManagerBase : MonoBase
             Debug.LogError("ManagerBase : msg not contain msgId ==" + tmpMsg.msgId);
         }
         else {
+           
             EventNode tmp = eventTree[tmpMsg.msgId];
             do
             {
