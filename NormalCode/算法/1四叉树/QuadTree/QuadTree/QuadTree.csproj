@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuadTree\QuadTree.cs" />
+    <Compile Include="QuadTree\QuadTreeAbs.cs" />
+    <Compile Include="QuadTree\Rect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
