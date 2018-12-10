@@ -9,8 +9,6 @@ namespace FSM
     /// <typeparam name="T"></typeparam>
     public class FiniteStateMachine<T>
     {
-        //当前状态的跳转条件
-        private List<FiniteStateTransaction<T>> stateTransactions = new List<FiniteStateTransaction<T>>();
         //上一次的状态
         private FiniteState<T> lastState;
         //当前状态
@@ -78,12 +76,38 @@ namespace FSM
 
         public void SetInt(string key, int value)
         {
-            intParams.Add(key, value);
+            if (intParams.ContainsKey(key))
+            {
+                intParams[key] = value;
+            }
+            else
+            {
+                intParams.Add(key, value);
+            }
         }
 
         public void SetBool(string key, bool value)
         {
-            boolParams.Add(key, value);
+            if (boolParams.ContainsKey(key))
+            {
+                boolParams[key] = value;
+            }
+            else
+            {
+                boolParams.Add(key, value);
+            }
+        }
+
+        public void SetLong(string key, long value)
+        {
+            if (longParams.ContainsKey(key))
+            {
+                longParams[key] = value;
+            }
+            else
+            {
+                longParams.Add(key, value);
+            }
         }
 
         /// <summary>
@@ -96,6 +120,7 @@ namespace FSM
 
         public void Tick(T t, long now, int duration)
         {
+            //更新新的状态
             if (lastState != currentState)
             {
                 currentState.onInit(this, t, now, duration);
@@ -103,8 +128,11 @@ namespace FSM
                 onStateChangeProcesser.OnChange(this, t, lastState, currentState);
                 lastState = currentState;
             }
+            //处理当前状态的执行器的执行函数
             currentState.DoState(this, t, now, duration);
+            //更新执行函数后的数据
             ProcessOnCurrentState(currentState, t, now, duration);
+            //检查执行函数后状态是否变化
             checkCurrentState();
         }
 
@@ -121,7 +149,7 @@ namespace FSM
             {
                 if (t.Check(intParams, boolParams, longParams))
                 {
-                    state = t.getDstState();
+                    state = t.GetDstState();
                     break;
                 }
             }
@@ -138,16 +166,19 @@ namespace FSM
         /// <returns></returns>
         public FiniteState<T> AddState(int state)
         {
-            FiniteState<T> fightState = allState[state];
-            if (fightState == null)
+            FiniteState<T> fightState;
+            if (!allState.ContainsKey(state))
             {
                 fightState = new FiniteState<T>(state);
                 allState.Add(state, fightState);
 
-                if (transactions[fightState] == null)
+                if (!transactions.ContainsKey(fightState))
                 {
-                    transactions.Add(fightState, stateTransactions);
+                    transactions.Add(fightState, new List<FiniteStateTransaction<T>>());
                 }
+            }
+            else {
+                fightState = allState[state];
             }
             return fightState;
         }
@@ -169,26 +200,22 @@ namespace FSM
        */
         public FiniteStateTransaction<T> AddTranscation(FiniteState<T> src, FiniteState<T> dst)
         {
-            List<FiniteStateTransaction<T>> list = transactions[src];
-            bool checkContains = true;
-            if (list == stateTransactions)
+            if (!transactions.ContainsKey(src))
             {
-                list = new List<FiniteStateTransaction<T>>();
-                transactions.put(src, list);
-                checkContains = false;
+                throw new Exception("存在为止的state:"+src);
             }
+
+            List<FiniteStateTransaction<T>> list = transactions[src];
             FiniteStateTransaction<T> fightTransaction = null;
-            if (checkContains)
+            foreach (FiniteStateTransaction<T> t in list)
             {
-                foreach (FiniteStateTransaction<T> t in list)
+                if (t.GetDstState() == dst)
                 {
-                    if (t.GetDstState() == dst)
-                    {
-                        fightTransaction = t;
-                        break;
-                    }
+                    fightTransaction = t;
+                    break;
                 }
             }
+            
             if (fightTransaction == null)
             {
                 fightTransaction = new FiniteStateTransaction<T>(dst);

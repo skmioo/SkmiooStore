@@ -43,11 +43,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FSM\Condition\BoolCondition.cs" />
+    <Compile Include="FSM\Condition\IntCondition.cs" />
+    <Compile Include="FSM\Condition\LongCondition.cs" />
+    <Compile Include="FSM\FiniteStateMachine.cs" />
+    <Compile Include="FSM\FiniteStateTransaction.cs" />
+    <Compile Include="FSM\FiniteState\FiniteState.cs" />
+    <Compile Include="FSM\FSMTest.cs" />
+    <Compile Include="FSM\Implement\Monster\MonsterOnStateChangeProcess.cs" />
+    <Compile Include="FSM\Implement\Monster\MonsterStateProcesser.cs" />
+    <Compile Include="FSM\Implement\Monster\Monster.cs" />
+    <Compile Include="FSM\Implement\Monster\StateExcutor\MonsterBattleExecutor.cs" />
+    <Compile Include="FSM\Implement\Monster\StateExcutor\MonsterCharseExecutor.cs" />
+    <Compile Include="FSM\Implement\Monster\StateExcutor\MonsterWaitExecutor.cs" />
+    <Compile Include="FSM\Implement\OnStateChangeProcesserBase.cs" />
+    <Compile Include="FSM\Implement\StatesProcesserBase.cs" />
+    <Compile Include="FSM\Interface\IFiniteStateExecutor.cs" />
+    <Compile Include="FSM\Interface\IFiniteStatesProcesser.cs" />
+    <Compile Include="FSM\Interface\IOnFiniteStateChangeProcesser.cs" />
+    <Compile Include="FSM\Interface\ITransactionCondition.cs" />
+    <Compile Include="LogUtil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

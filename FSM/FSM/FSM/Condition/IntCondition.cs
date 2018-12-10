@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace FSM
 {
-    public class IntCondition
+    public class IntCondition : ITransactionCondition
     {
         public const byte EQUALS = 0;
         public const byte SMALLER = 1;
