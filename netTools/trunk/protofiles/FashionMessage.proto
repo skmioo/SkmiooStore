@@ -1,0 +1,54 @@
+//@module=fashion,StartIndex=4400,classname=Fashion
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------角色VO定义----------------------
+
+//推送玩家时装信息
+message GCBackFashionData
+{
+	repeated PlayerFashion playerfashion = 1;//时装信息
+}
+
+//玩家切换时装按钮
+message CGSwitchFashionData
+{
+	
+}
+
+message GCSwitchFashionDataBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+}
+
+//购买时装
+message CGBuyFashionData
+{
+	optional int32 tableid	=1;//时装配表id
+	optional int32 timetype	=2;//时间类型(0 7天1 1个月2 永久)
+}
+
+message GCBuyFashionDataBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+	repeated PlayerFashion playerfashion = 2;//时装信息
+}
+
+//装备卸下时装
+message CGMakeFashionData
+{
+	optional int64 serverid	=1;//时装服务器id
+}
+
+message GCMakeFashionDataBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+	repeated PlayerFashion playerfashion = 2;//时装信息
+}
+
+//时装装备切换重新创建角色
+message GCCreateCharacterInfo
+{
+	optional CharacterInfo characterInfo = 1;	//玩家信息
+}

@@ -1,0 +1,160 @@
+//@module=AllCombat,StartIndex=8200,classname=AllCombat
+option java_package = "com.mile.common.message";
+//跨服战消息链接注册
+message AllCombatRegist
+{
+optional int32 serverId	= 1;	//服务器id
+}
+
+message AllCombatRegistBack
+{
+}
+//跨服传输战斗对象，战报结果
+message ACombatTrans
+{
+    optional int32 transType=1;//传输的对象类型 1,模板数据2,玩家战斗对象，3，战报结果
+    repeated MessageList innerPackets	  	= 2;	//java对象数据
+    optional int64 startT=3;//开始时间
+}
+
+message MessageList
+{
+    optional bytes innerPackets	  	= 1;	//java对象数据
+}
+
+//跨服传输战斗对象，战报结果返回
+message ACombatTransBack
+{
+    optional int32 transType=1;//传输的对象类型 1,玩家战斗对象，2，战报结果
+}
+//远程方法调用测试
+message MethodInvoteMsg
+{
+    optional bytes innerPacket	  	= 1;	//java对象数据
+}
+//打开跨服战界面
+message CGGetAllCombatView
+{
+}
+//打开界面返回
+message GCGetAllCombatView
+{
+    optional string actStartTime=1;//活动开始时间
+    optional string combatStartTime=2;//跨服战开始时间
+    optional int32 title=4;//称号id
+    optional string function=5;//显示时装id
+    optional string item=6;//武器ID
+    optional string rewardShow=7;//奖励展示
+    optional string notice=8;//说明
+    optional int32 canEnter=9;//是否能进 1能进
+    optional int32 sceneId=10;//跨服战场景id
+    
+}
+
+//进入战斗
+message CGEnterAllCombat
+{
+ optional int32 type=1;//0进入
+}
+//进入战斗返回
+message GCEnterAllCombat
+{
+    optional int32 actType=1;//活动类型 
+    optional string ip=2;//跨服ip
+    optional int32 port=3;//端口
+    repeated GCAllCombatReport reports=4;//战斗结束，返回排行榜信息
+}
+//战场积分变化动态推 
+ message GCAllCombatReport
+ {
+        optional int64 gId=1;//玩家id
+        optional string name=2;//名字
+        optional int32 serverId=3;//服务器id
+        optional int32 killPersonNum=4;//杀人数量
+        optional int32 killedNum=5;//被杀数量
+        optional int32 sorce=7;//积分数
+        optional int32 rank=8;//排名
+        optional int32 maxKillNum=9;//最高连斩数量
+}
+
+//离开战斗
+message CGExitAllCombat
+{
+ 
+}
+//离开战斗返回
+message GCExitAllCombat
+{
+    optional int32 type=1;//0成功，1失败
+}
+//进入战场发送倒计时
+message GCEnterCombatEndTime
+{
+    optional int64 remainS=1;//剩余毫秒数  
+    repeated AllRankRwd2 rwds=2;
+
+}
+ 
+  message AllRankRwd2
+  {
+        optional string stage=1;//奖励区间
+        optional string itemrwd=2;//奖励列表
+   }
+
+//采集血晶
+message CGGetherBloodItem
+{
+	optional int64 objId = 1; //物品id
+}
+
+//本人积分数变化
+message GCChangeSorce
+{
+optional int32 sorce=7;//积分数
+}
+
+//获得战斗排行数据
+message CGGetAllCombatRanks
+{
+ 
+}
+//获得战斗排行数据返回
+message GCGetAllCombatRanks
+{
+  repeated GCAllCombatReport reports=1;//排行榜
+  optional GCAllCombatReport my=2;//自己
+}
+//战斗结束通知
+message GCAllCombatEnd
+{
+}
+//战场排行列表
+message CGGetAllRankDatas
+{
+
+}
+//战场排行列表返回
+message GCGetAllRankDatas
+{
+    repeated AllcombatRankData ranks=1;//排行榜
+}
+//战场数据模型
+message AllcombatRankData
+{
+        optional int64 gId=1;//玩家id
+        optional string name=2;//名字
+        optional int32 serverId=3;//服务器id
+        optional string serverName=4;//服务器名字
+        optional int32 playerLv=5;//等级
+        optional int32 battleNumber=6;//战力
+        optional int32 sorce=7;//积分数
+        optional int32 rank=8;//排名
+}
+
+
+
+    
+
+
+
+

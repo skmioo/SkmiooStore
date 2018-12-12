@@ -1,0 +1,28 @@
+//@module=battleTask,StartIndex=6000,classname=battleTask
+option java_package = "com.mile.common.message";
+
+//----------------------  战场任务功能  ----------------------
+
+//战场任务实体
+message BattleTask
+{
+	optional int32 taskID	=	1;	//任务ID
+	optional int32 status	=	2;	//状态 1:进行中 2:完成未交付 3:已交付
+	optional int32 num	=	3;	//完成任务所需数量(不需要此配置的传0)
+	optional int32 type = 4; //任务类型
+}
+
+//向客户端推送战场任务列表
+message GCBattleTaskListBack
+{
+	repeated BattleTask battleTasks	=	1;	//任务列表
+}
+
+//向客户端推送单条战场任务信息
+message GCBattleTaskInforBack
+{
+	optional BattleTask battleTask	=	1;	//任务信息
+	optional int32 type	=	2; //类型  1:更新; 2:新增 3:删除 4:替换 5: 初始化任务阶段 6:是否完成过某类任务
+	optional int32 oldTaskID = 3;	//旧任务ID
+	optional int32 taskStatus = 4; //是否完成 0否 1是
+}

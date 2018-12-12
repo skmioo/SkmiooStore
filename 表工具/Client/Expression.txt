@@ -1,0 +1,7 @@
+int	string	
+id	ExpressionPrefab	
+表情ID	表情预制体	
+1	ex1	
+2	ex2	
+3	ex3	
+4	ex4	

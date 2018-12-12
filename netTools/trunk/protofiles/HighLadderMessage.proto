@@ -1,0 +1,68 @@
+//@module=highladder,StartIndex=4500,classname=HighLadder
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+message GCPushHighLadderListBack
+{
+	repeated Titlel titlelist = 1;//称号
+	optional int32 locked = 2;    //1上锁 0没锁
+}
+
+//主动推送客户端成就称号已经完成
+message GCHighLadderOver
+{
+	optional Achievement mvt = 1;
+	optional Titlel title = 2;
+}
+
+//领取奖励
+message CGGetHighLadderReward
+{
+	optional int32 condition = 1;//类型
+	optional int32 achievementid = 2;//成就id
+}
+
+message GCGetHighLadderRewardBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+	optional int32 nextachievementid = 2;//下一个成就
+	optional int32 isover = 3;//是否完成 1是0否
+    optional int32 curachievementid = 4;    //当前领取成功的ID
+}
+
+//获取成就列表
+message CGGetAchievementData
+{
+}
+
+message GCGetAchievementDataBack
+{
+	repeated Achievement mvt = 1;//成就列表
+}
+
+//使用称号
+message CGUseTitle
+{
+	optional int32 titleid = 1;//称号类型，称号id 
+	optional int32 operateType =2; //1使用 2卸下
+}
+
+message GCUseTitleBack
+{
+	optional int32 flag = 1; //1 成功 0 失败 
+	optional Titlel title = 2;//称号
+	optional int32 operateType =3; //1使用 2卸下
+}
+
+//是否锁定
+message CGLockTitle
+{
+	optional int32 lock = 1; //1是0否
+}
+
+message GCLockTitleBack
+{
+	optional int32 flag = 1; //1 成功 0 失败 
+	optional int32 lock = 2; //锁状态1是0否
+}

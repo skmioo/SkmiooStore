@@ -1,0 +1,277 @@
+//@module=scene,StartIndex=2200,classname=Scene
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------Scene开始----------------------
+//请求进入场景
+message CGEnterScene
+{
+	optional int32 sceneId		= 1;    //地图ID
+	optional Vector3Info pos	= 2;	//玩家进入场景的坐标，如为0，则使用场景配表的出生点
+	optional Vector3Info direction	= 3;	//玩家进入场景的方向(3维)，如为空，则使用场景配表的方向
+	optional int32 notBackGCEnterScene	= 4;	//不需要返回GCEnterScene消息, 为1时不返回
+}
+//请求进入场景
+message GCEnterScene
+{
+	optional int32 sceneId		= 1;    //地图ID
+	optional int32 reason 		= 2;    //进入场景原因
+} 
+//进入场景是否完成
+message CGEnterSceneOk
+{
+   optional int32 flag		= 1;    //1 成功 0 失败
+} 
+//进入场景是否完成返回
+message GCEnterSceneOk
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+}
+//服务器返回视野区的角色列表
+message GCCharacterObjsInView
+{
+	repeated CharacterInfo characterObjs = 1;    // 
+} 
+
+//服务器返回删除场景中的角色
+message GCDelObjInSceneBack
+{
+	repeated int64 objIds = 1;    // 
+}
+//服务器返回角色死亡
+message GCCharObjDieBack
+{
+	repeated int64 objIds = 1;    // 
+}
+
+//玩家(宠物)移动消息
+message CGSendMove
+{
+	optional Vector3Info startPos	= 1;    //当前位置
+	repeated Vector3Info targetPos	= 2;    //目标位置
+	optional int64 clientTime	= 3;		//前端开始移动时间 
+	optional int32 flyHeight	= 4;//高度
+	optional int32 type	= 5;//类型
+	optional int32 speed	= 6;//速度
+	optional int32 flow=7;//是否跟随
+	optional int64 objectId=8;//唯一id
+}
+
+message GCSendMove
+{
+	optional Vector3Info startPos	= 1;    //当前位置
+	repeated Vector3Info targetPos	= 2;    //目标位置	
+	optional int64 objectId		= 3; //当前objectId
+	optional int64 startMoveTime	 = 4; //前端开始移动时间
+	optional int32 flyHeight	= 5;//高度
+	optional int32 type	= 6;//类型
+		optional int32 speed	= 7;//速度
+	optional int32 flow=8;//是否跟随
+}
+
+//玩家(宠物)停止移动
+message CGStopMove
+{
+	optional Vector3Info stopPosition = 1; //停止移动的位置
+	optional Vector3Info dirPosition = 2; //朝向
+	optional int32 flyHeight	= 3;//类型
+		optional int32 type	= 4;//类型
+		optional int64 objectId=5;//唯一id
+}
+
+message GCStopMove
+{
+	optional int64 objectId			= 1;//当前objectId 
+	optional Vector3Info stopPosition	= 2;//停止移动的位置
+	optional Vector3Info dirPosition = 3; //朝向
+	optional int32 flyHeight	= 4;//高度
+		optional int32 type	= 5;//类型
+}
+
+
+
+//刷新用户属性
+message GCRefreshPlayerAttr
+{
+	optional CharacterInfo mySelf	= 1;
+}
+//飞
+message CGFly
+{
+}
+
+
+//玩家(宠物)停止移动
+message CGSynPlayerPos
+{
+	optional Vector3Info position = 1; //当天位置
+	optional Vector3Info dirPosition = 2; //朝向
+
+}
+
+//更改攻击模式
+message CGChangeAttackState
+{
+	optional int32 state =1; //攻击模式
+}
+
+//添加场景device物品
+message GCPutDeviceInfo
+{
+	repeated DeviceInfo deviceInfo	= 1;	// 场景物品
+}
+
+//刷新场景device物品
+message GCRefreshDeviceInfo
+{
+	optional DeviceInfo deviceInfo	= 1;	// 场景物品
+}
+
+//采集物品
+message CGGetherDevice
+{
+	optional int64 objId = 1; //物品id
+}
+
+//捡取物品列表
+message GCPickDevice
+{
+	repeated int64 objIds = 1;    // 场景物品id
+}
+
+
+//服务器返回隐藏场景中的角色
+message GCShowHideObjInSceneBack
+{
+	optional int32 type =1; //1=显示， 2=隐藏
+	repeated int64 objIds = 2;    // 
+}
+
+
+//刷新场景机关
+message GCRefreshTrapData
+{
+	repeated TrapData trapData	= 1;	//机关
+} 
+
+//单体机关开始移动
+message GCTrapItemStartMove
+{
+	optional int64 objId  		= 1;	//机关的ID
+	repeated int32 itemIndex	= 2; //单体序号,从0开始
+}
+
+
+//角色伤害信息
+message CharacterHurtInfo
+{
+	optional int64 objId  		= 1;	//角色ID
+	optional int32 totalHurt	= 2;	//被当前客户端攻击的伤害总值
+	optional string charName	= 3;	//被伤害的角色名字(玩家名字、帮会名字等)
+	optional int32 type		= 4;	//(同刷新类型refreshType)type=0为玩家信息, type=1为帮会信息
+}
+
+//刷新角色伤害信息
+message GCRefreshCharacterHurtInfo
+{
+	repeated CharacterHurtInfo hurtInfoArr	= 1; //伤害排名信息(帮会时发前3个, 个人排名不用发)
+	optional CharacterHurtInfo selfHurtInfo	= 2; //自己的伤害信息(可以是玩家的,也可以是玩家所在帮会的)
+	optional int64 damageObjId  		= 3;//伤害的BOSS(因场景中目前只支持一个伤害列表)
+	optional int32 refreshType		= 4;//刷新类型(0=单人,1=帮会)
+}
+
+
+//删除角色伤害信息
+message GCDelCharacterHurtInfo
+{
+	repeated int64 objId	= 1; //被伤害的角色ID
+	optional int32 refreshType	= 2;//刷新类型(0=单人,1=帮会)
+}
+
+
+//玩家请求瞬移
+message CGTeleport
+{
+	optional int32 type		= 1;    //瞬移类型
+	optional Vector3Info pos	= 2;	//玩家瞬移的坐标
+	optional Vector3Info direction	= 3;	//玩家瞬移的朝向
+	optional int32 navMeshId	= 4;	//玩家当前在的地图Id 区域位置 服务器没用 客户端用
+	optional int64 objId		= 5; //瞬移指定的角色ID
+}
+
+//瞬移结果(只给当前请求者发,视野内的玩家收到GCSyncCharacterPos)
+message GCTeleport
+{
+	optional int32 flag		= 1;    //1 成功 0 失败 
+	optional int32 type		= 2;    //瞬移类型
+	optional Vector3Info pos	= 3;	//玩家瞬移的坐标
+	optional Vector3Info direction	= 4;	//玩家瞬移的朝向
+	optional int32 navMeshId = 5;	//玩家当前在的地图Id 区域位置 服务器没用 客户端用
+	optional int64 objId		= 6; //瞬移指定的角色ID
+}
+
+
+//乾坤大挪移
+message CGMoveInJog
+{
+	optional int32 type		= 1;    //瞬移类型,不填或默认0=最近的复活点
+}
+
+
+//GameSvr直接进入已经存在的场景
+message GGEnterExistScene
+{
+	optional int32 sceneInstanceId	= 1;    //场景实例ID
+	optional Vector3Info pos	= 2;	//玩家进入场景的坐标，如为0，则使用场景配表的出生点
+	optional Vector3Info direction	= 3;	//玩家进入场景的方向(3维)，如为空，则使用场景配表的方向
+	repeated int64 objId		= 4; //其他角色ID
+	optional int32 notBackGCEnterScene = 5;	//不需要返回GCEnterScene消息, 为1时不返回
+	optional int32 reason		= 6;    //进入场景原因,非必须,统计用
+	repeated string reasonParams	= 7;	//原因附带的参数
+	optional int32 sameMuiltLineScene = 8;	//同一分线场景
+}
+
+//服务器端直接操作离开场景
+message GGLeaveScene
+{
+	optional int32 sceneInstanceId	= 1;    //场景实例ID
+	repeated int64 objId		= 2;	//其他角色ID
+	optional int32 reason		= 3;    //进入场景原因,非必须,统计用
+	repeated string reasonParams	= 4;	//原因附带的参数
+}
+
+
+//指定角色做特定动作
+message GCCharacterChangeMotion
+{
+	optional int32 motionId		= 1;    //瞬移类型,不填或默认0=最近的复活点
+	repeated int64 objId		= 2; //角色ID
+	optional int64 targetObjId	= 3; //做动作时,先转向的目标(如果有,否则就不转向)
+}
+// 角色位置同步
+message GCSyncCharacterPos
+{ 
+	optional int64 objectId			= 1; //当前objectId
+	optional Vector3Info position	= 2; //	角色位置
+	optional Vector3Info dir	= 3; //	角色朝向
+}
+//支持单刷攻击关系
+message GCCharacterRelation
+{
+    optional int64 objectId			= 1; //当前objectId
+    optional int32 attackSts=2;//1 -1 0
+}
+//刷新攻击关系列表
+message GCSyncCharacterRelation
+{
+    repeated GCCharacterRelation relations=1;
+}
+
+//采集物品
+message CGCommonGetherDevice
+{
+	optional int64 objId = 1; //物品id
+}
+
+

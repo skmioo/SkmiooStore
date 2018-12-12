@@ -1,0 +1,213 @@
+//@module=welfare,StartIndex=5200,classname=Welfare
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------福利VO定义----------------------
+//领取物品信息
+message WelfareItem
+{
+	optional int32 temId = 1;	//道具表id
+	optional int32 num = 2;	//数量
+	optional int32 bind = 3;//0不绑定 1绑定 
+}
+
+
+//在线奖励结构
+message WelfareStruct
+{
+	optional int32 id = 1;	//配表id
+	repeated WelfareItem items = 2;	//道具列表
+	optional int32 status = 3; //状态 可领取0 不可领取1 以领取2 以过期3
+	optional int32 sprintType = 4;	//开服冲刺类型 1等级 2战力 3爬塔层数
+	optional int64 param = 5;	//完成条件参数
+	optional string showRew = 6; //道具显示
+	optional string showName = 7; //名称
+}
+
+//推送已经可领取的在线奖励
+//SIGNIN = 1,//每日签到
+//SPRINT = 2,//开服冲刺
+//ONLINE = 3,//每日在线
+//ONLINE = 4,//等级
+//ONLINE = 5,//连续登录
+//ONLINE = 6,//
+message GCPushWelfare
+{
+	optional int32 welfareType = 1;	//福利类型
+	repeated WelfareStruct welfareStruct = 2;	//道具列表
+	repeated SprintTime sprintTime = 3;//开服冲刺活动开始结束时间
+	optional int32 actDays = 4;//连续登录天数
+	optional int32 payNum = 5; //活动期间充值金额，消费灵石
+}
+
+//开服冲刺活动开始结束时间列表
+message SprintTime
+{
+  optional int32 sprintType = 1;//开服冲刺类型 1等级 2战力 3爬塔层数
+  optional string stateTime = 2;//开服冲刺活动开始时间
+  optional string endTime = 3;//开服冲刺活动结束时间
+  optional int32 openType =4; //0关闭1开启
+}
+
+//福利开启结束时间
+message GCWelfare
+{
+  optional int32 sprintType = 1;//活动类型1开服冲刺
+  optional string stateTime = 2;//开服冲刺活动开始时间
+  optional string endTime = 3;//开服冲刺活动结束时间
+  optional int32 openType =4; //0关闭1开启
+}
+
+
+
+//打开每日在线福利面板
+message CGOpenWelfare
+{
+	optional int32 type = 1;//打开对应类型的面板type
+}
+
+//每日在线奖励返回
+message GCOpenOnLineWelfareBack
+{
+	optional int64 onlinetime = 1;//在线时间
+}
+
+//领取福利
+message CGGetWelfareReward
+{
+	optional int32 welfareType = 1;	//福利类型
+	optional int32 temId = 2;	//配表id
+	optional int32 sprintType = 3;//开服冲刺类型 1等级 2战力 3爬塔层数
+}
+
+//领取每日在线福利返回
+message GCGetWelfareRewardBack
+{
+	optional int32 welfareType = 1;	//福利类型
+	repeated WelfareStruct welfareStruct = 2;//在线奖励结构
+}
+
+//领取等级福利
+message CGGetLevelRewardOver
+{
+	optional int32 id = 1;    //领取福利对应的id
+}
+
+message GCGetLevelRewardOverBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+	repeated WelfareStruct welfareStruct = 2;//在线奖励结构
+}
+
+//主动推在线天数
+message GCPushContinuousLandDayNum
+{
+	optional int32 dayNum = 1; //登陆天数
+}
+
+//领取连续登陆
+message CGContinuousLandOver
+{
+}
+
+//连续登陆反馈
+message GCContinuousLandOverBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+	repeated WelfareStruct welfareStruct = 2;//在线奖励结构
+}
+
+
+//请求领取奖励
+message CGRequestGetReward
+{
+	optional int32 type = 1;    //领取福利对应的type 上边的结构
+}
+
+//返回请求领取奖励
+message GCRequestGetRewardBack
+{
+	optional int32 type = 1;    //福利对应的type 上边的结构(那个界面请求的)
+	optional int32 flag = 2;    //1 成功 0 失败
+}
+
+//每日分享
+message CGDailyShare
+{
+	optional int32 type = 1;	//1：领取奖励
+}
+
+message GCDailyShare
+{
+	optional int32 type = 1;	//1：领取奖励
+}
+
+//请求领取七日 十五日奖励
+message CGGetLoginReward
+{
+	optional int32 type = 1;    //领取福利对应的type 12=7日 13=15日
+	optional int32 id = 2;    //对应表里的Id
+}
+
+//返回请求领取七日 十五日奖励
+message GCGetLoginReward
+{
+	optional int32 type = 1;    //领取福利对应的type 12=7日 13=15日
+	optional int32 flag = 2;    //1 成功 0 失败
+	optional WelfareStruct welfareStruct = 3;//领取的奖励
+}
+
+
+//分享奖励领取信息
+message ShareRewardInfo
+{
+	optional int32 id = 1;    //对应表里的Id
+	optional int64 getTime = 2; //领取时间
+	optional int32 state = 3;	//状态 -1:未开启  0:开启,未处理  1:已分享，领取状态  2:已领取
+}
+
+message GCShareRewardInfo
+{
+	repeated ShareRewardInfo rewardInfoList = 1; //已经领取的分享奖励信息
+}
+
+//领取分享类奖励
+message CGGetShareReward
+{
+	optional int32 id = 1;    //对应表里的Id
+	optional int32 type = 2;	//操作   1:已分享   2:领取
+}
+
+//领取分享类奖励返回
+message GCGetShareReward
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+	optional ShareRewardInfo rewardInfo =2; //领取信息
+}
+
+//在线奖励 图标
+message GCOnlineViewSts
+{
+     optional int32 flag = 1;    //1 图标亮，0，图标消失
+}
+//领取在线奖励
+message CGRwdOnLineGift
+{
+}
+//领取奖励返回
+message GCRwdOnLineGift
+{
+    repeated WelfareStruct rwds=1;//OnLineStruct.status为个数
+}
+
+
+
+//双倍经验通知
+message GCDoubleExpmsg
+{
+    repeated int32 dungeonType = 1; //双倍副本id列表
+    optional int32 sts=2;//1显示，0关闭
+}
+
+

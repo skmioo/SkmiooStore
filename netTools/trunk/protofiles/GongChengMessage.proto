@@ -1,0 +1,144 @@
+//@module=gongCheng,StartIndex=6800,classname=GongCheng
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+//----------------------攻城----------------------
+
+message CGEnterGongCheng
+{
+	optional int64 playerId =1;//
+}
+message GCEnterGongCheng
+{
+	optional int32 result=1;//1成功 0失败
+	optional int32 state=2;//1准备中 2破门中 3混战 4 BOSS战 5活动未开 6 Stay阶段，打完BOSS和传出去之间7  Stay2 结算阶段
+	optional int32 doorState=3;//门的状态
+	optional int32 campState=4;//攻击状态 1 player状态 2守 3攻
+	optional int64 restTime=5;//本阶段剩余时间
+}
+//改变进度 
+message GCGongChengChangeSchedule
+{
+	optional int32 state=2;//1准备中 2破门中 3混战 4 BOSS战 5活动未开 6 Stay阶段，打完BOSS和传出去之间7  Stay2 结算阶段
+	optional int64 restTime=5;//本阶段剩余时间
+}
+//给棍子花元宝捐血
+message CGDonateStick
+{
+	optional int64 playerId=1;//
+}
+message GCDonateStick
+{
+	optional int32 result=1;//1成功0失败
+}
+message CGOpenGongChengUI
+{
+	optional int64 playerId=1;
+}
+message GCOpenGongChengUI
+{
+	optional CharacterInfo characterInfo=1;
+	optional int32 state=2;//1准备中 2破门中 3混战 4 BOSS战 5活动未开 6 Stay阶段，打完BOSS和传出去之间 7  Stay2 结算阶段
+	optional string gangName=3;//帮派名字
+}
+
+message GongChengDoorInfo
+{
+	optional string gangName = 1 ;//帮派名字
+	optional int64 gangId = 2;//帮派ID
+	optional int32 gangData = 3; //帮派积分或者是门的伤害百分比或者是龙棍的templateId1,2,3
+}
+message GCDoorScore
+{
+	repeated GongChengDoorInfo gangScoreInfo=1;//帮派积分列表
+	optional GongChengDoorInfo selfGangScoreInfo=2;//本帮积分
+}
+
+message GCDoorHurtPercent
+{
+	repeated GongChengDoorInfo gangHurtInfo=1;//帮派门伤害百分比列表
+	optional GongChengDoorInfo selfGangHurtInfo=2;//本帮伤害百分比
+}
+message GCGongChengLongBelong
+{
+	repeated GongChengDoorInfo longStickInfo=1;//龙棍的info
+}
+message GCGongchengAddScore
+{
+	optional int32 score=1;//加攻城积分，目前规则，谁杀人了给自己推，打破门，棍，雕像，帮派里全推
+
+}
+//离开场景
+message CGGongChengLeave
+{
+	optional int64 playerId=1;//
+}
+
+message GCGongChengLeave
+{
+	optional int32 result=1;//1成功0失败
+}
+//给棍子捐血前，显示要花的钱
+message CGBeforeDonateStick
+{
+	optional int64 playerId=1;//
+}
+message GCBeforeDonateStick
+{
+	optional int32 money=1;//要花的钱
+	optional int32 percent=2;//加成的百分比
+	optional int32 canNext=3;//能不能捐下一次，1能 0不能
+}
+//离开倒计时
+message GCGongChengLeaveTime
+{
+	optional int32 leaveTime=1;//倒计时的秒数
+}
+//结算
+message GCGongChengScoreCount
+{
+	repeated GongChengDoorInfo gangScoreInfo=1;//帮派积分列表
+	optional int32 closeTime =3;//关板倒计时的秒数
+}
+//领取奖励
+message CGGongChengReceiveAward
+{
+	optional int64 playerId=1;//
+}
+//领取奖励
+message GCGongChengReceiveAward
+{
+	optional int32 result=1;//1成功0失败
+}
+//是否可以点开攻城雕像
+message CGGongChengCanStatue
+{
+	optional int64 playerId=1;
+}
+message GCGongChengCanStatue
+{
+	optional int32 result=1;//1行0不行
+	optional int32 canGet=2;//1能0不能领
+}
+//领取雕像奖励
+message CGGongChengGetStatueAward
+{
+	optional int32 type=1;//1花钱领0免费领
+}
+message GCGongChengGetStatueAward
+{
+	optional int32 result=1;//1成功0失败
+}
+//活动开始，弹进入板
+message GCOpenGongChengEnterBoard
+{
+	optional int32 type =1;//默认发1
+}
+//城主上线，推城主身份，在发生更换时，推给新城主，同时取消旧城主
+message GCGongChengLeader
+{
+	optional int32 flag=1;//1置为城主，2取消城主
+}
+
+
+

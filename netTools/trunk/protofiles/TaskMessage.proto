@@ -1,0 +1,134 @@
+//@module=task,StartIndex=3000,classname=Task
+option java_package = "com.mile.common.message";
+
+import "TowerMessage.proto";
+
+//----------------------  任务功能  ----------------------
+
+//任务实体
+message TaskInfor
+{
+	optional int32 taskID	=	1;	//任务ID
+	optional int32 status	=	2;	//状态 1:进行中 2:完成未交付 3:已交付
+	optional int32 num	=	3;	//完成任务所需数量(不需要此配置的传0)
+	optional int32 stage = 4;	// 阶段(捉鬼任务用)
+	optional int32 total = 5;	//总阶段
+	optional int32 type = 6; //任务类型
+	optional int32 level = 7;	//领任务等级
+}
+
+message TaskStatus
+{
+	optional int32 type = 1;	//任务类型
+	optional int32 status = 2;	//0：未完成  1:完成
+	optional int32 stage = 3;	// 阶段
+	optional int32 total = 4;	//总阶段
+}
+
+//交付任务
+message CGDeliverTask
+{	
+	optional int32 taskID	=	1;	//任务ID
+	optional int32 isDouble = 	2;  //是否加倍 （ 0正常交付，1加倍交付 ）
+}
+
+//完成任务
+message CGFinishTask
+{	
+	optional int32 taskID	=	1;	//任务ID
+}
+
+//向客户端推送任务列表
+message GCTaskListBack
+{
+	repeated TaskInfor taskInfors	=	1;	//任务列表
+}
+
+//向客户端推送单条任务信息
+message GCTaskInforBack
+{
+	optional TaskInfor taskInfors	=	1;	//任务信息
+	optional int32 type	=	2; //类型  1:更新; 2:新增 3:删除 4:替换 5: 初始化任务阶段 6:是否完成过某类任务
+	optional int32 oldTaskID = 3;	//旧任务ID
+	repeated TaskInfor stageInfo = 4; //任务阶段 (帮派任务,后期用到的再加注释)
+	repeated TaskStatus taskStatus = 5; //是否完成
+}
+
+//================================== 除妖活动协议 begin ===============================
+//领取任务
+message CGReciveTask
+{
+	optional int32 type = 1;	//任务类型 1:挖宝; 2:捉妖 3:帮派任务
+	optional int32 taskID = 2;	//任务ID(帮派任务需要传,目前挖宝捉妖不需要)
+}
+
+//除妖,完成一个阶段任务
+message CGCatchComplate
+{
+	optional int32 taskID = 1;	//任务ID
+	optional int32 stage = 2;	//完成的阶段
+}
+
+//走到坐标点,根据任务ID生成怪物
+message CGCatchCreatMonster
+{
+	optional int32 taskID = 1;	//任务ID
+}
+
+//队长放弃任务(挖宝任务专用)
+message CGCatchGiveUpTask
+{
+	optional int32 taskID = 1;	//任务ID
+}
+
+//弹对话框
+message CGOpenDialog
+{
+	optional int32 taskID  = 1;
+}
+
+//推送弹对话框
+message GCMenverOpenDialog
+{
+	optional int32 taskID = 1;
+}
+
+//通知客户端完成一轮任务,可领取新一轮任务
+message GCSendTaskOver
+{
+	optional int32 type = 1;	//任务类型
+}
+
+//推送完成过的主线任务(新手引导用)
+message GCSendMainTasks
+{
+	optional int32 type = 1;	//1:获取完成过的主线任务id列表 2:增加
+	repeated int32 taskIds = 2;	//任务id列表
+}
+
+//推送任务奖励
+message GCSendTaskReward
+{
+	repeated RewardItem rewardItems = 1;	//道具奖励
+	repeated RewardItem attrRewards = 2;	//货币经验奖励
+}
+
+//走到坐标点,根据任务ID生成怪物
+message GCCreatMonsterBack
+{
+	optional int32 success = 1;	//操作结果 0:失败; 1:成功
+	optional int32 taskID = 2;	//任务ID
+}
+
+//推送任务和怪物数据
+message GCSendTaskMonster
+{
+	optional int32 taskID = 1;	//任务ID
+	optional int32 mosnterID = 2;	//怪物sid
+}
+
+//走到坐标点,根据任务ID生成道具
+message CGCatchCreatProp
+{
+	optional int32 taskID = 1;	//任务ID
+}

@@ -1,0 +1,4 @@
+int	int	int	int	
+id	SeaResourceGenerate	ResourcePointNo	ResourcePointCD	
+数据序号	海面资源分布	资源点数量	资源点冷却时间/秒	
+1	10	10	10	

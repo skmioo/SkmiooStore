@@ -1,0 +1,251 @@
+//@module=gang,StartIndex=4100,classname=Gang
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+import "CommonMessage.proto";
+message GangAttr
+{
+	optional int32 attrKey = 1;
+	optional int32 arrtValue = 2;
+}
+
+//帮派信息
+message GangMainInfo
+{
+	optional int64 gangId=1;//帮派ID
+	optional string gangName=2;//帮派名字
+	optional string gangTotem=3;//帮派旗名
+	optional int32 gangLevel=4;//帮派等级
+	optional int32 memberNum=5;//帮派人数
+	optional string bulletin=6;//公告
+	optional int64 money=7;//资金
+	optional int64 power=8;//战力
+	optional string masterName=9;//帮主名字
+	optional int32 isKickMaster=10;//帮主是否被弹劾 0：没弹劾 1：弹劾中
+	optional int64 kickTime=11;//弹劾时间（毫秒）
+}
+message BuildingInfo
+{
+	optional int32 gangDonateNum= 1;//捐献总次数
+	repeated GangAttr builtAttr=2;//建设信息 //大类ID（某建筑）小类ID（建筑等级）
+	repeated GangAttr practice=3;//修炼信息  //大类ID，小类LEVEL
+	repeated GangAttr buyUniqueInfo=4;//购买信息 标记已购买的唯一或者每日限定物品 key=id value=已购买的数量 
+}
+
+//帮派成员信息
+message GangMemberInfo
+{
+	optional int64 memId=1;//ID
+	optional string memName=2;//名字
+	optional int32 memLevel=3;//等级
+	optional int64 memFightPower=4;//战力
+	optional int32 memJob=5;//职位
+	optional int32 memOnline=6;//1在线 0不在线
+	optional int64 memContribute=7;//贡献
+	optional int64 gangContributeTotal=8;//帮派总贡献（个人）
+	optional int32 professionId=9;//职业Id
+	optional int32 vip=10;//VIP等级
+	optional int64 memLogoutTime=11;//上次下线时间
+	optional int32 sex=12;//性别1女2男
+}
+
+//创建帮派
+message CGCreateGang
+{
+	optional int32 requestType=1;//请求类型：1：创建 3：刷新全部信息 4:申请列表 5:刷新帮派建筑信息
+	optional string gangName=2;//帮派名字
+	optional string gangFont=3;//帮派旗
+}
+
+//创建帮派返回
+message GCCreateGang
+{
+	optional int32 responseType=1;//返回类型 1：创建 2：登录 3：刷新全部信息 4:申请列表
+	optional int32 result=2;//1成功 0失败
+	optional GangMainInfo gangInfo=3;//帮会信息
+	repeated GangMemberInfo memberInfo=4;//成员列表
+	optional BuildingInfo buildInfo=5;//建设信息 
+}
+
+//请求帮派列表
+message CGGetGangList
+{
+	optional int32 listType=1;//请求类型 1：请求帮派列表 2：搜索帮派
+	optional string gangName=3;//帮派名字
+}
+
+//请求帮派列表返回
+message GCGetGangList
+{
+	optional int32 listType=1;//请求类型 1：请求帮派列表 2：搜索帮派
+	repeated GangMainInfo gangInfo=4;//帮派列表
+	optional int32 result=5;//1成功 0失败
+	repeated int64 joinGangIdList=6;//已加入帮派ID
+	optional int64 lastQuitTime=7;//上一次退出帮派的时间
+}
+
+//帮派操作
+message CGGangOperate
+{
+	optional int32 operateType=1;//操作类型 1：加入2：退出 3：修改公告 4：职能操作  5：批准 6：拒绝 9：批量加入 10：弹劾帮主 11一键拒绝 12一键同意
+	optional int64 gangId=2;//帮派ID
+	optional string bulletin=3;//公告内容
+	optional int64 bePlayerId=4;//被操作人ID
+	optional int32 bePlayerType=5;//被操作人动作 其他根据配表ID
+	repeated int64 gangIdList=6;//批量加入的帮派列表ID
+}
+
+//帮派操作返回
+message GCGangOperate
+{
+	optional int32 operateType=1;//操作类型  //7被踢刷新  8 在线被加入帮派
+	optional int32 result=2;//1成功 0失败
+	optional GangMainInfo gangInfo=3;//帮派信息
+	repeated GangMemberInfo memberInfo=4;//被操作人的信息
+	optional int64 quitMemberId=5;//踢出成员ID
+	optional int64 joinGangId=6;//申请加入的帮派ID
+	repeated int64 joinGangIdList=7;//批量加入的帮派ID列表
+	optional int64 kickTime=8;//弹劾时间（毫秒）
+	optional int32 isKickMaster=9;//帮主是否被弹劾 0：没弹劾 1：弹劾中
+}
+
+//购买请求
+message CGGangBuy
+{
+	optional int32 request = 1;//请求类型 1：捐献 2：建设（点击升级时） 3：商店（点击购买） 4：修炼（点击修炼按钮）
+	optional int32 buyId = 2;//物品ID
+	optional int32 buyNum = 3;//数量
+}
+
+//购买返回
+message GCGangBuy
+{
+	optional int32 result = 1;//0:失败 1：成功
+	optional int32 response = 2;//返回操作类型
+	optional GangMainInfo gangInfo = 3;//帮派信息
+	optional BuildingInfo buildInfo = 4;//建筑相关
+}
+
+// 帮战 请求
+message CGGangFight
+{
+	optional int32 operate = 1;//1：打开帮战面板，2：报名，3：进入战场，4离开战场，5：扛旗,6:进入战场板，7：结束板，8；免费膜拜, 9:扔旗，10：传送至雕像，11：付费膜拜, 12 刷分,13 点击雕像
+	optional int32 mapId = 2;//地图id 空：第一个
+}
+
+message GangInfo4Map
+{
+	optional int32 mapId = 1;//地图id 
+	optional GangMainInfo holdGangInfo = 2;//占领帮会信息
+	repeated GangMainInfo applyGangInfo = 3;//报名帮会信息
+	optional int32 applyState = 4;//报名 状态 0：无，1：不可报名，2：可以报名，3：已报名。。。打开雕像：1,可以领取，2不可领取
+	optional int32 enterFightState = 5;//进入战场 状态 0:不可进入，1可以进入
+	optional int32 countOfMap = 6;//当前领地内战斗人数->本帮人数
+	optional int32 firstOfMap = 7;//当前领地内最高积分->本帮积分
+}
+
+// 帮战 返回
+message GCGangFight
+{
+	optional int32 operate = 1;
+	optional int32 result = 2;//0:失败 1：成功
+	optional int32 flag = 3;//标志位 （operate=3进入战场时 1 准备， 2 战斗）（operate=1打开时，1,活动开启，0:否）
+	optional int32 lastTime = 4;//剩余时间 
+	optional int64 puid = 5;//扛旗玩家puid
+	optional int64 flaguId = 6;//旗id
+	repeated GangInfo4Map gangInfo4Map = 7;//打开帮战面板:全部地图的占领/报名帮会信息;报名时：1个，当前地图的帮会
+	repeated EntryStringInt pointMap = 8;// 刷分[[nameOfGang:point]]  ([谁来弄死我:1,我来弄死谁:5])
+}
+//进入驻地
+message CGEnterGang
+{
+	optional int64 playerId =  1;//大于0进入帮派驻地 小于0离开帮派驻地
+}
+//进入驻地返回
+message GCEnterGang
+{
+	optional int32 result=1;//1成功 0失败
+}
+
+//帮派强盗的数量
+message GCGangRobberNum
+{
+	optional int32 num	=1;//当前数量
+	optional int32 numTotal	=2;//总数量
+}
+//帮派活动开始
+message GCGangActiveOpen
+{
+	optional int32 type = 1;//1为帮派强盗 2为帮派守护之心 3为带参数的黑条， 4为不带参数的黑条
+	optional int32 languageId = 2;//文字表ID
+	repeated string param = 3;//参数
+}
+
+//禁言某个玩家
+message CGMuteGangMember
+{
+	optional int32 type = 1;//1：禁言 2：解除禁言
+	optional int64 plyerId = 2;//玩家ID
+}
+
+//推送给所有当前在线的帮派成员
+message GCMuteGangMember
+{
+	optional int32 result = 1;//1成功 0失败
+	optional int32 type = 2;//1：禁言 2：解除禁言
+	optional int64 playerId = 3;//玩家ID
+}
+
+//登录时推送的禁言列表
+message GCMuteGangList
+{
+	repeated int64 mute = 1; //禁言列表
+}
+
+//邀请入帮
+message CGInviteToGang
+{
+	optional int64 playerId = 1;//被邀请的玩家ID
+}
+
+
+//被邀请人接收
+message GCBeInvitedToGang
+{
+	optional int64 gangId = 1;
+	optional string gangName = 2;
+}
+
+//被邀请人发送
+message CGBeBeInvitedToGang
+{
+	optional int32 operateType = 1; //1同意 2拒绝
+	optional int64 gangId = 2;
+}
+//通知有人申请入帮
+message GCApplyNotice
+{
+	optional int64 playerId = 1;//角色ID
+}
+
+message CGHasGang
+{
+	optional int32 playerId=1;
+}
+
+message GCHasGang
+{
+	optional int32 result=1;//0:没有 1：有	
+}
+//帮派改名
+message CGGangChangeName
+{
+	optional int64 gangId = 1;//帮派ID
+	optional string gangTotem = 2;//帮派图腾
+	optional string gangName = 3;//帮派名字
+}
+//帮派改名返回
+message GCGangChangeName
+{
+	optional int32 result = 1;//结果 0 失败 1成功
+}

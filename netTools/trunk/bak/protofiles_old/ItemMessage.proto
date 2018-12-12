@@ -1,0 +1,132 @@
+//@module=item,StartIndex=23001,classname=Item
+option java_package = "com.mrd.game.message";
+
+import "InnerMessage.proto";
+ 
+message ItemData
+{
+	optional int32 	dataIndex = 1;//物品id
+	optional int32 	num = 2;//物品数量
+	optional int32	bitStatus = 3;// 占用一个Byte，物品状态一个bit位表示一种状态;
+	optional int32  strengthenLevel = 4; // 1byte 强化等级
+	optional int32	runeSuitId = 5; // 符文组Id
+}
+ 
+//刷新背包 装备等的物品
+message GCSyncItemPacket
+{ 	 
+	optional int32 	packId = 1;//包代号
+	repeated int32  dirtyFlag = 2;//包裹槽位的脏标记
+	repeated ItemData  itemDatas = 3;//item 数据 列表
+	optional int64 	playerId = 4;//包代号
+}
+
+//捡拾物品
+message CGPickItem
+{
+	optional int32 dropBoxId = 1;//掉落包id
+	optional int32 slotIndex = 2;//在掉落包中的槽位索引
+}
+
+//丢弃 
+message CGDiscardItem
+{
+	optional int32 packId = 1;//包代号
+	optional int32 slotIndex = 2;//在包中的索引
+	optional int32 num = 3;//丢弃的数量
+}
+
+//出售
+message CGSellItem
+{
+	optional int32 packId = 1;//包代号
+	optional int32 slotIndex = 2;//在包中槽位的索引
+	optional int32 num = 3;//出售的数量
+}
+
+//装备 
+message CGEquipItem
+{
+	optional int32 slotIndexInBackPack = 1;//在背包中槽位的索引
+	optional int32 equipSlotIndex = 2;//装备槽的索引
+}
+
+//卸装
+message CGUnequipItem
+{
+	optional int32 equipSlotIndex= 1;//装备的槽位
+}
+
+//交换 将包1中的槽位1和包2中的槽位2交换
+message CGSwapItem
+{
+	optional int32 pack1Id = 1;//包1的id
+	optional int32 slot1Index = 2;//包1的槽位索引
+	optional int32 pack2Id = 3;//包2的id
+	optional int32 slot2Index = 4;//包2的槽位索引 
+}
+
+//整理
+message CGTidyItem
+{
+	optional int32 packId = 1;//包id 
+}
+
+//物品使用
+message CGUseItem
+{
+	optional int32 packId = 1;//包id 
+	optional int32 slotIndex = 2;//包槽位 
+}
+// 物品操作通用返回协议
+message GCItemOptBack
+{
+	required int32 protocolId = 1;//协议编号
+	required int32 resultCode = 2;//返回码
+}
+// ----------------------装备操作协议------------------
+// 装备强化
+message CGStrengthenEquip
+{
+	optional int32 packId = 1;//包id 
+	optional int32 slotIndex = 2;//包槽位
+}
+// 装备一键强化
+message CGVipStrengthenEquip
+{
+	optional int32 packId = 1;//包id 
+	optional int32 slotIndex = 2;//包槽位
+}
+// 装备分解
+message CGDecomposeEquip
+{
+	optional int32 packId = 1;//包id 
+	repeated int32 slotIndex = 2;//包槽位
+}
+// 装备相关玩法通用返回协议
+message GCEquipOptBack
+{
+	required int32 protocolId = 1;//协议编号
+	required int32 resultCode = 2;//返回码
+}
+// ----------------------符文协议------------------
+// 镶嵌符文
+message CGInlayRune
+{
+	required int32 packId 		= 1;//包id
+	required int32 slotIndex 	= 2;//包槽位
+	required int32 suitId 		= 3;// 符文组合Id
+}
+// 拆卸符文
+message CGRemoveRune
+{
+	required int32 packId 		= 1;//包id
+	required int32 slotIndex 	= 2;//包槽位
+}
+// 符文玩法通用返回协议
+message GCRuneOptBack
+{
+	required int32 protocolId = 1;//协议编号
+	required int32 resultCode = 2;//返回码
+}
+

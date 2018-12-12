@@ -1,0 +1,45 @@
+//@module=activityRank,StartIndex=7300,classname=ActivityRank
+option java_package = "com.mile.common.message";
+
+
+//----------------------  活动,充值排行 消费排行 repeated ----------------------
+
+//排行信息
+message ActivityRankInfo
+{
+	optional int64 playerID = 1;	//角色ID
+	optional string playerName = 2;	//角色名称
+	optional int32 rank = 3;	//排名
+	optional int32 points = 4;	//积分
+}
+
+
+//活动奖励
+message ActivityRankReward
+{
+	optional int32 rank = 1;	//排名
+	optional int32 points = 2;	//所需积分
+	optional string reward = 3;	//普通奖励 bid,sid,num|bid,sid,num
+	optional string pointReward = 4;	//积分奖励bid,sid,num|bid,sid,num
+	optional string showReward = 5;	//礼包道具展示bid,sid,num|bid,sid,num
+}
+
+//客户端请求
+message CGActivityRank
+{
+	optional int32 operate = 1;	//操作类型  1:活动奖励 2:获取榜单数据
+	optional int32 type = 2;	//排行榜类型
+}
+
+//返回数据
+message GCActivityRankResult
+{
+	optional int32 operate = 1;	//操作类型  1:活动奖励 2:主动获取榜单数据 3:服务器下发榜单数据
+	repeated ActivityRankInfo chargeRanks = 2;	//充值排行榜
+	repeated ActivityRankInfo spendRanks = 3;	//消费排行榜
+	optional ActivityRankInfo playerCharge = 4;	//玩家充值排行数据
+	optional ActivityRankInfo playerSpend = 5;	//玩家消费排行数据
+	repeated ActivityRankReward chargeRewards = 6;	//充值奖励
+	repeated ActivityRankReward spendRewards = 7;	//消费奖励
+	optional int32 type = 8;	//排行榜类型(活动id)
+} 

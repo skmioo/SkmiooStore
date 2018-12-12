@@ -1,0 +1,13 @@
+//@module=Pvp,StartIndex=6700,classname=PVP
+option java_package = "com.mile.common.message";
+
+//获取今日声望
+message CGGetTodayPvpPrestige
+{
+	optional int32 requestType = 1;//1：获取今日声望，2：全部兑换
+}
+
+message GCGetTodayPvpPrestige
+{
+	optional int32 prestige=1;//今日获取声望
+}

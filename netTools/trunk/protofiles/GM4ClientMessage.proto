@@ -1,0 +1,18 @@
+//@module=GM4Client,StartIndex=3500,classname=GM4Client
+option java_package = "com.mile.common.message";
+
+//----------------------  GM功能  ----------------------
+
+message Entry4GM
+{
+	optional string key = 1; // key
+	optional string value = 2; // value
+	optional string type = 3; // type
+}
+
+//GM 功能
+message CGGM4ClientMsg
+{
+	optional string cmd = 1;	//命令
+	optional string params = 2; // 参数
+}

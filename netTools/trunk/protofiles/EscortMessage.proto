@@ -1,0 +1,39 @@
+//@module=escort,StartIndex=8700,classname=Escort
+option java_package = "com.mile.common.message";
+
+//----------------------护送灵石----------------------
+
+// 护送灵石 客户端发起操作
+message CGEscortOperate
+{ 
+	optional int32 operate = 1;					// 操作类型 1:推送登陆护送数据 2:接镖 3：护送 4：交付 5:护送失败 6：劫镖成功 7:被劫镖 8：镖车事件
+	optional int32 dartType = 2; 				// 接镖类型( 1，金币 2，一键龙船 )	
+	optional int32 dartID = 3;					// 镖船id
+}
+
+// 护送灵石 操作返回
+message GCEscortOperateResult
+{
+	optional int32 operate = 1;					// 操作类型
+	optional int32 escortCnt = 2; 				// 今日已护送次数
+	optional int32 robCnt = 3; 					// 今日已劫镖次数
+	optional int32 dartID = 4; 					// 当前操作镖船的配置表id	
+	optional string reward = 5;					// 护送奖励，劫镖奖励
+	optional string playerName = 6;				// 玩家名字（ 被劫镖或者劫镖成功的对方玩家名字 ）
+	optional int64 dartPid = 7;					// 镖船pid
+	optional int64 endTime = 8;					// 护送结束时间戳
+	optional int64 failTime = 9;				// 失败时间戳（ 0表示正常护送中或者护送结束， 有时间表示开始失败倒计时 ）
+}
+
+// 跟随镖船 客户端发起操作
+message CGFollowDart
+{
+}
+
+// 跟随镖船 操作返回
+message GCFollowDartResult
+{
+	optional int32 sceneID = 1;					// 场景id
+	optional int32 posX = 2;					// x坐标
+	optional int32 posZ = 3;					// z坐标
+}

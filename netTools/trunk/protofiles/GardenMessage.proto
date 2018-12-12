@@ -1,0 +1,48 @@
+//@module=garden,StartIndex=9000,classname=Garden
+option java_package = "com.mile.common.message";
+
+//----------------------药园----------------------
+
+// 草药数据
+message GardenHerbalInfo
+{
+	optional int32 herbalID = 1;				// 草药id
+	optional int32 herbalLv = 2;				// 草药阶段
+	optional int32 quality  = 3;				// 草药品质
+	optional int64 completeTime = 4;			// 当前阶段完成时间
+}
+
+// 土地数据
+message GardenFieldInfo
+{
+	optional int32 fieldID = 1;					// 土地位置
+	optional GardenHerbalInfo herbalInfo = 2;	// 草药数据
+}
+
+// 药园 登陆数据返回
+message GCGardenOperateResult
+{	
+	optional int32 operate = 1;					// 操作类型（ 1.登录 2.购买土地 3.种植 4.采摘 5.铲除 6.催熟 ）
+	repeated GardenFieldInfo fieldInfo = 2;		// 土地数据
+}
+
+// 药园 客户端发起操作
+message CGGardenOperate
+{ 
+	optional int32 operate = 1;					// 操作类型（ 1.登录 2.购买土地 3.种植 4.采摘 5.铲除 6.催熟 ）
+	optional int32 seedID = 2;					// 种子id
+	optional int32 fieldID = 3;					// 土地位置
+}
+
+// 炼丹 客户端发起操作
+message CGGardenMakeMedicine
+{
+	optional int32 configID = 1;				// 炼丹配置表id
+	optional int32 fireID = 2;					// 炼丹火（ 1，2, 3 ）
+}
+
+// 炼丹 服务器返回
+message GCGardenMakeMedicine
+{
+	optional int32 result = 1;					// 结果（ 1成功，0失败 ）
+}

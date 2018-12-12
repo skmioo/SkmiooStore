@@ -1,0 +1,7 @@
+int	string	string	int	int	int	int	
+id	ShipSkillName	ShipSkillFX	DamageBoost	HealthBoost	SpeedBoost	AttackDistanceBoost	
+技能序号	技能名称	技能特效	伤害加成	血量加成	速度加成	攻击距离加成	
+1	一般技能	special1	2	3	3	3	
+2	战斗技能1	special2	5	5	5	5	
+3	速度技能1	special3	3	5	7	4	
+4	防御技能1	special4	3	7	6	4	

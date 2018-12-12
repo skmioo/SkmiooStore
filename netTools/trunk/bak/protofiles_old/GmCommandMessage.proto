@@ -1,0 +1,17 @@
+//@module=gmcommand,StartIndex=25001,classname=GmCommand
+option java_package = "com.mrd.game.message";
+
+// GM指令相关协议
+
+// 客户端发起
+message CGGmCommand
+{
+	required string gm 	= 1; 
+	repeated string params = 2;
+}
+// 服务器返回结果，通常只有出错了才会以提示方式返回，其他直接看产生效果即可
+message GCGmCommandResult
+{
+	required int32 result 	= 1; // 0成功，1以上，表示失败，具体数值代表错误码
+
+}

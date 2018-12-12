@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{9c153c15-5507-44e9-8b15-d918a6a1fbcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet">
+      <UniqueIdentifier>{ff05d9da-2f1f-4307-b8aa-7535da2545a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OutSide">
+      <UniqueIdentifier>{f3933690-cb82-44d4-afd5-fa915dae3b37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketCreateDefine.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\IPacketFactory.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\PacketCplus.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\BaseDef.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\cmd.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\fileLog.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\Log.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\logImp.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\StrFun.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\StringFun.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\SystemConfig.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\Type.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\WinFun.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\XML\tinystr.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\XML\tinyxml.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CodeEngine\Code\FileStream.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CodeEngine\Code\PBImpl.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CodeEngine\Code\StreamData.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CodeEngine\Code\PBCSharp.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CodeEngine\Code\TemplateDef.h">
+      <Filter>OutSide</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\PacketCSharp.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet\PacketJava.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FigurePacket.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet\IPacketFactory.cc">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet\PacketCplus.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\cmd.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\fileLog.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\Log.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\logImp.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\StrFun.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\StringFun.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\SystemConfig.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\WinFun.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\XML\tinystr.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\XML\tinyxml.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\XML\tinyxmlerror.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\XML\tinyxmlparser.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CodeEngine\Code\FileStream.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CodeEngine\Code\PBImpl.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CodeEngine\Code\StreamData.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CodeEngine\Code\PBCSharp.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CodeEngine\Code\PBCSharp_Base.cpp">
+      <Filter>OutSide</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet\PacketCSharp.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="Packet\PacketJava.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

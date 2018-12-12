@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="WarShip">
+<data id="1" ShipName="一级战舰" UpgradeCost="10" Upgrade="2|3|4" ShipSkillID="1" ShipSpeedMax="8" ShipHealth="5" WeaponCount="2" RepairCost="2" RepairHealth="1" ShipAcceleration="-1" ShipTurnSpeed="-1"/>
+<data id="2" ShipName="2级战斗舰" UpgradeCost="20" Upgrade="-1" ShipSkillID="2" ShipSpeedMax="10" ShipHealth="10" WeaponCount="6" RepairCost="3" RepairHealth="1" ShipAcceleration="-1" ShipTurnSpeed="-1"/>
+<data id="3" ShipName="2级速度舰" UpgradeCost="20" Upgrade="-1" ShipSkillID="3" ShipSpeedMax="13" ShipHealth="10" WeaponCount="4" RepairCost="3" RepairHealth="1" ShipAcceleration="-1" ShipTurnSpeed="-1"/>
+<data id="4" ShipName="2级防御舰" UpgradeCost="20" Upgrade="-1" ShipSkillID="4" ShipSpeedMax="10" ShipHealth="15" WeaponCount="4" RepairCost="3" RepairHealth="1" ShipAcceleration="-1" ShipTurnSpeed="-1"/>
+</root>

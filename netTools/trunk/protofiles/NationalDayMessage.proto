@@ -1,0 +1,67 @@
+//@module=nationalDay,StartIndex=7500,classname=NationalDay
+option java_package = "com.mile.common.message";
+//----------------------  运营活动九门考核答题 repeated ----------------------
+
+//排行奖励数据
+message NationalReward
+{
+	optional int32 id =1;	//排名
+	optional string reward = 2;	//奖励bid,sid,num
+}
+
+//每日积分兑换表数据
+message NationalCash
+{
+	optional int32 id =1;	//配表id
+	optional int32 points = 2;	//所需积分
+	optional string reward = 3;	//可兑换道具bid,sid,num|bid,sid,num
+}
+
+//可捐献道具
+message NationalItem
+{
+	optional int32 id = 1;	//配表id
+	optional int32 points =2;	//奖励积分
+	optional string itemInfo = 3;	//道具信息bid,sid,num
+}
+
+message NationalRank
+{
+	optional int32 rank = 1;	//排名
+	optional string playerName = 2;	//角色名
+	optional int32 points = 3;	//所获积分
+	optional int64 playerID = 4;	//排名
+}
+
+//活动数据
+message NationalInfo
+{
+	optional int32 totalPoints = 1;	//累计积分
+	optional int32 dailyPoints =2;	//今日积分
+	repeated int32 cashs = 3;	//已兑换过的奖励id
+	optional int32 baseHate = 4;	//积分倍数
+}
+
+message CGNationalOperate
+{
+	optional int32 operate = 1;	//操作类型 1:推送配表数据 2:捐献道具 3:排行数据 4:兑换积分
+	optional int32 itemID = 2;	//捐献道具配表id
+	optional int32 num = 3;	//捐献道具数量
+}
+
+//推送活动配表数据(登录或者活动开始的时候推)
+message GCNationalOperateResult
+{
+	optional int32 operate = 1;	//操作类型 1:获取数据 2:捐献道具 3:推送排行榜数据 4:积分兑换
+	repeated NationalReward nationalRewards = 2;	//排名奖励配置信息
+	repeated NationalCash nationalCashs = 3;	//每日兑换表数据
+	repeated NationalItem nationalItems = 4;	//可捐献道具配表
+	repeated NationalRank nationalRanks = 5;	//玩家积分排行榜数据
+	optional NationalInfo nationalInfos = 6;	//个人积分数
+	repeated int32 multiples = 7;	// 积分倍数列表
+	optional int32 actType = 8;//活动类型 0=国庆, 1=端午
+	optional string caption = 9;//活动说明
+	optional string listNum = 10;//积分排名奖励限制说明
+
+	
+}

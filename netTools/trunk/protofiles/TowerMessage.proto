@@ -1,0 +1,52 @@
+//@module=tower,StartIndex=3300,classname=Tower
+option java_package = "com.mile.common.message";
+
+//----------------------  竞技场功能 repeated ----------------------
+
+//爬塔实体
+message TowerInfo
+{
+	optional int64 playerID = 1;
+	optional int32 limitNum = 2; // 剩余挑战次数
+	optional int32 clearNum = 3; // 剩余扫荡次数
+	optional int32 pileNum = 4; // 已经通过层数
+	optional int32 status = 5; // 扫荡状态标识 0:未开始; 1:扫荡中
+	optional int64 beginTime = 6;	//扫荡开始时间(扫荡中的时候才传时间)
+	optional int32 topNum = 7;	//最高层数
+	optional int32 clearPileNum = 8;	//当前扫荡到的层数
+	optional int32 maxVipNum = 9;	//当前vip等级增加的扫荡次数（当天可购买次数上限）
+	optional int32 alreadyBuy = 10;	//今天购买过的挑战次数（vip特权）
+}
+
+message CGTowerSend
+{
+	optional int32 operate = 1;	//操作类型 1:初始化爬塔数据 2:开始挑战 3:进入下一层 4:免费扫荡 5:付费扫荡(等vip系统再做) 6:离开爬塔副本 12:vip购买挑战次数 
+	optional int32 buyNum = 2;	//vip要购买的挑战次数
+}
+
+//奖励物品信息
+message RewardItem
+{
+	optional int32 bid = 1;	//奖励物品大类ID
+	optional int32 sid = 2;	//奖励物品模版ID
+	optional int32 num = 3;		//物品数量
+}
+
+message GCTowerPush
+{
+	optional int32 operate = 1;	//操作类型 1:初始化爬塔数据 2:开始挑战 3:进入下一层 4:免费扫荡 5:付费扫荡(等vip系统再做) 6:离开爬塔副本 7:推送当前层结束时间 8:推送扫荡开始时间  9:推送当前层开始时间 10:推送奖励 11:爬塔 推推送首次通关奖励 13:重新登陆，推送爬塔id和开始时间 
+	optional int64 timeStamp = 2;
+	optional TowerInfo towerInfo = 3;
+	repeated RewardItem rewardItems = 4;	//通关奖励
+	repeated RewardItem firstRewards = 5;	//首次通关奖励
+	optional int32 towerID = 6;	//爬塔场景ID(重新登录用)
+	optional int64 beginTime = 7;	//爬塔开始时间(重新登录用)
+}
+
+
+
+
+
+
+
+

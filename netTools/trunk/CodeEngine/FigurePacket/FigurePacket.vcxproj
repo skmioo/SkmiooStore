@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{11317473-D0F2-4091-A51A-004F1FED05A1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FigurePacket</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../Bin</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;__WINDOWS__;TIXML_USE_STL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../CodeEngine/Code/;./;../Logic/;../Logic/XML/;./Packet/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CodeEngine\Code\FileStream.h" />
+    <ClInclude Include="..\CodeEngine\Code\PBCSharp.h" />
+    <ClInclude Include="..\CodeEngine\Code\PBImpl.h" />
+    <ClInclude Include="..\CodeEngine\Code\StreamData.h" />
+    <ClInclude Include="..\CodeEngine\Code\TemplateDef.h" />
+    <ClInclude Include="..\Logic\BaseDef.h" />
+    <ClInclude Include="..\Logic\cmd.h" />
+    <ClInclude Include="..\Logic\fileLog.h" />
+    <ClInclude Include="..\Logic\Log.h" />
+    <ClInclude Include="..\Logic\logImp.h" />
+    <ClInclude Include="..\Logic\StrFun.h" />
+    <ClInclude Include="..\Logic\StringFun.h" />
+    <ClInclude Include="..\Logic\SystemConfig.h" />
+    <ClInclude Include="..\Logic\Type.h" />
+    <ClInclude Include="..\Logic\WinFun.h" />
+    <ClInclude Include="..\Logic\XML\tinystr.h" />
+    <ClInclude Include="..\Logic\XML\tinyxml.h" />
+    <ClInclude Include="PacketCreateDefine.h" />
+    <ClInclude Include="Packet\IPacketFactory.h" />
+    <ClInclude Include="Packet\PacketCplus.h" />
+    <ClInclude Include="Packet\PacketCSharp.h" />
+    <ClInclude Include="Packet\PacketJava.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CodeEngine\Code\FileStream.cpp" />
+    <ClCompile Include="..\CodeEngine\Code\PBCSharp.cpp" />
+    <ClCompile Include="..\CodeEngine\Code\PBCSharp_Base.cpp" />
+    <ClCompile Include="..\CodeEngine\Code\PBImpl.cpp" />
+    <ClCompile Include="..\CodeEngine\Code\StreamData.cpp" />
+    <ClCompile Include="..\Logic\cmd.cpp" />
+    <ClCompile Include="..\Logic\fileLog.cpp" />
+    <ClCompile Include="..\Logic\Log.cpp" />
+    <ClCompile Include="..\Logic\logImp.cpp" />
+    <ClCompile Include="..\Logic\StrFun.cpp" />
+    <ClCompile Include="..\Logic\StringFun.cpp" />
+    <ClCompile Include="..\Logic\SystemConfig.cpp" />
+    <ClCompile Include="..\Logic\WinFun.cpp" />
+    <ClCompile Include="..\Logic\XML\tinystr.cpp" />
+    <ClCompile Include="..\Logic\XML\tinyxml.cpp" />
+    <ClCompile Include="..\Logic\XML\tinyxmlerror.cpp" />
+    <ClCompile Include="..\Logic\XML\tinyxmlparser.cpp" />
+    <ClCompile Include="FigurePacket.cpp" />
+    <ClCompile Include="Packet\IPacketFactory.cc" />
+    <ClCompile Include="Packet\PacketCplus.cpp" />
+    <ClCompile Include="Packet\PacketCSharp.cpp" />
+    <ClCompile Include="Packet\PacketJava.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

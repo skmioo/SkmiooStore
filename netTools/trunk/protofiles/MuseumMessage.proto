@@ -1,0 +1,18 @@
+//@module=museum,StartIndex=4300,classname=Museum,
+option java_package = "com.mile.common.message";
+
+//----------------------博物馆----------------------
+
+
+// 客户端发起操作
+message CGMuseumOperate
+{
+}
+
+// 返回操作结果
+message GCMuseumResult
+{
+	optional int32 errorCode=1; //0:失败;1:成功
+	optional int32 currentID = 2;//当前称号id
+}
+

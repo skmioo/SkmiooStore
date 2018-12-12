@@ -1,0 +1,40 @@
+//@module=pokedex,StartIndex=3900,classname=Pokedex
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+
+
+message PokedexSimpleInfo
+{
+	optional int32 pokedexSimpleInfoId=1;//id
+	optional int32 pokedexSimpleInfoLevel=2;//当前级别
+	optional int32 pokedexSimpleInfoValue=3;//当前好感度
+}
+
+//-----------------------------------------客户端协议---------------------
+message CGGetPokedex
+{
+	optional int64 playerId=1;//角色ID
+	optional int32 type=2;//类型 1:获取单个 GCGetPokedex 2:获取列表 GCGetPokedexList 3:免费送礼 4.元宝送礼 5：清除CD 6：每天24点重置7.获得图鉴
+	optional int32 id=3;//备用ID        
+}
+//-----------------------------------------客户端协议---------------------
+
+
+//==============================服务端协议================================
+message GCGetPokedexList
+{
+	optional int64 lastTime=1;//是最后一次送礼的时间，如果新号或者第二天清0而没有最后送礼时间会发0，
+							//客户端判断如果上次时间到现在大于CD时间，即标亮
+							//如果免费次数用尽，请忽略此字段
+	optional int32 restNum=2;//免费剩余次数
+	optional int32 restNumKim=3;//VIP剩余次数
+	optional int32 type=4;//类型
+	repeated PokedexSimpleInfo pokedexs=5;//图鉴属性单个简表
+	optional int32 result=6;//1成功 0失败
+	optional int32 newId=7;//得到新的图鉴  0没有 其它是ID
+}
+
+
+//==============================服务端协议================================

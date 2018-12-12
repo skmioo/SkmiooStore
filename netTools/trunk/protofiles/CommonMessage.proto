@@ -1,0 +1,134 @@
+//@module=Common,StartIndex=800,classname=Common
+option java_package = "com.mile.common.message";
+message EntryStrStr
+{
+	optional string key = 1; // key
+	optional string value = 2; // value
+	optional string type = 3; // type
+}
+
+message EntryStringInt
+{
+	optional string key = 1; // key
+	optional int32 value = 2; // value
+}
+
+message EntryLongInt
+{
+	optional int64 key = 1; // key
+	optional int32 value = 2; // value
+}
+
+message EntryIntInt
+{
+	optional int32 key = 1; // key
+	optional int32 value = 2; // value
+}
+
+message EntryLongAry
+{
+	optional int64 key = 1; // key
+	repeated string strAry = 2; // value
+}
+
+message MapStrStr
+{
+	repeated EntryStrStr entry = 1;
+}
+
+message MapLongAry
+{
+	repeated EntryLongAry entry = 1;	
+}
+
+//向game-server注册session
+message ServerRegist
+{
+	optional int32 serverId = 1;	//服务器ID
+	optional int32 serverType = 2;	//服务器类型
+}
+
+//向登录服返回注册结果
+message LoginRegistBack
+{
+	optional int32 code		= 1;	//0:失败;1:成功
+	optional int32 serverID		= 2;	//服务器ID
+	optional string serverName	= 3;	//服务器名称
+	optional int32 onlineNum	= 4;	//当前在线玩家数量,防止断线重连问题
+}
+
+// login-server向game-server发送用户校验码数据
+message LoginSendVilicode
+{
+	optional string uid = 1;	//uid
+	optional string viliCode = 2;	//校验码
+	optional int64 invalidTime = 3;	//到期时间
+}
+
+
+//玩家重新连接服务器
+message CGReLogin
+{
+	optional int64 accountID	= 1;	//账户id(center-login生成)
+	optional string uid		= 2;
+	optional string platForm	= 3;	//平台类型
+	optional string authKey		= 4;	//账号登陆验证
+}
+
+//重连返回
+message GCReLogin
+{
+	optional int32 result		= 1;	//登陆结果，验证失败0, 1成功, 3=封号， 4连接超时, 
+	optional int64 eniqueID		= 2;	//EniqueID
+}
+
+
+//同步消息
+message SendSyncInnerPacket
+{
+	optional int64 exchagerId	= 1;	//exchager交换ID
+	optional int32 innerPacketId	= 2;	//内部消息ID
+	optional bytes innerPacket	= 3;	//内部消息包	
+}
+
+message BackSyncInnerPacket
+{
+	optional int64 exchagerId	= 1;	//exchager交换ID
+	optional int32 result		= 2;
+	optional int32 innerPacketId	= 3;	//内部消息ID
+	optional bytes innerPacket	= 4;	//内部消息包	
+}
+
+//请求服务器配置
+message ReqServerProperties
+{
+	optional int32 serverType = 1;	//服务器类型
+	repeated string propFileName = 2;//请求的文件名	
+	optional int32 needMongodb = 3;	//需要DB
+}
+
+message PropertiesInfo
+{
+	optional string key = 1;	//key
+	repeated string value = 2;	//值
+}
+
+message ServerPropertiesBack
+{
+	optional int32 serverType	= 1;	//服务器类型
+	optional int32 serverGroupId	= 2;	//服务器组ID	
+	repeated PropertiesInfo propInfoArr = 3;//其他属性
+}
+//功能开关
+message GCFunctionOpen
+{
+    optional int32 functionId	= 1;	//功能id
+	  optional int32 functionVal	= 2;	//功能值 1开启，0，关闭
+}
+//功能开关列表
+message GCFunctionOpenList
+{
+    repeated GCFunctionOpen functions=1;//开放列表
+}
+
+

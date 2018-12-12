@@ -1,0 +1,354 @@
+//@module=inner,StartIndex=300,classname=Inner
+option java_package = "com.mile.common.message";
+
+message RandomIsland
+{
+	optional string islandName	= 1;
+	optional int32 PosX	= 2;
+	optional int32 PosY	= 3;
+}
+
+//----------------------角色VO定义----------------------
+
+
+
+message Vector3Info
+{
+	optional int32 x	= 1;
+	optional int32 y	= 2;
+	optional int32 z	= 3;
+}
+
+message SkillItemData
+{
+	optional int32 skillid = 1;	//技能id
+	optional int32 skilllevel = 2;	//技能id
+	optional int32 skillposition = 3;	//技能格子
+	optional int32 flagnormal = 4;	//是否普通技能 1是0否
+}
+
+//外显处理消息 根据不同类型的外显 拼接不同的字符串.客户端分别
+message CharacterViewMsg
+{
+    optional int32 viewType=1;//1宠物外显  2 血色试炼积分 3，称号 4帮派属性
+    optional string viewValue=2;//1宠物外显     悟性:等级:星级:成长率:代数 ;2 血色试炼积分
+}
+
+
+
+
+
+//角色基础数据
+message CharacterInfo
+{
+	optional int64 objId  			= 1;	//obj 唯一vo
+	optional string charName		= 2;    //角色名字
+	optional Vector3Info pos		= 3;	//玩家进入场景的坐标，如为0，则使用场景配表的出生点
+	optional Vector3Info direction		= 4;	//玩家进入场景的方向(3维)，如为空，则使用场景配表的方向
+	optional int32 sid			= 5;//小类ID
+	optional int32 bid			= 6; //大类ID
+	repeated CharacterAttr charAttr		= 7;//用户属性集合
+	optional ChangeEquipInfo changeEquipInfo =8;//换装需要的数据
+	optional string interactId		= 9;	//交互id
+	optional int32 liveTime			= 10; //已存活时间
+	optional RedCross redcross		= 12;//血池
+	optional int32 horseid  		= 13;	//已选择坐骑id
+	optional int32 usehorseflag  		= 14;	//是否骑马1是 0否
+	optional int32 titleid  		= 15;	//称号
+	repeated int64 belongObjId  		= 16;	//专属角色ID
+	optional int32 gemEffect		= 17;	//宝石共鸣效果 0:表示没有效果
+	optional GangInfo gangInfo		= 18;//帮派属性
+	optional int32 enterDungeon		= 19;	//是否同意进入副本	0:未同意; 1:已同意
+	optional int32 powerEffect		= 20;	//装备注灵共鸣效果 0:表示没有效果
+	optional int32 awakeEffect		= 21;	//装备觉醒共鸣效果 0:表示没有效果
+	optional string vipName			= 22;	//加v姓名
+	optional RandomIndexInfo randomIndexInfo = 23; //随机数
+	optional int32 horseEquipEffect		= 24;	//坐骑装备升星共鸣效果 0:表示没有效果
+	optional int32 flowerValue  		= 25;	//鲜花宝贝魅力值
+	optional string otherName  		= 26;	//另一半的名字
+	optional int32 otherSex  		= 27;	//另一半在婚姻中的性别 1，男，0女
+	repeated Vector3Info roads  		= 28;	//移动路径
+	optional int64 ownId=29;//
+	repeated CharacterViewMsg views=30;//外显
+	optional int32 catchState 		= 31; // 捕捉状态（ 0不可捕捉，1可捕捉 ）
+	optional int64 deleteTime		= 32; // 灵兽怪可捕捉状态存活时间
+}
+
+//坐骑数据
+message HorseInfo
+{
+	optional int32 tableid	=1;//坐骑配表id
+	optional int64 serverid	=2;//坐骑服务器id
+	optional int32 isuse = 3;//是否使用 1是 0 否
+	optional int32 upstarrate = 4;//坐骑培养进度
+}
+
+//换装需要的数据
+message ChangeEquipInfo
+{	    
+	optional int32 hair	=1;//头发
+	optional int32 face	=2;//脸
+	optional int32 weapon =3;//背包中武器
+	optional int32 clothes	=4;//背包中衣服
+	optional int32 fashionClothes	=5;//时装衣服(为0时，装备的是衣服，不为0时，装备的是时装)
+	optional int32 fashionWeapon =6;//时装武器(为0时，装备的是衣服，不为0时，装备的是时装)
+	optional int32 fashionHair =7;//时装发型(为0时，装备的是衣服，不为0时，装备的是时装)
+	optional int32 isview			= 8; //是否显示时装1是 0否
+}
+
+//玩家时装包数据
+message PlayerFashion
+{
+	optional int32 tableid	=1;//时装配表id
+	optional int64 serverid	=2;//时装服务器id
+	optional int64 invalidtime	=3;//失效时间
+	optional int32 timetype	=4;//时间类型(0 7天1 1个月2 永久)
+	optional int32 isuser	=5;//是否使用1是 0否
+}
+
+//血池数据
+message RedCross
+{
+	optional int64 redcrossmaxhp	=1;//血池最大血量
+	optional int64 redcrosshp	=2;//血池血量
+	optional int64 redcrossmaxmp	=3;//血池最大魔法
+	optional int64 redcrossmp	=4;//血池魔法
+}
+
+message CharacterAttr
+{
+	optional int32 attrkey  		= 1;
+	optional int64 attrvalue  		= 2;
+	optional int32 viewflag  		= 3;//是否展示(1是 0否)
+}
+
+message PetAttr
+{
+	optional int32 attrkey  		= 1;
+	optional int32 attrvalue  		= 2;
+	optional int32 num  		= 3;//属性培养剩余次数
+}
+
+
+
+message PetInfo
+{
+	optional int32 id = 1;//配置表id
+	optional string name	= 2;    //宠物名字
+	optional int32 sex  = 3;//性别
+	optional int32 quality = 4;//品质:0白色 1绿色 2蓝色 3紫色 4橙色
+	optional int32 character = 5;//性格:0鲁莽1憨厚2冷静3谨慎
+	optional int32 battleflag = 6;//战斗状态0休息1出战
+	optional int32 petGrow = 7;//成长资质
+	optional int32 starlevel = 8;//星级
+	optional int32 level = 9;//等级
+	optional int64 petId = 10;//宠物唯一id
+	repeated PetAttr petAttr = 11;//属性集合不计算
+	repeated PetAttr petAttrDown = 12;//属性集合计算
+	repeated SkillItemData skilldata = 13;//技能集合
+	optional int64 objid = 14;//服务器唯一id
+}
+
+//message CGheartbeatClientSend
+//{
+//	optional int64 accountID  	= 1;//玩家账号,可能为空或者0
+//}
+
+//修改属性
+message GCChangeAttribute
+{
+	optional int64 objId  		= 1;	//唯一id
+	optional int32 type		= 2;  //修改类型 
+	optional int32 bid		= 3;  //大类id
+	optional int32 sid		= 4;  //小类id
+	optional string interactId	= 5;	//交互id
+	optional CharacterInfo info	= 6;	//角色属性
+}
+
+//message GCheartbeatServerBack
+//{
+//	optional int64 serverTime  	= 1;//服务器当前时间
+//}
+
+//统一错误提示
+message GCErroeHintBack
+{
+	optional int32 errorCode = 1;	// 错误类型提示码
+	optional string errorDesc = 2;	//错误描述(取不到提示码的时候取文字描述)
+	repeated string parm = 3;//提示错误参数
+	optional int32 boxType = 4;	// 0=默认小弹窗,1=大弹窗
+}
+
+//device 数据
+message DeviceInfo
+{
+	optional int64 objId  		= 1;	//场景中id
+	optional Vector3Info pos	= 2;	//坐标
+	optional int32 bid		= 3;  //大类id
+	optional int32 sid		= 4;  //小类id
+	optional int32 deviceType	= 5;  //类型 4=掉落物品 5=传送点 6=采集物品
+	optional int32 num		= 6;  //数量
+	optional int32 status		= 7;  //采集状态(掉落物品没有此属性), 0不可采集 1可采集
+	optional Vector3Info srcPos	= 8;	//怪物坐标
+	optional int32 camp		= 9;  //阵营
+	optional int32 isCurrency	= 10;  //是否货币
+	optional string str	= 11;  //字符串
+	optional Vector3Info direction	= 12;  //朝向
+}
+
+//成就
+message Achievement
+{
+	optional int32 id = 1;//成就id
+	optional int32 isover = 2;//成就id 1完成0未完成
+	optional int32 isget = 3;//是否领取 1是0否
+	optional int64 value = 4;//已完成数量
+	optional int64 getachievetime	=5;//成就获得时间
+}
+
+//称号
+message Titlel
+{
+	optional int32 id = 1;//称号id
+	optional int32 flag = 2;//是否在使用 1是 0否
+	optional int32 status = 3;//称号状态 0未获得 1已获得  2已过期
+	optional int64 endtime = 4;//称号失效时间.....限时称号用到
+}
+
+
+//机关数据(因秦伟已经抢占了TrapInfo, 我只能使用)
+message TrapData
+{
+	optional int64 objId  		= 1;	//场景中id	
+	optional int32 sid		= 2;  //小类id
+	repeated TrapItemData items	= 3;  //包含的单体
+}
+
+
+//机关单体数据
+message TrapItemData
+{
+	optional int64 objId  		= 1;	//场景中id	
+	optional int32 sid		= 2;  //小类id
+	optional Vector3Info pos	= 3;	//坐标
+	optional Vector3Info dir	= 4;	//朝向
+}
+
+//vip数据
+message VipData
+{
+	optional int32 viplevel		= 1;  //vip等级
+	optional int32 getflag		= 2;  //是否领取1已经领取 0没领取
+}
+
+message GangInfo
+{
+	optional int64 gangId      = 1;//帮派ID
+	optional string gangName   = 2;//帮派名字
+	optional string totemName  = 3;//图腾名字
+	optional int32 gangJob     = 4;//职位
+}
+
+//好友数据
+message FriendData
+{
+	optional int64 objId  			= 1;	//obj 唯一vo
+	optional string address  = 2;//地理位置
+	optional int32 online     = 3;//是否在线 1是 0否
+	optional int32 type = 4;//类型 1好友 2仇人 3黑名单 4陌生人大于3的都返4
+	optional int32 career = 5;//职业
+	optional string name = 6;//名字
+	optional int32 level = 7;//等级
+	optional int32 sex = 8;//性别 0女
+	optional int32 vip = 9;//Vip
+}
+
+//个人消息
+message PersonalMessagees
+{
+	optional int32 type = 1;//1好友 2被杀
+	optional int64 objId = 2;//obj 唯一vo
+	optional string name = 3;//名字
+}
+
+//弹框通用协议,type根据使用情况自己添加
+message GCCmmonDialog
+{
+	optional int32 type = 1;	//类型 1:队长领取新一轮捉鬼任务 2:XXX(多个)不在附近,不能执行任务 3:组队拒绝跟随 4:XXX拒绝进入副本
+	repeated string contents = 2;	//参数列表
+}
+
+
+//技能攻击关系
+message SkillAttackRelation
+{
+	optional int64 objId 				= 1; // 角色Id
+	optional int32 relation 			= 2; //关系
+}
+
+//向客户端推送获得经验
+message GCSendAddExp
+{
+	optional int32 bid = 1;	//任务 宠物 坐骑 大类id
+	optional int64 sid = 2;	//对象id(宠物坐骑预留)
+	optional int32 addExp = 3;	//获得经验数量
+	optional int32 source = 4;	//来源 4:副本扫荡经验 5:资源找回经验 6:爬塔经验 7:使用道具获得经验 8:任务获得经验 9:排行榜膜拜
+}
+
+//客户端弹倒计时确认提示框
+message GCAddVerifyBox
+{
+	optional int32 type = 1;	//弹框类型(用到的自己定义，根据类型选择确认 取消的后续操作)
+	optional int32 operate = 2;	//倒计时结束后操作 1:取消 2:确定
+	optional int32 time = 3;	//倒计时 N 秒
+	repeated string params = 4;	//参数(根据type封装)
+	optional int32 messageID = 5;	//确认操作提示内容
+}
+
+//客户端弹倒计时确认提示框
+message CGVerifyBoxResult
+{
+	optional int32 type = 1;	//弹框类型(用到的自己定义，根据类型选择确认 取消的后续操作)
+	optional int32 operate = 2;	//倒计时结束后操作 1:取消 2:确定
+	repeated string params = 3;	//参数,根据type解析
+}
+
+//角色说话
+message GCCharacterTalk
+{
+	optional int64 objId		= 1; // 角色Id
+	optional int32 talkWord		= 2; //说话文字ID
+	optional int32 talkVoice	= 3; //说话语音ID
+}
+
+//副本切换场景
+message GGDungeonChangeScene
+{
+	optional int32 id		= 1; //副本id
+	optional int32 type	= 2; //进入类型
+	optional int32 instanceId		= 3; //场景实例id
+}
+
+
+//随机数
+message RandomIndexInfo
+{
+	optional int32 randomIndexHitChances	= 1; //随机序号-命中
+	optional int32 randomIndexCrit		= 2; //随机序号-暴击
+}
+
+
+//物品信息
+message Iteminfo
+{
+	optional int32 bid =1; //大类id
+	optional int32 sid =2; //小类id
+	optional int32 num =3; //物品数量
+}
+
+
+//播放固定特效
+message GCPlayEffect
+{
+	optional int32 id= 1; //特效ID
+}

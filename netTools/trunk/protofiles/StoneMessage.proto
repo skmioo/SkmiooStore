@@ -1,0 +1,35 @@
+//@module=stone,StartIndex=2900,classname=Stone
+option java_package = "com.mile.common.message";
+
+//----------------------宝石----------------------
+
+
+message CGStone
+{
+	optional int32 type	=1; //1：获取宝石数据 2：镶嵌(ps：宝石坑中已存在宝石时，替换) 3：摘除 ，4：合成，5：合成全部 
+    optional int32 slotId	=2; //装备槽id 	
+    optional int32 holeId = 3;	//宝石坑id
+	optional int32 templateId	=4; //宝石id
+	optional int32 addBind = 5;	//合成是否使用绑定宝石  0:不使用; 1:使用
+}
+
+
+message GCStone
+{
+	optional int32 type	=1;	//
+	repeated StoneSlotInfo stoneSlotList=2;	//宝石列表
+	optional int32 errorCode	=3;//成功：0；  
+	repeated int32 gemSyms = 4;	//共鸣属性列表	
+}
+
+message StoneSlotInfo
+{
+	optional int32 slotId = 1;	//装备槽id
+	repeated StoneInfo stoneInfo = 2;	//槽的宝石信息
+}
+
+message StoneInfo
+{
+	optional int32 holeId	=1;	//宝石坑id
+    optional int32 templateId	=2;// 宝石模板id
+}

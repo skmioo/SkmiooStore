@@ -1,0 +1,33 @@
+//@module=worldBoss,StartIndex=3700,classname=WorldBoss
+option java_package = "com.mile.common.message";
+
+//----------------------  世界BOSS功能 repeated ----------------------
+
+//世界Boss个人数据
+message WorldBossPlayerInfo
+{
+	optional int64 inspireTime= 1; //鼓舞时间
+	optional int32 freeInspire=	2; //免费鼓舞次数
+	optional int32 payInspire = 3; //付费鼓舞次数
+}
+
+
+//世界BOSS
+message CGWorldBossInfo
+{
+	optional int32 type = 1;  //1:免费鼓舞 2:付费鼓舞
+	optional int64 playerId = 2; //被膜拜人的ID(膜拜时需要)
+}
+
+message GCWorldBossInfo
+{
+	optional int32 type = 1; //	1:登录个人数据	2:活动开始	3:个人数据修改
+	optional WorldBossPlayerInfo  playerInfo=2;//个人数据
+	optional int32 bossID = 3;//bossid
+}
+
+
+
+
+
+

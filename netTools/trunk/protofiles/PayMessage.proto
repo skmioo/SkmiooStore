@@ -1,0 +1,76 @@
+//@module=pay,StartIndex=6100,classname=Pay
+option java_package = "com.mile.common.message";
+
+//----------------------  充值支付功能  ----------------------
+
+message OrderInfo
+{
+	optional string orderID = 1;	//订单id
+	optional int64 playerID =2;	//角色id
+	optional int32 type = 3;	//订单类型
+	optional int32 state = 4; //订单状态 0:未支付; 1:支付完成
+	optional string createTime = 5;	//订单时间
+	optional int32 money = 6;	//订单金额(RMB)
+	optional string platForm = 7;	//充值平台
+	optional string apppOrderID = 8;	//平台订单id
+	optional int32 serverID = 9;	//game-server服务器ID
+	optional int32 sid = 10;//充值模板ID
+	optional int64 accountID = 11;	//账户ID
+}
+
+// 客户端充值,创建订单
+message CGCreateOrder
+{
+	optional int32 sid = 1;	//充值模版ID
+	optional string apppOrderID = 2;	//平台订单ID,选填
+	optional string platForm = 3;	//充值平台
+	optional string parse = 4;	//特殊参数,没有不传
+}
+
+//返回订单信息
+message GCCreateOrderBack
+{
+	optional OrderInfo orderInfo = 1;	//订单信息
+}
+
+//获取订单状态
+message CGGetOrderState
+{
+	optional string orderID = 1;	//订单ID
+}
+
+//返回订单状态
+message GCOrderStateBack
+{
+	optional string orderID = 1;	//订单ID
+	optional int32 state = 2;	//订单状态 0:未支付; 1:支付完成
+}
+
+//IOS充值验证
+message CGVerifyIOSPay
+{
+	optional string orderID = 1;	//订单ID
+	optional string receipt = 2;	//订单receipt
+}
+
+//返回IOS充值验证信息
+message GCVerifyIOSPayBack
+{
+	optional string orderID = 1;	//订单ID
+	optional string transaction_id = 2;	//ios订单编号
+	optional int32 state = 3;	//订单状态 0:未支付; 1:支付完成
+}
+
+//充值项每日购买信息
+message RechargeItem
+{
+	optional int32 sid = 1;	//充值模版ID
+	optional int32 curTimes = 2;	//已购买次数
+	optional int32 maxTimes = 3;	//最大购买次数-1不限制
+}
+//返回玩家充值项每日购买情况
+message GCRechargeItemInfo
+{
+	repeated RechargeItem  rechargeItemList = 1;	//充值项购买信息
+}
+

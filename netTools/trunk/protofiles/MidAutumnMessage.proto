@@ -1,0 +1,50 @@
+//@module=midAutumn,StartIndex=7400,classname=MidAutumn
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//-----------------------------中秋------------------------
+//奖励内容
+message MidaTargetInfo
+{
+	optional Iteminfo itemInfo		= 1;		//物品显示为icon
+	optional int32 currency			= 2;		//首选消耗货币
+	optional int32 consumeValue		= 3;		//消费的金额 
+	optional int32 isShow			= 4;		//是否显示 0不 1是
+	optional int32 vipLevel			= 5;		//免费领取vip等级限制
+	optional int32 freeNun			= 6;		//免费次数
+	optional int32 maxNun			= 7;		//最大次数
+	optional int32 id				= 8;		//id
+	optional int32 currency2               = 9;		//备选消耗货币
+}
+
+//奖励内容
+message MidaClientInfo
+{
+	optional int32 model				=1;	//模型
+	optional string scale				=2;	//缩放
+	optional string rotate				=3;	//朝向
+	optional string position			=4;	//位置
+	optional int32 title				=5;	//称号
+	optional int64 startTime			=6;	//开始
+	optional int64 endTime			=7;	//结束
+	repeated Iteminfo items		=8; //奖励列表
+}
+
+//请求数据
+message CGMidAutumn
+{
+	optional int32 type		= 1 ; //1活动消息 包含client target 数据 2 抽奖 3获取活动版本  4获取奖励
+	optional int32 targetID		= 2 ; //抽奖目标id
+}
+
+
+message GCMidAutumn
+{
+	optional int32			 type			= 1;		//1活动消息 2 抽奖 3获取活动版本
+	repeated MidaTargetInfo	 targets		= 2;		//活动消息
+	optional MidaClientInfo	 clientInfo		= 3;		//客户端数据
+	optional int32			 result		= 4;		//消息返回 1 表示成功 
+	optional int32			 version		= 5;		 //活动版本
+	optional int32    	 activityId = 6; 		//活动id 1001表示中秋  1024表示万圣节
+}

@@ -1,0 +1,43 @@
+//@module=shenQi,StartIndex=7800,classname=ShenQi
+option java_package = "com.mile.common.message";
+
+
+import "InnerMessage.proto";
+
+//----------------------  神器系统协议  ----------------------
+//信息
+message ShenQiInfo
+{
+	optional int32 sid = 1;//当前小ID
+	optional int32 can = 2;	//可进行的操作 0升星1解封 2突破 3已满级不能操作
+	optional int32 isWear = 3;//穿戴状态 0：没穿戴 1：穿戴
+}
+
+//升级
+message CGShenQiLevelUp
+{
+	optional int32 bid = 1;	//神器大类
+}
+
+
+
+//升级返回结果
+message GCShenQiLevel
+{
+	optional int32 type=1;//1 登录推送 2返回升级结果3穿戴
+	optional int32 result = 2;	//操作结果0:升级失败; 1:升级成功
+	repeated ShenQiInfo infos = 3;	//神器数据 	
+}
+
+//穿戴神器
+message CGShenQiWear
+{
+	optional int32 bid = 1;//神器大类
+	optional int32 isWear =2;//0卸下 1穿戴
+}
+
+//刷新神器技能
+message GCRefreshShenQiSkill
+{
+	optional SkillItemData shenQiSkilldata = 1;//神器技能
+}

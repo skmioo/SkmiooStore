@@ -1,0 +1,127 @@
+15:49 2014/3/12
+
+windows环境 ：win7 64bit 
+	      Python 2.7.6+
+直接点击cmd.exe，然后输入runme,生成目标文件在..\Server和..\Client
+
+
+
+12:17 2014/3/11
+
+文件说明：
+
+1、ID_Generator.py  生成MessageId的文件包括cs和java
+
+2、Msg_Generator.py 生成Message的文件包括cs和java
+
+3、runme.bat 是删除旧文件并运行上述两个py文件生成的目标文件在..\Server和..\Client中
+直接copy到相应的路径下面即可使用。
+
+4、proto源文件存放在..\protofiles目录下面，按照模块进行划分
+
+5、每个proto文件中必须有如下描述信息(建议放到第一行)：
+//@module=login,StartIndex=10001,classname=Login
+格式必须一致，模块名和类名可以和文件名保持一致
+对于StartIndex 必须由项目组统一进行分段规划。
+
+6、portoc 文件是2.4.1版本，java 环境需要的jar包：protobuf-java-2.4.1.jar
+
+7、注意，C++client的话，需要引入.\protobuf-2.4.1\src 这个依赖
+
+8、除作为参数的消息体，其他消息的名字格式如下：
+    客户端 -> 登陆服务器 CL
+    客户端 -> 游戏服务器 CG
+    登陆服务器 -> 游戏服务器 LG
+    游戏服务器 -> 登陆服务器 GL
+
+
+注意事项（坑点，都是大家摸索试出来的，出错时没有日志供查看）
+1、message 与消息名之间只能有一个空格， 否则会生成不出来
+2、message 的{ } 必须都是另起一行，顶格写，否则会生成不出来
+3、每个消息文件StartIndex都不能重复，否则生成不出来
+4、每个消息文件里的消息数量不能太多，否则会产生大文件
+5、每个消息文件里最多产生100个，否则拆分新文件
+
+
+
+//=====================当前各个.photo文件的StartIndex======================================
+
+//预留通用的服务器间的消息1001 ~ 9999
+StartIndex=100,classname=Config
+StartIndex=200,classname=Gateway
+StartIndex=300,classname=Inner
+StartIndex=400,classname=Recast
+
+//逻辑用的Index
+StartIndex=800,classname=Common
+StartIndex=1000,classname=Login
+
+StartIndex=2100,classname=PlayerMessage
+StartIndex=2200,classname=SceneMessage
+StartIndex=2300,classname=BackpackMessage
+StartIndex=2400,classname=EquipMessage
+StartIndex=2500,classname=SkillMessage
+StartIndex=2600,classname=ImpactMessage
+StartIndex=2700,classname=TeamMessage
+StartIndex=2800,classname=DungeonMessage
+StartIndex=2900,classname=StoneMessage
+StartIndex=3000,classname=TaskMessage
+StartIndex=3100,classname=ShopMessage
+StartIndex=3200,classname=ArenaMessage
+StartIndex=3300,classname=TowerMessage
+StartIndex=3400,classname=MailMessage
+StartIndex=3500,classname=GM4ClientMessage
+StartIndex=3600,classname=TeamPKMessage
+StartIndex=3700,classname=WorldBossMessage
+StartIndex=3800,classname=RankingMessage
+StartIndex=3900,classname=PokedexMessage
+StartIndex=4000,classname=WildBossMessage
+StartIndex=4100,classname=GangMessage
+StartIndex=4200,classname=AuctionMessage
+StartIndex=4300,classname=MuseumMessage
+StartIndex=4400,classname=FashionMessage
+StartIndex=4500,classname=HighLadderMessage
+StartIndex=4600,classname=HorsesMessage
+StartIndex=4700,classname=PetMessage
+StartIndex=4800,classname=RedCrossMessage
+StartIndex=4900,classname=VipMessage
+StartIndex=5000,classname=FriendMessage
+StartIndex=5100,classname=ChatMessage
+StartIndex=5200,classname=WelfareMessage
+StartIndex=5300,classname=VitalityMessage
+StartIndex=5400,classname=BattleFieldMessage
+StartIndex=5500,classname=ResourceMessage
+StartIndex=5700,classname=RandomDungeonMessage
+StartIndex=5800,classname=RedPrisonMessage
+StartIndex=5900,classname=ActivityMessage
+StartIndex=6000,classname=BattleMessage
+StartIndex=6100,classname=PayMessage
+StartIndex=6200,classname=LegacyMessage
+StartIndex=6300,classname=SuperGiftMessage
+StartIndex=6400,classname=ActivityAnswerMessage
+StartIndex=6500,classname=BattleFieldMessage
+StartIndex=6600,classname=BadValleyMessage
+StartIndex=6700,classname=PVPMessage
+StartIndex=6800,classname=GongChengMessage
+StartIndex=6900,classname=KingClashMessage
+StartIndex=7000,classname=HappyRollMessage
+StartIndex=7100,classname=CapeMessage
+StartIndex=7200,classname=FateMessage
+StartIndex=7300,classname=ActivityRankMessage
+StartIndex=7400,classname=MidAutumnMessage
+StartIndex=7500,classname=NationalDayMessage
+StartIndex=7600,classname=CurcyIntegralMessage
+StartIndex=7700,classname=CommonExchangeMessage
+StartIndex=7800,classname=ShenQiMessage
+StartIndex=7900,classname=ChallengeBatchMessage
+StartIndex=8000,classname=CombineActivityMessage
+StartIndex=8100,classname=SnowManMessage
+StartIndex=8200,classname=AllCombatMessage
+StartIndex=8300,classname=TreasureEquipMessage
+StartIndex=8400,classname=MarryMessage
+StartIndex=8500,classname=TalismanMessage
+StartIndex=8600,classname=SpiritBeastMessage
+StartIndex=8700,classname=EscortMessage
+StartIndex=8800,classname=GalaxyMessage
+StartIndex=8900,classname=XueSeShiLian
+StartIndex=9000,classname=GardenMessage

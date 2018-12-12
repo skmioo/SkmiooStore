@@ -1,0 +1,41 @@
+//@module=Base,StartIndex=900,classname=Base
+option java_package = "com.mile.common.message";
+
+//统一错误提示
+message GCErrorBack
+{
+	optional int32 type = 1;	// 提示类型 0 1 
+	optional int32 revMsgId = 2;	// 服务器接收到的消息id
+	optional string parm = 3;//提示错误参数
+
+
+}
+
+//心跳
+message CGheartbeatClientSend
+{
+
+}
+
+//心跳返回
+message GCheartbeatServerBack
+{
+	optional int64 serverTime = 1;//服务器当前时间
+}
+//服务器间消息传递
+message GCServerMsg
+{
+    optional bytes innerPackets	  	= 1;	//java对象数据
+}
+
+//多点登陆限制
+message GCCloseOldSession
+{
+}
+
+message GCLogMsg
+{
+    optional string func = 1;//功能名字
+    optional string context = 2;//内容
+    optional int32 type=3;//1本地日志，2，y2日志
+}

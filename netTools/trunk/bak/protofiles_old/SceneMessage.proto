@@ -1,0 +1,252 @@
+//@module=scene,StartIndex=20001,classname=Scene
+option java_package = "com.mrd.game.message";
+
+import "InnerMessage.proto";
+import "ImpactMessage.proto";
+
+//----------------------Scene开始----------------------
+//客户端请求登陆场景服务器
+message CGLoginGameServer
+{
+	optional int64 	playerId	= 1;
+	optional string vilidCode	= 2;    //登陆校验码
+	optional int32 	gameServerId	= 3;  //游戏服务器ID
+}
+//服务器端登录返回包
+message GCLoginGameServerBack
+{
+	optional int32 result		= 1;	//登陆结果，验证失败0, 1成功, 4连接超时
+	optional int32 sceneId		= 2;    //地图ID
+}
+//请求进入场景
+message CGEnterScene
+{
+	optional int32 sceneId		= 1;    //地图ID
+	optional Vector3Info pos		= 2;	//玩家进入场景的坐标，如为0，则使用场景配表的出生点
+	optional Vector3Info direction	= 3;	//玩家进入场景的方向(3维)，如为空，则使用场景配表的方向
+}
+//请求进入场景 deprecated
+message GCEnterSceneBack
+{
+	optional int32 flag		= 1;    //1 成功 0 失败
+	optional PlayerInfo mySelf	= 2;    // 
+	optional int32 sceneId		= 3;    //地图ID
+} 
+//进入场景是否完成
+message CGEnterSceneOk
+{
+   optional int32 flag		= 1;    //1 成功 0 失败
+} 
+//进入场景是否完成返回
+message GCEnterSceneOkBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+}
+//服务器返回场景中其他玩家 deprecated
+message GCOtherPlayerInSceneBack
+{
+	repeated PlayerInfo otherPlayers = 1;    // 
+} 
+//服务器返回场景中npc数据 deprecated
+message GCNPCInSceneBack
+{
+	repeated NpcInfo npcInfos = 1;    // 
+}
+//服务器返回场景中MONSTER数据 deprecated
+message GCMonsterInSceneBack
+{
+	repeated MonsterInfo monsterInfos = 1;    // 
+}  
+//服务器返回删除场景中的角色（物品？？）
+message GCDelObjInSceneBack
+{
+	repeated int64 objIds = 1;    // 
+}
+//服务器返回角色死亡
+message GCCharObjDieBack
+{
+	repeated int64 objIds = 1;    // 
+}
+//请求离开场景
+message CGLeaveScene
+{
+	optional int32 leaveSceneId		= 1;    //离开的地图ID
+	optional int32 leaveType		= 2;    //客户端主动离开为1， 服务器强制离开为2
+}
+message GCLeaveSceneBack
+{
+	optional int32 result		= 1;    //1为成功
+	optional int32 sceneId		= 2;    //下一个要进入的场景ID
+}
+//玩家移动消息
+message CGSendMove
+{
+	optional int32 velocity		= 1;    //移动速度
+	optional Vector3Info direction	= 2;    //3维方向
+	optional Vector3Info startPos	= 3;    //玩家当前坐标
+	optional Vector3Info targetPos	= 4;    //玩家目标坐标
+	optional int64 clientTime = 5;		//前端开始移动时间
+}
+//移动路段信息
+message MoveSectionInfo
+{
+	optional int32 moveTypeId	= 1;    //何对象移动，0玩家，1npc
+	optional int64 targetId		= 2;    //对象的ObjBaseInfo.objId
+	optional int32 velocity		= 3;    //移动速度
+	optional Vector3Info startPos	= 4;    //角色当前坐标
+	optional Vector3Info targetPos	= 5;    //角色目标坐标
+	optional int64 startMoveTime	= 6;	//角色开始移动时间
+}
+// 
+message GCMovePathBack
+{
+	repeated MoveSectionInfo moveInvo	= 1;    //移动速度
+}
+//仅同步给玩家自己的属性
+message GCSyncPlayerAttr
+{
+	repeated int32 dirtyFlag = 1; // 标记位型属性的脏标记
+	repeated int32 bitFlagAttr = 2; // 标记位型属性的脏数据
+}
+//CooldownList同步, 仅发送给玩家自己
+message GCSyncCooldownList
+{
+	repeated int32 dirtyFlag = 1; // 标记位型属性的脏标记
+	repeated int32 cooldownSlot = 2; // Cooldown脏数据
+}
+message GCFaceToBack
+{
+	optional int64 objectId			= 1; //当前objectId
+	optional int64 faceToObjectId	= 2; //面向的objectId
+	optional Vector3Info faceToPos	= 3; //面向的方向（如果找不到faceToObjectId所代表的object，则读取此值）
+}
+// 角色位置同步
+message GCSyncCharPosBack
+{ 
+	optional int64 objectId			= 1; //当前objectId
+	optional Vector3Info position	= 2; //	角色位置
+}
+message CGSynStoryValueSend
+{
+	optional int32 storyValue			= 1; //当前StoryValue
+}
+// 前端在某些特定操作（如瞬移技能）后，同步一个当前角色位置，方便服务器进行位置修正
+message CGFixPosSend
+{
+	optional Vector3Info clientPos			= 1; // 当前角色位置
+}
+// ---------------角色属性同步
+message GCSyncCharAttrbuteBack
+{ 
+	optional int32 objType 			= 1; // 角色类型 1player,2 MONSTER,3 BOSS,4 NPC
+	optional AttackInfo attackInfo 	= 2; // 
+	optional CharacterInfo baseInfo = 3; //
+}
+// 修改属性同步1
+message GCSyncAlterableAttr
+{
+	optional int64 objectId			= 1; //当前objectId
+	repeated int32 dirtyFlag = 2; // 标记位型属性的脏标记
+	repeated int32 bitFlagAttr = 3; // 标记位型属性的脏数据
+}
+// 修正属性同步2
+message GCSyncRefixableAttr
+{
+	optional int64 objectId			= 1; //当前objectId
+	repeated int32 dirtyFlag = 2; // 标记位型属性的脏标记
+	repeated int32 bitFlagAttr = 3; // 标记位型属性的脏数据
+}
+// 额外(除修改、修正)属性同步3
+message GCSyncAdditionalAttr
+{
+	optional int64 objectId			= 1; //当前objectId
+	repeated int32 replaceableDirtyFlag = 2; // 标记位型属性的脏标记
+	repeated int32 replaceableBitFlagAttr = 3; // 标记位型属性的脏数据
+	repeated int32 statusDirtyFlag = 4; // 标记位型属性的脏标记
+	repeated int32 statusBitFlagAttr = 5; // 标记位型属性的脏数据
+}
+//创建object 时候的基础数据同步
+message CreateObjectInfo
+{
+	optional int64 objectId			= 1; //当前objectId
+	optional GCSyncAlterableAttr alterableAttr = 2; // 基础属性同步1
+	optional Vector3Info pos		= 3;	//玩家进入场景的坐标，如为0，则使用场景配表的出生点
+	optional Vector3Info direction	= 4;	//玩家进入场景的方向(3维)，如为空，则使用场景配表的方向
+	optional int32 tableId = 5;//配置表中的tableid
+	optional string charName = 6;//玩家名字
+	optional int32 professionType = 7;//职业类型
+	optional int32 objectType = 8; // obj类型 1player,2 MONSTER,3 BOSS,4 NPC ...
+	optional GCSyncRefixableAttr refixableAttr = 9; //修正属性，只有Player Monster才传该值
+	optional GCSyncImpactList impactList = 10; // 效果列表
+	optional GCSyncAdditionalAttr additionalAttr = 11; // 额外属性
+}
+// 服务器推送角色数据
+message GCCreateObjectInfoList
+{
+	repeated CreateObjectInfo objInfo = 1;
+}
+// 玩家进入场景返回当前玩家数据
+message GCPlayerEnterScene
+{
+	optional int32 flag		= 1;    //1 成功 0 失败
+	optional CreateObjectInfo playerSelf = 2;
+	optional int32 sceneId		= 3;    //地图ID
+}
+// 同步朝向
+message GCObjectFaceState
+{
+	optional int64 objectId			= 1;//当前objectId 
+	optional int64 faceToObject		= 2;//看向的objectId 
+	optional Vector3Info faceToPosition	= 3;//看向的位置
+	optional Vector3Info serverPosition	= 4;//服务器的位置
+}
+
+message CGStopMove
+{
+	optional Vector3Info stopPosition = 1; //停止移动的位置
+	optional Vector3Info dirPosition = 2; //朝向
+}
+
+// 停止移动广播
+message GCStopMove
+{
+	optional int64 objectId			= 1;//当前objectId 
+	optional Vector3Info stopPosition	= 2;//停止移动的位置
+	optional Vector3Info dirPosition = 3; //朝向
+	
+}
+
+//申请角色复活(只限主角)
+message CGReqPlayerReborn
+{
+	optional int32 type = 1; //复活类型，1=buff复活
+}
+
+//返回角色复活
+message GCPlayerRebornBack
+{
+	optional int64 objectId		= 1;//当前objectId 
+	optional Vector3Info pos = 2;//复活位置
+	optional Vector3Info direction = 3; //朝向
+}
+
+
+//返回瞬移（只限同场景）
+message GCTeleportBack
+{
+	optional int64 objectId		= 1;//当前objectId 
+	optional Vector3Info pos = 2;//复活位置
+	optional Vector3Info direction = 3; //朝向
+}
+
+//同步场景进度
+message GCSceneScheduleBack
+{
+	optional int32 schedule		= 1;//进度
+}
+
+//同步场景事件
+message GCSceneEventBack
+{
+	optional int32 eventId		= 1;//事件ID
+}

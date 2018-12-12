@@ -1,0 +1,37 @@
+//@module=battleField,StartIndex=5400,classname=BattleField
+option java_package = "com.mile.common.message";
+
+import "CommonMessage.proto";
+//----------------------  战场 repeated ----------------------
+
+message GCBattleField
+{
+    optional int32 operate = 1; //操作类型：1:打开战场面板 2:打开进入战场面板 3:打开商店 4:进入战场 5:退出战场 6:战报数据 7:结算 8:获得结算奖励 9:击杀数据 10:npc说话 11:兑换商品
+    optional int32 time = 2;   //时间：state=1:准备之间 state=2:开始时间
+    optional int32 state = 3;   //(operate=1)活动表id| (operate=3)-1：全部 0：物品 1：装备 2：药品 |(operate=4)1：准备状态 2：开始前十分钟  | (operate=9)1:击杀 2:杀人如麻
+    optional int32 param = 4;   //(operate=4)活动表id
+    optional EntryIntInt itemInfo = 5;//商品id:兑换次数
+    repeated EntryIntInt itemList = 6;//商品id
+    optional int64 killPuid = 7; //击杀者
+    optional int64 diePuid = 8; //被杀者
+    optional int32 npcID = 9;   //说话npcID
+	optional int32 result = 10;//(operate=7)1:队伍1获胜，2：队伍2获胜，0：平局 (operate=1) 1:活动开启 0:活动未开启
+    repeated int32 camp1Info = 11; //阵营1人数，当前资源，最大资源
+    repeated int32 camp2Info = 12; //阵营2人数，当前资源，最大资源
+    repeated int32 selfRecord = 13;  //个人战绩 排名 杀敌数量,击杀npc,三连斩次数,大杀特杀
+    repeated EntryLongAry fightRecord = 14;// 战报数据[puid:[阵营, 门派, 玩家姓名, 所属帮会,杀敌数, 最大连斩数, 杀敌npc, 个人积分, (战场结果)]]
+    optional int32 selfIndex = 15;// 自己的排名
+}
+
+message CGBattleField
+{
+    optional int32 operate = 1; //操作类型：1:打开战场面板  3:打开商店 4:进入战场 5:退出战场   8:获得结算奖励  11:兑换商品
+    optional int32 state = 2;//(operate=3)-1：全部 0：物品 1：装备 2：药品 
+    optional int32 itemId = 3;//兑换商品id
+}
+
+
+
+
+
+

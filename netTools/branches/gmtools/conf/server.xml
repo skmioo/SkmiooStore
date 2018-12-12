@@ -1,0 +1,18 @@
+﻿<root>
+	<!--
+		name:服务器名称
+		host:主服务器ip地址
+		port:主服务器端口
+		userName:用户名
+		userPwd:密码
+	-->
+	<node name="程序专用" host="192.168.7.59" port="7100" userName="admin" userPwd="123456"/>
+	<node name="策划专用" host="192.168.7.57" port="7100" userName="admin" userPwd="123456"/>
+	<node name="测试专用" host="120.92.86.9 " port="7100" userName="admin" userPwd="123456"/>
+	<node name="外网160" host="120.92.102.160" port="7100" userName="admin" userPwd="123456"/>
+	<node name="海全" host="192.168.6.53" port="7100" userName="admin" userPwd="123456"/>
+	<node name="张哲晰" host="192.168.0.190" port="7100" userName="admin" userPwd="123456"/>
+	<node name="李小军" host="192.168.6.75" port="7100" userName="admin" userPwd="123456"/>
+	<node name="冯瑞" host="192.168.6.52" port="7100" userName="admin" userPwd="123456"/>
+	<node name="袁旭东" host="192.168.6.54" port="7100" userName="admin" userPwd="123456"/>
+</root>

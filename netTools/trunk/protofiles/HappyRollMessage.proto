@@ -1,0 +1,110 @@
+//@module=happyRoll,StartIndex=7000,classname=HappyRoll
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//-----------------------------开心乐翻翻------------------------
+//奖励内容
+message HRRewardInfo
+{
+	repeated Iteminfo itemInfo	= 1;			//大小id
+	optional int32 consumeBid = 2;				//消费的bid
+	optional int32 consumeSid = 3;				//消费的sid
+	optional int32 consumeValue = 4;			//消费的金额 
+	optional int32 isShow		= 5;			//是否显示 0不 1是
+	optional int32 id			= 6;			//id
+}
+//活动盘内容
+message ShowInfo
+{
+	optional int32 id	=1; //奖励目标id
+	optional int32 num =2;	//奖励目标数量
+}
+
+//活动消息
+message HRInfo
+{
+	repeated string rewardList = 1;			//获奖玩家名单
+	optional int64 startTime = 2;			//开始时间
+	optional int64 endTime = 3;			//结束时间
+	optional int32 jackPotScore = 4;		//奖池积分
+	optional int32 jackPotMoney = 5;		//奖池金额
+	optional int32 percent = 6;				//%30 = 30
+	optional int32 integral = 7;			//瓜分彩金所需积分
+	optional int32 maxSelectNum = 8;		//最大选择数量
+	optional int32 lastPond = 9;			//瓜分彩金数
+}
+
+
+//请求数据
+message CGHappyRoll
+{
+	optional int32 type = 1;		//1提示信息 2积分  3金额  4全部
+}
+
+//刷新开心乐翻翻提示等等
+message GCHappyRoll
+{
+	optional int32 type = 1;		//1提示信息 2积分  3金额  4全部
+	optional HRInfo hrInfo = 2;		//活动消息
+	optional int32 haveMoneyNum = 3;		//当前只有的钱币金额
+}
+
+
+//下发奖励目标
+message GCHappyRollRewardList
+{
+	repeated HRRewardInfo hrRewardList = 1;	//奖励列表
+	repeated int32 hrMulList = 2;			//下注倍数
+	repeated int32 hrMulDesList = 3;		//下注倍数描述
+}
+
+//下发奖池内容
+message GCHappyRollJackPotList
+{
+	repeated ShowInfo shows = 1;	//奖池
+}
+
+//发送抽奖
+message CGLottery
+{
+	repeated int32 choseRewardIDList = 1;		//选择奖励Id
+	optional int32 choseMultiple = 2;			//选择的倍数
+}
+
+//返回抽奖结果
+message GCLottery
+{
+	optional int32 result = 1;				//1中奖 其他没中
+	optional int32 targetID = 2;			//中奖目标id
+	optional int32 integral = 3;			//获得积分数量
+}
+
+//领取奖励
+message CGHappyRollGetReward
+{
+}
+
+//领取奖励返回结果
+message GCHappyRollGetRewardBack
+{
+	optional int32 result = 1;		//返回结果 1成功 其它失败
+}
+
+
+//检测更新
+message CGCheckHRUpdate
+{
+}
+
+//返回版本号
+message GCVersion
+{
+	optional int32 version = 1;		//版本号
+}
+
+//购买金币
+message CGHappyRollBuyMoney
+{
+	optional int32 buyMoneyNum = 1;	//购买的货币金额
+}

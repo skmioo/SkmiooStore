@@ -1,0 +1,65 @@
+//@module=gang,StartIndex=6900,classname=KingClash
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+import "ShopMessage.proto";
+//帮派信息
+message GangClashInfo
+{
+	optional int64 gangId=1;//帮派ID
+	optional string gangName=2;//帮派名字
+}
+
+//帮派信息
+message ClashNode
+{
+	optional string groupId=1;//节点ID
+	optional GangClashInfo gang1=2;//
+	optional GangClashInfo gang2=3;//
+	optional int32 clashStatus=4;// 状态(1:等待，2：交战, 3:交战完毕)
+	optional int64 winGang=5;//胜利帮派ID
+}
+
+//国王争霸
+message CGKingClash
+{
+	optional int32 operate=1;// 1:打开板，2：战报，3:加注， 4：参战, 5:战场状态,6：战斗结果,7:报名,8:离开
+	optional int32 flag=2;//3:加注（索引index1,2,3）
+}
+
+//国王争霸返回
+message GCKingClash
+{
+	optional int32 operate=1;// 1:打开板，2：战报，3:加注， 4：参战, 5:战场状态,6：战斗结果,7:报名,8:离开
+	optional int32 status=2;//状态：1:报名，2:加注，3:进入 ,5:比赛淘汰，6：报名淘汰
+	repeated ClashNode nodeLst=3;//节点列表
+	repeated CharacterInfo gangPlayerInfo = 4; //牛逼帮派帮众
+	repeated ItemInfo needItems = 5;//花费（4条:0，报名，1,2,3：加注）
+	optional int64 lastTime=6;//状态status：1:报名(报名剩余时间)，2:加注(报名剩余时间)，3:进入（下一场进入时间），-1:结束（）
+}
+
+message KingOneInfo
+{
+	optional int64 puid=1;//玩家ID
+	optional string name=2;//名字
+	optional int32 job=3;//职业
+	optional int64 gangId=4;//帮派id
+	optional int32 killNum=5;//击杀数
+}
+
+//战斗帮派信息
+message GCKingClashFightInfo
+{
+	optional int32 flag = 1;//标志位 （operate=3进入战场时 0，等待进入，1 准备， 2 战斗， 3结束，4：战斗弹板,5:报名弹板）
+	optional int32 lastTime = 2;//剩余时间 秒 根据标志位
+	optional int32 gangSelfKill = 3;//帮派击杀数 
+	optional int32 gangEnemyKill = 4;//
+	optional int32 gangSelfNum = 5;//帮派参战人数
+	optional int32 gangEnemyNum = 6;//
+	repeated KingOneInfo gang1Lst = 7;//帮派玩家列表
+	optional int32 result = 8;//0：失败，1：胜利
+	repeated ItemInfo rewards = 9;//奖励列表
+	optional string gangSelfName = 10;//己帮名
+	optional string gangEnemyName = 11;//敌帮名
+	optional int32 type=12;//8:八强，4：四强，2：二强, 1:第一
+}

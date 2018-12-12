@@ -1,0 +1,44 @@
+//@module=impact,StartIndex=24001,classname=Impact
+option java_package = "com.mrd.game.message";
+
+import "InnerMessage.proto";
+ 
+message ImpactData
+{
+	optional int32 	impactId = 1;//效果id
+	optional int64 	startTime = 2;//开始时间
+	optional int64 	endTime = 3;//结束时间
+	repeated int32 	param = 4;//其他参数(由逻辑自己决定)
+	optional int64	attack_id = 5;//攻击者的id
+}
+ 
+//刷新玩家buff列表
+message GCSyncImpactList
+{ 	 
+	optional int64 	guid = 1;//玩家Id
+	repeated int32  dirtyFlag = 2;//buff槽位的脏标记
+	repeated ImpactData  impactDatas = 3;//效果数据 列表
+}
+
+//前端通知后端有效果触发
+message CGTriggerImpact
+{ 	 
+	optional int64 	targetId = 1;//目标角色Id
+	optional int32  impactId = 2;//触发效果ID
+}
+
+//通知前端有效果触发
+message GCTriggerImpact
+{ 	 
+	optional int64 	guid = 1;//角色Id
+	optional int64 	attackId = 2;//释放角色Id
+	repeated int32  impactIds = 3;//触发效果ID列表
+}
+
+//----------------------测试消息----------------------
+//通知添加
+message CGTestADDImpact
+{ 	 
+	
+}
+

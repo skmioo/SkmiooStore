@@ -1,0 +1,25 @@
+//@module=cape,StartIndex=7100,classname=Cape
+option java_package = "com.mile.common.message";
+
+//----------------------  披风系统协议 repeated ----------------------
+//披风信息
+message CapeInfo
+{
+	optional int32 capeLevel = 1;	//披风等级	等级
+	optional int32 luckValue = 2;	//当前幸运值
+	optional int32 maxLuck = 3;	//最大幸运值	//占位
+}
+
+//披风升级
+message CGCapeLevelUp
+{
+	optional int32 autoReplace = 1;	//道具不足是否金币替代, 0:不替代,1:替代
+}
+
+//披风升级返回结果
+message GCCapeLevelUpResult
+{
+	optional int32 result = 1;	//操作结果0:升级失败; 1:升级成功
+	optional CapeInfo capeInfo = 2;	//披风信息
+	optional int32 operate = 3;	//1:初始化披风数据  2:披风升级结果 	
+}

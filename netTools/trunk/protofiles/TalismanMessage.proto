@@ -1,0 +1,83 @@
+//@module=talisman,StartIndex=8500,classname=Talisman
+option java_package = "com.mile.common.message";
+
+//----------------------法宝----------------------
+
+//法宝数据
+message TalismanInfo
+{
+	optional int64 pid = 1;    					//法宝唯一ID
+	optional int32 sid = 2;    					//模板ID	
+	repeated TalismanAttr talismanAttr = 3; 	//法宝随机属性
+	optional string createName = 4;     		//打造者名字
+}
+
+message TalismanAttr
+{
+	optional int32 attrkey  		= 1;
+	optional int32 attrvalue  		= 2;
+	optional int32 viewflag  		= 3;		//是否展示(1是 0否)
+}
+
+
+//法宝栏数据
+message TalismanSlots
+{
+	optional int32 gridID = 1;          		//法宝栏类型
+	optional int64 pid  = 2;  					//法宝栏所放法宝数据
+	optional int32 level = 3;      				//淬炼法宝栏等级
+}
+
+//查看别人法宝栏数据
+message TalismanSlotsLook
+{
+	optional int32 gridID = 1;          		//法宝栏类型
+	optional TalismanInfo talisInfo = 2;  		//法宝栏所放法宝数据
+	optional int32 level = 3;      				//淬炼法宝栏等级
+}
+
+// 法宝 客户端发起操作
+message CGTalismanOperate
+{
+	optional int32 operate = 1;					//操作类型 1:推送登陆法宝数据 2:穿法宝 3:卸法宝 4.淬炼法宝栏
+	optional int32 gridID = 2;	   		 		//法宝栏id
+	optional int64 pid = 3;	        			//法宝pid
+}
+
+// 法宝 操作返回
+message GCTalismanOperateResult
+{
+	optional int32 operate = 1;					// 操作类型
+	optional int32 result = 2;   				// 0失败，1成功
+	repeated TalismanSlots talismanSlots = 3;   // 法宝栏数据
+	repeated TalismanInfo talismanInfo = 4;     // 法宝数据
+}
+
+// 法宝打造 客户端发起操作
+message CGCreateTalisman
+{
+	optional int32 createListID = 1;  			// 打造列表id
+	optional int32 createType = 2;  			//打造类型( 0普通打造，1高级打造 )
+}
+
+// 法宝打造 返回操作结果
+message GCCreateTalismanResult
+{
+	optional int32 result = 1;  			  	//打造结果（0失败，1成功）
+	optional TalismanInfo talismanInfo = 2;   	//法宝数据
+}
+
+// 法宝分解 客户端发起操作
+message CGResolveTalisman
+{
+	repeated int64 talismanIDList = 1;      	// 要分解的法宝id列表
+}
+
+// 法宝分解 返回操作结果
+message GCResolveTalismanResult
+{
+	optional int32 result = 1;    				// 分解结果 （0失败，1成功）
+	repeated int64 talismanIDList = 2;       	// 要分解的法宝id列表
+}
+
+

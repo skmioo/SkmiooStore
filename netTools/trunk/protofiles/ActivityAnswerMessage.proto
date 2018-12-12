@@ -1,0 +1,117 @@
+//@module=activityAnswer,StartIndex=6400,classname=ActivityAnswer
+option java_package = "com.mile.common.message";
+
+//----------------------  运营活动九门考核答题 repeated ----------------------
+
+//参加活动,获取问题列表
+message CGGetQuestions
+{
+	
+}
+
+//推送问题列表
+message GCSendQuestions
+{
+	repeated int32 ids = 1;	//问题配表id列表
+	optional int64 beginTime = 2;	//答题开始时间
+	optional int32 isOpenSurvey = 3;//是否开启问卷调查 0：不开启 1：开启
+}
+
+//回答问题
+message CGAnswer
+{
+	optional int32 id = 1;	//问题配表id列表
+	optional int32 answer =2;	//答案,配表下标
+}
+
+//回答问题返回结果
+message GCAnswerResult
+{
+	optional int32 result = 1;	//结果,0:错误; 1:正确
+	optional int32 right = 2;	//回答正确的数量
+	optional int32 total = 3;	//累计回答的问题数量
+	optional int32 errorCode = 4;	//错误码 0:答题失败; 1:成功
+	optional int32 totalExp = 5;	//本次活动累计经验
+	optional int32 totalMoney = 6;	//本次活动累计货币
+}
+
+//推送活动开始
+message GCPushAnswerOpen
+{
+	optional int32 isOpenSurvey = 1;//是否开启问卷调查 0：不开启 1：开启
+}
+
+//登录初始化问题数据
+message GCInitAnswer
+{
+	repeated int32 ids = 1;	//问题配表id列表
+	optional int64 beginTime = 2;	//答题开始时间
+	optional int32 right = 3;	//回答正确的数量
+	optional int32 total = 4;	//累计回答的问题数量
+	optional int32 totalExp = 5;	//本次活动累计经验
+	optional int32 totalMoney = 6;	//本次活动累计货币
+	optional int32 isOpenSurvey = 7;//是否开启问卷调查 0：不开启 1：开启
+}
+
+//回答调查
+message CGSurvey
+{
+	optional int32 id = 1;//问题配表id列表
+	optional string answer = 2;//答案
+}
+
+message GCSurvey
+{
+	optional int32 result = 1; //占位 目前没啥意义
+}
+
+//单个题数据
+message QuestionData
+{
+    optional int32 id = 1;	//
+    optional int32 category = 2;	// 1，单选，2多选，3，输入
+    optional string question = 3;	//问题描述
+    optional string answer=4;//答案
+}
+//题库
+message TiKuData
+{
+	repeated QuestionData datas=1;//未答题集合列表
+	optional string propsReward=3;//道具奖励
+	optional string currencyReward=4;//货币奖励
+	optional int32 tikuId=5;//题库id
+	optional string name=6;//题库名字
+	optional int32 rwdSts=7;//领奖状态 1，领取，0，未领取
+	optional int32 totalNum=8;//总题数
+}
+
+
+
+//登陆，活动开启，发送给客户端问卷数据
+message GCWenJuanListData
+{
+    repeated TiKuData dataList=1;//题库列表
+}
+//答题
+message CGAnswrQus
+{
+    optional int32 tikuId=1;//题库id
+    optional int32 questId = 2;	//回答的题
+    optional string answer=3;// 答案 ;多选中间用|分开
+}
+
+//答题返回
+message GCAnswrQus
+{
+    optional int32 tikuId=1;//题库id
+    optional int32 questId = 2;	//回答的题
+}
+//领取奖励
+message CGRwdAnswrQus
+{
+    	optional int32 tikuId=5;//题库id
+}
+message GCRwdAnswrQus
+{
+    	optional int32 tikuId=5;//题库id
+}

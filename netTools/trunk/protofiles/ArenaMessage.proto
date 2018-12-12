@@ -1,0 +1,153 @@
+//@module=arena,StartIndex=3200,classname=Arena
+option java_package = "com.mile.common.message";
+
+//----------------------  竞技场功能  ----------------------
+import "InnerMessage.proto";
+import "ShopMessage.proto";
+import "CommonMessage.proto";
+
+//竞技场实体
+message ArenaInfo
+{
+	optional int64 playerID = 1;	//玩家ID
+	optional string name = 2; //玩家名称
+	optional int32 fightValue = 3;	//战斗力
+	optional int32 division = 4;	//段位
+	optional int32 isDivisionUp = 5;	//是否可以晋级赛
+	optional int32 rank = 6;	//排名
+	optional int32 points = 7;	//积分
+	optional int32 arenaCoin = 8;	//竞技币
+	optional int32 remainTime = 9;	//剩余挑战次数
+	optional int32 cdTime = 10;	//冷却时间
+	optional int32 isCanFight = 12; //是否能挑战 0:不能， 1:能
+	optional CharacterInfo characterInfo = 13; //换装模型
+	optional int32 rankOffset = 14;	//上升名次
+	optional int32 headIcon = 15;	//头像ID
+    optional int32 divisionRank = 16;   //当前段位排名
+ 	optional int32 petConfigId = 17;// 宠物 配置表id -1:不存在
+ 	optional int32 remainVipBuyTime = 18;	//剩余VIP可购买次数
+}
+
+message FightHistroyInfo
+{
+	optional int32 result = 1;	//战斗结果
+	optional int32 isChange = 2; //战斗结果 1:挑战别人， 0：被挑战
+	optional int32 rank = 3;	//排名
+	optional int32 rankOffset = 4;	//上升名次
+	optional int64 enemyID = 5;	//对手ID
+	optional string enemyName = 6;	// 对手名字
+	optional int64 fightTime = 7; // 战斗时间
+}
+
+//开启竞技场
+message CGArenaOpen
+{
+//	optional int64 playerID = 1;	//玩家ID
+}
+
+//服务器推送玩家段位排名等信息
+message GCArenaOpen
+{
+	optional ArenaInfo arenaInfo = 1;	//玩家竞技场信息
+	repeated ArenaInfo arenaInfoList = 2;	//排名前20的玩家信息 //可挑战玩家
+}
+
+//挑战玩家
+message CGArenaFight
+{
+	optional int64 pkID = 1;	//挑战对象ID
+	optional int32 rank = 2;	//挑战对象之前排名
+	optional int32 devision = 3;	//挑战对象之前段位
+}
+
+//挑战结果
+message GCArenaFight
+{
+	optional int32 flg = 1;	//挑战结果 1：成功，0：失败
+	optional int32 senceId = 2;//场景ID 
+}
+
+// 挑战结束结果
+message GCArenaFightResult
+{
+	optional int32 isDivisionUp = 1;// 是否是晋级 1：是，0 不是
+	optional int32 result = 2;	//结果 1:胜利 0:失败
+	optional int32 isExchange = 3;	//是否排名上升 1:是 0:不是
+	optional ArenaInfo selfInfo = 4;	//挑战者信息
+	optional ArenaInfo enemyInfo = 5;	//被挑战者
+	optional int32 exp = 6;	//
+	optional int32 arenaCoin = 7;//
+	repeated ItemInfo fightReward = 8;//挑战奖励
+	repeated ItemInfo divisionUpRewards = 9;// 晋级奖励
+}
+
+// 请求 晋级赛
+message CGArenaDivisionUp
+{
+//	optional int64 pkID = 1;	//挑战对象ID
+}
+
+// 退出竞技场
+message CGArenaQuit
+{
+}
+
+//购买挑战次数
+message CGArenaBuyChance
+{
+}
+
+//推送挑战次数
+message GCArenaBuyChance
+{
+	optional int32 result = 1;	//结果：1：成功，-1：VIP可购买剩余次数不足，-2:金钱不足, 0:只推送总次数
+	optional int32 remainTime = 2;	//剩余挑战次数
+	optional int32 remainVipBuyTime = 3;	//剩余VIP可购买次数
+}
+
+//请求 挑战记录
+message CGArenaFightRecord
+{
+}
+
+//返回 挑战记录
+message GCArenaFightRecord
+{
+	repeated FightHistroyInfo fightHistroyInfo = 1;
+}
+
+// 重置挑战时间(冷却时间归零)
+message CGArenaClrCDTime
+{
+}
+
+//推送下一次挑战时间
+message GCArenaClrCDTime
+{
+	optional int32 result = 1;	//结果：1：成功，0：失败
+}
+
+message CGGetArenaShopItems
+{
+    optional int32 state = 1;//-1：全部 0：物品 1：装备 2：药品 
+}
+
+message GCGetArenaShopItemsBack
+{
+	optional int32 state = 1;//-1：全部 0：物品 1：装备 2：药品 
+    repeated EntryIntInt item1List = 2;//商品id:今日可兑换次数
+    repeated EntryIntInt item2List = 3;//商品id：是否可兑换
+}
+
+message CGExchangeArenaShopItem
+{
+    optional int32 id = 1;     //商品id
+}
+
+message GCExchangeArenaShopItem
+{
+    optional int32 result = 1;  //结果：1：成功，0：失败
+    optional int32 credit = 2;      //当前玩家荣誉点
+    optional int32 arenaCoin = 3;   //当前玩家竞技币
+    optional EntryIntInt itemInfo = 4;//商品id:兑换次数
+}

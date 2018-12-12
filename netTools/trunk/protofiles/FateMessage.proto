@@ -1,0 +1,40 @@
+//@module=fate,StartIndex=7200,classname=Fate
+option java_package = "com.mile.common.message";
+
+import "BackpackMessage.proto";
+
+//----------------------  结缘系统协议 repeated ----------------------
+//披风信息
+message FateInfo
+{
+	optional int32 id = 1;	//人物模版ID
+	optional int32 level = 2;	//等级
+	optional int32 type = 3;	//人物类型
+}
+
+//共鸣(结缘)信息
+message SymInfo
+{
+	optional int32 type = 1;	//类型 1:上三门 2:平三门 3:下三门 4:老九门
+	optional int32 symId = 2;	//共鸣属性ID
+}
+
+//客户端结缘操作
+message CGFateOperate
+{
+	optional int32 operate = 1;	//操作类型 1:初始化结缘数据; 2:抽取信物 3:结缘 4:升星 5:幻化 6:取消幻化
+	optional int32 id = 2;	//结缘对象ID
+	optional int32 type = 3;	// 操作人物阵营,结缘升星幻化的时候传
+	
+}
+
+//结缘返回结果
+message GCFateResult
+{
+	optional int32 operate = 1;	//操作类型 1:初始化结缘数据; 2:抽取信物 3:结缘 4:升星 5:幻化 6:取消幻化
+	repeated SymInfo symInfos = 2;	//牵绊效果列表
+	repeated FateInfo fateInfos = 3;	//结缘信息列表
+	repeated BackpackItem markItems = 4;	//结缘抽取物品列表
+	optional int32 transtType = 5;	//幻化中的人物类型
+}
+

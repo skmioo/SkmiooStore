@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="VIP">
+<data id="1" BoatName="一级战舰" ristEXP="10" ristBlode="2|3|4" boatSkill="1" boatSpeedMax="8" boatBlood="5" fortNumber="2" service="2" recover="1" acceleration="" turnVelocity=""/>
+<data id="2" BoatName="2级战斗舰" ristEXP="20" ristBlode="" boatSkill="2" boatSpeedMax="10" boatBlood="10" fortNumber="6" service="3" recover="1" acceleration="" turnVelocity=""/>
+<data id="3" BoatName="2级速度舰" ristEXP="20" ristBlode="" boatSkill="3" boatSpeedMax="13" boatBlood="10" fortNumber="4" service="3" recover="1" acceleration="" turnVelocity=""/>
+<data id="4" BoatName="2级防御舰" ristEXP="20" ristBlode="" boatSkill="4" boatSpeedMax="10" boatBlood="15" fortNumber="4" service="3" recover="1" acceleration="" turnVelocity=""/>
+</root>

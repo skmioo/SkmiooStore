@@ -1,0 +1,76 @@
+//@module=scene,StartIndex=27001,classname=CopyScene
+option java_package = "com.mrd.game.message";
+
+import "InnerMessage.proto";
+
+
+//----------------------CopyScene开始----------------------
+
+message CopySceneInfo
+{
+	optional int32	copyId		= 1;	//副本ID
+	optional int32 	freeFightNum	= 2;//当日免费进入次数
+	optional int32 	buyFightNum	= 3;//当日付费进入次数
+	optional int32 	maxYellowStar	= 4;//最高黄星评价
+	optional int32 	maxPurpleStar	= 5;//最高紫星评价
+}
+
+
+//请求当前已经进入过的所有副本信息
+message CGGetAllCopyScene
+{	
+}
+
+//刷新副本信息
+message GCRefreshCopySceneInfo
+{
+	optional int32 totalFightNum	= 1;	//今日总的战斗次数
+	repeated CopySceneInfo copyInfo	= 2;    //副本信息
+}
+
+//启动副本（战斗、扫荡）
+message CGStartCopyScene
+{
+   optional int32 copyId		= 1;    //
+   optional int32 fightType		= 2;    //战斗方式：0-战斗，1-扫荡
+} 
+
+//返回启动副本结果
+message GCStartCopySceneBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+}
+
+//请求购买次数
+message CGBuyCopySceneFightNum
+{
+	optional int32 copyId		= 1;    //
+}
+//返回购买结果
+message GCBuyCopySceneFightNumBack
+{
+	optional int32 flag		= 1;    //1为成功 0 失败（失败时是否要返回错误码）
+}
+
+//返回战斗结算
+message GCCopySceneBalance
+{
+	optional int32 	wineFlag	= 1;//结果1为胜利，0为失败
+	optional int32 	yellowStar	= 2;//黄星评价
+	optional int32 	purpleStar1	= 3;//紫星评价
+	optional int32 	purpleStar2	= 4;//紫星评价
+	optional int32 	purpleStar3	= 5;//紫星评价
+	optional int32 	fightTime	= 6;//战斗时长
+
+	repeated GCShowItemInfo bossDropPrize = 7;//Boss掉落奖励
+	repeated GCShowItemInfo otherPrize = 8;//其他奖励
+	optional int32 	copyId	= 9;//副本ID
+}
+
+//请求退出副本
+message CGExitCopyScene
+{
+	
+}
+
+

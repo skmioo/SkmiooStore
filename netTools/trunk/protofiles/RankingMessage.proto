@@ -1,0 +1,135 @@
+//@module=ranking,StartIndex=3800,classname=Ranking
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------  排行榜 repeated ----------------------
+
+//世界Boss排行榜实体
+message RankInfo
+{
+	optional int64 playerId = 1;	//玩家ID
+	optional string playerName = 2;	//玩家名称
+	optional int32 type = 3;	//排行榜类型 1:战斗力；2:等级；3:财富；4:宠物战斗力；5:坐骑战斗力；6:竞技场；7:爬塔；8:世界Boss；9:帮会；10:在线时长；
+	optional int32 rank = 4;	//排名
+	optional int32 battle = 5;	//战斗力
+	optional int64 moneyNum = 6;	//不绑定金币数量
+	optional int32 petBattle = 7;	//宠物战斗力
+	optional int32 horseBattle = 8;	//坐骑战斗力
+	optional int32 arenaRank = 9;	//竞技场排名
+	optional int32 topTower = 10;	//最高爬塔层数
+	optional string outPut = 11;	//世界boss输出百分比
+	optional int64 onlineTime = 12;	//在线时长
+	optional int32 gangBattle = 13;	//帮会战斗力
+	optional int64 petID = 14;	//宠物ID
+	optional int64 horseID = 15;	//坐骑ID
+	optional int64 worship = 16;	//被崇拜次数
+	optional int32 level = 17;	//等级
+	optional int32 winNum = 18;	//组队pk胜场数
+	optional int64 gangID = 19;	//帮会ID
+	optional int32 isWorship = 20;	//0:未膜拜;1:膜拜过
+	optional int32 vip = 21;
+	optional int32 killPlayers = 22;	//历史杀人数
+	optional int32 killValue = 23;	//杀戮值
+}
+
+//根据排行榜类型获取榜单信息
+message CGGetRankByType
+{
+	optional int32 type = 1;	//排行榜类型
+}
+
+//向客户端推送榜单信息
+message GCPushRankInfo
+{
+	repeated RankInfo rankInfo = 1;	//排行榜信息
+	optional int32 type = 2;	//排行榜类型 1:战斗力；2:等级；3:财富；4:宠物战斗力；5:坐骑战斗力；6:竞技场；7:爬塔；8:世界Boss；9:帮会；10:在线时长；11:组队2V2; 12：组队5V5 13:杀人数排行 14:杀戮值排行
+	optional int32 num = 3;	// 当前玩家崇拜可用次数
+	optional CharacterInfo firstInfo = 4;	//排行榜第一名玩家模型数据
+	optional PetInfo petInfo = 5;	//排行榜第一名宠物模型数据(宠物排行榜用)
+	optional HorseInfo horseInfo = 6;	//排行榜第一名坐骑模型数据(坐骑排行榜用)
+}
+
+//崇拜榜单上的玩家
+message CGRankWorship
+{
+	optional int64 playerID = 1;	//被崇拜人ID
+	optional int32 type = 2;	//排行榜类型 1:战斗力；2:等级；3:财富；4:宠物战斗力；5:坐骑战斗力；6:竞技场；7:爬塔；8:世界Boss；9:帮会；10:在线时长；
+}
+
+//崇拜结果
+message GCRankWrshipBack
+{
+	optional int64 playerID = 1;	//被崇拜人ID
+	optional int64 worship = 2;	//被崇拜人被崇拜次数
+	optional int32 type = 3;	//排行榜类型
+	optional int32 num = 4;	//可用崇拜次数
+	optional int32 result = 5;	// 操作结果 0:失败 1:成功
+}
+
+//根据id获取宠物
+message CGGetPetOrHorseInfo
+{
+	optional int64 playerID = 1;	//玩家ID(必传)
+	optional int64 petID = 2;	//宠物id
+	optional int64 horseID = 3;	//坐骑ID
+}
+
+//发送宠物或者坐骑模型数据
+message GCSendPetOrHorseInfo
+{
+	optional PetInfo petInfo = 1;	//宠物模型信息
+	optional HorseInfo horseInfo = 2;	//坐骑模型信息
+}
+
+//登录推送排行榜可用崇拜次数
+message GCPushWorship
+{
+	optional int32 num = 1;	//可用崇拜次数
+}
+
+//刷新排行榜数据
+message GCRefreshRank
+{
+	optional int32 type = 1;	//排行榜类型
+}
+
+//开服冲战配置数据
+message FightInfo
+{
+	optional int32 id =1;
+	optional string fighting = 2; // 战斗力需求
+	optional string horse = 3; // 坐骑奖励bid,sid,num
+	optional int32 model = 4;	//模型
+	optional string position = 5;	//界面位置
+	optional string scale = 6;	//模型缩放
+	optional string rotate = 7;	//模型朝向
+	optional string rewards = 8; // 奖励bid,sid,num|bid,sid,num
+}
+
+//开服冲级配置数据
+message LevelInfo
+{
+	optional int32 id = 1;
+	optional string fighting = 2; // 排名 minLevel|maxLevel
+	optional int32 title = 3; // 称号
+	optional string position = 4;	//模型朝向
+	optional string scale = 5;	//模型缩放
+	optional string rewards = 6; // 奖励bid,sid,num|bid,sid,num
+}
+
+//客户端登录向客户端推送开服冲级、冲战活动数据
+message GCPushOpenInfo
+{
+	repeated FightInfo firstInfos = 1;
+	repeated LevelInfo levelInfos = 2;
+	optional int64 levelStartTime = 3;
+	optional int64 levelEndTime = 4;
+	optional int64 fightStartTime = 5;
+	optional int64 fightEndTime = 6;
+}
+
+message GCOpenRankOver
+{
+	optional int32 type = 1;	//25:冲战; 26:冲级
+}

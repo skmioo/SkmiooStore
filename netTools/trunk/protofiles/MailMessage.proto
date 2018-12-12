@@ -1,0 +1,104 @@
+//@module=mail,StartIndex=3400,classname=Mail
+option java_package = "com.mile.common.message";
+
+import "BackpackMessage.proto";
+
+//----------------------  邮件功能  ----------------------
+
+//邮件实体
+message MailInfo
+{
+	optional int64 mailID = 1;	//邮件ID
+	optional int64 receivePlayerID = 2; //收件玩家ID
+	optional int32 sendType = 3;	//类型  0：系统邮件；1:GM 邮件；2：好友邮件
+	optional int64 playerID = 4;	//发信人ID
+	optional string sendName = 5; //发信人名称
+	optional string content = 6;	//内容
+	repeated BackpackItem items = 7;	//附带道具
+	optional int64 sendTime = 8;	//发送时间
+	optional int32 state = 9;	//状态 0：未读； 1:未读未领取；3：已读 4：已读未领取 ；5: 已读已领取; 6:已删除
+								//	普通 :0->3 未读->已读
+								//	附件 :1->4->5 未读未领取-> 已读未领取-> 已读已领取
+	optional string title =10; //邮件标题
+}
+
+// 初始化 邮件未读数量
+message GCSendMailStatus
+{
+	optional int32 offRead = 1; // 未读
+	optional int32 total = 2; // 全部
+}
+
+// 发送
+// 请求 给好友发送邮件
+message CGSendMail2Player
+{
+	optional MailInfo mail = 1; // 邮件
+}
+
+// 返回 给好友发送邮件 
+message GCSendMail2Player
+{
+	optional int32 result = 1; // 结果： 0：success; 1:fail(已经不是好友)
+}
+
+// 系统 给玩家发送邮件
+message GCSysSendMail2Player
+{
+	optional MailInfo mail = 1; // 邮件
+}
+
+// 查看
+// 请求 邮件列表
+message CGGetMailList
+{
+	optional int64 playerID = 1;	//玩家ID
+}
+
+// 返回 邮件列表
+message GCGetMailList
+{
+	repeated MailInfo mails = 1;	//邮件列表
+}
+
+// 请求 查看邮件
+message CGReadMail
+{
+	optional int64 mailID = 1;	 //邮件Id
+}
+
+// 返回 查看邮件
+message GCReadMail
+{
+	optional int64 mailID = 1;	//邮件ID
+	optional int32 result = 2;	//结果：0：success;1：fail
+}
+
+// 领取
+// 请求 领取邮件附件
+message CGGetItemInMail
+{
+	repeated int64 mailID = 1;	//邮件ID List   空:全部领取，[MailId,,,]:领取指定邮件
+}
+
+// 返回 领取邮件附件
+message GCGetItemInMail
+{
+	repeated int64 mailID = 1;	//邮件ID
+	optional int32 result = 2;	//结果：0：success;1：fail(背包已满)
+}
+
+
+// 删除
+// 请求 删除邮件
+message CGDelMail
+{
+	repeated int64 mailID = 1;	//邮件ID List   空:全部领取，[MailId,,,]:领取指定邮件
+}
+
+// 返回 删除邮件
+message GCDelMail
+{
+	repeated int64 mailID = 1;	//邮件ID
+	optional int32 result = 2;	//结果：0：success;1：fail(附件未领取)
+}

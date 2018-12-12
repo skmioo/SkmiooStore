@@ -1,0 +1,12 @@
+//@module=redcross,StartIndex=4800,classname=RedCross
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------角色VO定义----------------------
+
+//推送血池信息
+message GCBackRedCrossData
+{
+	repeated RedCross redcross = 1;//血池信息
+}

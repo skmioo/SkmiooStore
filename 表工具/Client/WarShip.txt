@@ -1,0 +1,7 @@
+int	string	string	int	intarray	int	int	int	int	int	int	int	int	
+id	ShipName	ShipModel	UpgradeCost	Upgrade	ShipSkillID	ShipSpeedMax	ShipHealth	WeaponCount	RepairCost	RepairHealth	ShipAcceleration	ShipTurnSpeed	
+战舰序号	战舰名称	模型名称	升级材料	升级对象	战舰技能	战舰最大速度	战舰血量	炮台数量	维修费用	恢复比例	加速度	转向速度	
+1	一级战舰	ship1	10	2|3|4	1	8	5	2	2	1	-1	-1	
+2	2级战斗舰	ship2	20	-1	2	10	10	6	3	1	-1	-1	
+3	2级速度舰	ship3	20	-1	3	13	10	4	3	1	-1	-1	
+4	2级防御舰	ship4	20	-1	4	10	15	4	3	1	-1	-1	

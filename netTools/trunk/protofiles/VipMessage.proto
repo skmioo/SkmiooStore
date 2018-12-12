@@ -1,0 +1,25 @@
+//@module=vip,StartIndex=4900,classname=Vip
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+message GCPushVipBack
+{
+	optional int32 vip		= 1;  //当前vip
+	optional int32 summoney		= 2;  //充钱总额
+	repeated VipData vipdata = 3;//vip数据
+}
+
+//领取vip奖励
+message CGGetRewardData
+{
+	optional int32 vip		= 1;  //vip数据
+}
+
+message GCGetRewardDataBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+	optional int32 vip		= 2;//返回客户端传来的vip值
+}
+
+

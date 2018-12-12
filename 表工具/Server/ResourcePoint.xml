@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="ResourcePoint">
+<data id="1" PointName="资源点1" PointRseource="10" PointCD="7"/>
+<data id="2" PointName="资源点2" PointRseource="10" PointCD="8"/>
+<data id="3" PointName="资源点3" PointRseource="10" PointCD="9"/>
+</root>

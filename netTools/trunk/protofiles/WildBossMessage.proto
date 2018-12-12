@@ -1,0 +1,18 @@
+//@module=wildBoss,StartIndex=4000,classname=WildBoss
+option java_package = "com.mile.common.message";
+
+//----------------------  野外BOSS功能 repeated ----------------------
+
+//野外BOSS击杀数据
+message WildBossInfo
+{
+	optional int32 id = 1; //BOSSID
+	optional string gangName = 2; //击杀公会名字
+	optional int32 status = 3; // 状态 1=未刷新 2=已刷新 3=已击杀 4=已逃走
+}
+
+message GCWildBossInfo
+{
+	optional int32 state = 1; //有值表示活动开始
+	repeated WildBossInfo WildBossKillInfo = 2; //野外BOSS信息 
+}

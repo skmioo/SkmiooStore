@@ -1,0 +1,68 @@
+//@module=horse,StartIndex=4600,classname=Horse
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------角色VO定义----------------------
+
+//推送玩家坐骑数据
+message GCBackHorseData
+{
+	repeated HorseInfo horseInfo = 1;//坐骑信息
+}
+
+//选择坐骑
+message CGChoseHorse
+{
+	optional int64 horseid	=1;//坐骑服务器id
+}
+
+message GCChoseHorseBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+}
+
+//使用坐骑(上马下马)
+message CGUseHorse
+{
+	optional int32 useflag = 1;    //1上 0下
+}
+
+message GCUseHorseBack
+{
+	optional int64 guid = 1;  //使用坐骑人的guid
+	optional int32 useflag = 2;  //1上 0下
+	optional int32 flag = 3;    //1 成功 0 失败 
+}
+
+//培养升星
+message CGCultureToUpStar
+{
+	optional int64 horseid	= 1;//坐骑服务器id
+	optional int32 usegemflag = 2;    //1使用元宝 0不使用元宝
+}
+
+message GCCultureToUpStarBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+	optional int32 luckflag = 2;    //是否解锁新坐骑 0否 1是
+	optional HorseInfo horseInfo = 3;//坐骑信息
+	optional HorseInfo newhorseInfo = 4;//获的新坐骑
+}
+
+message CGLookHorse
+{
+	optional int64 playerUid	= 1;	//玩家Id
+}
+
+message GCLookHorseBack
+{
+	optional int32 flag = 1;    	//1成功 0失败
+	optional int32 horseId = 2;    //坐骑Id
+}
+
+//获得新坐骑
+message GCGetNewHorse
+{
+	optional int32 horseId = 1;//坐骑Id
+}

@@ -1,0 +1,399 @@
+//@module=arena,StartIndex=5900,classname=Activity
+option java_package = "com.mile.common.message";
+
+//----------------------  活动功能  ----------------------
+import "CommonMessage.proto";
+import "InnerMessage.proto";
+import "ActivityRankMessage.proto";
+
+//活动实体
+message GCActivity
+{
+	optional int32 opt = 1;//操作符 0准备  1：开启，2：关闭
+  optional int32 type = 2;//活动类型：1 
+  optional int64 endTime= 3;//结束时间 结束倒计时
+}
+
+message CGActivityOprateEvent
+{
+    optional int32 type = 1;//类型: 1 :静默下载 更新包奖励
+    repeated EntryStrStr params = 2;//参数
+}
+
+message GCActivityOprateEvent
+{
+    optional int32 type = 1;//类型：1 静默下载 更新包奖励
+    optional int32 flag = 2;//标志位 0:失败，1：成功
+}
+
+//运营活动信息
+message OpActivityInfo
+{
+	optional int32 btype = 1;//大类
+	optional int32 stype = 2;//小类
+	optional int32 flag = 3;//状态标识 0未开启1开启 2关闭
+	optional int64 remainTime = 4;//剩余时间
+	optional int64 startTime = 5;//开始时间
+	optional int64 endTime = 6;//结束时间
+	optional int32 actId = 7;//活动惟一ID
+}
+//请求运营活动信息
+message CGOpActivityInfo
+{
+	
+}
+
+message GCOpActivityInfo
+{
+	repeated OpActivityInfo activityList = 1;//当前开启运营活动列表
+}
+
+//IOS活动开关
+message GCIOSActivityOpen
+{
+	optional int32 flag = 1;//总活动:0未开启1开启
+	optional int32 cdkOpen = 2;//CDK: 0未开启1开启
+}
+
+
+
+//------------------------金鸡报晓活动-----------
+
+
+//蛋信息
+message EggInfo
+{
+	optional int32 type = 1;//类型: 1=白,2=金
+	optional int32 status = 2;//状态: 0=无状态, 1=孵化中, 2=孵化完成, 3=已兑换
+	optional int64 hatchEndTime = 3;//孵化截止时间
+}
+
+//孵化蛋信息
+message HatchEggInfo
+{
+	optional int32 type = 1;//类型: 0=白,1=金
+	optional string time2Jintiao = 2;//时间换算成金条单价
+	repeated Iteminfo needItems = 3;//兑换需要的道具
+}
+
+//金鸡报晓活动信息 初始化
+message GCInitChickenActivity
+{
+	optional int32 activityId	= 1;//活动ID	
+	optional string content		= 2;//正文
+	optional EggInfo eggInfo	= 3;
+	repeated Iteminfo chickenItemArr = 4;//可兑换的小鸡
+	repeated HatchEggInfo hatchEggTemplate = 5;//孵化蛋配置表
+	optional int32 actType	= 6;//1六一活动
+	optional string model1	= 7;//模型id1
+	optional string model2	= 8;//模型id2
+}
+
+//孵化
+message CGEggHatch
+{
+	optional int32 type	= 1;//类型: 0=白,1=金
+	optional int32 num	= 2;//孵化数量	
+	optional int32 operator	= 3;//操作:　0=正常孵化, 1=付费孵化, 2=领取
+}
+
+message GCEggHatchBack
+{
+	optional int32 result	= 1;//结果: 1=成功
+	optional EggInfo eggInfo = 2;
+}
+
+
+//红包信息
+message RedBagInfo
+{
+	optional int32 id = 1;//
+	optional int32 status = 2;//状态 : 0= 未领取, 1=已领取, 2=已过期
+	optional int64 createTime = 3;//获取时间
+	optional int64 expiryTime = 4;//过期时间
+	repeated Iteminfo rewardArr = 5; 
+	optional string name = 6;//红包名字
+	optional string title = 7;//最上方的标题
+}
+
+//适用初始化和收到新红包
+message GCInitRedBagInfo
+{
+	repeated RedBagInfo redBagArr = 1;//红包
+	optional int32 operator	= 2;//操作:　0=初始化, 1=新增
+}
+
+//领取红包
+message CGGetRedBag
+{
+	optional int32 id	= 1;//
+	optional int32 operator	= 2;//操作:　0=单个领取, 1=全部领取
+}
+
+
+//领取红包结果
+message GCGetRedBagBack
+{
+	optional int32 result	= 1;//结果: 1=成功
+	optional int32 status	= 2;//状态 0= 未领取, 1=已领取, 2=已过期
+	repeated int32 id	 = 3;//	所有领取红包的ID
+}
+
+
+
+
+//------------------------元旦幸运抽奖-----------
+
+//抽奖袋记录
+message NewYearLuckyDrawHistory
+{
+	optional int64 time =1;//抽奖时间
+	optional Iteminfo itemInfo =2;//获取的道具信息
+}
+
+//元旦幸运抽奖
+message CGNewYearLuckyDraw
+{
+	optional int32 operateType = 1;//操作1，抽奖 6，十连抽 5:获取幸运抽奖道具
+}
+
+//元旦幸运抽奖返回
+message GCNewYearLuckyDrawBack
+{
+	optional int32 operateType = 1;//操作(0:初始化，1:抽奖成功 2:抽奖失败 3:积分更新 6，十连抽 5:获取幸运抽奖道具)
+	optional string note = 2;	//活动说明
+	optional string items = 3;	//活动道具信息
+	optional int32 needScore = 4;	//抽奖需要的积分
+	optional int32 curScore = 5;	//当前可用积分
+	optional int32 allScore = 6;	//累计积分
+	optional int32 drawIndex = 7;	//抽奖结果的索引位置
+	repeated NewYearLuckyDrawHistory historyList = 8;//礼包袋信息
+	repeated ActivityRankReward rankRewardList = 9;//排名奖励信息(activityRankMessage)
+}
+
+//客户端请求元旦幸运抽奖排行
+message CGNewYearLuckyDrawRank
+{
+	
+}
+
+//返回数据
+message GCNewYearLuckyDrawRank
+{
+	repeated ActivityRankInfo rankList = 1;	//排行榜(activityRankMessage)
+	optional ActivityRankInfo myRankInfo = 2;//自己的排名信息排名为0 表示没有排名
+}
+
+
+//------------------------鲜花宝贝活动-----------
+
+//获取鲜花记录
+message FlowerBabyHistory
+{
+	optional int64 time =1;//时间
+	optional int64 sendId = 2;//发送者ID
+	optional string sendName = 3;//发送者名称
+	optional int32 sendVip = 4;//发送者VIP
+	optional int32 flowerId =5;//发送的鲜花道具ID
+}
+
+//查询玩家的鲜花信息
+message CGGetFlowerBabyInfo
+{
+	optional int64 playerID = 1;//玩家ID
+}
+
+message GCGetFlowerBabyInfoBack
+{
+	repeated FlowerBabyHistory hisList=1; //获取鲜花记录列表
+	optional int32 receiveScoreSum = 2;//魅力值
+}
+
+
+//送鲜花
+message CGGiveFlower
+{
+	optional int32 flowerId = 1;//鲜花道具ID
+	optional int64 playerID = 2;//玩家ID
+}
+
+//送鲜花返回
+message GCGiveFlowerBack
+{
+	optional int32 operate = 1;//操作类型0初始化 1更新数据,2送鲜花失败
+	optional int32 giveScore = 2;//土豪值
+	optional int32 receiveScore = 3;//魅力值
+	optional int32 giveScoreSum = 4;//累计土豪值
+	optional int32 receiveScoreSum = 5;//累计魅力值
+	repeated FlowerRewardItem giveRankDaily = 6;	//每日土豪排行榜
+	repeated FlowerRewardItem receiveRankDaily = 7;	//每日魅力排行榜
+	repeated int32 flowerIdList = 8; //鲜花的道具ID列表
+}
+
+message FlowerRewardItem
+{
+	optional int32 id = 1;//奖励项ID
+	optional int32 needScore = 2;// 需要的积分
+	optional string reward = 3;	//普通奖励 bid,sid,num|bid,sid,num
+	optional int32 state = 4;//0未领取 1已领取
+}
+
+
+//领取每日积分奖励
+message CGGiveFlowerReward
+{
+	optional int32 id = 1;//奖励项ID
+	optional int32 type = 2;//积分奖励类型：1土豪值 2魅力值
+}
+
+//领取每日积分奖励返回
+message GCGiveFlowerRewardBack
+{
+	optional int32 result = 1;//0 领取失败  1成功
+}
+
+
+//客户端请求元旦幸运抽奖排行
+message CGFlowerBabyRank
+{
+	
+}
+
+//返回数据
+message GCFlowerBabyRank
+{
+	optional int32 operate = 1;	//操作类型  0: 初始化所有数据 1:排行数据刷新
+	optional int32 giveRankTitleId =2;//土豪排行榜第一名称号
+	optional int32 receiveRankTitleId =3;//魅力值排行榜第一名称号
+	repeated ActivityRankReward giveRankRewards = 4;	//充值奖励
+	repeated ActivityRankReward receiveRankRewards = 5;	//消费奖励
+	repeated ActivityRankInfo giveRankList = 6;	//土豪排行榜
+	repeated ActivityRankInfo receiveRankList = 7;	//魅力值排行榜
+	optional int32 myGiveRank =8;// 自己的土豪值排名
+	optional int32 myReceiveRank =9;// 自己的魅力值排名
+}
+
+
+
+
+//------------------------值树活动-----------
+
+//获取树的阶段信息
+message TreeInfo
+{
+	optional int32 id =1;//阶段ID
+	optional int32 needGrowth = 2;//需要的成长值
+	optional string rewardInfo = 3;//阶段奖励信息
+	optional int32 treeNPC = 4;//对应的NPC
+	optional string treeName = 5;//对应的名称
+	optional int32 sceneId = 6;//场景ID
+	optional string pos = 7;//位置
+	optional string scaling = 8;//缩放
+}
+
+//植树道具信息
+message TreeToolInfo
+{
+	optional int32 id =1;//道具ID
+	optional string icon = 2;//道具图标信息
+}
+
+message CGTreeDayProp
+{
+	optional int32 propId = 1;//道具ID
+}
+
+message GCTreeDayPropBack
+{
+	optional int32 operate = 1;//操作类型0初始化 1更新数据,2浇灌成功 3浇灌失败 
+	optional int32 myGrowth = 2;//自身浇灌值 
+	optional int32 treeGrowth = 3;//全服浇灌值
+	optional int32 treeID = 4;//树的阶段ID
+	repeated TreeInfo treeInfoList = 5;	//树的阶段信息
+	repeated TreeToolInfo toolList = 6; //道具ID列表
+	repeated int32 rewardGetList = 7; //阶段奖励领取记录
+}
+
+message CGTreeDayReward
+{
+	optional int32 id = 1;//奖励项ID
+}
+message GCTreeDayRewardBack
+{
+	optional int32 result = 1;//0 领取失败  1成功
+	repeated int32 rewardGetList = 2; //阶段奖励领取记录
+}
+
+message CGTreeDayRank
+{
+	
+}
+
+message GCTreeDayRankBack
+{
+	optional int32 operate = 1;	//操作类型  0: 初始化所有数据 1:排行数据刷新
+	repeated ActivityRankReward arborRankRewards = 2;	//充值奖励
+	repeated ActivityRankInfo arborRankList = 3;	//排行榜
+	optional int32 myArborRank = 4;// 自己的排名
+}
+
+//------------------------糖果骰子活动-----------
+
+//糖果骰子信息
+message SweetDiceInfo
+{
+	optional int32 typeId =1;//类型ID
+	optional string name = 2;//活动名称
+	optional string needmoney = 3;//扔一次需要的钱
+	optional string tenneedmoney = 4;//扔十次需要的钱
+	optional string itemshow = 5;//每个位置对应的物品(0表示开始位置)
+	optional int32 model = 6;//界面展示模型
+	optional string scale = 7;//缩放
+	optional string rotate = 8;//朝向
+	optional string position = 9;//位置
+	optional string noticetxt = 10;//活动说明
+	optional string iconName = 11;//图片
+	
+}
+
+//玩家糖果信息
+message PlayerSweetDice
+{
+	optional int32 typeId =1;//编号ID
+	optional int32 posId = 2;//当前posID
+	optional int32 freeTimes = 3;//免费次数
+	optional int32 sweetDiceNum = 4;//筛子数量
+}
+
+//扔糖果骰子
+message CGSweetDice
+{
+	optional int32 typeId = 1;//类型ID
+	optional int32 operate = 2;//操作类型1 一次 2十次
+	optional int32 freeFlag = 3;//是否是免费扔0不是，1是
+}
+
+message GCSweetDice
+{
+	optional int32 operate = 1;//操作类型0初始化 1:一次扔 2:十次扔 3：操作失败,4刷新糖果个数
+	repeated SweetDiceInfo sweetDiceData = 2;//糖果活动配置信息
+	repeated PlayerSweetDice playerSweetDiceData = 3;//糖果活动玩家对应信息
+	optional PlayerSweetDice playerSweetDice = 4;//玩家糖果信息更新
+	repeated int32 tenPosList = 5;//十连扔的位置信息
+	
+}
+
+//领取扔的物品信息
+message CGGetSweetDiceItem
+{
+	optional int32 typeId = 1;//类型ID
+}
+
+//领取扔的物品信息
+message CGBuySweetDice
+{
+    optional int32 typeId = 1;//类型ID
+	optional int32 buySweetDiceNum = 2;//1||10
+}
+
+

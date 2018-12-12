@@ -1,0 +1,98 @@
+//@module=Auction,StartIndex=4200,classname=Auction
+option java_package = "com.mile.common.message";
+
+import "EquipMessage.proto";
+import "InnerMessage.proto";
+
+//列表数据
+message AuctionBackData
+{
+	optional int64 ahID		= 1;	//拍卖id 
+	optional int32 bid		= 2;  //大类id
+	optional int32 sid		= 3;  //小类id
+	optional int32 num		= 4;  //物品数量
+	optional int32 priceType	= 5;  //价格类型 1= 铜币，2=元宝
+	optional int32 price		= 6;  //价格
+	optional int32 isShow		= 7;  //是否过期0=没过期 1=过期
+	optional EquipInfo equipInfo	= 8;  //装备数据
+	optional PetInfo petInfo	= 9;	//宠物数据
+	optional int64 exTime	= 10;	//过期时间
+}
+
+//交易数据
+message AuctionRecordData
+{
+	optional int64 hid		= 1;	//交易id 
+	optional int32 bid		= 2;  //大类id
+	optional int32 sid		= 3;  //小类id
+	optional int32 num		= 4;  //物品数量
+	optional int32 priceType	= 5;  //价格类型 1= 铜币，2=元宝
+	optional int32 price		= 6;  //价格
+	optional int64 buyTime  	= 7;	//购买时间
+	optional string playerName  	= 8;	//购买者姓名
+	optional int64 playerID  	= 9;	//用户id
+	optional string petName  	= 10;	//宠物名
+	optional int32 petQuality  	= 11;	//宠物品质
+	optional int32 petLevel  	= 12;	//宠物等级
+	optional int32 saleVip  	= 13;//vip等级
+}
+
+//获取拍卖行列表
+message CGGetAucitonList
+{
+	optional int32 getType		= 1;  //获取类型 1=正常，2搜索,3 获取自己拍卖物品
+	optional int32 bid		= 2;  //大类id
+	optional int32 sid		= 3;  //小类id
+	optional int32 jobid		= 4;  //职业
+	optional int32 sortType	= 5;	//排序类型 1=id正序，2=id反序，3=单价正序，4=单价反序,5=等级正序,6=等级反序
+	repeated int32 bodyType	= 6;	//装备部位
+	optional int32 pageNum	= 7;	//页数
+	optional string searchKey	= 8;	//搜索关键字
+	repeated int32 priceType	= 9;  //价格类型 1= 铜币，2=元宝，3=铜币元宝
+	repeated int32 quality		= 10;	//品质
+}
+
+message GCGetAucitonListBack
+{
+	optional int32 getType		 = 1;//获取类型 1=正常，2搜索,3 获取自己拍卖物品
+	optional int32 currentPage	 = 2;//当前页数
+	optional int32 AllPages		 = 3;//所有页数
+	repeated AuctionBackData abackDatalist = 4;//拍卖行出售列表
+}
+
+//物品上架
+message CGAuctionSale
+{
+	optional int64 itemID		= 1;  //物品唯一id
+	optional int32 auctionType	= 2;  //拍卖类型 1装备道具 2宠物 暂时没用
+	optional int32 num		= 3;  //物品数量
+	optional int32 sellType		= 4;  //1=金币出售，2=钻石出售 
+	optional int32 unitPrice	= 5;  //物品单价 金币最大1000w 钻石最大100w
+}
+
+//购买下架重新上架
+message CGAuctionBuyShelve
+{
+	optional int64 ahID		= 1;  //拍卖id
+	optional int32 type		= 2;  //动作类型  1=购买 2=下架 3=重新上架,不需要数量
+	optional int32 num		= 3;  //数量
+}
+
+//上架,下架,购买 返回结果
+message GCAuctionHouseBack
+{
+	optional int32 actionType	= 1;	// 操作类型
+	optional int32 resultCode	= 2;	//0 操作成功 非0表示失败
+}
+
+//获取交易记录
+message CGGetAuctionRecordList
+{
+
+}
+
+message GCGetAuctionRecordListBack
+{
+	repeated AuctionRecordData auctionRecordDataList = 1;
+	optional int32 resultCode	= 2;	//0 操作成功 非0表示失败
+}

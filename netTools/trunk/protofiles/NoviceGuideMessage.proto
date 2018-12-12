@@ -1,0 +1,29 @@
+//@module=NoviceGuide,StartIndex=5600,classname=NoviceGuide
+option java_package = "com.mile.common.message";
+
+//----------------------  新手引导  ----------------------
+
+
+message GCNoviceGuideBack
+{
+	optional int32 fragmentId = 1;	//大段id
+	optional int32 shortId = 2;	//小段id
+	optional int32 type = 3;	//1,有下一步. 2,完成
+	optional int32 result = 4;	//1成功 0 失败 
+}
+
+message CGNoviceGuideFinish
+{
+	optional int32 fragmentId = 1;	//大段id
+	optional int32 shortId = 2;	//小段id
+}
+
+//----------------------  小电影  ----------------------
+message GCViewMovie
+{
+	optional int32 flag=1;//标记 默认发1
+}
+message CGViewMovieFinish
+{
+	optional int32 flag=1;//标记 默认发1
+}

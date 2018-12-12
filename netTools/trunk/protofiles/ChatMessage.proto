@@ -1,0 +1,55 @@
+//@module=chat,StartIndex=5100,classname=Chat
+option java_package = "com.mile.common.message";
+
+//----------------------聊天----------------------
+//客户端发送消息
+message CGSendChatMsg
+{
+	optional int32 channel = 1;	//频道类型
+	optional int64 targetId = 2;	//目标id(私聊)
+	optional string content = 3;	//聊天内容
+}
+
+message ChatInfo
+{
+	optional int64 sendTime = 1;	//发送时间
+	optional string content = 2;	//内容
+	optional int32 horn = 4;	//是否是喇叭消息  0:不是;1:是
+}
+
+//推送聊天信息
+message GCPushChatMsg
+{
+	optional int32 channel = 1;	//频道类型
+	repeated ChatInfo chatInfos = 2;	//聊天内容
+	optional int64 targetId = 3;	//目标id(私聊)
+}
+
+//聊天设置
+message CGChatSeting
+{
+	repeated int32 channels = 1;	//频道列表
+	repeated int32 autoAudio=2;//自动播放频道列表
+	
+}
+//聊天设置返回 (登陆刷新)
+message GCChatSeting
+{
+	repeated int32 channels = 1;	//频道列表
+	repeated int32 autoAudio=2;//自动播放频道列表
+}
+
+//屏蔽聊天
+message CGBlackChatSeting
+{
+   optional int32 flag = 1;	//1，增加 。2删除
+	optional int64 playerId = 2;	//屏蔽的玩家id
+
+	
+}
+//屏蔽聊天返回
+message GCBlackChatSeting
+{
+	optional int32 flag = 1;	//0 替换 1，增加 。2删除
+	repeated int64 playerIds=2;//屏蔽的玩家id列表
+}

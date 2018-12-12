@@ -1,0 +1,94 @@
+//@module=galaxy,StartIndex=8800,classname=Galaxy
+option java_package = "com.mile.common.message";
+
+//----------------------乱星海除妖----------------------
+
+// boss击杀记录
+message killBossInfo
+{
+	optional string name = 1;					// 击杀者名称
+	optional int64 time = 2;					// 击杀时间
+}
+
+// bossInfo
+message bossInfo
+{
+	optional int32 bossID = 1;					// 怪物配置表id
+	optional int64 reliveTime = 2;				// 复活时间戳（ 如果当前boss是活的，填0 ）
+	repeated killBossInfo killInfo = 3;			// 击杀记录
+}
+
+// 乱星海除妖 登陆数据返回
+message GCGalaxyOperateResult
+{	
+	optional int32 tired = 1;					// 疲劳值
+	optional int32 worldID = 2;			        // 关注世界bossID表唯一ID
+	optional int32 homeID = 3;			        // 关注Boss之家表唯一ID
+	optional int32 remainCnt = 4;			    // 个人boss剩余次数
+	repeated bossInfo boss = 5;					// boss信息
+}
+
+// 个人boss 客户端发起操作
+message CGSingleGalaxyOperate
+{ 
+	optional int32 dungeonID = 1;					// 进入个人副本ID
+}
+
+// 个人boss 操作返回
+message GCSingleGalaxyOperate
+{ 
+	optional int32 dungeonID = 1;					// 进入个人副本ID
+	optional int32 remainCnt = 2;				    // 个人boss剩余次数
+}
+
+// 世界Boss 客户端发起操作
+message CGWorldGalaxyOperate
+{ 
+	optional int32 operate = 1;					// 操作类型  1关注  2进入世界Boss场景 3.取消关注
+	
+    optional int32 worldID = 2;                 //世界Boss表唯一ID
+}
+
+// 世界Boss 操作返回
+message GCWorldGalaxyOperate
+{ 
+	optional int32 operate = 1;					// 操作类型  1关注 3.取消关注
+    optional int32 worldID = 2;                 //世界Boss表唯一ID
+}
+
+// Boss之家 客户端发起操作
+message CGGalaxyHomeOperate
+{ 
+	optional int32 operate = 1;					// 操作类型  1关注  2进入Boss之家场景 3.取消关注
+    optional int32 homeID = 2;                 //Boss之家表唯一ID
+}
+
+// Boss之家 操作返回
+message GCGalaxyHomeOperate
+{ 
+	optional int32 operate = 1;					// 操作类型  1关注 3.取消关注
+    optional int32 homeID = 2;                 //Boss之家表唯一ID
+}
+
+// 踢回上一个场景 客户端发起操作
+message CGBackLastScene
+{
+}
+
+// 队长进入boss巢穴，给队员发邀请
+message GCGalaxyInviteGoHome
+{
+	optional int32 homeID = 1;                 //Boss之家表唯一ID
+}
+
+// 请求队长所在的sceneID 客户端发起操作
+message CGGetTeamLeaderSceneID
+{
+}
+
+// 请求队长所在的sceneID 服务器返回
+message GCGetTeamLeaderSceneID
+{
+	optional int32 sceneID = 1;				// 队长所在的sceneID
+}
+

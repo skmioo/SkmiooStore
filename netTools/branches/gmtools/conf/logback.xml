@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+
+<configuration debug="false" scan="false">  
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">   
+	    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> 
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>  
+		</encoder>
+	</appender>   
+
+  <appender name="A1" class="ch.qos.logback.core.rolling.RollingFileAppender">  
+         <file>kingdoms.log</file> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+		  <fileNamePattern>kingdoms.%d{yyyy-MM-dd}.log</fileNamePattern>  
+		</rollingPolicy>  
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> 
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>  
+		</encoder>  
+		<!--<MaxHistory>30</MaxHistory>-->
+  </appender>  
+  
+
+  <appender name="A2" class="ch.qos.logback.core.rolling.RollingFileAppender">  
+   <file>kingdoms_server_error.log</file> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+		  <fileNamePattern>kingdoms_server_error.%d{yyyy-MM-dd}.log</fileNamePattern>  
+		</rollingPolicy>  
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"> 
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>  
+		</encoder>  
+		<!--<MaxHistory>30</MaxHistory>-->
+  </appender>  
+
+  <root level="ERROR"> 
+  <!--
+	  <appender-ref ref="A1" />
+-->
+	  <appender-ref ref="stdout" /> 
+  </root>  
+
+
+<logger name="com.xunshanhu.server.error" level="INFO" additivity="false">  
+	<appender-ref ref="A2"/>  
+</logger> 
+
+  <logger name="com.xunshanhu.Kingdoms" level="INFO"/>
+
+
+<!--     <logger name="com.ibatis.sqlmap.engine" level="INFO"/> -->
+  <logger name="com.xunshanhu.Kingdoms.combat" level="DEBUG"/>
+
+  <logger name="com.xunshanhu.Kingdoms.countrywar" level="DEBUG"/>  
+  <logger name="com.xunshanhu.Kingdoms.guildwar" level="DEBUG"/>  
+   <logger name=" com.xunshanhu.Kingdoms.armyout" level="INFO"/>  
+   <logger name="com.xunshanhu.Kingdoms.huns" level="INFO"/>
+   <logger name="com.xunshanhu.Kingdoms.flag" level="INFO"/>
+<logger name="com.xunshanhu.core" level="INFO"/>
+<logger name="com.xunshanhu.core.job" level="WARN"/>
+  <logger name="com.xunshanhu.wolf.net.RemoteWolfService" level="WARN"/>
+  <logger name="com.xunshanhu.wolf.net.RequestTimeoutCloseHandler" level="WARN"/>  
+  <logger name="com.xunshanhu.Kingdoms.asyncdb.service.impl" level="WARN"/>  
+ <logger name="org.springframework" level="WARN"/>
+     <logger name="org.apache.mina" level="INFO"/> 
+    <logger name="org.apache.commons.httpclient" level="WARN"/>
+
+    <logger name="net.rubyeye.xmemcached.transcoders" level="ERROR"/>
+
+
+  <logger name="org.jgroups" level="WARN"/>
+  <logger name="org.logicalcobwebs.proxool" level="ERROR"/>
+  <!-- 
+  <logger name="com.google.code.yanf4j" level="INFO"/>
+   -->
+  <!--
+    <logger name="org.apache.commons.dbcp" level="DEBUG"/>
+    <logger name="org.apache.commons.pool" level="DEBUG"/>
+
+
+
+  <logger name="com.ibatis.sqlmap.engine.cache.memcached.broadcast.jgroup.JGroupBroadcastingManager" level="DEBUG"/>
+   -->
+<!--
+  <logger name="net.spy.memcached" level="DEBUG"/>
+
+  -->
+
+ 
+
+<!--
+    <logger name="org.shardbatis.spring.jdbc.transaction.MemCacheDataSourceTransactionManager" level="INFO"/>
+    <logger name="com.xunshanhu.Kingdoms.util.MyPerformanceMonitorInterceptor" level="TRACE"/>
+
+  <logger name="com.ibatis.sqlmap.engine.cache.memcached.broadcast.jgroup" level="DEBUG"/>
+ <logger name="com.ibatis.sqlmap.engine.cache.memcached" level="DEBUG"/>
+-->
+
+
+
+
+<!-- <logger name="com.ibatis.sqlmap.engine.cache" level="DEBUG"/> -->
+
+
+
+
+<!--
+
+  <logger name="com.google.code.yanf4j" level="DEBUG"/>
+  <logger name="net.rubyeye.xmemcached" level="DEBUG"/>
+
+<logger name="com.ibatis.sqlmap.engine.cache.memcached" level="DEBUG"/>
+<logger name="com.ibatis.sqlmap.engine.cache.memcached.MemcachedController" level="DEBUG"/>
+<logger name="com.ibatis.sqlmap.engine.cache.memcached.SerializingTranscoderEx" level="DEBUG"/>
+<logger name="com.ibatis.sqlmap.engine.cache.memcached.MemcachedCache" level="DEBUG"/>
+-->
+
+<!--
+不继承Root的输出 additivity="false"
+<logger name="com.ibatis.sqlmap.engine.cache.memcached" level="DEBUG" additivity="false">
+	  <appender-ref ref="A1" />
+</logger>
+-->
+ <!-- 调试用 -->
+
+ 
+ <!--logger name="com.ibatis" level="DEBUG" />
+
+ <logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG" />
+ <logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG" />
+ <logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG" />
+ <logger name="java.sql.Connection" level="DEBUG" />
+ <logger name="java.sql.Statement" level="DEBUG" />
+ <logger name="java.sql.PreparedStatement" level="DEBUG" /-->
+
+
+<!--additivity="false"-->
+
+  <!--
+  <logger name="com.xunshanhu" >
+	  <level value="ALL" />
+	  <appender-ref ref="A1" />
+  </logger>
+	-->
+</configuration> 

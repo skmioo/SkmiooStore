@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="ShipSkill">
+<data id="1" ShipSkillName="一般技能" DamageBoost="2" HealthBoost="3" SpeedBoost="3" AttackDistanceBoost="3"/>
+<data id="2" ShipSkillName="战斗技能1" DamageBoost="5" HealthBoost="5" SpeedBoost="5" AttackDistanceBoost="5"/>
+<data id="3" ShipSkillName="速度技能1" DamageBoost="3" HealthBoost="5" SpeedBoost="7" AttackDistanceBoost="4"/>
+<data id="4" ShipSkillName="防御技能1" DamageBoost="3" HealthBoost="7" SpeedBoost="6" AttackDistanceBoost="4"/>
+</root>

@@ -1,0 +1,32 @@
+//@module=battleField2,StartIndex=6500,classname=BattleField2
+option java_package = "com.mile.common.message";
+
+import "CommonMessage.proto";
+//----------------------  战场 repeated ----------------------
+
+message GCBattleField2
+{
+    optional int32 operate = 1; //操作类型：1:打开战场面板 2:打开进入战场面板 4:进入战场 5:退出战场 6:战报数据 7:结算 8:获得结算奖励 9:击杀数据
+    optional int32 time = 2;   //时间：state=1:准备之间 state=2:开始时间
+    optional int32 state = 3;   //(operate=1)活动表id |(operate=4)1：准备状态 2：开始前十分钟  | (operate=9)1:击杀 2:杀人如麻
+    optional int32 param = 4;   //(operate=4)活动表id
+    optional int64 killPuid = 5; //击杀者
+    optional int64 diePuid = 6; //被杀者
+	optional int32 result = 7;//(operate=7)1:队伍1获胜，2：队伍2获胜，0：平局 (operate=1) 1:活动开启 0:活动未开启,2:战斗中
+    repeated int32 selfRecord = 8;  //个人战绩 [玩家姓名, 杀敌数, 死亡数, 最高连斩数, 个人积分]
+    repeated EntryLongAry fightRecord = 9;// 战报数据[puid:[玩家姓名, 杀敌数, 死亡数, 最高连斩数, 个人积分]]
+    optional int32 selfIndex = 10;// 自己的排名
+}
+
+message CGBattleField2
+{
+    optional int32 operate = 1; //操作类型：1:打开战场面板 4:进入战场 5:退出战场   8:获得结算奖励 
+    optional int32 state = 2;//
+    optional int32 itemId = 3;//
+}
+
+
+
+
+
+

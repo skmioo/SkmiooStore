@@ -1,0 +1,111 @@
+//@module=mission,StartIndex=22001,classname=Mission
+option java_package = "com.mrd.game.message";
+
+import "InnerMessage.proto";
+
+
+message GCmissionInfoListVo
+{
+	optional int32 	mid			= 1;	//任务编号
+	optional int32 	conditionId			= 2;	//条件编号
+	optional int32 	mCount				= 3;	//条件计数	
+}
+
+
+message CGgetMissionDataSend
+{
+}
+message GCgetMissionDataBack
+{
+	repeated GCmissionInfoListVo doingVo		= 1;	//正在做的任务列表
+	repeated int32 doneList		= 2;	//已经完成的任务Id列表
+}
+
+message CGacceptMissionSend
+{
+	optional int32 	mid			= 1;	//任务编号
+}
+message GCacceptMissionBack
+{
+	optional int32 	mid			= 1;	//任务编号
+	optional int32 result 		= 2; //0表示失败、1表示成功
+}
+
+message CGcommitMissionSend
+{
+	optional int32 	mid			= 1;	//任务编号
+}
+message GCcommitMissionBack
+{
+	optional int32 	mid			= 1;	//任务编号
+	optional int32 result 		= 2; 	//0表示失败、1表示成功
+}
+
+message GCmissionCountChangeBack
+{
+	repeated GCmissionInfoListVo 	mission			= 1;	//任务
+}
+
+message CGchangeMissionCountSend
+{
+	optional int32 	mid			= 1;	//任务编号
+	optional int32 	conditionId			= 2;	//条件编号
+	optional int32 	count			= 3;	//数值增加量
+}
+
+message MissionData
+{
+	optional int32 	missionId = 1;//任务id 原dataIndex
+	repeated int32 	DynamicParam = 2;//动态参数
+}
+//后面是重构后的任务协议
+//刷新任务列表
+message GCSyncMissionList
+{ 	 
+	repeated int32  dirtySlotIndex = 1;//任务槽位的脏标记，原dirtyFlag
+	repeated MissionData  dirtyMission = 2;//需要更新的任务槽位数据
+}
+
+//接任务申请
+message CGAcceptMission
+{
+	optional int32 missionId = 1; //任务id
+}
+
+// 接任务结果，接取的任务数据由GCSyncMissionList发送
+message GCAcceptMissionResult
+{
+	optional int32 missionId = 1; // 任务Id
+	optional int32 result = 2; //结果 Result类型 =0,成功 >0 失败原因
+}
+
+//取消/放弃任务申请
+message CGCancelMission
+{
+	optional int32 missionSlotIndex = 1;//需要取消的任务在任务列表中的索引
+}
+
+// 取消/放弃任务结果
+message GCCancelMissionResult
+{
+	optional int32 missionId = 1; // 任务Id
+	optional int32 result = 2; //结果 Result类型 =0,成功 >0 失败原因
+}
+
+//提交/完成接任务申请
+message CGCommitMission
+{
+	optional int32 missionSlotIndex = 1;//需要提交的任务在任务列表中的索引
+}
+
+// 提交/完成任务结果
+message GCCommitMissionResult
+{
+	optional int32 missionId = 1; // 任务Id
+	optional int32 result = 2; //结果 Result类型 =0,成功 >0 失败原因
+}
+
+message CGTalkToMissionNpc
+{
+	optional int32 npcId = 1;	//对话NPC的Id，注意此NPC是特指：有对话任务在身的NPC，亦即对话任务的目标NPC
+}

@@ -1,0 +1,33 @@
+//@module=resource,StartIndex=5500,classname=Resource
+option java_package = "com.mile.common.message";
+
+//----------------------资源找回repeated----------------------
+
+//资源回收信息
+message ResourceInfo
+{
+	optional int32 id = 1;		//资源模版id
+	optional int32 backNum = 2;	//未完成次数
+}
+
+//返回资源信息  给我的反馈
+message GCRequestResourceInfoBack
+{
+	repeated ResourceInfo resourceInfo = 1;	//资源回收列表
+	optional int32 type = 2;	//1代表普通的资源找回 2代表累计资源找回
+	optional int32 loginLv = 3; //前一天玩家等级
+}
+
+//回收资源
+message CGGetResource
+{
+	optional int32 getType = 1;		//获取类型 1获得1个 2获得所有
+	optional int32 consumeType = 2;	//消耗类型 1消耗1 2消耗2
+	optional int32 resourceId = 3;	//要回收的资源Id 如果获得所有 那么忽略这个值
+}
+
+//回收资源反馈
+message GCGetResourceBack
+{
+	repeated ResourceInfo resourceInfo = 1;	//资源回收列表
+}

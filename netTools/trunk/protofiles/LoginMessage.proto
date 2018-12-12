@@ -1,0 +1,224 @@
+//@module=login,StartIndex=1000,classname=Login
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+message CGLogin
+{
+	optional string uid		= 1;
+	optional string vilidCode	= 2;
+	optional string platForm	= 3;	//平台类型
+	optional int64 accountID	= 4;	//账户id(center-login生成)
+	optional string authKey		= 5;	//账号登陆验证
+	optional int32 serverId	= 6;//登陆的服务器id
+	optional int32 loginType	= 7;//登陆类型 1，登陆，2重连
+	optional string customParam = 8;  // 自定义参数( gamechannel|adchannel|userid|accname|deviceid|udid|idfa|version )
+}
+
+message PlayInfo
+{
+	optional int64 playerId		= 1;	//玩家id
+	optional string name		= 2;	//玩家名称
+	optional int32 professionId	= 3;   //职业id
+	optional int32 sex		= 4;   //性别
+	optional int32 headicon		= 5;   //头像icon
+	optional int32 level		= 6;//等级
+	optional ChangeEquipInfo changeEquipInfo=8;//换装需要的数据
+	optional int32 deleteflag	= 9;//删除标识 0=可以删除 1=是帮主不可以删除 2=拍卖行有东西不能删除 3=结婚有老婆孩子不能删除(预)......
+	optional int32 currSceneId	= 10;    //地图ID
+	optional int64 createTime	= 11;	//创建时间
+	optional int32 powerEffect = 12;	//装备注灵最大效果
+	optional int32 awakeEffect = 13;	//装备觉醒最大效果
+	optional int32 gemEffect = 14;	//宝石最大效果
+}
+
+message GCLoginBack
+{
+	optional int32 flag		= 1;	//1=登陆成功 2服务器人数已满，排队。
+	optional int32 gameServerId	= 2;	//GameSvr-Id
+	optional int64 currPlayerId	= 3;	//当前使用的玩家id
+	repeated PlayInfo playerList	= 4;	//玩家集合
+	optional int64 accountID	= 5;	//账户id
+	optional int64 eniqueID		= 6;	//EniqueID
+	optional int32 queueSize	= 7;	//排队人数
+	optional int32 loginType	= 8;//登陆类型 1，登陆，2重连
+}
+
+message CGGetRandName
+{
+}
+
+message GCGetRandNameBack
+{
+	repeated string manname	= 7;	//男名列表
+	repeated string womanname	= 8;	//女名列表
+}
+
+//创建用户
+message CGCreatePlayer
+{
+	optional int32 professionId		= 1;   //职业id
+	optional string playerName		= 2; //角色名字
+	optional int32 sex		= 3;     //性别
+
+}
+
+message GCCreatePlayerOK
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+	optional PlayInfo newPlayer = 2;//新角色	
+}
+
+
+message CGLoginGameServer
+{
+	optional int64 	playerId	= 1;
+
+}
+
+//登陆返回
+message GCLoginGameServer
+{
+	optional CharacterInfo player		= 1 ; //角色ID
+}
+
+message CGDeletePlayer
+{
+	optional int64 playerId		= 1;	//玩家id
+}
+
+message GCDeletePlayer
+{
+	optional int64 playerId		= 1;	//玩家id
+}
+
+//强制下线
+message LGForceOffLine
+{
+	optional int64 playerID = 1;	//强制下线的角色ID
+	optional int32 messageID = 2;	//下线原因(配置到语言表)
+}
+
+//检测vilidCode是否有效
+message GLCheckVilidCode
+{
+	optional string uid		= 1;
+	optional string vilidCode	= 2;
+	optional string platForm	= 3;	//平台类型
+}
+
+//vilidCode检测结果
+message LGCheckVilidCodeBack
+{
+	optional int32 result		 =1;	//验证结果 0:失败; 1:成功
+	optional int64 accountID	 = 2;	//账户ID
+	optional int64 playerID		 = 3;	//当前已经登陆的角色ID	
+	optional string uid		= 4;
+	optional string vilidCode	= 5;
+	optional string platForm	 = 6;
+}
+
+//应用服登录成功,通知登录服
+message GLLoginSuccess
+{
+	optional int64 playerID = 1;	//角色ID	
+	optional int64 accountID = 2;	//账户ID
+	optional string vilidCode = 3;	//vilidCode
+	optional int32 onlineNum = 4;	//当前在线玩家数量,防止断线重连问题
+}
+
+//应用服通知登录服玩家掉线
+message GLPlayerOffLine
+{
+	optional int64 playerID = 1;	//玩家i
+	optional int64 accountID = 2;	//账户ID
+	optional int32 onlineNum = 3;	//当前在线玩家数量,防止断线重连问题
+}
+
+// 客户端登录login-server
+message CLBeforeLogin
+{
+	optional string uid		= 1;
+	optional string vilidCode	= 2;
+	optional string version		= 3;	//客户端版本 （可以为空）
+	optional string deviceInfo	= 4;	//设备信息（mac、系统等， 可以为空)
+	optional string platForm	= 5;	//平台类型
+	optional int64 accountID	= 6;	//账户ID
+	optional string authKey		= 7;	//账号登陆验证
+}
+
+//login-server返回登录数据
+message LCBeforeLoginBack
+{
+	optional int32 flag		= 1;	//1=登陆成功
+	optional int32 gameServerId	= 2;	//GameSvr-Id
+	optional string vilidCode	= 3;    //登陆校验码
+	optional string host		= 4;	//gate-server IP
+	optional int32 port		= 5;	//gate-server 端口号
+	optional int64 accountID	= 6;	//账户ID
+	optional string authKey		= 7;	//账号登陆验证
+}
+
+//切换角色协议成功后重新发起登录
+message CLChangePlayerLogin
+{
+	optional string uname		= 1;
+	optional string pwd		= 2;
+	optional string version		= 3;	//客户端版本 （可以为空）
+	optional string deviceInfo	= 4;	//设备信息（mac、系统等， 可以为空)
+}
+
+//切换橘色成功返回结果
+message LCChangePlayerBack
+{
+	optional int32 flag		= 1;	//1=登陆成功
+	optional int32 gameServerId	= 2;	//GameSvr-Id
+	optional string vilidCode	= 3;    //登陆校验码
+	optional string serverAddress	= 4;	//GateSvr-IP&port
+	optional string host = 5;	//game-server IP
+	optional int32 port = 6;	//game-server 端口号
+}
+
+
+//获取玩家登陆信息
+message GLGetPlayerLoginInfo
+{
+	optional string vilidCode	= 1;
+	optional int64 accountID	 = 2;	//账户ID
+	optional string platForm	 = 3;
+	optional string uid		= 4;
+}
+
+//返回玩家登陆信息
+message LGGetPlayerLoginInfoBack
+{
+	optional int32 result		 =1;	//验证结果 0:失败; 1:成功
+	optional int64 accountID	 = 2;	//账户ID
+	optional int64 playerID		 = 3;	//当前已经登陆的角色ID	
+	optional string uid		= 4;
+	optional string vilidCode	= 5;
+	optional string platForm	 = 6;
+}
+
+
+
+//服务器返回排队信息
+message LCPlayerLoginQueue
+{
+	optional int32 queueNum	= 1;	//当前队伍人数
+}
+
+//玩家取消排队
+message CLPlayerCancelLoginQueue
+{	
+}
+
+message LCPlayerCancelLoginQueueBack
+{	
+	optional int32 result		 =1;	//取消结果 0:失败; 1:成功, 注意:收到该消息,无条件退出,让玩家可以重新选服
+}
+
+message GCCommonSetting
+{
+	optional int32 debugFlag = 1;//是否调试模式0关闭，1开启
+}

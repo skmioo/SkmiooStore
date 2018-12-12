@@ -1,0 +1,69 @@
+//@module=login,StartIndex=10001,classname=Login
+option java_package = "com.mrd.game.message";
+
+import "InnerMessage.proto";//----------------------注册登录开始----------------------
+//
+message CLLogin
+{
+	optional string pfUid 	 	= 1;	//渠道账号 （之前的snsId）
+	optional int32  pfChannelId	= 2;	//渠道号 (本地测试填0即可)
+	optional string version		= 3;	//客户端版本 （可以为空）
+	optional string deviceInfo	= 4;	//设备信息（mac、系统等， 可以为空)
+}
+//服务器端登录返回包
+message LCLoginBack
+{
+	optional int32 loginResult		= 1;	//登陆结果，0失败1成功
+	optional string vilidCode		= 2;    //登陆校验码
+	optional int64 accountId		= 3;
+	repeated LoginPlayerInfo allPlayerInfo	= 4;    //该账号创建的角色信息
+}
+
+message LoginPlayerInfo
+{
+	optional int64 playerId  			= 1;	// 唯一标示（游戏角色唯一标示）
+	optional string playerName   		= 2;	// 角色名字
+	optional int32 playerLevel  		= 3;	// 角色等级
+	optional int32 professionType  		= 4;	// 职业类型
+	optional ModelInfo modelInfo		= 5;	// 
+}
+
+//创建角色
+message CLCreatePlayer
+{
+	optional string playerName 		= 1;	// 角色名字
+	optional int32 	professionType 	= 2;	// 职业类型
+	optional ModelInfo modelInfo	= 3;	// 职业类型 
+}
+
+message LCCreatePlayerBack
+{
+	optional int32 	result				= 1;	// 创建结果，0异常的错误, 1成功, 2角色有重名, 3角色昵称包含关键字 4超时（请重新发送登陆请求）
+	optional LoginPlayerInfo playerInfo	= 2;
+}
+
+//删除角色
+message CLDeletePlayer
+{
+	optional int64 playerId		= 1;
+}
+
+message LCDeletPlayerBack
+{
+	optional int32 result 		= 1;	// 0表示失败、1表示成功
+}
+
+//客户端请求登陆场景服务器
+message CLPlayerLoginGameSvr
+{
+	optional int64 	playerId	= 1;//角色id 
+}
+
+//服务器端登录返回包
+message LCPlayerLoginGameSvrBack
+{
+	optional int32 result			= 1;	//登陆结果，0异常的错误, 1成功, 4连接超时
+	optional string serverAddress	= 2;    //网关服务器 ip:port
+	optional int32 	gameServerId	= 3;  //游戏服务器ID
+}
+

@@ -1,0 +1,74 @@
+//@module=team,StartIndex=8100,classname=SnowMan
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------  雪人活动  ----------------------
+
+
+//挑战雪人随机副本
+message CGEnterSnowInstance
+{
+	optional int64 snowManGuid	=1; //雪人唯一id
+}
+
+//刷新雪人王活动
+message GCRefreshSnowBossActitivy
+{
+	optional string name		= 1; //活动名字
+	optional string ruleExplain	= 2; //界面规则说明
+	optional string icon		= 3; //icon
+	optional string buttonName	= 4; //按钮的名字 (多个,竖线分割, 可以根据玩家状态获取显示)
+	optional int32 level		= 5; //限制等级
+	optional int32 playerStatus	= 6; //玩家状态 : (意思为按钮名字 : 0=未开始, 1=进入挑战, 2=挑战成功, 3=挑战失败)
+	optional int32 needClearCache	= 7; //是否需要清理缓存, 1=需要
+	optional int64 canEnterTime	= 8; //玩家可以进入的截止时间
+	optional int32 bossid		= 9; //
+	optional string position	= 10;
+	optional string rotation	= 11;
+	optional string scale	= 12;
+}
+
+
+//请求刷新
+message CGRefreshSnowActivityData
+{
+	optional int32 type	= 1; //类型: 1=奖励数据, 2=伤害榜数据
+}
+
+//战斗排行
+message FightRankInfo
+{
+	optional int32 rank		= 1; //排名
+	optional string playerName	= 2; //玩家名
+	optional int32 damage		= 3; //玩家伤害值
+}
+
+//刷新玩家战斗排行
+message GCRefreshFightRankList
+{
+	optional int32 myRank		= 1; //我的排名
+	optional int32 myDamage		= 2; //我的伤害值
+	repeated FightRankInfo rankList	= 3; //排名
+}
+
+//排名奖励信息
+message RankRewardsInfo
+{
+	optional string ranks		= 1; //排名组合
+	repeated Iteminfo rewards	= 2; //奖励
+}
+
+//刷新排名奖励
+message GCRefreshRankRewardsList
+{
+	repeated RankRewardsInfo rewardList	= 1; //奖励
+}
+
+//玩家操作
+message CGOperSnowBoss
+{
+	optional int32 oper	= 1; //1=挑战
+}
+
+

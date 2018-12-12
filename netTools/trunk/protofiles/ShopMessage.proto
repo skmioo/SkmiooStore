@@ -1,0 +1,115 @@
+//@module=shop,StartIndex=3100,classname=Shop
+option java_package = "com.mile.common.message";
+
+//----------------------商店----------------------
+
+
+message CGShop
+{
+	optional int32 type	=1;//1：境界商店,2暂时没有，3暂时没有
+	optional int64 id	=2;//配表ID
+	optional int32 num	=3;//购买数量		  
+}
+
+message GCShop
+{
+	optional int32 type	=1;	
+	optional ItemInfo itemInfo = 2;	//物品列表	
+	optional int32 errorCode	=3;//成功：0；   
+}
+
+//物品信息
+message ItemInfo
+{   
+	optional int64 temID =1; //模板id
+	optional int32 currNum =2; //剩余数量	
+	optional int32 bid =3; //大id
+	optional int32 sid =4; //小id
+	optional int32 num =5; //数量
+	optional int32 bind =6;//是否绑定 1绑定0不绑定
+    	
+}
+
+
+//商品信息
+message ShopItemInfo
+{   
+    optional int64 temID =1; //模板id
+    optional int32 shopType =2; //商品类型    	
+    optional int32 itemId =3; //物品ID
+    optional int32 limitNumber =4; //数量
+    optional int32 oneBuyMax =5; //单次购买最大数量
+    optional int32 needMoney =6; //消耗的货币类型
+    optional int32 price =7; //单价
+    optional int32 discount =8; //商品折扣
+    optional string limitparam =9; //购买所需条件
+    optional int32 limitType =10; //限购类型
+    optional int32 cardId =11;//小也卡Id
+}
+
+//商城也签
+message ShopSingInfo
+{
+ optional int32 id =1;//模板id
+ optional int32 name =2;//商城名称ID
+ optional int32 canSee =3;//是否显示
+ optional int32 order =4;//排序
+ optional int32 card =5;//是否有子页卡 1是，0否
+ optional string result =6;//特效
+ repeated ShopCardInfo ShopCardInfo =7;//商城也签里面小也签
+ optional int32 storeType =8;//1商城 2商店 3充值
+}
+
+//商城也签里面小也签
+message ShopCardInfo
+{
+optional int32 cardId =1;//也卡Id
+optional string CardName =2;//也卡名称
+
+}
+
+
+//商店商品列表信息
+message GCPushShopData
+{
+    repeated ShopItemInfo shopData = 1;	//商品列表
+    repeated ShopSingInfo shopSing = 2;//商城也签
+}
+
+
+
+
+
+
+
+
+//添加限时道具列表
+message GCAddShopItemData
+{
+    repeated ShopItemInfo shopData = 1;	//商品列表
+}
+
+message DelItemData
+{
+    optional int32 type	=1;//1：元宝商店购买，2：VIP商店购买，3：宠物商店购买，4：强化商店购买 ，5:热卖商店购买，6，时装商店购买，7：限时商店购买 8:NPC商店
+    optional int64 id	=2;
+}
+
+//删除限时道具列表
+message GCDelShopItemData
+{
+    repeated DelItemData shopData = 1;	//商品列表
+}
+
+
+message CGShopLuckDraw
+{
+	optional int32 type	=1;//1：:抽装备，2：10连抽			  
+}
+
+message GCPushShop
+{
+	optional int32 type	=1;	
+	repeated ItemInfo itemInfo = 2;	//物品列表	
+	optional int32 errorCode	=3;//成功：0；   
+}

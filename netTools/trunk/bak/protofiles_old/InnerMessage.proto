@@ -1,0 +1,126 @@
+//@module=inner,StartIndex=8001,classname=Inner
+option java_package = "com.mrd.game.message";
+
+//----------------------角色VO定义----------------------
+
+
+
+
+message Vector3Info
+{
+	optional int32 x	= 1;
+	optional int32 y	= 2;
+	optional int32 z	= 3;
+}
+
+//技能相关属性 同步频率优先级1
+message AttackInfo
+{
+	optional int32 physicsAttack	= 1;	// 物理攻击
+	optional int32 magicAttack		= 2;	// 法术攻击
+	optional int32 physicsDefense	= 3;	// 物理防御
+	optional int32 magicDefense		= 4;	// 法术防御
+	optional int32 explodeAttack	= 5;	// 暴击
+	optional int32 attackSpeed		= 6;	// 攻击速度
+	optional int32 destroyDefense	= 7;	// 破防值
+	optional int32 naturalElement	= 8;	// 五行属性
+}
+
+// 同步频率优先级0
+message ModelInfo
+{
+	optional int32 actor	= 1;	// 角色模型id
+	optional int32 head		= 2;
+	optional int32 body 	= 3;
+	optional int32 weapon	= 4;
+}
+
+// 同步频率优先级0
+message ObjBaseInfo
+{
+	optional int64 objId  		= 1;	//obj 唯一vo
+	optional int32 tableId 		= 2;	//配置表中的id 
+	optional Vector3Info pos 	= 3;	//出生点
+	optional Vector3Info direction	= 4;	//3维方向
+	optional int32 camp			= 5;	//阵营
+	optional int32 hp			= 6;	//血量
+	optional int32 maxHp		= 7;	//最大血量
+	optional ModelInfo modelInfo= 8;	//
+}
+//角色基础数据
+message CharacterInfo
+{
+	optional string charName		= 1;    //角色名字
+	optional int32 charLevel		= 2;	//角色等级
+	optional int32 charExp			= 3;	// 角色经验值
+	optional int32 professionType		= 4;	// 职业类型
+	optional int32 mp			= 5;	// 饮血值
+	optional int32 maxMp			= 6;	// 最大饮血值
+	optional int32 mind			= 7;	// 心性
+	optional int32 randomNum		= 8;	// 随机数
+	optional int32 unExplodeAttack		= 9;	// 免暴
+	optional int32 balance			= 10;	// 平衡值   
+	optional ObjBaseInfo objInfo 	= 11;	// 
+	optional int32 canMove 		= 12; //能否移动
+	optional int32 canUseSkill	= 13; //能否使用技能
+	optional int32 busyTime		= 14; //busy 时间
+	optional int32 speed		= 15; // 移动速度
+	optional int32 storyValue	= 16; //剧情进展
+}
+ 
+//Npcvo
+message NpcInfo
+{
+	optional CharacterInfo baseInfo = 1; 
+}
+
+//Monster
+message MonsterInfo
+{ 
+ 	optional AttackInfo attackInfo	= 1;
+	optional CharacterInfo baseInfo = 2; 
+}
+
+message PlayerInfo
+{ 
+	optional AttackInfo attackInfo 	= 1;
+	optional CharacterInfo baseInfo = 2; 
+}
+
+
+
+
+
+//----------通用消息-----------------
+
+//提示消息
+//服务器给客户端的通用消息提示，客户端接收后弹出统一消息提示面板
+message GCCommonPromptBack
+{
+	optional int32	messageId	 = 1; //错误消息编号
+	repeated string params		= 2; //文本参数列表，可选
+}
+message CGheartbeatClientSend
+{
+	optional int32	packetId	 = 1; //同步次数
+}
+message GCheartbeatServerBack
+{
+	optional int32	packetId	 = 1; //同步次数
+	optional int64  serverTime	 = 2; //服务器时间
+}
+//临时消息 (测试期间使用)
+message GCTmpCommonPromptBack
+{
+	optional string	messageInfo	 = 1; //消息内容
+}
+
+
+
+//服务器通知客户端显示物品信息
+message GCShowItemInfo
+{
+	optional int32	itemId	 = 1; //物品id ，经验、金币之类需策划配置物品ID
+	optional int32  num		 = 2; //物品数量
+}
+

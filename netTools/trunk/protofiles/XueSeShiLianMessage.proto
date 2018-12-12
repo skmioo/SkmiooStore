@@ -1,0 +1,107 @@
+//@module=xueseshilian,StartIndex=8900,classname=XueSeShiLian
+option java_package = "com.mile.common.message";
+
+
+//进入或退出血色试炼
+message CGEnterOrExitSXSL
+{
+    optional int32 type	= 1;//1进入，0退出
+}
+
+//采集草药
+message CGPickCaoYao
+{
+    optional int64 objId	= 1;//
+    optional int32 type	= 2;//1采集，2获得排行榜列表
+}
+
+message XueSeShiLianRank
+{
+     optional int64 id=1;
+     optional string name=2;
+     optional int32 playerLv=3;
+     optional int32 profession=4;
+     optional int32 sorce=5;//积分
+     optional int32 rank=6;//
+     optional int32 sex=7;//
+}
+
+//血色试炼消息
+message GCXueSeShiLian
+{
+    optional int32 type	= 1;//1初始化，2更新，3结束
+    optional int64 endTime=2;
+    optional int32 sorce=3;//积分
+    repeated XueSeShiLianRank ranks=4;
+    optional int32 rank=5;
+    optional int32 enterNextTime=6;//进入下一个场景倒计时
+}
+
+
+message LingMaiCity
+{
+    optional int32 id	= 1;//城池id
+    optional int64 gangId=2;//城池占宗门的id
+    optional string gangName=3;//城池占领盟的名字
+}
+//打开灵脉入口
+message CGGetLingMaiView
+{
+}
+
+//打开灵脉入口返回
+message GCGetLingMaiView
+{
+    repeated LingMaiCity occupyCityList=1;//占领的联盟列表
+}
+
+message CGEnterOrExitLingMai
+{
+    optional int32 type	= 1;//1进入，0退出
+    optional int32 cityId	= 2;//进入的城池id
+}
+
+
+//根据类型获得排行榜
+message CGGetLingMaiRank
+{
+    optional int32 type	= 1;//1宗门积分排行，2，个人杀人排行，3，个人积分排行
+    optional int32 cityId	= 2;//城池id
+}
+
+message LingMaiRank
+{
+   optional int32 rankId	= 1;
+   optional int64 id=2;//角色id||宗门id
+   optional string name=3;//角色名字||宗门名字
+   optional int32 num=4;//数量
+}
+
+//排行榜返回
+message GCLingMaiRank
+{
+   optional int32 type	= 1;//1宗门积分排行，2，个人杀人排行，3，个人积分排行
+   repeated LingMaiRank ranks	= 2;
+}
+//灵脉争夺消息
+message GCLingMaiMsg
+{ 
+    optional int32 type	= 1;//0初始化，1更新，2结束,
+    optional string occupyGangName=2;//
+    optional int32 gangRank=3;
+    optional int32 gangSorce=4;
+    optional int32 killMonsterNum=5;
+    optional int32 killPersonNum=6;
+    optional int32 totalSorce=7;//本日总积分
+    optional int32 mySorce=8;//本场积分
+    optional int32 myKillRank=9;//我的排行
+    optional int32 cityId=10;//
+    repeated LingMaiCity occupyCityList=11;//占领的联盟列表
+    optional int64 endTime=12;//活动结束时间
+}
+
+
+
+
+
+

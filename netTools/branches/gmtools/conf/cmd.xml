@@ -1,0 +1,78 @@
+﻿<root>
+	<!-- cmd:指令编号 serverName:指令名称 desc:描述 { name:参数名称 type:参数类型 (int,string) 
+		} -->
+	<node cmd="gmAddResource" name="加资源" desc=" 2001 灵石;2003金子;1003经验 ;1015境界经验值;2005声望；2009帮贡；2015灵兽经验">
+		<param name="playerId" type="long" />
+		<param name="资源类型" type="int" />
+		<param name="资源数量" type="int" />
+	</node>
+	<node cmd="gmAddItem" name="加道具" desc="加道具">
+		<param name="playerId" type="long" />
+		<param name="道具id" type="int" />
+		<param name="大道具数量" type="int" />
+	</node>
+	<node cmd="gmDelItem" name="删道具" desc="删道具">
+		<param name="playerId" type="long" />
+		<param name="道具id" type="int" />
+		<param name="道具数量" type="int" />
+	</node>
+	<node cmd="gmSendHorse" name="加坐骑" desc="加坐骑">
+		<param name="playerId" type="long" />
+		<param name="坐骑id" type="int" />
+	</node>
+
+	<node cmd="gmGetPlayerIdByName" name="根据角色名字查询角色id" desc="根据角色名字查询角色id">
+		<param name="角色名" type="string" />
+	</node>
+	<node cmd="gmStartXuese" name="开启血色试炼" desc="开启血色试炼">
+	</node>
+	<node cmd="gmEndXuese" name="关闭血色试炼" desc="关闭血色试炼">
+	</node>
+	<node cmd="gmStartLingMai" name="开启灵脉" desc="开启灵脉">
+	</node>
+	<node cmd="gmEndLingMai" name="关闭灵脉" desc="开启灵脉">
+	</node>
+	<node cmd="gmReadAct" name="活动进入准备阶段" desc="活动进入准备阶段">
+		<param name="活动id" type="int" />
+	</node>
+	<node cmd="gmAddSBLucky" name="加繁殖灵兽幸运值" desc="加繁殖灵兽幸运值">
+		<param name="playerId" type="long" />
+		<param name="幸运值" type="int" />
+	</node>
+	<node cmd="gmGangResource" name="帮派加资金" desc="帮派加资金">
+		<param name="playerId" type="long" />
+		<param name="num" type="int" />
+	</node>
+		<node cmd="gmAddTask" name="增加任务" desc="增加任务">
+		<param name="playerId" type="long" />
+		<param name="taskId" type="int" />
+	</node>
+	<node cmd="gmFinishTask" name="完成任务" desc="完成任务">
+		<param name="playerId" type="long" />
+		<param name="taskId" type="int" />
+	</node>
+	<node cmd="gmClearDunNum" name="清空所有副本记录" desc="清空所有副本记录">
+		<param name="playerId" type="long" />
+	</node>
+    <node cmd="gmSetGuild" name="设置新手引导" desc="设置新手引导">
+		<param name="playerId" type="long" />
+		<param name="id" type="int" />
+	</node>
+	 <node cmd="gmStartAct" name="gm开启活动" desc="gm开启活动">
+		<param name="id" type="int" />
+	</node>
+	 <node cmd="gmEndAct" name="gm结束活动" desc="gm结束活动">
+		<param name="id" type="int" />
+	</node>
+	
+	<node cmd="gmResetRingTask" name="重置日常周常任务" desc="重置日常周常任务">
+		<param name="playerId" type="long" />
+	</node>
+		<node cmd="gmSetTowerId" name="设置塔层数" desc="设置塔层数">
+		<param name="playerId" type="long" />
+		<param name="towerId" type="int" />
+	</node>
+	<node cmd="gmResetWorldBossTired" name="重置世界boss疲劳值" desc="重置世界boss疲劳值">
+		<param name="playerId" type="long" />
+	</node>
+</root>

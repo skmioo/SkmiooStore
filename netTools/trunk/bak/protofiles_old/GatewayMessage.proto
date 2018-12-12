@@ -1,0 +1,29 @@
+//@module=Gateway,StartIndex=3001,classname=Gateway
+option java_package = "com.mrd.game.message";
+
+// 网关服务器相关协议
+
+// gateway 启动并成功注册各服务器后通知World注册结果，World在收到正确消息后才可允许客户端登陆
+message GateWReadyPush
+{
+	required int32 code 	= 1; // 1-gateway注册全部server成功，即游戏服务器进程启动正常;2：异常。 如果返回异常，建议查找原因，禁止客户端登陆
+}
+
+// 客户端连接gateway成功后或者玩家退出游戏或者定时推送，推送给World，告知 world当前 gateway 负载。
+message GateWLoadPush
+{
+	required int32 serverId 	= 1; // gateway id
+	required int32 load 		= 2; // 负载，即当前连接数
+}
+// World通知gateway 玩家切换服务器。 gateway 根据比对当前curServerId是否匹配，确定本次修改是否执行。time字段可能辅助进行比较
+message WGateSwitchServerPush
+{
+	required int64 playerId 	= 1; // 玩家ID
+	required int32 serverId 	= 2; // 需要切换的服务器ID -1 ，表示刚登陆
+	required int32 curServerId 	= 3;  // 当前所在服务器ID
+}
+// 玩家连接断开(退出或网络异常中断)时，通知玩家当前所在服务器
+message GateGSessionClosedPush
+{
+	required int32 	playerId	= 1;
+}

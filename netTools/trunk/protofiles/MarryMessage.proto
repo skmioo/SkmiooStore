@@ -1,0 +1,155 @@
+//@module=marry,StartIndex=8400,classname=Marry
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//发起求婚
+message CGDoMarry
+{
+	optional int64 sourcePlayerId = 1;    //求婚者id
+	optional int64 targetPlayerId = 2;    //被求婚者id
+	optional int32 ringId = 4;    		  //钻戒id 1---3
+}
+
+//求婚返回
+message GCDoMarry
+{
+	optional int64 sourcePlayerId = 1;    //求婚者id
+	optional int64 targetPlayerId = 2;    //被求婚者id
+	optional int32 ringId = 3;    		  //钻戒id 1---3
+	optional string sourceName = 4;		  //求婚者名字
+}
+
+//发起告白
+message CGExpressLove
+{
+	optional int64 sourcePlayerId = 1;    //求婚者id
+	optional int64 targetPlayerId = 2;    //被求婚者id
+	optional int32 ringId = 3;    		  //钻戒id 1---3
+	optional string loveLetter = 4;		  //告白语言
+}
+
+//告白返回
+message GCExpressLove
+{
+	optional int64 sourcePlayerId = 1;    //求婚者id
+	optional int64 targetPlayerId = 2;    //被求婚者id
+	optional int32 ringId = 3;    		  //钻戒id 1---3
+	optional string loveLetter = 4;		  //告白语言
+	optional string sourceName = 5;		  //求婚者名字
+}
+
+// 告白回应
+message CGExpressLoveBack
+{
+	optional int64 sourcePlayerId = 1;    //求婚者id
+	optional int64 targetPlayerId = 2;    //被求婚者id
+	optional int32 ringId = 3;    		  //钻戒id 1---3
+	optional int32 result = 4;			  //1同意，0拒绝
+}
+
+// 告白回应
+message GCExpressLoveBack
+{
+	optional int64 sourcePlayerId = 1;    //求婚者id
+	optional int64 targetPlayerId = 2;    //被求婚者id
+	optional int32 ringId = 3;    		  //钻戒id 1---3
+	optional int32 result = 4;			  //1同意，0拒绝
+	optional string targetName = 5;	  	  //被求婚者名字
+}
+
+//戒指信息
+message RingInfo
+{
+     optional int32 ringID = 1;//戒指ID
+     optional int32 level = 2;//等级
+     optional int32 loveNum = 3;//恩爱值
+}
+
+//推送玩家结婚状态
+message GCMarrySts
+{
+    optional int32 sts = 1;//0未婚 1，已婚，2，离婚中
+    optional int32 sex = 2;//1男，0，女(本人在结婚中的性别)
+    optional RingInfo ringInfo = 3;//戒指
+    optional int64 arriveTime = 4;//if 当前是 离婚中状态，这里传到期时间
+    optional int64 divorcePlayerId = 5;//if 当前是 离婚中状态，这里传离婚发起者的角色id
+	optional string divorcePlayerName = 6;//if 当前是 离婚中状态，这里传离婚发起者的名字
+}
+
+//戒指强化
+message CGMarryRingPower
+{
+}
+
+message GCMarryRingPower
+{
+     optional RingInfo ringInfo = 1;//戒指
+}
+
+//查看配偶戒指模型信息
+message CGSearchMarryInfo
+{
+}
+
+message GCSearchMarryInfo
+{
+     optional int32 sid			= 1;//小类ID
+     optional string playerName = 2;//名字
+     optional RingInfo ringInfo = 3;//戒指
+     optional ChangeEquipInfo changInfo = 4;//模型
+}
+
+//离婚
+message CGDivorce
+{
+    optional int32 divorceType = 1;//离婚类型1，强制离婚，2协议离婚 
+}
+
+message GCDivorce
+{
+    optional int32 divorceType = 1;//离婚类型1，强制离婚，2协议离婚 
+    optional GCMarrySts data = 2;//玩家结婚状态
+}
+
+//同意离婚，或者拒绝离婚
+message CGAgreeOrRefuse
+{
+    optional int32 type = 1;//同意离婚,拒绝离婚
+}
+
+//同意离婚，或者拒绝离婚(同意双方都发)
+message GCAgreeOrRefuse
+{
+    optional int32 type = 1;//同意离婚,拒绝离婚
+    optional GCMarrySts data = 2;//玩家结婚状态
+	optional string playerName = 3; // 同意或者拒绝离婚者的名字
+}
+
+
+
+
+
+
+
+
+
+
+
+//结婚排行榜
+message MarryRank
+{
+    optional int32 rankId = 1;//排行id 
+    optional int64 boyPlayerId = 2;//
+    optional string boyName = 3;//
+    optional int32 boyVipLv = 4;//vip等级
+    optional int64 girlPlayerId = 5;//
+    optional string girlName = 6;//
+    optional int32 girlVipLv = 7;//vip等级
+    optional int32 totalLoveNum = 8;//恩爱值
+}
+
+
+
+
+

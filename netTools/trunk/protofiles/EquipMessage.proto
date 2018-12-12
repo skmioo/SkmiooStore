@@ -1,0 +1,118 @@
+//@module=equip,StartIndex=2400,classname=Equip
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+import "StoneMessage.proto";
+//----------------------装备----------------------
+
+//装备槽数据
+message EquipSlots
+{
+	optional int32 type = 1;      		//装备槽类型
+	optional EquipInfo equipInfo = 2;   //槽中所放装备数据
+	optional int32 level = 3;      		//装备槽强化等级
+	repeated StoneInfo StoneList = 4;   //装备槽上镶嵌的宝石列表
+}
+
+//装备数据
+message EquipInfo
+{
+	optional int64 pid = 1;    			//装备唯一ID
+	optional int32 sid = 2;    			//模板ID	
+	optional int32 bind	= 3;    		//是否绑定 0:未绑定;1:已绑定
+	optional int32 isEquiped = 4;		//是否穿在身上 0:未穿 1:已穿
+	repeated EquipAttr equipAttrs = 5; 	//装备随机属性
+	optional string createName = 6;     //打造者名字
+}
+
+message EquipAttr
+{
+	optional int32 attrkey  		= 1;
+	optional int32 attrvalue  		= 2;
+	optional int32 viewflag  		= 3;//是否展示(1是 0否)
+}
+
+// 装备 客户端发起操作
+message CGEquipOperate
+{
+	optional int32 operate = 1;		//操作类型 1:所有穿在身上的装备 2:穿装备 3:脱装备 4.强化装备槽 5：宝石镶嵌 6：宝石摘除 7: 宝石一键镶嵌
+	optional int32 gridID = 2;	    //装备槽id
+	optional int64 pid = 3;	        //装备pid
+	optional int32 powertype = 4;	//强化类型 0:普通强化 1：一键强化
+	optional int32 holeId = 5;		//宝石坑id
+	optional int64 gemPid =6; 	    //宝石唯一id
+	
+}
+
+// 装备 返回操作结果
+message GCEquipOperateResult
+{
+    optional int32 operate = 1;//类型
+    repeated EquipSlots equipSlots = 2;
+	optional int32 errorCode=3; //0:失败;1:成功
+}
+
+// 查看角色型 装备 属性 详细信息
+message CGPlayerDetalitedInfo
+{
+	optional int64 playerID = 1;	//要查看的玩家ID
+}
+
+// 向客户端推送角色模型 装备 属性 详细信息
+message GCSendPlayerDetalitedInfo
+{
+	repeated CharacterAttr charAttr = 1;//用户属性集合e
+	repeated EquipInfo equipInfos = 2;	//装备信息
+	optional int32 gemEffect =  3;	//宝石共鸣效果 0:表示没有效果
+	repeated EquipSlots equipSlots = 4; //装备槽信息
+	optional int32 slotEffect = 5;  //装备槽共鸣效果
+	optional int32 level = 6;	//玩家等级
+	optional int32 iconid = 7;	//头像id
+	optional string gangName = 8;	//帮会名(没有不传)
+	optional int32 professionId = 9;	//职业
+	optional int32 vipLevel = 10;	//vip等级
+	optional string playerName = 11;	//角色名
+	optional int32 battleNum = 12;	//战斗力
+	repeated StoneSlotInfo stoneSlotList=13;	//宝石列表
+	optional ChangeEquipInfo changeEquipInfo=14;//换装需要的数据
+	optional int64 playerID = 15;	//查看的玩家ID
+	optional string vipName = 16;	//加V信息
+}
+
+
+// 坐骑装备 客户端发起操作
+message CGHorseEquipOperate
+{
+	optional int32 operate = 1;	//操作类型 1:所有穿在身上的装备 2:穿装备  3:强化 4:升星
+	optional int32 gridID = 2;	//格子id	//根据操作类型选填
+	optional int64 pid = 3;	//装备pid
+	optional int32 autoCost = 4;	//坐骑强化石不足是否自动消耗金币 0:否；1:是
+}
+
+// 坐骑装备 返回操作结果
+message GCHorseEquipOperateResult
+{
+    optional int32 operate = 1;//类型
+    repeated EquipInfo equipInfos = 2;
+	optional int32 errorCode=3; //0:失败;1:成功 2:升星成功 3:升星失败
+	repeated int32 starSyms = 4; //升星共鸣效果id列表
+	repeated int32 intensiveSyms = 5;	//强化共鸣效果id列表
+	repeated int32 qualitySyms = 6;	//装备共鸣效果id列表
+	optional int32 extendState = 7;	//1继承强化  2继承升星  3都继承 0不继承
+}
+
+// 装备打造 客户端发起操作
+message CGCreateEquip
+{
+	optional int32 createListID = 1;  //打造列表id
+	optional int32 createType = 2;    //打造类型( 0普通打造，1高级打造 )
+}
+
+// 装备打造 返回操作结果
+message GCCreateEquipResult
+{
+	optional int32 result = 1;  		//打造结果（0失败，1成功）
+	optional EquipInfo equipInfo = 2;   //装备数据
+}
+
+

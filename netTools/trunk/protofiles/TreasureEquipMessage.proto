@@ -1,0 +1,73 @@
+//@module=treasureEquip,StartIndex=8300,classname=TreasureEquip
+option java_package = "com.mile.common.message";
+
+//词条定义
+message VocabularyInfo
+{
+    optional int32 tid = 1;    //策划配置表词条id
+	optional int32 type = 2;    //1改变人物属性,2改变宝器基础属性,3技能修正,4伤害修正,5承伤修正     
+	optional string value = 3;    //不同类型对应的格式不相同，目前1,2的类型为key:value|key:value
+	
+}
+
+//宝器数据结构
+message TreasureEquipData
+{
+	optional int64 pid = 1;    //装备唯一ID
+	optional int32 sid = 2;    //模板ID	
+	optional string baseValue = 3;    //属性宝器属性集合 格式 key:value|key:value
+	optional int32 battleNum	= 4;    //战斗力
+	repeated VocabularyInfo vocalInfos = 5;	//词条列表
+	repeated VocabularyInfo tempVocalInfos = 6;	//随机洗练结果
+    optional int32 sorce	= 7;    //洗练积分	
+    optional int32 pos	= 8;    //位置
+    optional int32 bind	= 9;    //是否绑定 0:未绑定;1:已绑定
+    optional int32 oldVocalBattleNumber = 10;   //老词条战力
+    optional int32 newVocalBattleNumber = 11;   //新老词条战力
+    
+}
+//玩家身上所有的装备集合
+message GCAllOnTreasureEquips
+{
+   repeated TreasureEquipData equips=1;//装备列表
+}
+//装备穿脱
+message CGOnOrOffTreasureEquip
+{
+    optional int64 pid = 1;    //装备唯一ID
+	optional int32 type = 2;    //1 穿上 2.脱下	
+	optional int32 pos	= 3;    //位置
+}
+
+//装备穿脱
+message GCOnOrOffTreasureEquip
+{
+    optional int64 pid = 1;    //装备唯一ID
+	optional int32 type = 2;    //1 穿上 2.脱下	
+	optional int32 sts = 3;    //1 成功，0失败	
+}
+//洗练
+message CGRandomTreasureEquip
+{
+     optional int64 pid = 1;    //装备唯一ID
+	optional int32 type = 2;    //1 普通洗练，2随机洗练
+	optional int32 costType=3;//是否消耗金条，1，消耗，0不消耗
+}
+//洗练返回
+message GCRandomTreasureEquip
+{
+     optional int64 pid = 1;    //装备唯一ID
+	optional int32 type = 2;    //1 普通洗练，2随机洗练
+	optional TreasureEquipData data=3;//洗练结果
+}
+//保存洗练
+message CGSaveTreasureEquip
+{
+  optional int64 pid = 1;    //装备唯一ID
+}
+//保存洗练返回
+message GCSaveTreasureEquip
+{
+  optional int64 pid = 1;    //装备唯一ID
+  optional TreasureEquipData data=2;//洗练结果
+}

@@ -1,0 +1,234 @@
+//@module=team,StartIndex=2700,classname=Team
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------  组队功能  ----------------------
+
+
+//队员信息
+message TeamMember
+{
+	optional int64 playerID = 1;	//玩家id
+	optional string nickName = 2;	//昵称
+	optional int32 level = 3;	//等级
+	optional int32 fightValue = 4;	//战斗力
+	optional int32 onLine = 5;	//在线状态 在线:1;	离线:2
+	optional int32 professionId = 6; //职业
+	optional int32 sex = 7;	//性别
+	optional int32 isFollow = 8;	//是否跟随队长 1:跟随 2:不跟随
+	optional int64 teamID = 9;	//队伍ID(暂定附近玩家时使用此字段)
+	optional int32 hp = 10; //血
+	optional int32 maxHp = 11;	//蓝
+	optional int32 iconid = 12;	//头像ID
+	optional ChangeEquipInfo changeEquipInfo = 13;	//角色换装信息
+	optional Vector3Info pos = 14;	//玩家坐标
+	optional int32 sceneID = 15;	//场景id
+}
+
+//队伍信息
+message TeamInfo
+{
+	optional int64 teamID = 1;	//队伍id
+	optional string teamName = 2;	//队伍名称
+	repeated TeamMember memberInfo = 3;	//队员列表
+	optional int64 captionID = 4 ;	//队长ID
+	optional int32 targetID = 5;	//队伍目标
+	optional int32 fightValue = 6;	//战斗力
+	optional int32 minFight = 7; //最低战斗力(80表示百分之八十)
+	optional int32 maxLevel = 8;	//最高等级要求
+	optional int32 minLevel = 9;	//最低等级要求
+	optional int32 isFollow = 10;	//入队是否跟随 1:跟随 2：不跟随
+	optional int32 autoMate=11;//1自动匹配中，0，未匹配
+}
+
+
+
+//队伍精简信息
+message TeamSampleInfo
+{
+	optional int64 teamID = 1;	//队伍id
+	optional string teamName = 2;	//队伍名称
+	optional int32 num = 3;	//队员个数
+	optional int32 level = 4;	//等级
+	optional int32 iconid = 5;	//头像ID
+	optional int32 professionId = 6; //职业
+	optional int32 isNear=7;//是否是附近队伍，1，是
+	optional int32 targetID = 8;	//队伍目标
+		optional int32 maxLevel = 9;	//最高等级要求
+	optional int32 minLevel = 10;	//最低等级要求
+	optional int32 sex = 11;	//性别
+	
+}
+
+
+//创建组队
+message CGCreateTeam
+{
+	optional int32 targetID = 1;	//队伍目标
+}
+
+//创建组队
+message GCRefreashMyTeam
+{
+	optional TeamInfo teamInfo = 1;	//队伍信息
+}
+//打开组队界面
+message CGOpenTeamView
+{
+    optional int32 type=1;//0查看全部，1，附近玩家
+}
+
+//打开组队界面 返回
+message GCOPenTeamView
+{
+    repeated TeamMember members = 1;	//附近玩家
+    repeated TeamSampleInfo teams=2;//队伍列表
+    optional int32 autoAgree=3;//组队邀请我时，我是否自动同意 默认1自动同意
+     optional int32 type=4;//0查看全部，1，附近玩家
+     optional int32 autoMate=5;//1自动匹配中，0，未匹配
+}
+
+//离开队伍 
+message CGLeaveTeam
+{
+}
+//离开队伍
+message GCLeaveTeam
+{
+     optional int32 isInitiative=1;//1主动，0
+}
+
+//队伍中增加一个人
+message GCAddTeamMember
+{
+    optional TeamMember member=1;//队伍中添加一个人
+}
+//队伍中删除一个人
+message GCDelTeamMember
+{
+    optional int64 playerID = 1;	//玩家id
+}
+//某人属性发生改变，更新
+message GCUpdateTeamMember
+{
+    repeated TeamMember member=1;//队伍中更新一个人
+}
+//其他人员申请入队
+message CGApplyTeam
+{
+    optional int64 teamID = 1;	//队伍id
+}
+//给队长发确认框
+message GCApplyTeamLeader
+{
+     optional int64 applyId=1;//申请者id
+     optional string applyName=2;//申请者名字
+     optional  string battleNumber=3;//战斗力
+}
+//队长同意申请||拒绝
+message CGAgreeApply
+{
+    optional int64 applyId=1;//申请者id
+    optional int32 sts=2;//0同意，1，拒绝
+}
+//队长邀请其他玩家
+message CGInviteOther
+{
+    optional int64 invitePlayerId=1;//邀请者id
+}
+//其他玩家接收到队长邀请
+message GCInviteOther
+{
+    optional int64 leaderPlayerId=1;//队长id
+    optional  string leaderName=2;//队长名字
+    optional  string battleNumber=3;//战斗力
+}
+
+//其他玩家同意队长邀请
+message CGAgreeInvite
+{
+    optional int64 leaderPlayerId=1;//队长id
+    optional int32 type=2;//1是同意,0拒绝
+}
+
+//队长踢出其他队员
+message CGKickedOut
+{
+     optional int64 otherPlayerId=1;//其他id
+}
+//移交队长---队长返回GCLeaveTeam 其他玩家重新刷新队伍信息
+message CGTransferCaption
+{
+   optional int64 otherPlayerId=1;//移交目标
+}
+//队长配置队伍内容
+message CGSetTeamAuthority
+{
+     optional int32 minLv=1;//最小等级 最小1 (-1不处理)
+     optional int32 maxLv=2;//最大等级 最大300 (-1不处理)
+     optional int32 minBattleNumber=3;//战力(-1不处理)
+     optional int32 targetID = 4;	//队伍目标(-1不处理)
+     optional int32 autoFollw = 5;	//1自动跟随(-1不处理)
+     optional int32 autoAgree=6;//1申请自动同意(-1不处理)
+}
+message GCSetTeamAuthority
+{
+     optional int32 minLv=1;//最小等级 最小1(-1不处理)
+     optional int32 maxLv=2;//最大等级 最大300(-1不处理)
+     optional int32 minBattleNumber=3;//战力(-1不处理)
+     optional int32 targetID = 4;	//队伍目标(-1不处理)
+     optional int32 autoFollw = 5;	//1自动跟随(-1不处理)
+     optional int32 autoAgree=6;//1申请自动同意(-1不处理)
+}
+//设置是否自动同意队长的邀请
+message CGSetAutoAgree
+{
+    optional int32 autoAgree=1;//1同意，0不同意
+}
+//设置是否自动同意队长的邀请
+message GCSetAutoAgree
+{
+    optional int32 autoAgree=1;//1同意，0不同意
+}
+//队长向全体队员发起跟随喊话
+message CGCallFlow
+{
+}
+//跟随消息广播给其他玩家 
+message GCCallFlow
+{
+    optional string playerName=1;//队长名字
+}
+//队员响应队长
+message CGMemberResponse
+{
+    optional int32 res=1;//1同意跟随 
+}
+// 队员设置自己的跟随状态
+message CGMemberFolw
+{
+	optional int32 autoFolw=1;//1同意跟随 0 取消跟随 
+}
+// 队员设置自己的跟随状态
+message GCMemberFolw
+{
+	optional int32 autoFolw=1;//1同意跟随 0 取消跟随
+	optional int64 playerId=2;//操作的id 
+}
+//便捷组队便捷组队，if是队长，则是队伍组队
+message CGQuickTeam
+{
+     optional int32 autoQuick=1;//1自动组队 0 取消自动组队 
+     optional int32 targetID=2;//目标id
+}
+message GCQuickTeam
+{
+     optional int32 autoQuick=1;//1自动组队 0 取消自动组队 
+}
+
+//跟随序列
+message GCFllowQueue
+{
+     repeated int64 fllowIds=1;//跟随列表
+}

@@ -1,0 +1,76 @@
+//@module=friend,StartIndex=5000,classname=Friend
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------好友VO定义----------------------
+
+//请求好友数据列表
+message CGFriendListData
+{ 
+	optional int32 type = 1;//列表类型 1好友 2仇人 3黑名单 4最近联系人 5好友申请列表 6推荐好友列表 7搜索好友 8鲜花宝贝搜索好友
+	optional string playername   = 2;//玩家名字
+	optional int32 region   = 3;//地域 1同城2全国
+	optional int32 gender   = 4;//性别 1女生 2男生 3全部
+}
+
+message GCFriendListDataBack
+{
+	optional int32 type = 1;//列表类型 1好友 2仇人 3黑名单 4最近联系人 5好友申请列表 6推荐好友列表 7搜索好友 8鲜花宝贝搜索好友
+	repeated FriendData frienddata = 2;//数据列表
+}
+
+//好友操作
+message CGOptionFriend
+{
+	optional int32 type = 1;//操作类型 1加好友 2删除好友 3加黑名单 4删黑名单 5加仇人 6删除仇人 7同意好友请求 8忽略好友申请列表 9删除好友删除好友申请
+	repeated int64 objId = 2;
+}
+
+message GCOptionFriendBack
+{
+	optional int32 flag = 1;    //1 成功 0=失败 2=刷新 3=加好友操作成功
+	optional int32 type = 2;//操作类型 1加好友 2删除好友 3加黑名单 4删黑名单 5加仇人 6删除仇人 7同意好友请求 8忽略好友申请列表(不返回数据)9删除好友删除好友申请
+	repeated FriendData frienddata = 3;//数据列表
+}
+
+//主动推送加好友列表
+message GCPushAddFriend
+{
+	repeated FriendData frienddata = 1;//好友数据
+}
+
+//系统消息
+message GCPushPersonMessage
+{
+	repeated PersonalMessagees permsg = 1;//消息数据
+}
+
+//获取FriendData
+message CGGetFriendData
+{
+	optional int64 objId = 1;//玩家唯一ID
+}
+
+//获取FriendData
+message GCGetFriendDataBack
+{
+	optional FriendData frienddata = 1;//玩家数据
+}
+//精灵
+message CGFairy
+{
+	optional string content = 1;//反馈内容
+}
+
+//追踪仇人
+message CGTrackEnemy
+{
+   optional int64 enemyPlayerId = 1;//仇人ID
+}
+
+//追踪仇人返回
+message GCTrackEnemy
+{
+   optional Vector3Info targetPos	= 2;    //仇人目标位置
+}

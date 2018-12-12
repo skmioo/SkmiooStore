@@ -1,0 +1,42 @@
+//@module=legacy,StartIndex=6200,classname=Legacy
+option java_package = "com.mile.common.message";
+
+//----------------------  血脉功能  ----------------------
+
+// 血脉
+message LegacyData
+{
+	optional int32 legacyId=1;//服务器生成唯一ID，也可以不唯一
+	optional int32 tableId=2;//配表Id
+	optional int32 currentExp=3;//总当前经验
+	optional int32 isOnBody=4;//是否在身上， 0:背包，1：屁股上
+	optional int32 idxOfBody=5;//槽ID
+}
+
+message CGLegacy
+{
+	optional int32 operate = 1;// 操作类型0：打开, 1：使用,2:卸下，3：融合，4:出售，5: 抽取, 6:一键卖出, 7:一键取回
+	optional int32 legacyId=2;//唯一Id （1：使用,2:卸下，3：融合，4:出售）（融合:被融合血脉ID）
+	repeated int32 listLegacyId=3;//(融合：原材料血脉Id列表);
+	optional int32 flag=4;// (抽取：0：抽取;1:召唤紫色; 2:抽十次)
+	optional int32 state=5;// (抽取:0:正常，1:自动卖出毒血)
+}
+
+message GCLegacy
+{
+	optional int32 operate = 1;// 操作类型0:打开，1：使用,2:卸下，3：融合，4:出售，5: 抽取, 6:一键卖出, 7:一键取回// 全推：打开，使用，卸下，融合，//推背包：出售,，//推仓库：抽取,一键卖出， //推背包和仓库: 一键取出
+	optional int32 fightValue = 2;//血脉总战斗力
+	repeated LegacyData listOnBody = 3;//穿在身上的
+	repeated LegacyData listInBag = 4;//背包里的，客户端排序
+	optional int32 result = 5;//结果0：失败，1:成功
+	optional LegacyData legacy = 6;//替换之后的血脉
+	repeated LegacyData listInDepot = 7;//抽取的血脉仓库
+	optional int32 drawId = 8;//打开/抽取：血脉掉落表Id
+	optional int32 haveMoneyNum = 9;	//当前有的钱数
+}
+
+message CGLegacyBuyNum
+{
+	optional int32 type = 1;	// 0 1次 2 10次
+}
+

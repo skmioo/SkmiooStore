@@ -1,0 +1,51 @@
+//@module=teamPK,StartIndex=3600,classname=TeamPK
+option java_package = "com.mile.common.message";
+
+import "CommonMessage.proto";
+//----------------------  组队PK repeated ----------------------
+
+//组队PK数据
+message TeamPKInfo
+{
+	optional int32 teamPKType = 1; //类型
+	optional int32 teamPKCount = 2; //参加次数
+	optional int32 teamPKWinCount = 3; //胜利次数
+	optional int32 teamPKSuccessionCount = 4; //连胜次数
+	optional int32 teamPKRewardState = 5; //领取奖励状态 
+}
+
+message CGTeamPKSend
+{
+	optional int32 operate = 1;	//操作类型 1:组队PK数据 2:开始匹配 3:进入战场 4:获得指定奖励, 5:取消匹配
+	optional int32 rewardId = 2; //指定奖励索引
+	optional int32 teamPKType = 3; //匹配与进入战场的类型
+}
+
+message GCTeamPKPush
+{
+	optional int32 operate = 1;	//操作类型 1:组队PK数据 2: 3v3车所属 3:5v5标记所属PlayerID  4：5v5标示改变后PlayerID 5：两队分数 6:战场状态（准备 开始 结束）7:15v15资源所属队伍 8:获得指定奖励 9:匹配完成
+	repeated TeamPKInfo teamPKInfo = 2; //组队PK数据 根据类型判断是否开启
+	optional int32 lastReadyTime = 3;// flag=1(ready),表示剩余准备时间；flag=2(active),表示剩余战斗时间，
+	optional int64 diePuid = 4; //操作7复用 标记Index
+	optional int64 killPuid = 5; //操作7复用 所属队伍
+	optional string dieName = 6;
+	optional string killName = 7;
+	optional int32 flag = 8;//
+	optional int32 result = 9;//2:队伍1获胜，3：队伍2获胜，0：平局
+	optional MapLongAry camp1 = 10;// 匹配完成之后的点亮数据[puid:[headIcon, name]] [12312:["player1","猴子"]] /战斗中面板数据  [puid:[killNum,deadNum]]   ([12312:[1,2],5223:[5,4]])
+	optional MapLongAry camp2 = 11;// 战斗中面板数据[12312:[1,2],5223:[5,4]] 
+	optional int32 scoreBattle1 = 12;//阵营BATTLE1 的分数
+	optional int32 scoreBattle2 = 13;//阵营BATTLE2 的分数
+}
+
+message CGTeamPKHoldFightFlag
+{
+	optional int64 objId = 1; // 战旗ID	
+}
+
+message GCTeamPKHoldFightFlag
+{
+	optional int64 objId = 1; // 战旗ID
+	optional int32 camp = 2; // 修改后的阵营
+	optional int64 playerId = 3; // 发起人
+}

@@ -1,0 +1,230 @@
+//@module=backpack,StartIndex=2300,classname=Backpack
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+import "EquipMessage.proto";
+import "TreasureEquipMessage.proto";
+import "TalismanMessage.proto";
+
+//----------------------背包----------------------
+
+
+//背包数据
+message BackpackGrid
+{
+	optional int32 gridID =1;//格子id	
+	optional int32 type =2; //道具类型
+	optional int32 itemId =3; //道具id
+	optional int32 num =4; //物品数量
+	optional EquipInfo equipInfo =5;	// 装备
+	optional int64 pid = 6;	//唯一id
+	optional int32 bind = 7;	//是否绑定 0:未绑定; 1:已绑定
+	optional TreasureEquipData treasureEquip =8;	// 宝器
+	optional TalismanInfo talismanInfo = 9;  // 法宝
+	optional TreasureMapDataInfo treasureMap = 10; //藏宝图
+}
+
+//物品信息
+message BackpackItem
+{
+	optional int32 bid =1; //大类id
+	optional int32 sid =2; //小类id
+	optional int32 num =3; //物品数量
+	optional int32 bind =4;//绑定状态(0不绑定,1绑定)
+}
+
+//背包操作
+message CGBackpackOper
+{
+	optional int32 operate =1;	//操作类型 1:获取数据; 2:整理；3:使用物品； 4:扩充; 5:拆分; 6:分解装备 7:背包放入到仓库  8:仓库提取到背包; 9:出售 10:刷新 11:特殊使用 12:任务背包添加 13:任务背包使用 14:任务背包 整理 15:使用钥匙宝箱 16:仓库整理 17:仓库扩充
+	optional int32 gid	=2;	//操作的格子id
+	optional int32 addNum = 3;	//改变的数量
+	repeated int32 resolveId = 4;	//要分解的格子id
+}
+
+message GCBackpackOper
+{
+	optional int32 operate =1;	//操作类型 1:获取数据; 2:整理；3:使用物品； 4:扩充; 5:拆分; 6:分解装备 7:背包放入到仓库  8:仓库提取到背包; 9:出售 10:刷新 11:特殊使用 12:任务背包添加 13:任务背包使用 14:任务背包 整理 15:使用钥匙宝箱 16:仓库整理 17:仓库扩充
+	optional int32 gid	=2;	//操作的格子id
+	optional int32 addNum = 3;	//改变的数量
+	repeated int32 resolveId = 4;	//要分解的格子id
+}
+
+
+//返回背包数据
+message GCPutBackpack
+{
+	optional int32 operate =1;	//操作类型  0 覆盖 1更新
+	repeated BackpackGrid items =2;//背包数据(使用道具、提取、查询结果)
+	optional int32 gridNum =3;//开启格子数
+	optional int32 gridMax =4;//格子最大数
+}
+
+//返回仓库数据
+message GCPutStorage
+{
+	optional int32 operate =1;	//操作类型  0 覆盖 1更新
+	repeated BackpackGrid items =2;//仓库数据(使用道具、提取、查询结果)
+	optional int32 gridNum =3;//开启格子数
+	optional int32 gridMax =4;//格子最大数
+}
+
+
+//背包添加操作
+message CGBackpackSpecial
+{
+	optional int64 playerId	=1;    //玩家id
+	optional int32 operate =2;	//操作类型   7: 放东西  11:特殊使用 12:任务背包添加
+	repeated BackpackItem backpackItem = 3;	//要放入的物品列表
+}
+
+//藏宝图信息 凡人
+message TreasureMapDataInfo
+{
+	optional int64 pid = 1;	//道具唯一ID
+	optional int32 locationId = 2;	//藏宝图位置信息表里对应id
+    optional int32 eventType = 3; //事件类型
+	optional int32 eventParam = 4;	//事件参数   
+}
+
+//推送使用藏宝图结果 凡人
+message GCBackTreasureMap
+{
+	optional int32 result = 1;	//协议结果 0:失败 1:成功
+	optional int32 operate = 2;	//1:道具类处理成功 2:副本类型进入副本 3:副本完成 4:杀怪事件开始杀怪 5:杀怪完成 6:文件事件处理成功
+}
+
+
+// 藏宝图信息 以前的作废
+message TreasureMap
+{
+	optional int64 pid = 1;	//道具唯一ID
+	optional int32 mapID = 2;	//藏宝图位置信息表
+	optional int32 funcID = 3;	//效果表ID
+}
+
+//使用藏宝图
+message CGBackUseMap
+{
+	optional int32 gridID = 1;	//格子id
+	optional int64 pid = 2;	//唯一ID(检测使用物品是否存在)
+}
+
+//推送使用藏宝图结果
+message GCBackPuseUseMap
+{
+	optional int32 result = 1;	//使用结果 0:失败 1:成功
+	repeated TreasureMap treasureMap = 2;	//藏宝图数据
+	optional int32 type = 3;	//1:使用藏宝图 2:获取藏宝图数据 3:怪物已生成  4:使用通缉令成功
+	optional int64 monsterID = 4;	//怪物id
+}
+
+//邀请帮派成员传送到自己身边(使用道具效果)
+message GCSendTransmitToMe
+{
+	optional int64 playerID = 1;	//邀请人ID
+	optional int32 limitTime = 2;	//弹出框持续时间
+	optional string playerName = 3;	//邀请人名称
+}
+
+//传送到帮派成员身边(使用道具效果)
+message CGTransmitToMember
+{
+	optional int64 playerID = 1;	//传送对象ID
+}
+
+//通知客户端打开喇叭聊天UI
+message GCOpenChatHornUI
+{
+	optional int32 errorCode = 1;	//结果 0:失败; 1:成功
+}
+
+//使用宝箱结束
+message GCSendOpenBoxEnd
+{
+	repeated BackpackItem rewards =1;	//获得的道具列表
+	optional int32 errorCode = 2;	//结果 0:失败; 1:成功
+}
+
+//角色做指定动作
+message GCSendMakeAct
+{
+	optional int32 actID = 1;	//动作ID
+	optional int64 playerID = 2;	//角色ID
+}
+
+//道具类型数量限制
+message ItemLimit
+{
+	optional int32 type = 1;	//道具类型
+	optional int32 num = 2;	//使用数量
+}
+
+//返回道具限制使用数量
+message GCItemLimitBack
+{
+	repeated ItemLimit itemLimits = 1;	//道具类型使用限制数量
+}
+
+
+
+// 九门秘录信息
+message NineMysteryItem
+{
+	optional int64 pid = 1;	//道具唯一ID
+	optional int32 mapID = 2;	//秘录位置信息表
+	optional int32 eventType = 3;	//事件类型
+	optional string param = 4;	//事件参数。(如：事件为副本，则参数是副本id。如：事件为文本，则参数是文本id。)
+}
+
+//使用九门秘录
+message CGBackUseNineMystery
+{
+	optional int32 gridID = 1;	//格子id
+	optional int64 pid = 2;	//唯一ID(检测使用物品是否存在)
+}
+
+//请求进入副本 
+message CGUseNineMysteryIntoDungeon
+{
+	optional string dungeon = 1;	//参数副本id
+}
+
+
+//推送使用九门秘录结果
+message GCBackNineMystery
+{
+	optional int32 result = 1;	//协议结果 0:失败 1:成功
+	repeated NineMysteryItem nineMysteryItem = 2;	//九门秘录数据
+	optional int64 pid = 3;	//道具唯一ID  专属怪死亡 和 副本完成不需要
+	optional int32 operate = 4;	//1:获取数据 2:道具类处理成功 3:怪物已生成 4:怪物类处理成功 5:状态类处理成功 6:文本类处理成功 7:藏宝阁处理成功 8:副本类处理进入副本 9:副本完成
+	optional int64 monsterID = 5;	//怪物id
+}
+
+//道具合成
+message CGComposeItems
+{
+    optional int32 id = 1;	//策划配置表合成id
+    optional int32 targetNum = 2;//需要合成的目标个数
+    optional int32 selectBound = 3;//是否勾选了非绑定道具
+}
+message GCComposeItems
+{
+    optional int32 id = 1;	//策划配置表合成id
+    optional int32 targetNum = 2;//需要合成的目标个数
+    optional int32 selectBound = 3;//是否勾选了非绑定道具
+	optional int32 flag = 4;//0失败,1成功
+}
+//设置分解状态
+message CGSetAutoResolve
+{
+    optional int32 resolveId=1;
+}
+message GCSetAutoResolve
+{
+    optional int32 resolveId=1;
+}
+
+
+
+		

@@ -1,0 +1,89 @@
+//@module=Config,StartIndex=1001,classname=Config
+option java_package = "com.mrd.game.message";
+
+//FrontServer向 World请求初始化配置
+message LoadConfig
+{
+	optional int32 serverType = 1; //1=Login  2=world 3=scence
+	optional int32 serverID = 2;
+}
+message LoadConfigRet
+{
+	optional int32 serverType = 1; //1=Login  2=world 3=scence
+	repeated NamedConfigArray configArray = 2; //
+	repeated ServerInfo serverInfo 	= 3; // added for gateway 
+}
+
+message NamedConfigArray
+{
+	optional string name  = 1;//name
+	repeated KeyValuePair item  = 2; //List of key-value pairs
+}
+
+message KeyValuePair
+{
+	optional string key   = 1;
+	optional string value = 2;
+}
+
+//--------------------------------------------
+
+//服务器类型
+enum ServerType
+{
+	Login		= 1;
+	World 		= 2;
+	Scence		= 3;
+	GateWay		= 4;
+	social		= 5;
+}
+
+//服务器配置信息
+message ServerInfo
+{
+	optional int32 serverType = 1; //1=Login  2=world 3=scence
+	optional string ip = 2;
+	optional int32	id = 3;
+	optional int32	port = 4;
+}
+
+
+//Server向world注册
+message ServerRegist
+{
+	optional int32 serverType = 1; //1=Login  2=world 3=scence
+	optional int32 serverID = 2;
+	optional string registerKey = 3; // 注册请求唯一key，用于exchange异步结果匹配交换
+}
+message ServerRegistRet
+{
+	optional int32 retCode = 1; // 注册结果码
+	optional string registerKey = 2; // 原封不动返回注册请求唯一key，用于exchange异步结果匹配交换
+}
+
+// Login 向 World 请求网关信息
+message LWGetGatewayInfo
+{
+	required int64 playerId 		= 1;	// 唯一标示（游戏角色唯一标示）
+	required string token			= 2;	// 令牌
+	required string sessionId		= 3;	// 玩家在登陆服务器的会话id，需返回
+}
+message WLGetGatewayInfoBack
+{
+	required int64 playerId 		= 1;	// 唯一标示（游戏角色唯一标示）
+	required string sessionId		= 2;	// 玩家在登陆服务器的会话id，需返回
+	required ServerInfo gatewayInfo = 3;	// 网关信息
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

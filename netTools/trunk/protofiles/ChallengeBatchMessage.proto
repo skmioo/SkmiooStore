@@ -1,0 +1,47 @@
+//@module=challengeBatch,StartIndex=7900,classname=ChallengeBatch
+option java_package = "com.mile.common.message";
+
+//----------------------  挑战波次的怪  ----------------------
+
+import "InnerMessage.proto";
+
+//操作
+message CGChallengeBatchOperate
+{
+	optional int32 type = 1;	//类型: 0=初始化数据, 1=挑战 2=付费挑战, 3=挑战下一层, 4=扫荡, 5=付费扫荡, 9=退出
+}
+
+//操作结果
+message GCChallengeBatchOperateBack
+{
+	optional int32 type = 1;	//类型:  0=初始化数据, 1=挑战 2=付费挑战, 3=挑战下一层, 4=扫荡, 5=付费扫荡, 9=退出
+	optional int32 result = 2;	//结果,  失败时 有错误码
+}
+
+//初始化信息
+message GCChallengeBatchInfo
+{
+	optional int32 bo = 1;	//当前波次
+	optional int32 mopNum = 2;	//扫荡次数
+	optional int32 maxBo = 3;	//最大波次
+	optional int32 maxMopNum = 4;	//最大扫荡次数
+}
+
+//结果奖励
+message GCChallengeBatchReward
+{	
+	optional int32		operate = 1;//1=挑战,2=扫荡
+	optional int32		result=2; //结果
+	optional int32		bo = 3;	//当前波次
+	optional int32		mopNum = 4;	//扫荡次数
+	repeated Iteminfo	rewardItems = 5;	//奖励	
+}
+
+//推送这层的挑战时间
+message GCChallengeBatchRefreshTime
+{
+	optional int32 totalTime = 1;	//当前波数需要的总时间
+}
+
+
+

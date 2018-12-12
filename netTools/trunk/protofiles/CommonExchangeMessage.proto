@@ -1,0 +1,52 @@
+//@module=commonExchange,StartIndex=7700,classname=CommonExchange
+option java_package = "com.mile.common.message";
+
+
+//----------------------  通用兑换  ----------------------
+
+message CommonExchangeInfo
+{
+	optional int32 bid=1;
+	optional int32 sid=2;
+	optional int32 num=3;
+}
+message CommonExchangeListInfo
+{
+	optional int32 id=1;//templateId
+	repeated CommonExchangeInfo ex=2;//兑换需要物品
+	optional CommonExchangeInfo beEx=3;//兑换成品
+	optional int32 totalNum=4;//总次数
+	optional int32 hasNum =5;//已消耗次数
+	optional int32 shopType=6;//商店类型
+	optional string shopTypeName=7;//商店类型名称
+}
+
+
+message CGRefreshCommonExchange
+{
+	optional int64 playerId=1;
+}
+
+message GCRefreshCommonExchange
+{
+	repeated CommonExchangeListInfo exs=1;
+	repeated string history=2;//幸运记录  格式是 玩家名字,玩家名字,bid,sid,num
+	optional string information=3;//魔灵说明
+}
+
+message CGCommonExchange
+{
+	optional int32 id=1;
+}
+
+message GCCommonExchange
+{
+	optional int32 result=1;//1成功 0失败
+	optional int32 templateId=2;//
+	optional int32 totalNum=3;//
+	optional int32 hasNum=4;//
+}
+message GCRefreshHistory
+{
+	repeated string history=1;//幸运记录  格式是 玩家名字,bid,sid,num
+}

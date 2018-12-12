@@ -1,0 +1,91 @@
+//@module=combineActivity,StartIndex=8000,classname=CombineActivity
+option java_package = "com.mile.common.message";
+
+//----------------------  组合活动功能  ----------------------
+import "CommonMessage.proto";
+import "InnerMessage.proto";
+
+//组合活动信息
+message CombineActivityInfo
+{
+	optional int32 actId = 1;//活动ID
+	optional string name = 2;//活动名字
+	optional int32 tabid = 3;//活动排序
+	optional string tabimg = 4;//面板图片
+	optional string tabDesc = 5;//活动描述	
+}
+
+message CombineActivity
+{
+	optional int32 actId = 1;//活动ID
+	repeated CombineActivityInfo infoList = 2;//当前开启组合活动列表
+}
+
+//返回组合活动信息
+message GCCombineActivityList
+{
+	repeated CombineActivity activityList = 1;//当前开启所有的组合活动列表
+}
+
+//活动列表项信息
+message CombineActivityListItem
+{
+	optional int32 id = 1;//列表项ID
+	optional string desc = 2;//单项说明
+	optional string rewardInfo = 3;//奖励项信息
+	optional string progressText = 4;//进度说明文字
+	optional int32 curValue = 5;//当前值
+	optional int32 needValue = 6;//目标值
+	optional int32 getTimes = 7;//当前领取次数
+	optional int32 getTimesLimit = 8;//最大领取次数
+}
+
+//活动兑换项信息
+message CombineActivityExchangeItem
+{
+	optional int32 id = 1;//列表项ID
+	optional string desc = 2;//单项说明
+	optional string rewardInfo = 3;//奖励项信息
+	optional string needItemList = 4;//需要道具列表
+	optional int32 getTimes = 5;//当前领取次数
+	optional int32 getTimesLimit = 6;//最大领取次数	
+}
+
+
+//活动兑换项信息
+message CombineActivityBuyItem
+{
+	optional int32 id = 1;//列表项ID
+	optional string desc = 2;//单项说明
+	optional string rewardInfo = 3;//奖励项信息
+	optional string needMoney = 4;//需要的货币
+	optional int32 getTimes = 5;//当前领取次数
+	optional int32 getTimesLimit = 6;//最大领取次数
+}
+
+
+//领取或兑换奖励
+message CGGetCombineActivityReward
+{
+	optional int32 actId = 1;//活动ID
+	optional int32 id = 2;//列表项ID
+}
+
+//领取返回
+message GCGetCombineActivityRewardBack
+{
+	optional int32 result = 1;//操作结果0失败，2成功
+	optional int32 actId = 2;//活动ID
+	optional int32 id = 3;//列表项ID
+	optional int32 getTimes = 4;//当前领取次数	
+}
+
+//活动数据刷新
+message GCCombineActivityItemUpdate
+{
+	optional int32 actId = 1;//活动ID
+	optional int32 operate = 2;//操作类型0初始化 1更新
+	repeated CombineActivityListItem listItems =3;
+	repeated CombineActivityExchangeItem exchangeItems =4;
+	repeated CombineActivityBuyItem buyItems =5;	
+}

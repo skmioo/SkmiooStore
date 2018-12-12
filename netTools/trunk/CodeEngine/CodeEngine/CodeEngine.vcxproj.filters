@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Code">
+      <UniqueIdentifier>{2307749e-defd-4b0b-af47-f193fa1b2af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{a20ddff9-ac7d-4d44-b698-ce6a1541f898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\XML">
+      <UniqueIdentifier>{85963cd6-cd6d-46c8-876a-739eac444642}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\FileStream.h">
+      <Filter>Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\StreamData.h">
+      <Filter>Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\PBCSharp.h">
+      <Filter>Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\PBImpl.h">
+      <Filter>Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\TemplateDef.h">
+      <Filter>Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\BaseDef.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\cmd.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\fileLog.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\Log.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\logImp.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\StrFun.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\StringFun.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\SystemConfig.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\WinFun.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\XML\tinystr.h">
+      <Filter>Common\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Logic\XML\tinyxml.h">
+      <Filter>Common\XML</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CodeEngine.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\FileStream.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\StreamData.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\PBCSharp.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\PBImpl.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\PBCSharp_Base.cpp">
+      <Filter>Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\cmd.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\fileLog.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\Log.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\logImp.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\StrFun.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\StringFun.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\SystemConfig.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\WinFun.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\XML\tinystr.cpp">
+      <Filter>Common\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\XML\tinyxml.cpp">
+      <Filter>Common\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\XML\tinyxmlerror.cpp">
+      <Filter>Common\XML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Logic\XML\tinyxmlparser.cpp">
+      <Filter>Common\XML</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

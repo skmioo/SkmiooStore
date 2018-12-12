@@ -1,0 +1,17 @@
+//@module=dungeon,StartIndex=5700,classname=RandomDungeon
+option java_package = "com.mile.common.message";
+
+//----------------------副本----------------------
+
+
+message CGRandomDungeon
+{
+	optional int64 guid	=1; //npcid
+	optional int32 type	=2; //类型  1进入  2 完成退出 3中途退出
+}
+
+message GCRandomDungeon
+{
+	optional int32 resultCode	=1; //0 操作成功 非0表示失败
+}
+

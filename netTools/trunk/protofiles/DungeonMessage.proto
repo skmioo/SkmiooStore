@@ -1,0 +1,269 @@
+//@module=dungeon,StartIndex=2800,classname=Dungeon
+option java_package = "com.mile.common.message";
+
+//----------------------副本----------------------
+
+
+message CGEnterInstancing
+{
+	optional int32 id	=1; //副本id 
+}
+
+message GCEnterInstancing
+{
+	optional int32 id	=1; //副本id 
+	optional int64 endTime=2;//结束时间
+	repeated int32 guideIds=3;
+}
+
+
+//副本列表
+message GCAllMenusDatas
+{
+    repeated GCMenusData menus=1;
+}
+
+message GCMenusData
+{
+    optional int32 id	=1;// InstancingMenus.id
+    optional int32 current	=2;//当前次数
+	  optional int32 buyNum		=3;//当前购买次数
+	  repeated GCInstancingData instancingDatas=4;//副本信息
+	  repeated GCFastestPlayer players=5;//最快信息
+}
+
+//最快通过得人，支持单刷
+message GCFastestPlayer
+{
+  optional int32 id=1;//副本id
+  optional int32 passTime =2;//服务器最快通关时间 单位秒
+	optional string passTimeName =3;//服务器最快通关时间人名
+}
+//单个副本信息
+message GCInstancingData
+{
+	optional int32 id	=1;// 副本id
+	optional int32 currNum	=2;//当前挑战次数
+	optional int32 selfPassTime =3;//自己最快通关时间 单位秒
+	optional int32 canEnter=4;//1，可以打，o，不可以打
+	optional int32 canSweep=5;//能否扫荡 1 可以扫荡
+	optional int32 isPass=6;//是否通过
+}
+
+message DungeonItemsRwd
+{
+   optional int32 itemId=1;//道具id
+   optional int32 num=2;//数量
+   optional int32 bind=3;//绑定状态 1绑定
+}
+
+//结束返回
+message GCDungeonEnd
+{
+    optional int32 id=1;// 副本id
+    optional int32 sts=2;// 胜利状态；1胜利0，失败
+    repeated DungeonItemsRwd rwds=3;//获得的奖励列表 
+    optional int32 menus=4;//副本页卡id
+    
+}
+
+message CGChangeSchedule
+{
+	optional int32 schedule	=1;//进度id
+}
+
+message GCChangeSchedule
+{
+	optional int32 schedule	=1;//进度id
+	optional int64 changeTime	=2;//时间
+}
+//更改id
+message CGChangeGuideId
+{
+    optional int32 guideId	=1;//进度id
+}
+
+
+message GCInstancingStart
+{
+	optional int32 id		=1;//副本id
+	optional int32 time	=2;//时间
+}
+
+
+
+//询问队员是否同意
+message GCAskEnterDungeon
+{
+    optional int32 id=1;//副本id
+    optional string playerName=2;//队长名字
+}
+//队员同意进入副本
+message CGResponseEnterDungeon
+{
+    optional int32 id=1;//副本id
+    optional int32 sts=2;//是否同意进入，1，同意，0拒绝
+}
+//退出副本
+message CGExitDungeon
+{
+			optional int32 id=1;//副本id
+}
+//购买次数
+message CGBuyDungeonNum
+{
+     optional int32 menus=1;//副本页卡id
+     optional int32 buyNum=2;//购买数量
+}
+
+//扫荡副本
+message CGSweepDungeon
+{   
+     optional int32 sweepType=1;//扫荡类型 1,一键扫荡，0单个副本扫荡
+    optional int32 id=2;//sweepType==1  InstancingMenus.id；sweepType==0 Instancing.id;
+}
+
+message GCSweepDungeon
+{
+    repeated DungeonItemsRwd rwds=1;//获得的奖励列表 
+}
+//塔扫荡返回
+message GCSweepTower
+{
+   repeated GCDungeonEnd rwds=1;//
+}
+
+//副本进度
+message GCInstancingRwdSchedule
+{
+    optional int32 id=1;//副本id
+    optional int32 killNum=2;
+    optional int32 exp=3;
+    optional int32 boNum=4;
+}
+
+message GCInstancingErrorMessage
+{
+	optional int32 type	=1;//错误类型 //1 单人副本 2多人副本
+	optional int32 code	=2;//错误码
+	optional string name	=3;//姓名
+	optional int32 param	=4;//替换参数
+	optional int32 paramType	=5;//参数类型 //1任务id 2副本id
+}
+
+//boss数据结构
+message BossData
+{
+    optional int32 id	=1;
+    optional int32 starNum	=2;//星个数
+    optional int32 datePk=3;//今日是否已经挑战过 0 未PK，1，PK
+       optional int32 unLockBossSts	=4;//0未解锁，1，解锁
+}
+
+//boss章节
+message ChapterBossData
+{
+   repeated BossData bossList=1;//boss列表
+   optional int32 packStarNum=2;//宝箱个数
+   optional int32 childChapterId	=3;//章节id
+   optional int32 packRwdStatus=4;//是否领取了当前宝箱，1，领取，0，未领取
+
+}
+
+//打开页签
+message CGGetBossView
+{
+     optional int32 chapterId=1;
+}
+
+//打开页签返回
+message GCGetBossView
+{
+  optional int32 chapterId	=1;
+  repeated ChapterBossData chapterList=2;
+}
+
+//当有星数变化
+message GCChangeBossStar
+{
+   repeated BossData bossList=1;//星数变化列表
+    optional int32 chapterId	=2;
+   optional int32 childChapterId	=3;//变化宝箱星数章节id
+    optional int32 packStartNum	=4;//变化宝箱星数d
+    optional int32 rewardSts	=5;//0未领取，1，领取
+}
+
+//PKboss
+message CGPkBoss
+{
+    optional int32 chapterId	=1;
+    optional int32 childChapterId	=2;//变化宝箱星数章节id
+    optional int32 bossId	=3;
+}
+message BossRank
+{
+    optional int32 rankId	=1;
+    optional int64 sid	=2;//玩家id
+    optional string playerName	=3;
+    optional int32 useSeconds	=4;//用时 单位 （秒）
+}
+//获得某个boss 排行榜
+message CGGetBossRanks
+{
+    optional int32 chapterId	=1;
+    optional int32 childChapterId	=2;//变化宝箱星数章节id
+    optional int32 bossId	=3;
+}
+
+// 排行榜返回
+message GCGetBossRanks
+{
+    optional int32 chapterId	=1;
+    optional int32 childChapterId	=2;//变化宝箱星数章节id
+    optional int32 bossId	=3;
+    repeated BossRank ranks=4;
+}
+//boss战结束主动推
+message GCPKBossResult
+{
+    optional int32 result	=1;//1胜利，2失败
+    optional int32 starNum	=2;//星数
+    optional int32 useSeconds	=4;//用时 单位 （秒）
+    optional int32 chapterId	=5;
+    optional int32 childChapterId	=6;//变化宝箱星数章节id
+    optional int32 bossId	=7;
+}
+//领取章节宝箱
+message CGGetPackRwd
+{
+   optional int32 chapterId	=1;
+   optional int32 childChapterId	=2;//变化宝箱星数章节id
+   optional int32 bossId=3;//战斗结束领取奖励 
+}
+
+//退出个人boss战
+message CGExitPersonBoss
+{
+    optional int32 chapterId	=1;
+    optional int32 childChapterId	=2;//变化宝箱星数章节id
+    optional int32 bossId	=3;
+}
+
+message BossOpenSts
+{
+    optional int32 chapterId	=1;
+    optional int32 sts	=2;//0开启,1关闭
+
+}
+//个人boss是否开启
+message GCPersonBossOpenSts
+{  
+    repeated BossOpenSts stsList=1;
+}
+
+
+//清除个人boss
+message GCClearBossData
+{
+     optional int32 chapterId	=1;
+}

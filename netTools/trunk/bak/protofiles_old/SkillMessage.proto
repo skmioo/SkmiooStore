@@ -1,0 +1,63 @@
+//@module=skill,StartIndex=21001,classname=Skill
+option java_package = "com.mrd.game.message";
+
+import "InnerMessage.proto";
+
+//----------------------技能相关协议----------------------
+
+message CGUseSkill
+{
+	optional int32 skillId 				= 1; // 技能Id
+	optional int32 skillState  			= 2; // 技能状态
+	optional Vector3Info attackerPos 	= 3; // 攻击者位置，如果需要修正位置时，表示需要修正的位置
+	optional int32 skillCorrectState 	= 4; // 技能修正状态 0不需要修正 1需要修正
+	optional Vector3Info targetPos 		= 5; // 目标位置
+	optional int64 targetId 			= 6; // 目标id
+	optional int64 clientStartTime		= 7; //	前端开始时间
+}
+message GCUseSkillBack
+{
+	optional int64 attackerId 			= 1; //施法者Id
+	optional int32 skillId 				= 2; // 技能Id
+	optional int32 skillState  			= 3; // 技能状态
+	optional Vector3Info attackerPos 	= 4; // 攻击者位置
+	optional int32 skillCorrectState 	= 5; // 技能修正状态 0不需要修正 1需要修正
+	optional Vector3Info targetPos 		= 6; // 目标位置
+	optional int64 targetId 			= 7; // 目标id	
+	optional int64 clientStartTime		= 8; // 前端开始时间
+}
+
+
+message CGgetSkillGroupSend
+{
+}
+
+message GCskillGroupInfo
+{
+	optional int32 groupId				= 1; //组编号
+	optional int32 slot1				= 2; //技能栏1
+	optional int32 slot2				= 3; //技能栏2
+	optional int32 slot3				= 4; //技能栏3
+	optional int32 slot4				= 5; //技能栏4
+}
+message GCgetSkillGroupBack
+{
+	optional int64 playerId						= 1; // 玩家Id
+	repeated GCskillGroupInfo skillGroupInfo	= 2; //技能信息
+}
+
+
+message CGchangeSkillGroupSend
+{
+	optional int64 playerId				= 1; // 玩家Id
+	optional int32 groupId				= 2; //组编号
+	optional int32 slotId				= 3; //技能栏编号
+	optional int32 skillId				= 4; //技能编号
+}
+message GCchangeSkillGroupBack
+{
+	optional int32 result 				= 1; //0表示失败、1表示成功
+	optional int32 groupId				= 2; //组编号
+	optional int32 slotId				= 3; //技能栏编号
+	optional int32 skillId				= 4; //技能编号
+}

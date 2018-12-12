@@ -1,0 +1,111 @@
+//@module=recast,StartIndex=400,classname=Recast
+option java_package = "com.mile.common.message";
+
+//----------------------  寻路库  ----------------------
+
+
+import "InnerMessage.proto";
+
+message RecastRegist
+{
+	optional int32 recastId = 1;// 服务 id	
+}
+
+//申请移动
+message GRStartMove
+{
+	optional int32 sceneInstanceId	= 1;// 场景实例 id	
+	optional string mapFileName	= 2;// 场景地图名字
+	optional int64 charGuid		= 3;// 角色ID
+	optional int32 orderId		= 4;//寻路订单ID
+	optional Vector3Info startPos	= 5;//
+	optional Vector3Info targetPos	= 6;
+	optional int64 startTime	= 7;// 开始时间
+	optional int32 moveSpeed	= 8;// 速度	
+	optional int32 stopRange	= 9;// 停止距离	
+	optional int32 useRaycast	= 10;//为1时为使用射线寻路
+}
+
+message RGStartMoveBack
+{
+	optional int32 result		= 1;//1=成功
+	optional int64 charGuid		= 2;// 角色ID
+	optional int32 sceneInstanceId	= 3;// 场景实例 id
+	optional Vector3Info startPos	= 4;//	
+	optional Vector3Info targetPos	= 5;//目标点
+	optional int32 orderId		= 6;//寻路订单ID
+	optional int64 startTime	= 7;// 角色ID
+	optional int32 moveSpeed	= 8;// 速度	
+	optional int32 stopRange	= 9;// 停止距离	
+}
+
+
+//用射线检测路径点是否是可达的
+message GRCheckMoveToRayCastTest
+{	
+	optional int32 sceneInstanceId	= 1;// 场景实例 id
+	optional string mapFileName	= 2;// 场景地图名字
+	optional int64 charGuid		= 3;// 角色ID
+	optional int32 orderId		= 4;//寻路订单ID
+	optional Vector3Info startPos	= 5;//
+	optional Vector3Info targetPos	= 6;
+}
+
+message RGCheckMoveToRayCastTest
+{
+	optional int32 result		= 1;//1=成功
+	optional int64 charGuid		= 2;// 角色ID
+	optional int32 sceneInstanceId	= 3;// 场景实例 id
+	optional int32 orderId		= 4;//寻路订单ID
+	optional Vector3Info startPos	= 5;//
+	optional Vector3Info targetPos	= 6;
+}
+
+//角色单步移动
+message GRMoveStepOnPath
+{
+	optional int32 sceneInstanceId	= 1;// 场景实例 id
+	optional string mapFileName	= 2;// 场景地图名字
+	optional int64 charGuid		= 3;// 角色ID
+	optional int32 orderId		= 4;//寻路订单ID
+	optional int32 moveStep		= 5;// 移动距离除10000转float
+	optional int32 stopRange	= 6;// 停止距离除10000转float
+}
+
+message RGMoveStepOnPathBack
+{
+	optional int32 result		= 1;//1=成功
+	optional int64 charGuid		= 2;// 角色ID
+	optional int32 sceneInstanceId	= 3;// 场景实例 id	
+	optional Vector3Info pos	= 4;//新位置
+	optional Vector3Info direction	= 5;//新朝向
+	optional int32 orderId		= 6;//寻路订单ID
+}
+
+
+//停止移动
+message GRStopMoving
+{
+	optional int64 charGuid		= 1;// 角色ID
+	optional int32 sceneInstanceId	= 2;// 场景实例 id
+	optional int32 orderId		= 3;//寻路订单ID
+	optional int32 needBack		= 4;//是否需要返回消息
+}
+
+message RGStopMovingBack
+{
+	optional int32 result		= 1;//1=成功
+	optional int64 charGuid		= 2;// 角色ID
+	optional int32 sceneInstanceId	= 3;// 场景实例 id
+	optional int32 orderId		= 4;//寻路订单ID
+}
+
+//修改移动速度
+message GRUpdateMoveSpeed
+{
+	optional int64 charGuid		= 1;// 角色ID
+	optional int32 sceneInstanceId	= 2;// 场景实例 id
+	optional int32 orderId		= 3;//寻路订单ID
+	optional int32 moveSpeed	= 4;//新移动速度
+}
+

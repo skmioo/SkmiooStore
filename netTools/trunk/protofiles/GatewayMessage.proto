@@ -1,0 +1,74 @@
+//@module=Gateway,StartIndex=200,classname=Gateway
+option java_package = "com.mile.common.message";
+
+// 网关服务器相关协议
+
+//校验码和账户id对应数据
+message CodeInfo
+{
+	optional string vilidCode	= 1;	//校验码
+	optional int64 accountID	= 2;	//账户id
+	optional int64 vilidityTime	= 3;	//校验码到期时间
+	optional string platForm	= 4;	//平台id
+	optional string uid		= 5;
+	optional int64 	playerId	= 6;
+}
+// gateway 启动并成功注册各服务器后通知World注册结果，World在收到正确消息后才可允许客户端登陆
+
+message GateRegist
+{
+	optional int32 gateId		= 1;// gateway id
+	optional string host		= 2;//网关服务器IP
+	optional int32 port		= 3;//网关服务器端口
+	optional int32 onlineNum	= 4;	//当前在线玩家数量,防止断线重连问题
+}
+
+
+message GateRegistBack
+{
+
+	optional int32 code = 1;
+	repeated CodeInfo infos = 2;	//登录服保存的所有校验码数据
+	optional int32 serverType = 3;	//服务器类型
+}
+
+message Gate2LoginLoadPush
+{
+	required int32 gateId 		= 1; // gateway id
+	required int32 playerNum	= 2; // 负载，即当前连接数
+}
+
+message GateWReadyPush
+{
+	required int32 code 	= 1; // 1-gateway注册全部server成功，即游戏服务器进程启动正常;2：异常。 如果返回异常，建议查找原因，禁止客户端登陆
+}
+
+message User2GameForwardMessage
+{
+	optional int64 accountId  	= 2;	//账号Id
+	optional int32 messageId  	= 3;	//同步消息ID
+	optional bytes innerPacket	= 4;	//同步请求消息包
+	optional string vilidCode	= 5;	//校验码(可选参数在CLLogin CGLoginGameServer的消息中带即可)
+	optional string ip		= 6;	//由gate-server发给game-server即可
+}
+
+message Game2UserForwardMessage
+{
+	optional int32 allServer  		= 1;	//全服消息标识0否，1是
+	repeated int64 accountId  		= 2;	//账号Id
+	optional int32 messageId  		= 3;	//同步消息ID
+	optional bytes innerPacket	  	= 4;	//同步请求结果包
+}
+
+// 网关通知GameSvr玩家连接断开
+message Gate2GameInterruptUserSession
+{
+	optional int64 accountId  		= 2;	//账号Id
+}
+
+// 网关通知GameSvr玩家强制退出,无需通知其他服务器 
+message Gate2GamePlayerLoginout
+{
+	optional int64 playerId  		= 1;	//玩家Id
+	optional int64 accountId  		= 2;	//账号Id
+}

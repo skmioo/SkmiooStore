@@ -1,0 +1,458 @@
+//@module=superGift,StartIndex=6300,classname=SuperGift
+option java_package = "com.mile.common.message";
+
+import "CommonMessage.proto";
+import "ShopMessage.proto";
+//----------------------月卡返利消息----------------------
+
+message CardRewardData
+{
+	optional int32 type = 1;			//1月卡  2超级月卡
+	optional int32 status = 2;		//0为购买 1以购买
+	optional int32 day	= 3;			//剩余天数
+	optional int32 chargeId = 4;	//初始数据ID 充值表里
+	optional int32 getStatus = 5;	//领取状态  0为领取 1领取
+}
+
+message RechargeTypeData
+{
+	optional int32 type = 1;			//充值赔礼类型1=每日充值2=每日消费3=累计充值4=累计消费 5单笔充值
+	optional int64 startTime = 2;			//开启时间
+	optional int64 endTime = 3;			//结束时间
+	repeated RechargeRewardData rewardData = 4;			//奖励列表
+	optional int32 value = 5;	//当前值
+	optional int64 refreshTime = 6;	//倒计时刷新时间
+	optional int32 status = 7;	//0未开启，1开启，2完成
+}
+
+message RechargeRewardData
+{
+	optional int32 id = 1;			//配表ID
+	optional int32 status = 2;		//0未领取 1可以领取 2已经领取
+	optional int32 needNum = 3;		//需要的数量
+	optional string reward = 4;		//对应的奖励
+}
+
+ 
+//更新月卡信息00
+message GCUpdateCardReward
+{
+	repeated CardRewardData cardRewardData = 1; //月卡信息
+}
+
+//领取奖励
+message CGGetCardReward
+{
+	optional int32 type = 1;			//1月卡  2超级月卡
+}
+
+//-----------------------七日狂欢-----------------------
+message OneInDay
+{
+	optional int32 tblId = 1;//配表Id
+	optional int32 status = 2;//-1:领过的 0:不能领，1:可以领
+	optional int32 totalCount = 3;//总量
+	optional int32 count = 4;//（半价抢购：剩余），（七日目标：已经完成的数量）
+}
+
+message GCSevenDaysHappy
+{
+	optional int32 type = 1;//0:所有， 1：七日目标，2：冲级，3，冲战，4：半价, 5:领取最终奖励，6：刷新半价抢购
+	repeated OneInDay targetLst = 2;//七日目标
+	repeated OneInDay upgradeLst = 3;//冲级
+	repeated OneInDay fightPowerLst = 4;//冲战
+	repeated OneInDay halfPrice = 5;//半价
+	optional int32 day = 6;// 当前天数
+	optional int32 score = 7;//总得分
+	optional int32 curId = 8;//当前可领取的七日狂欢的奖励Id
+	optional int64 endTime = 9;//结束时间
+	optional int32 result = 10;//结果 0：失败， 1：成功
+}
+
+message CGSevenDaysHappy
+{
+	optional int32 type = 1;//0:所有， 1：七日目标，2：冲级，3，冲战，4：半价, 5:领取最终奖励，6：刷新半价抢购
+	optional int32 day = 2;// 天
+	optional int32 tblId = 3;//配表Id
+}
+
+//-----------------------首充-----------------------
+
+message CGFirstCharge
+{
+	optional int32 type = 1;		//1：查询首充状态 2：领取首充奖励
+}
+
+message GCFirstCharge
+{
+	optional int32 type = 1;		//1：查询首充状态 2：领取首充奖励
+	optional int32 state = 2;		//首充状态 任何情况下都返回 0：未充值 1：已充值 2:已领取
+}
+
+//-----------------------充值消费赠礼-----------------------
+
+message CGRechargeReward
+{
+	optional int32 opType = 1;		//1：查询充值消费赠礼状态 2：领取奖励
+	optional int32 id = 2;		//领取奖励的配表ID
+	
+}
+
+message GCRechargeReward
+{
+	optional int32 opType = 1;		//1：查询充值消费赠礼状态 2：领取奖励
+	repeated RechargeTypeData typeData = 2;		//充值消费赠礼列表
+	optional int32 flag = 3;		//领取奖励结果
+}
+
+message GCRechargeTypeUpdate
+{
+	optional RechargeTypeData typeData = 1;		//充值消费赠礼信息更新
+}
+
+//--------------------签到-----------
+
+
+//签到状态列表
+message GCSigninStatusList
+{
+	optional int32 today = 1;		//今天日期
+	repeated SunSignInRew rewardMap = 2; //累计签到奖励列表
+	optional int32 signCount = 3; //补签次数
+	repeated SignInTem signInTem = 4;//签到策划配表
+	optional int32 totalSignNum = 5;		//当月累积签到天数
+}
+
+//登录推送签到配表
+message SignInTem
+{
+	optional int32 temId = 1;      //配表ID
+	optional int32 month = 2;      //月
+	optional int32 day = 3;        //日
+	optional ItemInfo itemInfo = 4;//物品信息
+	optional int32 vip = 5;        //VIP
+	optional int32 ratio = 6;      //倍数	
+	optional int32 signStatus = 7;		//签到状态: 0=未签到 , 1=已签到, 2=漏签
+}
+
+
+//客户端签到或补签
+message CGSignin
+{
+	optional int32 type = 1;		//1=签到, 2=补签 3=领取累积签到
+	optional int32 temId = 2;       //策划配置Id
+	optional int32 indexId = 3;      //签到下标Id签到下标Id
+}
+
+message GCSignin
+{
+	optional int32 type = 1;		//1=签到, 2=补签	3=领取累积签到
+	optional int32 signStatus = 2;		//签到状态: 0=未签到 , 1=已签到, 2=漏签
+	optional int32 signId = 3;       //签到或者领取的ID
+	optional int32 signCount = 4; //补签次数
+	optional int32 totalSignNum = 5;		//当月累积签到天数
+	optional SunSignInRew changeRew = 6;		//累积签到状态变化
+}
+
+//签到次数奖励
+message SunSignInRew
+{
+    optional int32 temId =1;//配表ID
+    optional int32 signNum =2;//需要达到的签到天数
+	optional ItemInfo itemInfo = 3;//奖励信息
+	optional int32 value=4;//0不可领取，1可领取，2以领取
+}
+
+
+
+
+//-----------------------成长基金-----------------------
+
+message CGGrowFund
+{
+	optional int32 opType = 1;		//1：查询成长基金状态 2：购买  3:领取等级成长奖励 4:领取全民福利奖励
+	optional int32 id = 2;		//领取奖励的配表ID
+	
+}
+
+message GCGrowFund
+{
+	optional int32 opType = 1;		//1：查询成长基金状态 2：购买  3:领取等级成长奖励 4:领取全民福利奖励
+	optional int32 flag = 2;		//领取奖励结果0失败，1成功
+	optional int32 buyStatus = 3;		//是否购买了基金0未购买，1已购买
+	optional int32 buyNum = 4;		//购买基金人数
+	repeated int32 growFundList = 5;	//成长基金奖励已领取列表
+	repeated int32 generalWelfareList = 6;	//全民福利奖励已领取列表
+}
+
+message GCGrowFundBuyNum
+{
+	optional int32 buyNum = 1;		//购买基金人数
+}
+
+//充值双倍
+message CGDoublePay
+{
+	
+}
+
+message GCDoublePay
+{
+	repeated int32 payIdList = 1;		//已购买并获取过奖励的列表
+}
+
+//-----------------------每日礼包-----------------------
+
+//初始化每日礼包信息  一登陆就推下来
+message GCDailyGiftInfo
+{
+	repeated int32 dailyGiftList = 1;	//每日购买的礼包列表
+}
+
+
+//-----------------------一元购买-----------------------
+//获奖名单
+message WinnersInfo
+{
+	optional string playerName = 1;		//玩家名字
+	optional int32 price = 2;			//price
+	optional string name = 3;			//获得的名称
+}
+
+//初始化获奖人员列表
+message GCUpdateRewardList
+{
+	optional int32 type = 1;					//0初始化  1更新（在原来的基础上新增）
+	repeated WinnersInfo winnersInfoList = 2;	//获奖名单list
+}
+
+//一元购数据
+message oneBuyInfo
+{
+	optional int32 id = 1;					//表里的ID
+	optional int32 type = 2;				//0关闭  1未开启  2活动中
+	optional int32 curTotalBuyNum = 3;		//当前购买的个数
+	optional int32 curMyBuyNum = 4;			//当前自己购买的个数
+	optional int64 overTime = 5;			//结束时间
+	optional int32 group = 6;			//档位
+	optional int32 price = 7;			//price
+	optional string name = 8;			//显示名称
+	optional string item = 9;			//物品信息
+	optional int32 nextID = 10;			//下一项ID(0没有)
+	optional string charge = 11;		//充值项
+}
+
+//初始化一元购列表
+message GCUpdateOneBuyList
+{
+	optional int32 type = 1;				//0初始化 1更新数据
+	repeated oneBuyInfo buyInfoList = 2;	//数据
+}
+
+//是否可以购买
+message CGCanBuy
+{
+	optional int32 id = 1;			//要购买的一元购ID
+}
+
+//是否可以购买反馈
+message GCCanBuyBack
+{
+	optional int32 type = 1;		//0不可以购买 1可以购买
+}
+
+//-----------------------节假日活动-----------------------
+//response
+message GCHoliday
+{
+	optional int32 id = 1;//活动ID(3:七夕，4：中元)
+	optional int32 result = 2;//处理结果(-1:失败，0：推送，1：成功)
+	repeated EntryIntInt paraMap = 3;
+	repeated ItemInfo itemLst = 4;
+}
+
+//request
+message CGHoliday
+{
+	optional int32 id = 1;//活动ID(3:七夕，4：中元)
+	optional int32 type = 2;//操作类型 （七夕/中元：1免费：2付费，3：领取（确定））
+	optional int32 key = 3;//(七夕/中元:宝箱ID)
+}
+
+//------------------------摸金（砸蛋，开棺材）-----------
+//response
+message GCFeelGold
+{
+	optional int32 id = 1;//活动ID(摸金活动ID)
+	optional int32 type = 2;//操作类型 （1:开，2：领取, 3:推送, 4:一键摸金, 5:购买次数）
+	optional int32 result = 3;//处理结果(-1:失败，0：推送，1：成功)
+	optional int32 lastCount = 4;//剩余次数
+	repeated ItemInfo item1 = 5;//第1个箱子里的物品
+	repeated ItemInfo item2 = 6;//第2个箱子里的物品
+	repeated ItemInfo item3 = 7;//第3个箱子里的物品
+	optional string startDate = 8;//开始时间
+	optional string endDate = 9;	//结束时间
+	optional int32 nextNeedGold = 10;//下次购买需要充值金额
+	optional int32 buyType = 11;//(0:充值,1:三板)	//购买类型，0充值时只打开充值界面，1打开金条购买界面
+	optional int32 singleMoney = 12;//单次充值额度
+	optional string itemShow = 13;	//显示物品列表
+	optional string buyOneMoney = 14;	//一次购买价格
+	optional string buyTenMoney = 15;	//十次购买价格
+}
+
+//request
+message CGFeelGold
+{
+	optional int32 id = 1;//活动ID
+	optional int32 type = 2;//操作类型 （1:开，2：领取, 3:推送, 4:一键摸金, 5:购买次数）
+	optional int32 key = 3;//(宝箱ID{1,2,3})(5:购买次数[1:1次,2:10次])
+}
+
+
+//------------------------等级限购礼包-----------
+
+//等级限制礼包体
+message LevelQuotaInfo
+{
+	optional int32 id = 1;		//id
+	optional int32 levelLimit = 2;	//限制等级
+	optional string goodsGroup = 3;	//奖励
+	optional string ChargeId = 4;	//充值ID(平台,ID|)
+	optional int32 originalPrice = 5;	//原价(元)
+	optional int32 currentPrice = 6;	//当前价(元)
+	optional int32 noSeeLevel = 7;	//限制上限等级
+	optional int32 moneyType = 8;	//0充值
+}
+
+//当前可购买礼包
+message GCLevelQuota
+{
+	repeated LevelQuotaInfo infoList = 1;
+}
+
+//购买礼包
+message CGBuyLevelQuota
+{
+	optional int32 id = 1;//活动ID
+}
+
+//request
+message GCLevelQuotaUpdate
+{
+	optional int32 id = 1;//活动ID
+	optional int32 result = 2;//购买结果(-1:失败，1成功)	
+}
+
+
+//------------------------感恩回馈礼包-----------
+
+//感恩回馈礼包体
+message FreeBackInfo
+{
+	optional int32 id = 1;		//id
+	optional string itemShop = 2;	//物品列表
+	optional string showPrice = 3;	//显示价格
+	optional string sellPrice = 4;	//购买价格
+	optional string chargeID = 5;	//购买项信息
+}
+
+//购买感恩回馈礼包
+message CGBuyFreeBack
+{
+	optional int32 id = 1;//购买ID
+}
+
+//当前可购买感恩回馈礼包
+message GCFreeBack
+{
+	optional int32 operateType = 1;//购买结果(0:初始化，1:购买成功 2:购买失败)
+	optional FreeBackInfo freeBackInfo = 2;
+}
+
+//------------------------感恩回馈礼包-----------
+
+//超值返利包体
+message SuperRebateItem
+{
+	optional int32 type = 1;		//1小宝箱，2大宝箱
+	optional string itemInfo = 2;	//物品列表
+	optional int32 status = 3;		//0:初始状态 1:可领取 2:已领取
+}
+
+//超值返利包体
+message SuperRebateInfo
+{
+	optional int32 id = 1;		//档位ID
+	optional int32 price = 2;	//需要充值金额
+	optional string note = 3;	//档位说明
+	repeated SuperRebateItem itemList = 4;//宝箱列表
+}
+
+//购买超值返利宝箱
+message CGGetSuperRebateReward
+{
+	optional int32 id = 1;//购买ID
+	optional int32 index = 2;//第几个宝箱
+}
+
+//当前可购买感恩回馈礼包
+message GCSuperRebateBack
+{
+	optional int32 operateType = 1;//购买结果(0:初始化，1:领取成功 2:领取失败 3:单个档位状态更新)
+	optional string note = 2;	//活动说明
+	repeated SuperRebateInfo infoList = 3;//档位信息
+	optional SuperRebateInfo rebateInfo = 4;//单个档位更新
+}
+
+//-----------------------每日充值礼包-----------------------
+
+//超值返利包体
+message RechargeDailyGiftItem
+{
+	optional int32 id = 1;		//配表ID
+	optional int32 status = 2;		//0:初始状态 1:可领取 2:已领取
+}
+
+//初始化每日充值礼包信息  一登陆就推下来
+message GCRechargeDailyGiftInfo
+{
+	repeated RechargeDailyGiftItem dailyGiftList= 1;	//每日领取的礼包列表
+}
+
+//领取每日充值礼包
+message CGGetRechargeDailyGiftReward
+{
+	optional int32 id = 1;//配表ID
+}
+
+//领取每日充值礼包
+message GCGetRechargeDailyGiftRewardBack
+{
+	optional int32 result = 1;//领取结果(0:失败，1:领取成功)
+}
+
+
+//-----------------------积分购-----------------------
+//初始化积分购获奖人员列表
+message GCPointsBuyHisInfo
+{
+	optional int32 type = 1;					//0初始化  1更新（在原来的基础上新增）
+	repeated WinnersInfo winnersInfoList = 2;	//获奖名单list
+}
+
+//初始化积分购列表
+message GCPointsBuyList
+{
+	optional int32 type = 1;				//0初始化 1更新数据 2,积分更新 3购买失败 4购买成功
+	optional int32 points = 2;				//积分
+	repeated oneBuyInfo buyInfoList = 3;	//数据
+}
+
+//购买积分购
+message CGBuyPoints
+{
+	optional int32 id = 1;			//要购买的积分购ID
+	optional int32 num = 2;			//购买数量
+	
+}
+

@@ -1,0 +1,153 @@
+//@module=skill,StartIndex=2500,classname=Skill
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------技能相关协议----------------------
+
+//客户端发起玩家（宠物）使用技能
+message CGUseSkill
+{
+	optional int32 skillId 			= 1; // 技能Id
+	optional int32 skillIndex 		= 2; // 技能段位  index 段位从0开始
+	optional Vector3Info attackerPos 	= 3; // 攻击者位置，如果需要修正位置时，表示需要修正的位置
+	repeated int64 targetObjIds		= 4; // 目标攻击目标
+	optional int64 clientStartTime		= 5; //	前端开始时间
+	optional Vector3Info attackerDirection 	= 6; // 攻击者的朝向
+	optional int64 attackerId		= 7;//当前objectId 
+	optional Vector3Info targetPos=8;//目标点
+}
+
+//服务器广播使用技能
+message GCUseSkill
+{
+	optional int64 attackerId 			= 1; //施法者Id
+	optional int32 skillId 				= 2; // 技能Id
+	optional int32 skillIndex  			= 3; // 技能段位
+	optional Vector3Info attackerPos 		= 4; // 攻击者位置
+	repeated int64 targetObjIds			= 5; // 目标攻击目标
+	optional int64 clientStartTime			= 6; //	技能开始时间
+	optional Vector3Info attackerDirection		= 7; // 攻击者的朝向
+	repeated SkillAttackRelation attackRelationList	= 8; // 技能攻击范围内的目标关系列表
+	optional Vector3Info targetPos=9;//目标点
+}
+
+//目前只广播效果触发的动作
+message GCTriggerMotion
+{
+	optional int32 motionId 			= 1; // 技能Id
+	optional int64 targetId 			= 2; //目标Id
+	optional Vector3Info targetPos 			= 3; // 目标位置
+	optional Vector3Info targetDir 			= 4; // 目标位置
+}
+
+//技能升级
+message CGUpSkill
+{
+	optional int32 skillId 	= 1; // 技能Id
+	optional int32 flagall 	= 2; // 是否一键升级(1是0否)
+}
+
+message GCUpSkillOK
+{
+	optional int32 flag 	= 1; // 标识
+	repeated SkillItemData skilldata = 2;//用户技能集合
+	optional int32 skillFlag = 3;//技能标示 0初始化, 1跟换技能,2技能升级,3删除技能
+}
+
+//跟换技能
+message CGChangeSkill
+{
+	optional int32 skillId 	= 1; // 技能Id
+	optional int32 position 	= 2; //技能位置(格子)
+}
+
+message GCChangeSkillOK
+{
+	optional int32 flag 	= 1; // 标识
+	repeated SkillItemData skilldata = 2;//用户技能集合
+	optional int32 skillFlag = 3;//技能标示 0初始化, 1跟换技能,2技能升级,3删除技能
+}
+
+
+//buff信息
+message BuffImpactInfo
+{
+	optional int64 buffGuid 	= 1; //唯一ID 
+	optional int32 impactId		= 2; // BuffImpactId
+	optional int32 restTime 	= 3; // 剩余时间 (毫秒 , 小于0则一直存在)
+	repeated int32 params		= 4; // 公式使用参数
+}
+
+
+//添加buff
+message GCAddBuffImpact
+{
+	optional int64 objId		= 1; //角色Id
+	repeated BuffImpactInfo buffs	= 2; // BUFF
+}
+
+//添加buff
+message GCDelBuffImpact
+{
+	optional int64 objId		= 1; //角色Id
+	repeated int64 buffGuids	= 2; // BUFF唯一Id	
+}
+
+//刷新buff
+message CGRefreshBuff
+{
+}
+//返回刷新Buff结果
+message GCRefreshBuffBack
+{
+	repeated BuffImpactInfo buffs	= 1; // BUFF
+}
+
+message CombatResult
+{
+   optional int32 type		= 2; //1加血，2，减血，3，闪避，4，暴击
+   optional int32 value		= 3; //值
+}
+//战斗结果发放
+message GCCombatResult
+{
+   optional int64 objId		= 1; //角色Id
+   repeated CombatResult result=2;//战斗结果列表
+   optional int64 srcObjId		= 3; //释放者id
+}
+
+
+
+
+
+message SkillCDInfo
+{
+	optional int32 skillId 		= 1; // 技能ID
+	optional int64 cdEndTime	= 2; // CD截止时间(毫秒)
+}
+
+//刷新技能CD信息
+message GCRefreshSkillCDInfo
+{
+	repeated SkillCDInfo cdInfo 	= 1; // 技能CD信息
+}
+
+
+//使用技能结果, CGUseSkill的对应消息
+message GCUseSkillResult
+{
+	optional int32 flag 		= 1; // 使用技能结果,1=成功,0=失败
+	optional SkillCDInfo cdInfo 	= 2; // 技能CD时间变化
+}
+//伤害攻击帧触发的动作
+message GCChangeMotion
+{
+	optional int32 motionId 			= 1; // 动作id
+	optional int64 objId 			= 2; //切换者id
+	optional string effectId 	= 3; //效果id
+	optional int64 atkId 			= 4; //攻击者
+}
+
+
+

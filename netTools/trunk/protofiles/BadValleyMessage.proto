@@ -1,0 +1,23 @@
+//@module=badValley,StartIndex=6600,classname=BadValley
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+//----------------------恶人谷repeated----------------------
+
+//恶人谷相关操作
+
+message CGBadvellyOperate
+{
+	optional int32 type = 1;	//操作类型 1:检测是否进入场景 2:离开场景 
+	optional int32 missionId = 2;	//任务ID
+}
+
+message GCBadvellyOperateBack
+{
+	optional int32 type	= 1;	//1:进入场景 3:刷新boss
+	optional int32 scenceId = 2;	//
+	optional Vector3Info targetPos = 3;	//目标点
+	optional int32 langueId = 4;	//boss类型对应提示语言id
+	optional int32 result = 5;	// 0:不能进入;1:可以进入
+	optional int32 missionId = 6;	//通过任务引导进入,传任务ID
+}

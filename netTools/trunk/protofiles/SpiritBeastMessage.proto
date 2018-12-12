@@ -1,0 +1,219 @@
+//@module=spiritBeast,StartIndex=8600,classname=SpiritBeast
+option java_package = "com.mile.common.message";
+
+//----------------------灵兽----------------------
+
+//灵兽数据
+message SpiritBeastInfo
+{
+	optional int64 pid = 1;    					//灵兽唯一ID
+	optional int32 sid = 2;    					//模板ID	
+	optional int32 growthLv = 3;                //成长阶
+	optional int32 starLv = 4;                  //星级
+	optional int32 level = 5;         	        //等级
+	optional int32 generations = 6;             //代数
+	optional int64 nowexp = 7;             		//当前经验
+	optional int32 savvyLv = 8; 				//悟性等级
+	repeated SpiritBeastAttr attlist = 9;		//属性列表
+	repeated SpiritBeastSkillInfo skilllist = 10;//技能列表
+	optional int64 reliveTime = 11;             // 复活时间
+}
+
+// 灵兽属性
+message SpiritBeastAttr
+{
+	optional int32 attrkey  		= 1;
+	optional int32 growupvalue  	= 2;
+	optional int32 viewflag  		= 3;//是否展示(1是 0否)
+}
+
+// 灵兽技能
+message SpiritBeastSkillInfo
+{
+	optional int32 skillID = 1;             	 //技能ID
+	optional int32 skillLevel = 2;             	 //技能等级
+}
+
+// 兽灵数据
+message SpiritBeastShouLingInfo
+{
+	optional int32 pos = 1;						 //兽灵位置
+	optional int32 sid = 2;						 //兽灵配置表id
+	optional int32 level = 3;					 //兽灵等级
+}
+
+// 灵缘里灵兽数据
+message SpiritBeastInUnite
+{
+	optional int32 pos = 1;						 //灵兽位置
+	optional SpiritBeastInfo sbInfo = 2;		 //灵兽数据
+}
+
+// 灵缘数据
+message SpiritBeastUniteInfo
+{
+	optional int32 zhenID = 1;                      //灵缘阵配置表ID
+	repeated SpiritBeastInUnite sbInUnite = 2;      //灵兽数据
+    repeated SpiritBeastShouLingInfo sbShouling = 3;//兽灵数据	
+}
+
+// 灵兽 客户端发起操作
+message CGSpiritBeastOperate
+{
+	optional int32 operate = 1;					//操作类型 1:推送登陆灵兽数据 2:培养成长阶 3:洗练悟性 4：上阵 5：下阵 6：出战 7：休息
+	optional int64 pid = 2;	        			//灵兽pid（ 单独上阵，下阵操作的pid ）
+	optional int64 offPid = 3;                  //要替换下阵的灵兽pid 
+	optional int32 developType = 4;				//洗练悟性类型（ 1，普通洗练 2，自动洗练 ）
+}
+
+// 灵兽 操作返回
+message GCSpiritBeastOperateResult
+{
+	optional int32 operate = 1;					// 操作类型
+	optional int32 result = 2;   				// 0失败，1成功
+	repeated SpiritBeastInfo sbInfo = 3;     	// 灵兽数据
+	optional int64 petFight = 4;				// 出战ID
+	repeated int64 battleArray = 5;     		// 阵位
+	repeated SpiritBeastUniteInfo sbUnite = 6;  // 灵缘
+	optional int64 receiveTime = 7;             // 灵兽领取时间
+	optional int32 remainNum = 8;				// 剩余灵兽领取个数
+	optional int32 lucky = 9;                   // 繁殖幸运值
+	optional string breedResult = 10;           // 繁殖结果详情（ 最低星级|最高星级|灵兽配置表id ） 
+}
+
+// 灵兽传承 客户端发起操作
+message CGSpiritBeastInherit
+{
+	optional int64 targetPid = 1;	        	//目标灵兽pid
+	optional int64 stuffPid  = 2;               //材料灵兽pid
+	optional int32 isSavvy 	 = 3;               //悟性传承（1是，0否）
+	optional int32 isSkill   = 4;				//技能传承( 1是，0否 )
+}
+
+// 灵兽传承 操作返回
+message GCSpiritBeastInheritResult
+{
+	optional int32 result = 1;   				// 0失败，1成功
+	optional int64 stuffPid  = 2;               //材料灵兽pid
+	optional SpiritBeastInfo sbInfo = 3;     	//目标灵兽数据
+}
+
+// 灵兽升级 客户端发起操作
+message CGSpiritBeastLevelUp
+{
+	optional int64 pid = 1;	        			//灵兽pid
+	optional int32 pelletID = 2;				//灵兽经验丹配置表id
+	optional int32 pelletNum = 3;				//灵兽经验丹数量
+}
+
+// 灵兽升级 操作返回
+message GCSpiritBeastLevelUpResult
+{
+	optional int32 result = 1;   				// 0失败，1成功
+	optional SpiritBeastInfo sbInfo = 2;     	// 灵兽数据
+}
+
+// 灵兽技能 客户端发起操作
+message CGSpiritBeastOperateSkill
+{
+	optional int32 operate = 1;                 //操作类型（ 1 学习， 2 升级， 3 遗忘 ）
+	optional int64 pid = 2;	        			//灵兽pid
+	optional int32 targetID = 3;				//灵兽技能书id或者技能id
+}
+
+// 灵兽技能 操作返回
+message GCSpiritBeastOperateSkillResult
+{
+	optional int32 operate = 1;                 // 操作类型（ 1 学习， 2 升级， 3 遗忘 ）
+	optional int32 result = 2;   				// 0失败，1成功
+	optional SpiritBeastInfo sbInfo = 3;     	// 灵兽数据
+}
+
+// 灵兽灵缘镶嵌 客户端发起操作
+message CGSpiritBeastUniteOperate
+{
+	optional int32 operate = 1;					// 操作类型（ 1 镶嵌， 2 卸下, 3升级--升级只能兽灵）
+	optional int32 target = 2;                  // 操作对象 ( 1 兽灵， 2 灵兽 )
+	optional int32 zhenID = 3;                  // 灵缘阵配置表ID
+	optional int32 posID = 4;                   // 位置ID
+	optional int64 pid = 5;						// pid
+}
+
+// 灵兽灵缘镶嵌 操作返回
+message GCSpiritBeastUniteOperateResult
+{
+	optional int32 result = 1;   				// 0失败，1成功
+	optional int32 operate = 2;					// 操作类型（ 1 镶嵌， 2 卸下 , 3升级--升级只能兽灵）
+	optional int32 target = 3;                  // 操作对象 ( 1 兽灵， 2 灵兽 )
+	optional SpiritBeastUniteInfo sbUnite = 4;  // 灵缘数据
+	optional SpiritBeastInfo sbInfo = 5;     	// 灵兽数据
+}
+
+// 灵兽放生 客户端发起操作
+message CGSpiritBeastFree
+{
+	optional int64 pid = 1;	        			//灵兽pid
+}
+
+// 灵兽放生 操作返回
+message GCSpiritBeastFreeResult
+{
+	optional int64 pid = 1;	        			//灵兽pid
+}
+
+// 灵兽繁殖 客户端发起操作
+message CGSpiritBeastBreed
+{
+	optional int32 operate = 1;					// 操作类型（ 1.请求繁殖 2.同意繁殖( 同意后打开繁殖界面 ) 3.拒绝繁殖 4.放入灵兽 5.卸下灵兽 6.锁定灵兽 7.取消锁定 8.开始繁殖 ）
+	optional int32 breedType = 2;				// 繁殖类型（ 1.单人繁殖 2.组队繁殖 ）
+	optional int64 pid = 3;						// 灵兽pid
+}
+
+// 灵兽繁殖 操作返回
+message GCSpiritBeastBreedResult
+{
+	optional int32 operate = 1;					// 操作类型（ 1.请求繁殖 2.同意繁殖( 同意后打开繁殖界面 ) 3.拒绝繁殖 4.放入灵兽 5.卸下灵兽 6.锁定灵兽 7.取消锁定 8.开始繁殖 ）
+	optional int32 breedType = 2;				// 繁殖类型（ 1.单人繁殖 2.组队繁殖 ）
+	optional int32 objectType = 3;				// 操作对象类型（ 1.队长 2.队员 ） 
+	repeated SpiritBeastInfo sbInfo = 4;        // 操作的灵兽数据
+	optional int64 receiveTime = 5;             // 领取时间（unix时间戳，秒为单位）
+	optional string objectName = 6;             // 操作对象名字
+	optional int32 lucky = 7;                   // 繁殖幸运值
+	optional string breedResult = 8;            // 繁殖结果详情（ 最低星级|最高星级|灵兽配置表id ） 
+}
+
+// 灵兽孵化完成 客户端发起操作
+message CGSpiritBeastHatch
+{
+}
+
+// 灵兽孵化完成 操作返回
+message GCSpiritBeastHatchResult
+{
+	optional SpiritBeastInfo sbInfo = 1;     	// 灵兽数据
+}
+
+// 灵兽复活时间 服务器主动通知
+message GCSpiritBeastRelive
+{
+	optional int64 pid = 1;	        			//灵兽pid
+	optional int64 reliveTime = 2;              //复活时间
+	optional int64 fightPid = 3;	        	//当前出战灵兽pid（ 0表示没有可以出战的灵兽 ）
+}
+
+//灵兽捕捉 客户端发起操作
+message CGSpiritBeastCatch
+{
+	optional int32 operate = 1;					//捕捉事件(1开始，2中断，3完成)
+	optional int64 pid = 2;						//灵兽怪id
+}
+
+//灵兽捕捉 服务器端返回
+message GCSpiritBeastCatchResult
+{
+	optional int32 operate = 1;					//捕捉事件(1开始，2中断，3完成)
+	optional int64 pid = 2;						//灵兽怪id
+	optional int64 playerPid = 3;				//捕捉者id
+	optional int32 time = 4;					//捕捉结束时间
+	optional SpiritBeastInfo sbInfo = 5;		//捕捉获得的灵兽信息
+}

@@ -1,0 +1,6 @@
+int	string	string	int	int	string	stringarray	stringarray	
+id	PointPrefab	PointName	PointRseource	PointCD	PointModel	PointAnims	PointFXs	
+资源点ID	资源点预制	资源点名称	产出数量	产出时间/秒	资源模型	资源动画	资源特效	
+1	Point1	资源点1	10	7	M_Point1	Point1_An1|Point1_An2|Point1_An3	Point1_SP1|Point1_SP2|Point1_SP3	
+2	Point2	资源点2	10	8	M_Point2	Point2_An1|Point2_An2|Point2_An3	Point2_SP1|Point2_SP2|Point2_SP3	
+3	Point3	资源点3	10	9	M_Point3	Point3_An1|Point3_An2|Point3_An3	Point3_SP1|Point3_SP2|Point3_SP3	

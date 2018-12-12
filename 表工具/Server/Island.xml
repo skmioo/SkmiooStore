@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root type="Island">
+<data id="1" IslandName="海岛1" IslandResource="20" IslandCD="8"/>
+<data id="2" IslandName="海岛2" IslandResource="20" IslandCD="8"/>
+<data id="3" IslandName="海岛3" IslandResource="20" IslandCD="8"/>
+<data id="4" IslandName="海岛4" IslandResource="20" IslandCD="8"/>
+<data id="5" IslandName="海岛5" IslandResource="20" IslandCD="8"/>
+<data id="6" IslandName="海岛6" IslandResource="20" IslandCD="8"/>
+<data id="7" IslandName="海岛7" IslandResource="20" IslandCD="8"/>
+<data id="8" IslandName="海岛8" IslandResource="20" IslandCD="8"/>
+<data id="9" IslandName="海岛9" IslandResource="20" IslandCD="8"/>
+<data id="10" IslandName="海岛10" IslandResource="20" IslandCD="8"/>
+<data id="11" IslandName="海岛11" IslandResource="20" IslandCD="8"/>
+<data id="12" IslandName="海岛12" IslandResource="20" IslandCD="8"/>
+<data id="13" IslandName="海岛13" IslandResource="20" IslandCD="8"/>
+<data id="14" IslandName="海岛14" IslandResource="20" IslandCD="8"/>
+<data id="15" IslandName="海岛15" IslandResource="20" IslandCD="8"/>
+</root>

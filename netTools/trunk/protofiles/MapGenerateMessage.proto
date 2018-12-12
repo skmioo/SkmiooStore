@@ -1,0 +1,8 @@
+//@module=midAutumn,StartIndex=20000,classname=MidAutumn
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+message GCRandomIslandInfo
+{
+	repeated RandomIsland randomIsland		= 1;		//随机生成海岛位置信息
+}

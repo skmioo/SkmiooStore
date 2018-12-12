@@ -1,0 +1,51 @@
+//@module=CurcyIntegral,StartIndex=7600,classname=CurcyIntegral
+option java_package = "com.mile.common.message";
+
+//----------------------  通用积分协议 repeated ----------------------
+
+
+//通用积分排行信息
+message IntegralRankInfo
+{
+	optional int64 playerId=1;	//playerId
+	optional int32 rank = 2;	//排名
+	optional string name  = 3;	//名字
+
+}
+message CurcyIntegralItemInfo
+{
+	optional int32 bid=1;
+	optional int32 sid=2;
+	optional int32 num=3;
+}
+
+//通用积分奖励信息
+message IntegralRewardInfo
+{
+	optional int32 stage = 1;	//排名阶段
+	optional int32 integral = 2;	//所需积分
+	repeated CurcyIntegralItemInfo reward = 3;		//对应的奖励
+	optional string icon=4;//
+	optional string playerName=5;//阶段的前三名的名字
+}
+
+//客户端操作
+message CGIntegralOperate
+{
+	optional int64 playerId = 1;
+	
+}
+
+//返回结果
+message GCIntegralResult
+{
+	repeated IntegralRankInfo rankInfos = 1;//普通排行
+//	repeated IntegralRankInfo rankRewardInfos = 2;	//奖励排行信息列表
+	repeated IntegralRewardInfo rewardInfos = 2;	//奖励信息列表
+	optional int32 rank = 3; //当前排行
+	optional int32 rankReward = 4; //当前奖励排行
+	optional int32 integral = 5; //当前积分
+	optional int32 integralSpace = 6; //积分间隔
+	optional string uiId = 7;	//界面ID
+}
+

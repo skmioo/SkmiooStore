@@ -1,0 +1,131 @@
+//@module=vitality,StartIndex=5300,classname=Vitality
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------活跃度VO定义----------------------
+
+message ActiveData
+{
+	optional int32 id = 1;	//活动id
+	optional int32 count = 2;	//完成次数
+	optional int32 totalCount = 3;	//总次数 
+	optional int32 activeState = 4;	//活动状态 1开启 2即将开启 3结束
+	optional int64 opentime = 5;	//开启时间
+	optional int32 openlevel = 6;	//开启等级
+}
+
+message PowerMedicalData
+{
+	optional int32 id = 1;	//1装备 2装备注灵 3装备觉醒 4宝石镶嵌 5技能等级 6宠物 7坐骑星级 8博物馆等级 9称号  10图鉴 11帮派技能
+	optional int32 power = 2;	//对应模块战斗力
+}
+
+message ActiveStruct
+{
+	optional int32 rewardid = 1;	//奖励id
+	optional int32 status = 2; //状态 不可领取0 可领取1 以领取2
+}
+
+//打开活跃面板
+message CGOpenActive
+{
+
+}
+
+message GCOpenActiveBack
+{
+	optional int32 sumact = 1;	//总活跃度
+	repeated ActiveData activedata = 2;//活动别表
+	repeated ActiveStruct actiestruct = 3;//奖励列表
+	optional int32 resetFlag = 4;//1为重置
+}
+
+//领取宝箱
+message CGGetActiveReward
+{
+	optional int32 id = 1;	//奖励id
+}
+
+message GCGetActiveRewardBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+	optional int32 rewardid = 2;//领取成功的奖励Id
+}
+
+//获取模块战斗力
+message CGGetPowerMedical
+{
+
+}
+
+message GCGetPowerMedicalBack
+{
+	repeated PowerMedicalData powerMedicalData = 1;    //战斗力列表
+}
+
+//深度思考操作
+message CGDeepThinkOperation
+{
+    optional int32 type = 1;    //操作类型 1开始 2结束 3中继
+}
+
+message GCDeepThinkOperationBack
+{
+    optional int32 type = 1;    //操作类型 1开始 2结束 3中继 4进入场景初始化（）
+	optional int64 starttime = 2;    //开始思考时间
+	optional int64 endtime = 3;    //结束思考时间
+	optional int64 duration = 4;    //中继的时候用到此参数，中继前已经思考的时间（毫秒）
+}
+
+//获取经验
+message CGGetDeepThinkExp
+{
+optional int32 mult = 1;	//1普通 2大洋 3金条
+}
+
+message GCGetDeepThinkExpBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败
+}
+
+//系统广播
+message GCBroadcastSystemNotice
+{
+	optional int32 type = 1;    // 类型 108不需要读表
+	optional int32 lauId = 2;    //文字表Id
+	repeated string param = 3;    // 参数
+}
+
+//次日奖励
+message GCPushNextDayReward
+{
+	optional int32 id = 1;    // 领取的奖励的ID //没有了发-1
+	optional int64 gettime = 2;    //能够领取奖励时间 、、到时或者过时发  0
+	optional int64 servertime = 3;    //当前服务器时间
+}
+
+//领取次日奖励
+message CGGetNextDayReward
+{
+	optional int32 id = 1;    // 领取的奖励的ID
+}
+
+//领取次日奖励
+message GCGetNextDayRewardBack
+{
+	optional int32 flag = 1;    // 1成功 2失败
+}
+
+//领取CDK奖励
+message CGGetCDKReward
+{
+	optional string cdk = 1;    // 领取的CDK
+}
+
+//领取CDK奖励
+message GCGetCDKRewardBack
+{
+	optional int32 flag = 1;    // 1成功 0失败
+}
+

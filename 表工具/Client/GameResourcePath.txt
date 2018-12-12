@@ -1,0 +1,4 @@
+int	string	
+id	ExpressionPath	
+游戏资源路径ID	表情路径	
+1	Anims/Expression	

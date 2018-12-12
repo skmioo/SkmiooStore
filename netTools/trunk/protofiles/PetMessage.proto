@@ -1,0 +1,254 @@
+//@module=pet,StartIndex=4700,classname=Pet
+option java_package = "com.mile.common.message";
+
+import "InnerMessage.proto";
+
+//----------------------角色VO定义----------------------
+
+//请求宠物列表
+message CGGetPetList
+{
+	optional int32 type = 1;	//0背包1寄存
+}
+
+//返回玩家宠物列表
+message GCPetList
+{
+  optional int32 petbagnum = 1;	//已解锁格子数量
+	repeated PetInfo petinfo = 2;//宠物数据
+	optional int64 petid = 3;	//当前出战宠物
+}
+
+//修改宠物状态参战/休息
+message CGPetChangeStatus
+{
+	optional int64 petid = 1;	//宠物id
+	optional int32 battleflag = 2;//要修改成的状态0休息1出战
+}
+
+message GCPetChangeStatusBack
+{
+	optional int32 flag = 1;//1 成功 0 失败 
+	optional int64 objId = 2;//obj 唯一vo
+}
+
+//修改宠物名字
+message CGPetChangeName
+{
+	optional int64 petid = 1;	//宠物id
+	optional string petName = 2;//宠物要修改的名字
+}
+
+message GCPetChangeNameBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+}
+
+//放生宠物
+message CGPetRelease
+{
+	optional int64 petid = 1;	//宠物id
+}
+
+message GCPetReleaseBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+}
+
+//宠物洗练
+message CGPetReFreshAttr
+{
+	optional int64 petid = 1;	//宠物id
+}
+
+message GCPetReFreshAttrBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+	optional PetInfo petinfo = 2; //宠物数据
+}
+
+//宠物培养
+message CGPetCulture
+{
+	optional int64 petid = 1;	//宠物id
+	optional int32 cultype = 2;	//培养类型
+	optional int32 isten = 3;	//培养次数
+}
+
+message GCPetCultureBack
+{
+	optional int32 flag = 1;    //1 成功 0 失败 
+	repeated PetAttr petAttr = 2;//属性集合
+	repeated PetAttr petAttrDown = 3;//属性集合 计算
+}
+
+//宠物升星
+message CGPetUpStar
+{
+	optional int64 petid = 1;	//宠物id
+}
+
+message GCPetUpStarBack
+{
+	optional int32 flag = 1;//1 成功 0 失败 
+	repeated PetAttr petAttr = 2;//属性集合
+	repeated PetAttr petAttrDown = 3;//属性集合 计算
+}
+
+//宠物寄存
+message CGPetDeposit
+{
+	optional int64 petid = 1;	//宠物id
+	optional int32 dptype = 2;	//0要回1寄存
+}
+
+message GCPetDepositBack
+{
+	optional int32 flag = 1;//1 成功 0 失败
+}
+
+//宠物学习技能
+message CGPetStudySkill
+{
+	optional int64 petid = 1;	//宠物id
+	optional int32 bookid = 2;	//技能书id
+}
+
+message GCPetStudySkillBack
+{
+	optional int32 flag = 1;//1 成功 0 失败
+	repeated SkillItemData skilldata = 2;//技能集合
+}
+
+//刷新宠物属性
+message GCRefreshPetData
+{
+	repeated PetInfo petinfo = 1; //宠物数据
+}
+
+//解锁宠物栏
+message CGUnlockPetBag
+{
+	
+}
+
+message GCUnlockPetBagBack
+{
+	optional int32 flag = 1;//1 成功 0 失败
+}
+
+//购买宠物
+message CGBuyPet
+{
+	optional int32 shopid = 1;//商品Id
+}
+
+message GCBuyPetBack
+{
+	optional int32 flag = 1;//1 成功 0 失败
+	optional PetInfo petinfo = 2; //宠物数据
+}
+
+//查看玩家出战宠物
+message CGLookPet
+{
+	optional int64 playerUid	= 1;	//玩家Id
+}
+
+message GCLookPetBack
+{
+	optional int32 flag = 1;    	//1成功 0失败
+	optional PetInfo petinfo = 2;//宠物数据
+}
+
+
+//更新宠物信息
+message GCUpdatePetInfo
+{
+	repeated PetInfo petinfo = 1; //宠物数据
+}
+
+
+
+
+//-------------宠物阵法------------
+
+//阵法信息
+message PetEmbattleInfo
+{
+	optional int32 line	= 1;//位置
+	optional int64 petid	= 2;//宠物id	
+}
+
+message CGPetEmbattle
+{
+
+}
+
+//宠物阵法返回
+message GCPetEmbattleBack
+{
+	repeated PetEmbattleInfo embattleInfo = 1; //阵法信息
+	optional int32 power	= 2;	//灵力
+	optional int32 maxPower	= 3;	//最大灵力
+	optional int32 skillGroup = 4;	//技能组id
+	repeated CharacterAttr charAttr	= 5;//为主角增加的属性
+	repeated PetAttr petAttr	= 6;//为宠物增加的属性
+}
+
+//注灵
+message CGPetEmbattleAddPower
+{
+	optional int32 autoPower	= 1;	//1为一键注灵
+	optional int32 notUseBakMoney	= 2;	//1=不可以使用备用金
+}
+
+//宠物上阵
+message CGPetGoupEmbattle
+{
+	optional int32 line	= 1;	//位置
+	optional int64 petid	= 2;	//宠物id
+}
+
+//当前阵法可用技能
+message GCPetEmbattleSkill
+{
+	repeated SkillItemData skilldata = 1;//技能集合
+}
+
+//注灵返回
+message GCPetEmbattleAddPowerBack
+{
+	optional int32 autoPower	= 1;	//1为一键注灵
+	optional int32 flag		= 2;   	//1成功 0失败
+}
+
+
+
+//宠物洗练性格
+message CGPetChangeCharacter
+{
+	optional int64 petid	= 1;	//宠物id
+}
+
+message GCPetChangeCharacterBack
+{
+	optional int64 petid	= 1;	//宠物id
+	optional int32 flag	= 2;    //1成功 0失败
+	optional int32 newCharacter = 3; //性格:0鲁莽1憨厚2冷静3谨慎
+}
+
+//保存新性格
+message CGPetSaveNewCharacter
+{
+	optional int64 petid	= 1;	//宠物id
+}
+
+message GCPetSaveNewCharacterBack
+{
+	optional int32 flag	= 1;    //1成功 0失败
+	optional PetInfo petinfo = 2; //宠物数据
+}
+
+
+
