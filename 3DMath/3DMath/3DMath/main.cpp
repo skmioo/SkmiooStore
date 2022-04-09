@@ -1,8 +1,9 @@
 #include <iostream>
 #include "Vector3.h"
 #include "main.h"
-#include "Matrix3x3.h"
+#include "Matrix4x3.h"
 #include "MathUtil.h"
+#include "RotationMatrix.h"
 using namespace std;
 
 void print_v(const Vector3 v)
@@ -15,7 +16,7 @@ void print_f(float v)
 	cout << "[" << v << "]" << endl;
 }
 
-void print_Matrix3x3(Matrix3x3 m)
+void print_Matrix3x3(Matrix4x3 m)
 {
 	cout << "Matrix:" << endl;
 	cout << "[" << LimitZeroF(m.m11) << "\t" << LimitZeroF(m.m12) << "\t" << LimitZeroF(m.m13) << "]" << endl;
@@ -121,7 +122,11 @@ void Matrix3x3_Test()
 {
 	//Matrix3x3_Test_01();
 	//Matrix3x3_Test_02();
-	Matrix3x3_Test_03();
+	//Matrix3x3_Test_03();
+	//Matrix3x3_Test_04();
+	//Matrix3x3_Test_05();
+	//Matrix3x3_Test_06();
+	Matrix3x3_Test_07();
 }
 
 /*
@@ -131,7 +136,7 @@ p10 矩阵*矩阵
 void Matrix3x3_Test_01()
 {
 	//矩阵*矩阵
-	Matrix3x3 a, b, c;
+	Matrix4x3 a, b, c;
 	a.m11 = 1;	a.m12 = -5;	a.m13 = 3;
 	a.m21 = 0;	a.m22 = -2;	a.m23 = 6;
 	a.m31 = 7;	a.m32 = 2;	a.m33 = -4;
@@ -145,7 +150,7 @@ void Matrix3x3_Test_01()
 	print_Matrix3x3(a);
 	//行向量*矩阵
 	Vector3 v(3, -1, 4);
-	Matrix3x3 m;
+	Matrix4x3 m;
 	m.m11 = -2;	m.m12 = 0;	m.m13 = 3;
 	m.m21 = 5;	m.m22 = 7;	m.m23 = -6;
 	m.m31 = 1;	m.m32 = -4;	m.m33 = 2;
@@ -159,7 +164,7 @@ p11	向量旋转 setRotate
 void Matrix3x3_Test_02()
 {
 	Vector3 a(10, 0, 0) ,b;
-	Matrix3x3 M;
+	Matrix4x3 M;
 	M.setRotate(3, kPiOver2);
 	b = a * M;
 	print_Matrix3x3(M);
@@ -187,7 +192,7 @@ void Matrix3x3_Test_03()
 	Vector3 a(10, 20, 30);
 	//缩放系数
 	Vector3 scale(1,2,3);
-	Matrix3x3 m;
+	Matrix4x3 m;
 	m.setScale(scale);
 	print_v(a * m);
 	//投影
@@ -205,5 +210,72 @@ void Matrix3x3_Test_03()
 */
 void Matrix3x3_Test_04()
 {
+	//镜像
+	Vector3 a(10, 20, 30), b;
+	print_v(a);
+	Matrix4x3 M;
+	M.setReflect(1, 0);
+	b = a * M;
+	print_v(b);
+	M.setReflect(2, 0);
+	b = a * M;
+	print_v(b);
+	M.setReflect(3, 0);
+	b = a * M;
+	print_v(b);
+
+	Vector3 n(0, 0, 1);
+	M.setReflect(n);
+	b = a * M;
+	print_v(b);
+
+	//切变
+	M.setShear(1, 1, 2);
+	b = a * M;
+	print_v(b);
+
+}
+
+/*
+	p14
+	行列式
+*/
+void Matrix3x3_Test_05()
+{
+	Matrix4x3 M;
+	M.m11 = 3;	M.m12 = -2; M.m13 = 0;
+	M.m21 = 1;	M.m22 = 4; M.m23 = -3;
+	M.m31 = -1;	M.m32 = 0; M.m33 = 2;
+	float detM = determinant(M);
+	print_f(detM);
+}
+
+/*
+	矩阵的逆
+*/
+void Matrix3x3_Test_06()
+{
+	Matrix4x3 M;
+	M.m11 = -4;	M.m12 = -3; M.m13 = 3;
+	M.m21 = 0;	M.m22 = 2; M.m23 = -2;
+	M.m31 = 1;	M.m32 = 4; M.m33 = -1;
+	Matrix4x3 r = inverse(M);
+	print_Matrix3x3(r);
+	Matrix4x3 v1 = r * M;
+	Matrix4x3 v2 = M *r;
+	print_Matrix3x3(v1);
+	print_Matrix3x3(v2);
+}
+
+/*
+	旋转矩阵
+*/
+void Matrix3x3_Test_07()
+{
+	RotationMatrix m;
+	//绕y旋转30度
+	m.m11 = 0.866f;	m.m12 = 0;	m.m13 = -0.5f;
+	m.m21 = 0;		m.m22 = 1;	m.m23 = 0;
+	m.m31 = 0.5f;	m.m32 = 0;	m.m33 = 0.866f;
 
 }

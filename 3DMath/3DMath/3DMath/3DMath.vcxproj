@@ -124,12 +124,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Matrix3x3.cpp" />
+    <ClCompile Include="Matrix4x3.cpp" />
+    <ClCompile Include="RotationMatrix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
     <ClInclude Include="MathUtil.h" />
-    <ClInclude Include="Matrix3x3.h" />
+    <ClInclude Include="Matrix4x3.h" />
+    <ClInclude Include="Rotate.h" />
+    <ClInclude Include="RotationMatrix.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
