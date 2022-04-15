@@ -1,4 +1,6 @@
-﻿Shader "Shadertoy/Simple Circle" { 
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Shadertoy/Simple Circle" { 
 	Properties{
 		_Parameters ("Circle Parameters", Vector) = (0.5, 0.5, 10, 1) // Center: (x, y), Radius: z
 		_CircleColor ("Circle Color", Color) = (1, 1, 1, 1)
@@ -40,7 +42,7 @@
         
         v2f vert(appdata_base v) {  
         	v2f o;
-        	o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+        	o.pos = UnityObjectToClipPos (v.vertex);
             o.scrPos = ComputeScreenPos(o.pos);  
             return o;    
         }  

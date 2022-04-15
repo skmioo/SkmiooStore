@@ -1,4 +1,6 @@
-﻿Shader "Shadertoy/AntiAlias Point Sample" { 	// https://www.shadertoy.com/view/XtB3zw
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Shadertoy/AntiAlias Point Sample" { 	// https://www.shadertoy.com/view/XtB3zw
 	Properties{
 		_Aniso ("Aniso", float) = 1.0		// if you want stretchy pixels, try change this number to 0.1
 		iMouse ("Mouse Pos", Vector) = (100, 100, 0, 0)
@@ -41,7 +43,7 @@
         
         v2f vert(appdata_base v) {  
         	v2f o;
-        	o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+        	o.pos = UnityObjectToClipPos (v.vertex);
             o.scrPos = ComputeScreenPos(o.pos);  
             return o;    
         }  

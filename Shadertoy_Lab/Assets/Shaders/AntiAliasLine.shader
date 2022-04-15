@@ -1,4 +1,6 @@
-﻿Shader "Shadertoy/AA Line" { 
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Shadertoy/AA Line" { 
 	Properties{
 		_CircleRadius ("Circle Radius", Range(0, 0.1)) = 0.05
 		_OutlineWidth ("Outline Width", Range(0, 0.1)) = 0.01
@@ -54,7 +56,7 @@
         
         v2f vert(appdata_base v) {  
         	v2f o;
-        	o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+        	o.pos = UnityObjectToClipPos (v.vertex);
             o.scrPos = ComputeScreenPos(o.pos);  
             return o;    
         }  

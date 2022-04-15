@@ -1,4 +1,6 @@
-﻿Shader "Shadertoy/Heart" { // https://www.shadertoy.com/view/XsfGRn
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Shadertoy/Heart" { // https://www.shadertoy.com/view/XsfGRn
 	Properties {
 		_BackgroundColor ("Background Color", Color) = (1.0, 0.8, 0.7, 1.0)
 		_HeartColor ("Heart Color", Color) = (1.0, 0.5, 0.3, 1.0)
@@ -40,7 +42,7 @@
     
      v2f vert(appdata_base v) {    
          v2f o;    
-         o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+         o.pos = UnityObjectToClipPos (v.vertex);
          o.scrPos = ComputeScreenPos(o.pos);   
          return o;    
      }

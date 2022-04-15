@@ -1,4 +1,6 @@
-﻿Shader "Custom/Dot Line" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/Dot Line" {
 	Properties {
 		_MainTex ("Base (RGB)", 2D) = "white" {}
 		_StartPosition ("Start Position", Vector) = (0, 0, 0)
@@ -39,7 +41,7 @@
         	
         	v2f vert(appdata_base v) {  
         		v2f o;
-        		o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+        		o.pos = UnityObjectToClipPos (v.vertex);
         	    o.uv = v.texcoord;  
         	    o.srcPos = ComputeScreenPos(o.pos);
         	    return o;    

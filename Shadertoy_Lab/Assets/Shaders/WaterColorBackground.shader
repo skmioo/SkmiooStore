@@ -1,4 +1,6 @@
-﻿Shader "Shadertoy/Water Color" { // https://www.shadertoy.com/view/XdSSWd
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Shadertoy/Water Color" { // https://www.shadertoy.com/view/XdSSWd
 	Properties {
 		iMouse ("Mouse Pos", Vector) = (100,100,0,0)
 		iChannel0("iChannel0", 2D) = "white" {}  
@@ -38,7 +40,7 @@
      v2f vert(appdata_base v) {    
          v2f o; 
          o.uv = v.texcoord;  
-    	o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+    	o.pos = UnityObjectToClipPos (v.vertex);
     	o.scrPos = ComputeScreenPos(o.pos); 
          
          return o;    
