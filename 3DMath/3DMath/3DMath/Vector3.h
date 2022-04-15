@@ -119,3 +119,5 @@ inline Vector3 cross(const Vector3 &v1, const Vector3 &v2)
 		v1.x * v2.y - v1.y * v2.x
 	);
 }
+
+extern const Vector3 kZeroVector;

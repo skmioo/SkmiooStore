@@ -123,16 +123,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AABB3.cpp" />
+    <ClCompile Include="EditTriMesh.cpp" />
+    <ClCompile Include="EulerAngles.cpp" />
+    <ClCompile Include="Line3D.h" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MathUtil.cpp" />
     <ClCompile Include="Matrix4x3.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="Quaternion.cpp" />
     <ClCompile Include="RotationMatrix.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AABB3.h" />
+    <ClInclude Include="EditTriMesh.h" />
+    <ClInclude Include="EulerAngles.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="MathUtil.h" />
     <ClInclude Include="Matrix4x3.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="Quaternion.h" />
+    <ClInclude Include="Ray3D.h" />
     <ClInclude Include="Rotate.h" />
     <ClInclude Include="RotationMatrix.h" />
+    <ClInclude Include="Sphere.h" />
+    <ClInclude Include="TriAngle.h" />
+    <ClInclude Include="TriMesh.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

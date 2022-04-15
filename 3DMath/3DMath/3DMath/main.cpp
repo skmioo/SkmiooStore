@@ -3,8 +3,49 @@
 #include "main.h"
 #include "Matrix4x3.h"
 #include "MathUtil.h"
+#include "EulerAngles.h"
 #include "RotationMatrix.h"
+#include "Line3D.h"
+#include "EditTriMesh.h"
 using namespace std;
+
+//是否为凸多边形
+bool isConvex(int n, const Vector3 vl[])
+{
+	float angleSum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		Vector3 e1;
+		if (i == 0)
+		{
+			e1 = vl[n - 1] - vl[0];
+		}
+		else
+		{
+			e1 = vl[i - 1] - vl[i];
+		}
+		
+		Vector3 e2;
+		if (i == n- 1)
+		{
+			e1 = vl[0] - vl[i];
+		}
+		else
+		{
+			e2 = vl[i+1] - vl[i];
+		}
+		e1.normalize();
+		e2.normalize();
+		float dot = e1 * e2;
+		float theta = safeAcos(dot);
+		angleSum += theta;
+
+	}
+	float convexAngleSum = (float)(n - 2)*kPi;
+	if (angleSum < convexAngleSum - (float)n * 0.0001f)
+		return false;
+	return true;
+}
 
 void print_v(const Vector3 v)
 {
@@ -29,9 +70,18 @@ void print_Matrix3x3(Matrix4x3 m)
 int main()
 {
 	//Vector3_Test();
-	Matrix3x3_Test();
+	//Matrix3x3_Test();
+	//EulerAngles_Test();
+	TriMeshTest();
 	system("pause");
 	return 0;
+}
+
+void TriMeshTest()
+{
+	EditTriMesh mesh;
+	mesh.addTri();
+	mesh.addVertex();
 }
 
 void Vector3_Test()
@@ -278,4 +328,55 @@ void Matrix3x3_Test_07()
 	m.m21 = 0;		m.m22 = 1;	m.m23 = 0;
 	m.m31 = 0.5f;	m.m32 = 0;	m.m33 = 0.866f;
 
+	Vector3 v(10, 20, 30);
+	Vector3 v2;
+	//惯性坐标系到物体坐标系
+	v2 = m.inertialToObject(v);
+	print_v(v2);
+	Vector3 v3;
+	//物体坐标系到惯性坐标系
+	v3 = m.objectToInertial(v2);
+	print_v(v3);
 }
+
+void EulerAngles_Test()
+{
+	EulerAngles_Test_01();
+}
+
+void EulerAngles_Test_01()
+{
+	RotationMatrix m;
+	EulerAngles angle(kPiAngle(30.0f), 0, 0);
+	m.setup(angle);
+	Vector3 v(10,20,30);
+	Vector3 v2;
+	//惯性坐标系到物体坐标系
+	v2 = m.inertialToObject(v);
+	print_v(v2);
+	Vector3 v3;
+	//物体坐标系到惯性坐标系
+	v3 = m.objectToInertial(v2);
+	print_v(v3);
+}
+
+void EulerAngles_Test_02()
+{
+
+}
+
+void EulerAngles_Test_03()
+{
+
+}
+
+void EulerAngles_Test_04()
+{
+
+}
+
+void EulerAngles_Test_05()
+{
+
+}
+
