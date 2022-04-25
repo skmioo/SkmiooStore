@@ -1,0 +1,146 @@
+
+qianchengjiaotu.png
+size: 517,281
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yinying
+  rotate: true
+  xy: 2, 42
+  size: 237, 35
+  orig: 242, 35
+  offset: 2, 0
+  index: -1
+虔诚教徒-拆分_0000_头
+  rotate: false
+  xy: 364, 15
+  size: 72, 84
+  orig: 450, 450
+  offset: 180, 365
+  index: -1
+虔诚教徒-拆分_0001_左小臂
+  rotate: false
+  xy: 405, 123
+  size: 90, 61
+  orig: 450, 450
+  offset: 198, 280
+  index: -1
+虔诚教徒-拆分_0002_左手
+  rotate: false
+  xy: 472, 25
+  size: 43, 53
+  orig: 450, 450
+  offset: 173, 321
+  index: -1
+虔诚教徒-拆分_0003_左大臂
+  rotate: false
+  xy: 304, 19
+  size: 58, 126
+  orig: 450, 450
+  offset: 245, 285
+  index: -1
+虔诚教徒-拆分_0004_甲片
+  rotate: true
+  xy: 405, 186
+  size: 61, 93
+  orig: 450, 450
+  offset: 265, 158
+  index: -1
+虔诚教徒-拆分_0005_气罐
+  rotate: false
+  xy: 250, 147
+  size: 84, 132
+  orig: 450, 450
+  offset: 279, 228
+  index: -1
+虔诚教徒-拆分_0006_腰带
+  rotate: false
+  xy: 405, 249
+  size: 100, 30
+  orig: 450, 450
+  offset: 187, 233
+  index: -1
+虔诚教徒-拆分_0007_上身
+  rotate: false
+  xy: 116, 121
+  size: 99, 158
+  orig: 450, 450
+  offset: 189, 245
+  index: -1
+虔诚教徒-拆分_0008_右带子
+  rotate: false
+  xy: 217, 123
+  size: 31, 156
+  orig: 450, 450
+  offset: 185, 85
+  index: -1
+虔诚教徒-拆分_0009_左带子
+  rotate: true
+  xy: 35, 5
+  size: 35, 183
+  orig: 450, 450
+  offset: 224, 66
+  index: -1
+虔诚教徒-拆分_0010_刀
+  rotate: false
+  xy: 39, 44
+  size: 55, 74
+  orig: 450, 450
+  offset: 85, 279
+  index: -1
+虔诚教徒-拆分_0011_右小臂
+  rotate: false
+  xy: 438, 80
+  size: 66, 41
+  orig: 450, 450
+  offset: 121, 265
+  index: -1
+虔诚教徒-拆分_0012_右大臂
+  rotate: false
+  xy: 438, 18
+  size: 32, 60
+  orig: 450, 450
+  offset: 176, 271
+  index: -1
+虔诚教徒-拆分_0013_右脚
+  rotate: true
+  xy: 364, 101
+  size: 58, 33
+  orig: 450, 450
+  offset: 134, 10
+  index: -1
+虔诚教徒-拆分_0014_右小腿
+  rotate: false
+  xy: 336, 161
+  size: 67, 118
+  orig: 450, 450
+  offset: 164, 27
+  index: -1
+虔诚教徒-拆分_0015_右大腿
+  rotate: false
+  xy: 220, 2
+  size: 82, 119
+  orig: 450, 450
+  offset: 168, 123
+  index: -1
+虔诚教徒-拆分_0016_左脚
+  rotate: true
+  xy: 2, 3
+  size: 37, 31
+  orig: 450, 450
+  offset: 298, 1
+  index: -1
+虔诚教徒-拆分_0017_左大腿
+  rotate: false
+  xy: 39, 120
+  size: 75, 159
+  orig: 450, 450
+  offset: 245, 89
+  index: -1
+虔诚教徒-拆分_0018_左小腿
+  rotate: true
+  xy: 96, 45
+  size: 73, 120
+  orig: 450, 450
+  offset: 260, 16
+  index: -1

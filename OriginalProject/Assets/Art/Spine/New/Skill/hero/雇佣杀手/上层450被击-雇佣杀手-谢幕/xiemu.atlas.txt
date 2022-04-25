@@ -1,0 +1,27 @@
+
+xiemu.png
+size: 620,329
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: false
+  xy: 2, 42
+  size: 228, 285
+  orig: 252, 318
+  offset: 15, 28
+  index: -1
+body_1
+  rotate: false
+  xy: 232, 2
+  size: 185, 325
+  orig: 185, 325
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: false
+  xy: 419, 26
+  size: 199, 301
+  orig: 199, 301
+  offset: 0, 0
+  index: -1

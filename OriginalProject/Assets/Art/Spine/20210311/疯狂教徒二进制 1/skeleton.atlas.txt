@@ -1,0 +1,118 @@
+
+skeleton.png
+size: 421,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+疯狂教徒-拆分_0000_头
+  rotate: false
+  xy: 200, 31
+  size: 68, 81
+  orig: 450, 450
+  offset: 181, 361
+  index: -1
+疯狂教徒-拆分_0001_左手
+  rotate: true
+  xy: 370, 4
+  size: 30, 39
+  orig: 450, 450
+  offset: 311, 210
+  index: -1
+疯狂教徒-拆分_0002_左小臂
+  rotate: false
+  xy: 370, 36
+  size: 37, 83
+  orig: 450, 450
+  offset: 308, 237
+  index: -1
+疯狂教徒-拆分_0003_左大臂
+  rotate: false
+  xy: 2, 10
+  size: 84, 100
+  orig: 450, 450
+  offset: 254, 300
+  index: -1
+疯狂教徒-拆分_0004_项链
+  rotate: false
+  xy: 329, 121
+  size: 69, 52
+  orig: 450, 450
+  offset: 197, 304
+  index: -1
+疯狂教徒-拆分_0005_腰带
+  rotate: true
+  xy: 330, 23
+  size: 96, 38
+  orig: 450, 450
+  offset: 203, 224
+  index: -1
+疯狂教徒-拆分_0006_上身
+  rotate: false
+  xy: 2, 112
+  size: 102, 155
+  orig: 450, 450
+  offset: 198, 237
+  index: -1
+疯狂教徒-拆分_0007_右小臂-拷贝-8
+  rotate: false
+  xy: 138, 13
+  size: 60, 101
+  orig: 450, 450
+  offset: 124, 271
+  index: -1
+疯狂教徒-拆分_0008_刀
+  rotate: false
+  xy: 365, 175
+  size: 54, 92
+  orig: 450, 450
+  offset: 97, 348
+  index: -1
+疯狂教徒-拆分_0009_右大臂
+  rotate: false
+  xy: 270, 29
+  size: 58, 83
+  orig: 450, 450
+  offset: 170, 270
+  index: -1
+疯狂教徒-拆分_0010_左大腿
+  rotate: true
+  xy: 208, 183
+  size: 84, 155
+  orig: 450, 450
+  offset: 239, 94
+  index: -1
+疯狂教徒-拆分_0011_左脚
+  rotate: false
+  xy: 253, 2
+  size: 41, 25
+  orig: 450, 450
+  offset: 313, 0
+  index: -1
+疯狂教徒-拆分_0012_左小腿
+  rotate: true
+  xy: 208, 114
+  size: 67, 119
+  orig: 450, 450
+  offset: 281, 7
+  index: -1
+疯狂教徒-拆分_0013_右大腿
+  rotate: false
+  xy: 106, 116
+  size: 100, 151
+  orig: 450, 450
+  offset: 173, 98
+  index: -1
+疯狂教徒-拆分_0014_右脚
+  rotate: false
+  xy: 200, 4
+  size: 51, 25
+  orig: 450, 450
+  offset: 147, 7
+  index: -1
+疯狂教徒-拆分_0015_右小腿
+  rotate: false
+  xy: 88, 5
+  size: 48, 105
+  orig: 450, 450
+  offset: 171, 8
+  index: -1

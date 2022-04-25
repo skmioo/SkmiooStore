@@ -1,0 +1,730 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b98a50e64dd4949b4ddfe406310a15, type: 3}
+  m_Name: ZH_InteractiveDataSet
+  m_EditorClassIdentifier: 
+  interactiveDatas:
+  - name: "\u7ECF\u6587"
+    id: 20001
+    describe: "\u7ECF\u8FC7\u591A\u6B21\u5C1D\u8BD5\uFF0C\u4F60\u7834\u89E3\u4E86\u4E00\u6BB5\u7ECF\u6587"
+    interactiveType: 0
+    tip: 
+    interactiveCountMax: 1
+    probability: 30
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    altarIcons: []
+  - name: "\u51A5\u60F3\u53F0"
+    id: 20002
+    describe: "\u51A5\u60F3\u8FC7\u540E\uFF0C\u8BE5\u89D2\u8272\u58EB\u6C14\u6280\u80FD\u5C06\u53D1\u751F\u5F02\u53D8
+      \n\u82E5\u5F02\u53D8\u6B21\u6570\u8D85\u8FC7\u4E0A\u9650\uFF0C\u5C06\u968F\u673A\u66FF\u6362\u5DF2\u5F02\u53D8\u6548\u679C"
+    interactiveType: 1
+    tip: "\u9009\u62E9\u51A5\u60F3\u89D2\u8272"
+    interactiveCountMax: 10
+    probability: 30
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    altarIcons: []
+  - name: "\u796D\u575B"
+    id: 20003
+    describe: "\u7B2C1\u6B21\uFF1A\u732E\u4E0A\u751F\u547D\uFF0C\u6362\u53D6\u56DE\u62A5\uFF0C\u8FD9\u5F88\u516C\u5E73\u3002\n\u7B2C2\u6B21\uFF1A\u8FD9\u5C31\u662F\u4EE3\u4EF7\uFF0C\u4F46\u6CA1\u6709\u4EBA\u771F\u7684\u60F3\u505C\u4E0B\u3002\n\u7B2C3\u6B21\uFF1A\u4E0E\u56DE\u62A5\u76F8\u6BD4\uFF0C\u751F\u547D\u7684\u4EE3\u4EF7\u4E0D\u503C\u4E00\u63D0\u3002"
+    interactiveType: 2
+    tip: 
+    interactiveCountMax: 3
+    probability: 30
+    icon:
+      m_AssetGUID: ca23bea29d0d0a340b5c9d5dde6b0b8b
+      m_SubObjectName: "\u611A\u6627\u796D\u575B"
+    altarIcons:
+    - altarType: 1
+      icon:
+        m_AssetGUID: 7284201a92e34fd43a4c4bcd50ab8343
+        m_SubObjectName: "\u611A\u6627\u796D\u575B"
+    - altarType: 0
+      icon:
+        m_AssetGUID: 0e66487ace158db468c8ee4eaafbfdbb
+        m_SubObjectName: "\u8D2A\u5A6A"
+  - name: "\u89E3\u6551"
+    id: 20004
+    describe: 
+    interactiveType: 3
+    tip: "\u5782\u6B7B\u4E4B\u4EBA\u2014"
+    interactiveCountMax: -1
+    probability: 15
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    altarIcons: []
+  - name: "\u5730\u4E0B\u6E38\u5546"
+    id: 20005
+    describe: 
+    interactiveType: 4
+    tip: "\u751F\u547D\u3001\u5C0A\u4E25\u3001\u4EBA\u6027\uFF0C\u4E07\u7269\u90FD\u6709\u5176\u4EF7\u683C\u3002"
+    interactiveCountMax: -1
+    probability: 10
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    altarIcons: []
+  interactiveNumberDatas:
+  - taskDifficulty: 0
+    mapSize: 0
+    numbers:
+    - interactiveType: 0
+      minCount: 1
+      maxCount: 2
+    - interactiveType: 1
+      minCount: 0
+      maxCount: 1
+    - interactiveType: 2
+      minCount: 1
+      maxCount: 2
+    - interactiveType: 3
+      minCount: 0
+      maxCount: 1
+    - interactiveType: 4
+      minCount: 1
+      maxCount: 1
+  - taskDifficulty: 0
+    mapSize: 1
+    numbers:
+    - interactiveType: 0
+      minCount: 1
+      maxCount: 2
+    - interactiveType: 1
+      minCount: 1
+      maxCount: 1
+    - interactiveType: 2
+      minCount: 1
+      maxCount: 4
+    - interactiveType: 3
+      minCount: 0
+      maxCount: 2
+    - interactiveType: 4
+      minCount: 1
+      maxCount: 3
+  - taskDifficulty: 1
+    mapSize: 0
+    numbers:
+    - interactiveType: 0
+      minCount: 1
+      maxCount: 2
+    - interactiveType: 1
+      minCount: 0
+      maxCount: 1
+    - interactiveType: 2
+      minCount: 1
+      maxCount: 2
+    - interactiveType: 3
+      minCount: 0
+      maxCount: 1
+    - interactiveType: 4
+      minCount: 1
+      maxCount: 1
+  - taskDifficulty: 1
+    mapSize: 1
+    numbers:
+    - interactiveType: 0
+      minCount: 1
+      maxCount: 3
+    - interactiveType: 1
+      minCount: 1
+      maxCount: 1
+    - interactiveType: 2
+      minCount: 1
+      maxCount: 3
+    - interactiveType: 3
+      minCount: 0
+      maxCount: 2
+    - interactiveType: 4
+      minCount: 1
+      maxCount: 3
+  - taskDifficulty: 2
+    mapSize: 0
+    numbers:
+    - interactiveType: 0
+      minCount: 1
+      maxCount: 2
+    - interactiveType: 1
+      minCount: 1
+      maxCount: 1
+    - interactiveType: 2
+      minCount: 0
+      maxCount: 2
+    - interactiveType: 3
+      minCount: 0
+      maxCount: 1
+    - interactiveType: 4
+      minCount: 1
+      maxCount: 1
+  - taskDifficulty: 2
+    mapSize: 1
+    numbers:
+    - interactiveType: 0
+      minCount: 1
+      maxCount: 3
+    - interactiveType: 1
+      minCount: 1
+      maxCount: 2
+    - interactiveType: 2
+      minCount: 1
+      maxCount: 3
+    - interactiveType: 3
+      minCount: 0
+      maxCount: 1
+    - interactiveType: 4
+      minCount: 1
+      maxCount: 3
+  interactiveScriptures:
+  - name: "\u7597\u6108\u7ECF\u6587"
+    id: 10001
+    describe: "\u5168\u4F53\u6062\u590D15\u70B9\u751F\u547D\u503C"
+    Icon:
+      m_AssetGUID: e3298112db954744880b8e3e7aed51a4
+      m_SubObjectName: "\u7597\u6108\u7ECF\u6587"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 0
+    levelType: 4
+    ownerType: 4
+    buy: 99999
+    sell: 2250
+    settlement: 2250
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 2
+      valueType: 0
+      value: 15
+    specialEffect: 0
+    scriptureType: 0
+    knapsackDescribe: "\u7ECF\u8FC7\u7834\u8BD1\u540E\u7684\u4E00\u6BB5\u795E\u79D8\u7ECF\u6587\uFF0C\u4F3C\u4E4E\u6709\u7740\u8BA9\u4EBA\u7F13\u89E3\u4F24\u52BF\u7684\u4F5C\u7528"
+    ScriptureTypeProbability: 40
+    probability: 70
+    skillBuffs: []
+  - name: "\u7597\u6108\u7ECF\u6587"
+    id: 10002
+    describe: "\u5168\u4F53\u6062\u590D25\u70B9\u751F\u547D\u503C"
+    Icon:
+      m_AssetGUID: e3298112db954744880b8e3e7aed51a4
+      m_SubObjectName: "\u7597\u6108\u7ECF\u6587"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 0
+    levelType: 4
+    ownerType: 4
+    buy: 99999
+    sell: 3500
+    settlement: 3500
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 2
+      valueType: 0
+      value: 25
+    specialEffect: 0
+    scriptureType: 0
+    knapsackDescribe: "\u7ECF\u8FC7\u7834\u8BD1\u540E\u7684\u4E00\u6BB5\u795E\u79D8\u7ECF\u6587\uFF0C\u4F3C\u4E4E\u6709\u7740\u8BA9\u4EBA\u7F13\u89E3\u4F24\u52BF\u7684\u4F5C\u7528"
+    ScriptureTypeProbability: 40
+    probability: 30
+    skillBuffs: []
+  - name: "\u63D0\u632F\u7ECF\u6587"
+    id: 10003
+    describe: "\u6062\u590D5\u70B9\u58EB\u6C14"
+    Icon:
+      m_AssetGUID: e849f4d2500f7c546b1171a3bd2e4586
+      m_SubObjectName: "\u63D0\u632F\u7ECF\u6587"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 0
+    levelType: 4
+    ownerType: 4
+    buy: 99999
+    sell: 2000
+    settlement: 2000
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 0
+      valueType: 0
+      value: 5
+    specialEffect: 0
+    scriptureType: 1
+    knapsackDescribe: "\u7ECF\u8FC7\u7834\u8BD1\u540E\u7684\u4E00\u6BB5\u795E\u79D8\u7ECF\u6587\uFF0C\u4F3C\u4E4E\u6709\u7740\u8BA9\u4EBA\u58EB\u6C14\u63D0\u5347\u7684\u6548\u679C"
+    ScriptureTypeProbability: 15
+    probability: 70
+    skillBuffs: []
+  - name: "\u63D0\u632F\u7ECF\u6587"
+    id: 10004
+    describe: "\u6062\u590D10\u70B9\u58EB\u6C14"
+    Icon:
+      m_AssetGUID: e849f4d2500f7c546b1171a3bd2e4586
+      m_SubObjectName: "\u63D0\u632F\u7ECF\u6587"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 0
+    levelType: 4
+    ownerType: 4
+    buy: 99999
+    sell: 4000
+    settlement: 4000
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 0
+      valueType: 0
+      value: 10
+    specialEffect: 0
+    scriptureType: 1
+    knapsackDescribe: "\u7ECF\u8FC7\u7834\u8BD1\u540E\u7684\u4E00\u6BB5\u795E\u79D8\u7ECF\u6587\uFF0C\u4F3C\u4E4E\u6709\u7740\u8BA9\u4EBA\u58EB\u6C14\u63D0\u5347\u7684\u6548\u679C"
+    ScriptureTypeProbability: 15
+    probability: 30
+    skillBuffs: []
+  - name: "\u672A\u77E5\u7ECF\u6587"
+    id: 10005
+    describe: "\u6062\u590D15\u70B9\u751F\u547D\u503C\uFF0C\u83B7\u5F973\u56DE\u5408\u6D41\u8840"
+    Icon:
+      m_AssetGUID: 05d21746479a7014691d83bba9ec6a1b
+      m_SubObjectName: "\u672A\u77E5\u7ECF\u6587"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 0
+    levelType: 4
+    ownerType: 4
+    buy: 99999
+    sell: 750
+    settlement: 750
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 2
+      valueType: 0
+      value: 15
+    specialEffect: 0
+    scriptureType: 2
+    knapsackDescribe: "\u7ECF\u8FC7\u7834\u8BD1\u540E\u7684\u4E00\u6BB5\u795E\u79D8\u7ECF\u6587\uFF0C\u65E0\u6CD5\u786E\u5B9A\u5177\u4F53\u6548\u679C"
+    ScriptureTypeProbability: 45
+    probability: 40
+    skillBuffs:
+    - buffTarget: 2
+      buffType: 7
+      valueType: 0
+      value:
+        level1: -5
+        level2: 0
+        level3: 0
+        level4: 0
+        level5: 0
+      effectiveRounds: 3
+      rate:
+        level1: 0
+        level2: 0
+        level3: 0
+        level4: 0
+        level5: 0
+      specialType: 0
+  - name: "\u672A\u77E5\u7ECF\u6587"
+    id: 10006
+    describe: "\u6062\u590D15\u70B9\u751F\u547D\u503C\uFF0C\u5931\u53BB5\u58EB\u6C14"
+    Icon:
+      m_AssetGUID: 05d21746479a7014691d83bba9ec6a1b
+      m_SubObjectName: "\u672A\u77E5\u7ECF\u6587"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 0
+    levelType: 4
+    ownerType: 4
+    buy: 99999
+    sell: 750
+    settlement: 750
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 2
+      valueType: 0
+      value: 15
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 0
+      valueType: 0
+      value: -5
+    specialEffect: 0
+    scriptureType: 2
+    knapsackDescribe: "\u7ECF\u8FC7\u7834\u8BD1\u540E\u7684\u4E00\u6BB5\u795E\u79D8\u7ECF\u6587\uFF0C\u65E0\u6CD5\u786E\u5B9A\u5177\u4F53\u6548\u679C"
+    ScriptureTypeProbability: 45
+    probability: 40
+    skillBuffs: []
+  - name: "\u672A\u77E5\u7ECF\u6587"
+    id: 10007
+    describe: "\u635F\u593120\u70B9\u751F\u547D\u503C"
+    Icon:
+      m_AssetGUID: 05d21746479a7014691d83bba9ec6a1b
+      m_SubObjectName: "\u672A\u77E5\u7ECF\u6587"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 0
+    levelType: 4
+    ownerType: 4
+    buy: 99999
+    sell: 750
+    settlement: 750
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 2
+      valueType: 0
+      value: -20
+    specialEffect: 0
+    scriptureType: 2
+    knapsackDescribe: "\u7ECF\u8FC7\u7834\u8BD1\u540E\u7684\u4E00\u6BB5\u795E\u79D8\u7ECF\u6587\uFF0C\u65E0\u6CD5\u786E\u5B9A\u5177\u4F53\u6548\u679C"
+    ScriptureTypeProbability: 45
+    probability: 20
+    skillBuffs: []
+  interactiveAltars:
+  - name: "\u8D2A\u5A6A\u796D\u575B"
+    id: 23001
+    describe: "\u7B2C1\u6B21\uFF1A\u732E\u4E0A\u751F\u547D\uFF0C\u6362\u53D6\u56DE\u62A5\uFF0C\u8FD9\u5F88\u516C\u5E73\u3002\n\u7B2C2\u6B21\uFF1A\u8FD9\u5C31\u662F\u4EE3\u4EF7\uFF0C\u4F46\u6CA1\u6709\u4EBA\u771F\u7684\u60F3\u505C\u4E0B\u3002\n\u7B2C3\u6B21\uFF1A\u4E0E\u56DE\u62A5\u76F8\u6BD4\uFF0C\u751F\u547D\u7684\u4EE3\u4EF7\u4E0D\u503C\u4E00\u63D0\u3002"
+    altarType: 0
+    probability: 50
+    sacrificeCoutMax: 3
+    sacrifices:
+    - sacrificeCount: 0
+      minHpReduce: 1
+      maxHpReduce: 3
+      hpLimit: 4
+      rewards:
+      - rewardType: 0
+        count: 0
+        probability: 45
+      - rewardType: 1
+        count: 500
+        probability: 25
+      - rewardType: 2
+        count: 1
+        probability: 15
+      - rewardType: 3
+        count: 1
+        probability: 10
+      - rewardType: 3
+        count: 1
+        probability: 5
+      - rewardType: 5
+        count: 1
+        probability: 0
+    - sacrificeCount: 1
+      minHpReduce: 2
+      maxHpReduce: 4
+      hpLimit: 5
+      rewards:
+      - rewardType: 0
+        count: 0
+        probability: 40
+      - rewardType: 1
+        count: 500
+        probability: 20
+      - rewardType: 2
+        count: 1
+        probability: 10
+      - rewardType: 3
+        count: 1
+        probability: 20
+      - rewardType: 3
+        count: 1
+        probability: 10
+      - rewardType: 5
+        count: 1
+        probability: 0
+    - sacrificeCount: 2
+      minHpReduce: 3
+      maxHpReduce: 5
+      hpLimit: 6
+      rewards:
+      - rewardType: 0
+        count: 0
+        probability: 30
+      - rewardType: 1
+        count: 500
+        probability: 20
+      - rewardType: 2
+        count: 1
+        probability: 5
+      - rewardType: 3
+        count: 1
+        probability: 15
+      - rewardType: 3
+        count: 1
+        probability: 14
+      - rewardType: 5
+        count: 1
+        probability: 1
+  - name: "\u611A\u6627\u796D\u575B"
+    id: 23002
+    describe: "\u7B2C1\u6B21\uFF1A\u732E\u4E0A\u751F\u547D\uFF0C\u6362\u53D6\u56DE\u62A5\uFF0C\u8FD9\u5F88\u516C\u5E73\u3002\n\u7B2C2\u6B21\uFF1A\u8FD9\u5C31\u662F\u4EE3\u4EF7\uFF0C\u4F46\u6CA1\u6709\u4EBA\u771F\u7684\u60F3\u505C\u4E0B\u3002\n\u7B2C3\u6B21\uFF1A\u4E0E\u56DE\u62A5\u76F8\u6BD4\uFF0C\u751F\u547D\u7684\u4EE3\u4EF7\u4E0D\u503C\u4E00\u63D0\u3002"
+    altarType: 1
+    probability: 50
+    sacrificeCoutMax: 3
+    sacrifices:
+    - sacrificeCount: 0
+      minHpReduce: 1
+      maxHpReduce: 3
+      hpLimit: 4
+      rewards:
+      - rewardType: 0
+        count: 0
+        probability: 45
+      - rewardType: 1
+        count: 500
+        probability: 25
+      - rewardType: 6
+        count: 1
+        probability: 20
+      - rewardType: 7
+        count: 1
+        probability: 10
+    - sacrificeCount: 1
+      minHpReduce: 2
+      maxHpReduce: 4
+      hpLimit: 5
+      rewards:
+      - rewardType: 0
+        count: 0
+        probability: 40
+      - rewardType: 1
+        count: 500
+        probability: 20
+      - rewardType: 6
+        count: 1
+        probability: 27
+      - rewardType: 7
+        count: 1
+        probability: 13
+    - sacrificeCount: 2
+      minHpReduce: 3
+      maxHpReduce: 5
+      hpLimit: 6
+      rewards:
+      - rewardType: 0
+        count: 0
+        probability: 30
+      - rewardType: 1
+        count: 500
+        probability: 20
+      - rewardType: 6
+        count: 1
+        probability: 35
+      - rewardType: 7
+        count: 1
+        probability: 15
+  altarBlesses:
+  - rewardType: 7
+    actions:
+    - probability: 20
+      describe: "\u5168\u961F\u4F24\u5BB3+15%"
+      action:
+      - buffType: 1
+        valueType: 1
+        value: 15
+        round: 0
+        rate: 0
+    - probability: 20
+      describe: "\u5168\u961F\u51CF\u4F24+15%"
+      action:
+      - buffType: 3
+        valueType: 1
+        value: 15
+        round: 0
+        rate: 0
+    - probability: 20
+      describe: "\u5168\u961F\u4E2D\u6BD2\u3001\u6D41\u8840\u3001\u4F4D\u79FB\u6297\u6027+20%"
+      action:
+      - buffType: 17
+        valueType: 1
+        value: 20
+        round: 0
+        rate: 0
+      - buffType: 16
+        valueType: 1
+        value: 20
+        round: 0
+        rate: 0
+      - buffType: 20
+        valueType: 1
+        value: 20
+        round: 0
+        rate: 0
+    - probability: 20
+      describe: "\u5168\u961F\u901F\u5EA6+5"
+      action:
+      - buffType: 15
+        valueType: 0
+        value: 5
+        round: 0
+        rate: 0
+    - probability: 20
+      describe: "\u5168\u961F\u66B4\u51FB+5%"
+      action:
+      - buffType: 2
+        valueType: 1
+        value: 5
+        round: 0
+        rate: 0
+  - rewardType: 6
+    actions:
+    - probability: 20
+      describe: "\u6BCF\u6B21\u6218\u6597\u7ED3\u675F\u5168\u4F53\u6062\u590D10\u70B9\u751F\u547D"
+      action: []
+    - probability: 20
+      describe: "\u6BCF\u6B21\u6218\u6597\u7ED3\u675F\u5168\u4F53\u6062\u590D10\u70B9\u58EB\u6C14"
+      action: []
+    - probability: 20
+      describe: "\u5168\u961F\u6CBB\u7597\u6548\u679C+20%"
+      action: []
+    - probability: 20
+      describe: "\u5168\u961F\u66B4\u51FB+20%"
+      action: []
+    - probability: 20
+      describe: "\u5168\u961F\u83B7\u5F97\u72B6\u6001\u201C\u5145\u5206\u51C6\u5907\u201D"
+      action: []
+  interactiveRescues:
+  - name: "\u730E\u5934"
+    id: 24001
+    describe: "\u4E0B\u5468\u8425\u5730\u5EFA\u7B51\u5237\u65B0\u82F1\u96C4\u6570\u91CF\u7FFB\u500D"
+    rescueType: 0
+    probability: 20
+    interactiveResultDatas:
+    - resultType: 0
+      probability: 50
+    - resultType: 1
+      probability: 50
+    icon:
+      m_AssetGUID: a07707401ed517e4982ba2b8db494bda
+      m_SubObjectName: "\u730E\u5934"
+    monsterIds: 
+  - name: "\u8001\u5343"
+    id: 24002
+    describe: "\u4E0B\u5468\u8D4C\u573A\u5EFA\u7B51\u83B7\u53D6\u7A00\u6709\u52CB\u7AE0\u6982\u7387\u63D0\u9AD830%"
+    rescueType: 1
+    probability: 20
+    interactiveResultDatas:
+    - resultType: 0
+      probability: 60
+    - resultType: 1
+      probability: 40
+    icon:
+      m_AssetGUID: bdd5f13e83c893041b4b73cf8a0d38b9
+      m_SubObjectName: "\u8001\u5343"
+    monsterIds: bd0b0000bd0b0000ba0b0000bb0b0000
+  - name: "\u5546\u4EBA"
+    id: 24003
+    describe: "\u4E0B\u5468\u57CE\u9547\u4E2D\u9970\u54C1\u5546\u5E97\u4EF7\u683C-30%"
+    rescueType: 2
+    probability: 20
+    interactiveResultDatas:
+    - resultType: 0
+      probability: 55
+    - resultType: 1
+      probability: 45
+    icon:
+      m_AssetGUID: 5bca362794e3d424683442760e542493
+      m_SubObjectName: "\u5546\u4EBA"
+    monsterIds: 
+  - name: "\u9970\u54C1\u8D29\u5B50"
+    id: 24004
+    describe: "\u4E0B\u5468\u57CE\u9547\u4E2D\u9970\u54C1\u5546\u5E97\u5237\u65B0\u4E00\u4E2A\u7A00\u6709\u9970\u54C1"
+    rescueType: 3
+    probability: 20
+    interactiveResultDatas:
+    - resultType: 0
+      probability: 40
+    - resultType: 1
+      probability: 60
+    icon:
+      m_AssetGUID: c455e6c22d719e64db4758339d642ae2
+      m_SubObjectName: "\u9970\u54C1\u8D29\u5B50"
+    monsterIds: 
+  - name: "\u77FF\u5DE5"
+    id: 24005
+    describe: "\u672C\u6B21\u6218\u6597\u70B9\u4EAE\u5F53\u524D\u526F\u672C\u5269\u4F59\u5730\u56FE"
+    rescueType: 4
+    probability: 20
+    interactiveResultDatas:
+    - resultType: 0
+      probability: 70
+    - resultType: 1
+      probability: 30
+    icon:
+      m_AssetGUID: 318a0ddb6454bba4892bd50050f19a75
+      m_SubObjectName: "\u77FF\u5DE5"
+    monsterIds: 
+  interactiveShops:
+  - objType: 2
+    probability: 100
+    minCount: 1
+    maxCount: 10
+    levels: []
+  - objType: 0
+    probability: 100
+    minCount: 1
+    maxCount: 2
+    levels:
+    - levelType: 6
+      probability: 30
+    - levelType: 2
+      probability: 50
+    - levelType: 1
+      probability: 20
+    - levelType: 0
+      probability: 0
+  - objType: 1
+    probability: 20
+    minCount: 0
+    maxCount: 1
+    levels: []

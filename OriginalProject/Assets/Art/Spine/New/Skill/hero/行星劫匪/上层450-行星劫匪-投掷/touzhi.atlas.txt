@@ -1,0 +1,20 @@
+
+touzhi.png
+size: 356,202
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FUTOU
+  rotate: true
+  xy: 250, 2
+  size: 198, 104
+  orig: 668, 450
+  offset: 340, 162
+  index: -1
+JINENNG
+  rotate: false
+  xy: 2, 12
+  size: 246, 188
+  orig: 668, 450
+  offset: 337, 156
+  index: -1

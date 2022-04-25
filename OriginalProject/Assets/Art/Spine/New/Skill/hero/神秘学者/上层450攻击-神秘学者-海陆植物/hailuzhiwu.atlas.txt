@@ -1,0 +1,76 @@
+
+hailuzhiwu.png
+size: 712,215
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: true
+  xy: 245, 2
+  size: 91, 125
+  orig: 141, 154
+  offset: 33, 17
+  index: -1
+body_11
+  rotate: true
+  xy: 499, 12
+  size: 79, 122
+  orig: 83, 127
+  offset: 4, 5
+  index: -1
+body_12
+  rotate: false
+  xy: 372, 6
+  size: 125, 87
+  orig: 125, 93
+  offset: 0, 2
+  index: -1
+body_2
+  rotate: false
+  xy: 245, 95
+  size: 209, 118
+  orig: 225, 118
+  offset: 3, 0
+  index: -1
+body_3
+  rotate: true
+  xy: 596, 93
+  size: 120, 99
+  orig: 130, 100
+  offset: 4, 1
+  index: -1
+body_4
+  rotate: true
+  xy: 456, 95
+  size: 118, 138
+  orig: 118, 146
+  offset: 0, 6
+  index: -1
+body_5
+  rotate: true
+  xy: 680, 44
+  size: 47, 30
+  orig: 51, 35
+  offset: 2, 3
+  index: -1
+body_6
+  rotate: false
+  xy: 680, 3
+  size: 30, 39
+  orig: 38, 44
+  offset: 3, 3
+  index: -1
+body_7
+  rotate: false
+  xy: 623, 38
+  size: 55, 53
+  orig: 69, 58
+  offset: 11, 2
+  index: -1
+body_9
+  rotate: false
+  xy: 2, 10
+  size: 241, 203
+  orig: 245, 205
+  offset: 0, 0
+  index: -1

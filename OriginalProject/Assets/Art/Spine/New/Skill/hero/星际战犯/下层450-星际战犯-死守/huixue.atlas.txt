@@ -1,0 +1,76 @@
+
+huixue.png
+size: 287,410
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+c1
+  rotate: false
+  xy: 230, 49
+  size: 44, 46
+  orig: 47, 49
+  offset: 2, 2
+  index: -1
+c2
+  rotate: true
+  xy: 150, 2
+  size: 44, 45
+  orig: 47, 48
+  offset: 2, 2
+  index: -1
+c3
+  rotate: true
+  xy: 230, 3
+  size: 44, 46
+  orig: 47, 48
+  offset: 2, 1
+  index: -1
+c4
+  rotate: false
+  xy: 150, 48
+  size: 78, 47
+  orig: 81, 50
+  offset: 2, 2
+  index: -1
+c5
+  rotate: true
+  xy: 2, 38
+  size: 57, 60
+  orig: 61, 62
+  offset: 2, 1
+  index: -1
+c6
+  rotate: true
+  xy: 64, 4
+  size: 40, 41
+  orig: 43, 44
+  offset: 1, 2
+  index: -1
+c7
+  rotate: false
+  xy: 64, 46
+  size: 84, 49
+  orig: 86, 52
+  offset: 1, 2
+  index: -1
+c8
+  rotate: true
+  xy: 107, 4
+  size: 40, 35
+  orig: 43, 37
+  offset: 2, 1
+  index: -1
+c9
+  rotate: true
+  xy: 2, 8
+  size: 28, 48
+  orig: 30, 50
+  offset: 1, 1
+  index: -1
+dd1
+  rotate: false
+  xy: 2, 97
+  size: 283, 311
+  orig: 286, 363
+  offset: 0, 0
+  index: -1

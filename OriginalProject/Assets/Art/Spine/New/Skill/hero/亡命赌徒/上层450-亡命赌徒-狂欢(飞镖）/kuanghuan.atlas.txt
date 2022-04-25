@@ -1,0 +1,27 @@
+
+kuanghuan.png
+size: 272,87
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_1
+  rotate: true
+  xy: 210, 12
+  size: 73, 60
+  orig: 74, 74
+  offset: 1, 14
+  index: -1
+body_2
+  rotate: false
+  xy: 2, 3
+  size: 117, 82
+  orig: 117, 82
+  offset: 0, 0
+  index: -1
+body_3
+  rotate: false
+  xy: 121, 2
+  size: 87, 83
+  orig: 97, 91
+  offset: 2, 3
+  index: -1

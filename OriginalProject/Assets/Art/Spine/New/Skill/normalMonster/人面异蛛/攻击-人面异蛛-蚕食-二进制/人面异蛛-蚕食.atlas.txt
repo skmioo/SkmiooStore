@@ -1,0 +1,20 @@
+
+人面异蛛-蚕食.png
+size: 315,164
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: false
+  xy: 182, 2
+  size: 131, 160
+  orig: 133, 161
+  offset: 1, 1
+  index: -1
+body_1
+  rotate: true
+  xy: 2, 15
+  size: 147, 178
+  orig: 149, 179
+  offset: 1, 1
+  index: -1

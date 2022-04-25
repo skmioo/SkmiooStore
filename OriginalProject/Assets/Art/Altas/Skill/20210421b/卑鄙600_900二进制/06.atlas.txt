@@ -1,0 +1,13 @@
+
+06.png
+size: 252,400
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JINENG
+  rotate: false
+  xy: 2, 2
+  size: 248, 396
+  orig: 248, 396
+  offset: 0, 0
+  index: -1

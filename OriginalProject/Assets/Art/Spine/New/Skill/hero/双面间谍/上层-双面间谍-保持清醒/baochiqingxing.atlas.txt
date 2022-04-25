@@ -1,0 +1,41 @@
+
+baochiqingxing.png
+size: 576,385
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: true
+  xy: 453, 233
+  size: 59, 121
+  orig: 71, 122
+  offset: 1, 0
+  index: -1
+body_1
+  rotate: true
+  xy: 453, 161
+  size: 70, 115
+  orig: 71, 115
+  offset: 1, 0
+  index: -1
+body_2
+  rotate: false
+  xy: 453, 294
+  size: 121, 89
+  orig: 122, 111
+  offset: 1, 1
+  index: -1
+body_3
+  rotate: false
+  xy: 453, 25
+  size: 68, 134
+  orig: 69, 135
+  offset: 1, 0
+  index: -1
+body_4
+  rotate: true
+  xy: 2, 2
+  size: 381, 449
+  orig: 381, 449
+  offset: 0, 0
+  index: -1

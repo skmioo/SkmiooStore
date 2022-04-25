@@ -1,0 +1,41 @@
+
+suijiyaowan.png
+size: 871,503
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: false
+  xy: 669, 19
+  size: 143, 112
+  orig: 145, 114
+  offset: 1, 1
+  index: -1
+body_1
+  rotate: false
+  xy: 669, 133
+  size: 200, 368
+  orig: 200, 368
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: true
+  xy: 2, 234
+  size: 267, 426
+  orig: 270, 426
+  offset: 3, 0
+  index: -1
+body_3
+  rotate: true
+  xy: 2, 2
+  size: 230, 402
+  orig: 230, 402
+  offset: 0, 0
+  index: -1
+body_4
+  rotate: false
+  xy: 430, 98
+  size: 237, 403
+  orig: 237, 403
+  offset: 0, 0
+  index: -1

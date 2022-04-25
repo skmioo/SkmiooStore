@@ -1,0 +1,118 @@
+
+skeleton.png
+size: 384,537
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+上身
+  rotate: false
+  xy: 2, 135
+  size: 139, 199
+  orig: 450, 450
+  offset: 145, 232
+  index: -1
+下身
+  rotate: true
+  xy: 143, 161
+  size: 173, 158
+  orig: 450, 450
+  offset: 131, 102
+  index: -1
+右大腿
+  rotate: true
+  xy: 169, 33
+  size: 60, 102
+  orig: 450, 450
+  offset: 137, 37
+  index: -1
+右大臂
+  rotate: false
+  xy: 241, 384
+  size: 73, 151
+  orig: 450, 450
+  offset: 114, 277
+  index: -1
+右小臂
+  rotate: true
+  xy: 150, 95
+  size: 64, 128
+  orig: 450, 450
+  offset: 96, 204
+  index: -1
+右脚（走）
+  rotate: true
+  xy: 332, 10
+  size: 56, 50
+  orig: 450, 450
+  offset: 132, 4
+  index: -1
+外套后
+  rotate: false
+  xy: 241, 336
+  size: 52, 46
+  orig: 450, 450
+  offset: 209, 107
+  index: -1
+头
+  rotate: false
+  xy: 303, 177
+  size: 75, 94
+  orig: 450, 450
+  offset: 216, 355
+  index: -1
+左大腿
+  rotate: true
+  xy: 2, 2
+  size: 68, 84
+  orig: 450, 450
+  offset: 219, 109
+  index: -1
+左小腿
+  rotate: true
+  xy: 280, 68
+  size: 46, 99
+  orig: 450, 450
+  offset: 247, 36
+  index: -1
+左脚
+  rotate: false
+  xy: 273, 31
+  size: 57, 35
+  orig: 450, 450
+  offset: 257, 8
+  index: -1
+左臂
+  rotate: false
+  xy: 303, 116
+  size: 78, 59
+  orig: 450, 450
+  offset: 262, 232
+  index: -1
+手杖
+  rotate: false
+  xy: 316, 273
+  size: 65, 262
+  orig: 450, 450
+  offset: 294, 8
+  index: -1
+气管
+  rotate: true
+  xy: 2, 72
+  size: 61, 146
+  orig: 450, 450
+  offset: 203, 227
+  index: -1
+腰包
+  rotate: true
+  xy: 88, 2
+  size: 68, 79
+  orig: 450, 450
+  offset: 144, 194
+  index: -1
+铁链
+  rotate: false
+  xy: 2, 336
+  size: 237, 199
+  orig: 450, 450
+  offset: 91, 209
+  index: -1

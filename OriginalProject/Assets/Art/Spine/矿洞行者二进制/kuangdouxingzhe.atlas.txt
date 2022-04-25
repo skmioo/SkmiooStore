@@ -1,0 +1,97 @@
+
+kuangdouxingzhe.png
+size: 940,253
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shangshen
+  rotate: true
+  xy: 2, 11
+  size: 240, 419
+  orig: 550, 550
+  offset: 110, 92
+  index: -1
+tou
+  rotate: true
+  xy: 423, 106
+  size: 145, 133
+  orig: 550, 550
+  offset: 255, 409
+  index: -1
+xiashen
+  rotate: true
+  xy: 558, 136
+  size: 115, 107
+  orig: 550, 550
+  offset: 209, 204
+  index: -1
+yinying
+  rotate: true
+  xy: 903, 14
+  size: 237, 35
+  orig: 242, 35
+  offset: 2, 0
+  index: -1
+youbi
+  rotate: true
+  xy: 584, 8
+  size: 126, 95
+  orig: 550, 550
+  offset: 115, 254
+  index: -1
+youdabi
+  rotate: false
+  xy: 826, 59
+  size: 63, 100
+  orig: 550, 550
+  offset: 205, 145
+  index: -1
+youjiao
+  rotate: false
+  xy: 681, 13
+  size: 74, 144
+  orig: 550, 550
+  offset: 169, 24
+  index: -1
+youshou
+  rotate: true
+  xy: 757, 8
+  size: 43, 73
+  orig: 550, 550
+  offset: 106, 210
+  index: -1
+zuodabi
+  rotate: true
+  xy: 667, 159
+  size: 92, 124
+  orig: 550, 550
+  offset: 312, 300
+  index: -1
+zuodatui
+  rotate: false
+  xy: 757, 53
+  size: 67, 104
+  orig: 550, 550
+  offset: 266, 140
+  index: -1
+zuojiao
+  rotate: true
+  xy: 423, 2
+  size: 102, 159
+  orig: 550, 550
+  offset: 296, 7
+  index: -1
+zuoshou
+  rotate: true
+  xy: 832, 7
+  size: 50, 69
+  orig: 550, 550
+  offset: 395, 206
+  index: -1
+zuoxiaobi
+  rotate: false
+  xy: 793, 161
+  size: 76, 90
+  orig: 550, 550
+  offset: 355, 249
+  index: -1

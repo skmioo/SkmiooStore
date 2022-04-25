@@ -1,0 +1,306 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e750cead704d3834e8dabc6687a9a910, type: 3}
+  m_Name: ZH_BuildingDataSet
+  m_EditorClassIdentifier: 
+  skillUpEquip1:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    - {x: 50, y: 50}
+    descriptions:
+    - "\u6280\u80FD\u7B49\u7EA7\u4E0A\u9650+1"
+    - "\u6280\u80FD\u7B49\u7EA7\u4E0A\u9650+1"
+    - "\u6280\u80FD\u7B49\u7EA7\u4E0A\u9650+1"
+    - "\u6280\u80FD\u7B49\u7EA7\u4E0A\u9650+1"
+    - "\u6280\u80FD\u7B49\u7EA7\u4E0A\u9650+1"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u6218\u6597\u5FC3\u5F97"
+      value: 1
+    - name: "\u6218\u6597\u5FC3\u5F97"
+      value: 2
+    - name: "\u6218\u6597\u5FC3\u5F97"
+      value: 3
+    - name: "\u6218\u6597\u5FC3\u5F97"
+      value: 4
+    unlockLevels: 01000000020000000300000004000000
+  skillUpEquip2:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    - {x: 50, y: 50}
+    descriptions:
+    - "\u82F1\u96C4\u5347\u7EA7\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1115%"
+    - "\u82F1\u96C4\u5347\u7EA7\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1125%"
+    - "\u82F1\u96C4\u5347\u7EA7\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1133%"
+    - "\u82F1\u96C4\u5347\u7EA7\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1140%"
+    - "\u82F1\u96C4\u5347\u7EA7\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1150%"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u8BAD\u7EC3\u6280\u6CD5"
+      value: 1
+    - name: "\u8BAD\u7EC3\u6280\u6CD5"
+      value: 2
+    - name: "\u8BAD\u7EC3\u6280\u6CD5"
+      value: 3
+    - name: "\u8BAD\u7EC3\u6280\u6CD5"
+      value: 4
+    discounts:
+    - 0
+    - 0.15
+    - 0.25
+    - 0.33
+    - 0.4
+    - 0.5
+  healEquip1:
+    requireMents:
+    - {x: 8, y: 8}
+    - {x: 15, y: 15}
+    descriptions:
+    - "\u89E3\u95012\u53F7\u590D\u751F\u6C60"
+    - "\u89E3\u95013\u53F7\u590D\u751F\u6C60"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u5F00\u6E90"
+      value: 1
+    unlockBoxNum: 010000000200000003000000
+  healEquip2:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    - {x: 50, y: 50}
+    descriptions:
+    - "\u7597\u517B\u6240\u9700\u9CDE\u7247\u6570\u91CF\u51CF\u5C1115%"
+    - "\u7597\u517B\u6240\u9700\u9CDE\u7247\u6570\u91CF\u51CF\u5C1125%"
+    - "\u7597\u517B\u6240\u9700\u9CDE\u7247\u6570\u91CF\u51CF\u5C1133%"
+    - "\u7597\u517B\u6240\u9700\u9CDE\u7247\u6570\u91CF\u51CF\u5C1140%"
+    - "\u7597\u517B\u6240\u9700\u9CDE\u7247\u6570\u91CF\u51CF\u5C1150%"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u8282\u6D41"
+      value: 1
+    - name: "\u8282\u6D41"
+      value: 2
+    - name: "\u8282\u6D41"
+      value: 3
+    - name: "\u8282\u6D41"
+      value: 4
+    discounts:
+    - 0
+    - 0.15
+    - 0.25
+    - 0.33
+    - 0.4
+    - 0.5
+  healEquip3:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    descriptions:
+    - "\u6CBB\u7597\u7684\u4F24\u52BF\u6570\u503C\u589E\u52A0\u523019"
+    - "\u6CBB\u7597\u7684\u4F24\u52BF\u6570\u503C\u589E\u52A0\u523023"
+    - "\u6CBB\u7597\u7684\u4F24\u52BF\u6570\u503C\u589E\u52A0\u523026"
+    - "\u6CBB\u7597\u7684\u4F24\u52BF\u6570\u503C\u589E\u52A0\u523030"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u9AD8\u6548"
+      value: 1
+    - name: "\u9AD8\u6548"
+      value: 2
+    - name: "\u9AD8\u6548"
+      value: 3
+    efficiencies: 0f00000013000000170000001a0000001e000000
+  moraleSkillEquip1:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    - {x: 50, y: 50}
+    descriptions:
+    - "\u62BD\u53D6\u6280\u80FD\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1115%"
+    - "\u62BD\u53D6\u6280\u80FD\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1125%"
+    - "\u62BD\u53D6\u6280\u80FD\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1133%"
+    - "\u62BD\u53D6\u6280\u80FD\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1140%"
+    - "\u62BD\u53D6\u6280\u80FD\u6240\u9700\u7684\u9CDE\u7247\u6570\u91CF\u51CF\u5C1150%"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u538B\u69A8"
+      value: 1
+    - name: "\u538B\u69A8"
+      value: 2
+    - name: "\u538B\u69A8"
+      value: 3
+    - name: "\u538B\u69A8"
+      value: 4
+    discounts:
+    - 0
+    - 0.15
+    - 0.25
+    - 0.33
+    - 0.4
+    - 0.5
+  moraleSkillEquip2:
+    requireMents:
+    - {x: 16, y: 16}
+    - {x: 32, y: 32}
+    descriptions:
+    - "\u53EF\u62BD\u53D62\u4E2A\u6280\u80FD"
+    - "\u53EF\u62BD\u53D63\u4E2A\u6280\u80FD"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u8FF8\u53D1"
+      value: 1
+    extendNums: 010000000200000003000000
+  moraleSkillEquip3:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    - {x: 50, y: 50}
+    descriptions:
+    - "\u89E3\u9501\u50A8\u5907\u680F1"
+    - "\u89E3\u9501\u88C5\u5907\u680F1"
+    - "\u89E3\u9501\u50A8\u5907\u680F1"
+    - "\u89E3\u9501\u88C5\u5907\u680F1"
+    - "\u89E3\u9501\u50A8\u5907\u680F1"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u8D2A\u5A6A"
+      value: 1
+    - name: "\u8D2A\u5A6A"
+      value: 2
+    - name: "\u8D2A\u5A6A"
+      value: 3
+    - name: "\u8D2A\u5A6A"
+      value: 4
+    extendNums: 020000000300000004000000050000000600000007000000
+  recruitEquip1:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    - {x: 50, y: 50}
+    descriptions:
+    - "\u53EF\u62DB\u52DF\u82F1\u96C4\u6570\u91CF\u589E\u52A0\u81F33"
+    - "\u53EF\u62DB\u52DF\u82F1\u96C4\u6570\u91CF\u589E\u52A0\u81F34"
+    - "\u53EF\u62DB\u52DF\u82F1\u96C4\u6570\u91CF\u589E\u52A0\u81F35"
+    - "\u53EF\u62DB\u52DF\u82F1\u96C4\u6570\u91CF\u589E\u52A0\u81F36"
+    - "\u53EF\u62DB\u52DF\u82F1\u96C4\u6570\u91CF\u589E\u52A0\u81F38"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u8425\u5730\u6269\u5F20"
+      value: 1
+    - name: "\u8425\u5730\u6269\u5F20"
+      value: 2
+    - name: "\u8425\u5730\u6269\u5F20"
+      value: 3
+    - name: "\u8425\u5730\u6269\u5F20"
+      value: 4
+    extendNums: 020000000300000004000000050000000600000008000000
+  recruitEquip2:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    - {x: 50, y: 50}
+    descriptions:
+    - "\u961F\u4F0D\u82F1\u96C4\u4E0A\u9650\u589E\u52A0\u81F312"
+    - "\u961F\u4F0D\u82F1\u96C4\u4E0A\u9650\u589E\u52A0\u81F316"
+    - "\u961F\u4F0D\u82F1\u96C4\u4E0A\u9650\u589E\u52A0\u81F320"
+    - "\u961F\u4F0D\u82F1\u96C4\u4E0A\u9650\u589E\u52A0\u81F324"
+    - "\u961F\u4F0D\u82F1\u96C4\u4E0A\u9650\u589E\u52A0\u81F330"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u58EE\u5927\u56E2\u961F"
+      value: 1
+    - name: "\u58EE\u5927\u56E2\u961F"
+      value: 2
+    - name: "\u58EE\u5927\u56E2\u961F"
+      value: 3
+    - name: "\u58EE\u5927\u56E2\u961F"
+      value: 4
+    extendNums: 080000000c0000001000000014000000180000001e000000
+  shopEquip1:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    - {x: 50, y: 50}
+    descriptions:
+    - "\u8D2D\u4E70\u8D44\u6E90\u51CF\u5C11\u81F390%"
+    - "\u8D2D\u4E70\u8D44\u6E90\u51CF\u5C11\u81F380%"
+    - "\u8D2D\u4E70\u8D44\u6E90\u51CF\u5C11\u81F370%"
+    - "\u8D2D\u4E70\u8D44\u6E90\u51CF\u5C11\u81F360%"
+    - "\u8D2D\u4E70\u8D44\u6E90\u51CF\u5C11\u81F350%"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u9ED1\u5E02\u7F51\u7EDC"
+      value: 1
+    - name: "\u9ED1\u5E02\u7F51\u7EDC"
+      value: 2
+    - name: "\u9ED1\u5E02\u7F51\u7EDC"
+      value: 3
+    - name: "\u9ED1\u5E02\u7F51\u7EDC"
+      value: 4
+    discounts:
+    - 0
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+  shopEquip2:
+    requireMents:
+    - {x: 5, y: 5}
+    - {x: 10, y: 10}
+    - {x: 18, y: 18}
+    - {x: 30, y: 30}
+    descriptions:
+    - "\u9970\u54C1\u5237\u65B0\u6570\u91CF\u589E\u52A0\u81F34"
+    - "\u9970\u54C1\u5237\u65B0\u6570\u91CF\u589E\u52A0\u81F35"
+    - "\u9970\u54C1\u5237\u65B0\u6570\u91CF\u589E\u52A0\u81F36"
+    - "\u9970\u54C1\u5237\u65B0\u6570\u91CF\u589E\u52A0\u81F38"
+    limitations:
+    - name: 
+      value: 0
+    - name: "\u6E20\u9053\u6269\u5F20"
+      value: 1
+    - name: "\u6E20\u9053\u6269\u5F20"
+      value: 2
+    - name: "\u6E20\u9053\u6269\u5F20"
+      value: 3
+    extendNums: 0200000004000000050000000600000008000000

@@ -1,0 +1,20 @@
+
+riyue.png
+size: 162,93
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: true
+  xy: 2, 2
+  size: 89, 83
+  orig: 90, 84
+  offset: 0, 1
+  index: -1
+body_1
+  rotate: true
+  xy: 87, 4
+  size: 87, 73
+  orig: 88, 74
+  offset: 0, 0
+  index: -1

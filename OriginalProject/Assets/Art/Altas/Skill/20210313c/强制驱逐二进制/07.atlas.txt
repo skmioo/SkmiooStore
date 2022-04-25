@@ -1,0 +1,13 @@
+
+07.png
+size: 411,432
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qihua
+  rotate: false
+  xy: 2, 2
+  size: 407, 428
+  orig: 426, 440
+  offset: 15, 11
+  index: -1

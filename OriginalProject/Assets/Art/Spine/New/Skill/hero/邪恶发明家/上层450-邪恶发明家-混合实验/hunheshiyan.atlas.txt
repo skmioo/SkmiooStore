@@ -1,0 +1,62 @@
+
+hunheshiyan.png
+size: 216,172
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: true
+  xy: 164, 76
+  size: 44, 34
+  orig: 48, 34
+  offset: 4, 0
+  index: -1
+body_1
+  rotate: false
+  xy: 194, 48
+  size: 20, 26
+  orig: 20, 26
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: false
+  xy: 200, 89
+  size: 13, 31
+  orig: 13, 32
+  offset: 0, 0
+  index: -1
+body_3
+  rotate: true
+  xy: 164, 2
+  size: 37, 23
+  orig: 37, 23
+  offset: 0, 0
+  index: -1
+body_4
+  rotate: false
+  xy: 189, 5
+  size: 16, 34
+  orig: 16, 34
+  offset: 0, 0
+  index: -1
+body_5
+  rotate: true
+  xy: 164, 41
+  size: 33, 28
+  orig: 33, 28
+  offset: 0, 0
+  index: -1
+body_6
+  rotate: true
+  xy: 164, 122
+  size: 48, 40
+  orig: 48, 40
+  offset: 0, 0
+  index: -1
+body_7
+  rotate: false
+  xy: 2, 5
+  size: 160, 165
+  orig: 165, 165
+  offset: 5, 0
+  index: -1

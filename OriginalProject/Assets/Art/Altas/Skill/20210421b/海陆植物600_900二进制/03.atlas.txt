@@ -1,0 +1,27 @@
+
+03.png
+size: 518,175
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jiaoxiabo
+  rotate: false
+  xy: 408, 2
+  size: 108, 171
+  orig: 109, 176
+  offset: 1, 0
+  index: -1
+shu0
+  rotate: true
+  xy: 2, 16
+  size: 157, 226
+  orig: 157, 226
+  offset: 0, 0
+  index: -1
+shu02
+  rotate: true
+  xy: 230, 8
+  size: 165, 176
+  orig: 165, 176
+  offset: 0, 0
+  index: -1

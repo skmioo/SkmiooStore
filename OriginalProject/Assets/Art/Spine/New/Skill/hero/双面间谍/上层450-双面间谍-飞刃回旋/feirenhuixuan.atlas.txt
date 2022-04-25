@@ -1,0 +1,27 @@
+
+feirenhuixuan.png
+size: 740,181
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: false
+  xy: 252, 9
+  size: 253, 170
+  orig: 254, 181
+  offset: 1, 4
+  index: -1
+body_1
+  rotate: false
+  xy: 2, 2
+  size: 248, 177
+  orig: 253, 181
+  offset: 4, 3
+  index: -1
+body_2
+  rotate: false
+  xy: 507, 4
+  size: 231, 175
+  orig: 237, 179
+  offset: 3, 2
+  index: -1

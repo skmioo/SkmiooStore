@@ -1,0 +1,27 @@
+
+ganran.png
+size: 478,113
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_1
+  rotate: true
+  xy: 2, 2
+  size: 109, 165
+  orig: 110, 168
+  offset: 1, 2
+  index: -1
+body_2
+  rotate: true
+  xy: 169, 2
+  size: 109, 158
+  orig: 110, 159
+  offset: 1, 0
+  index: -1
+body_3
+  rotate: true
+  xy: 329, 2
+  size: 109, 147
+  orig: 110, 151
+  offset: 1, 3
+  index: -1

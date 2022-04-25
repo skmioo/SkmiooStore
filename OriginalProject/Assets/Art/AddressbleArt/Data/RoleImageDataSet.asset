@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6e969b69dbda5428500329b0c67e88, type: 3}
+  m_Name: RoleImageDataSet
+  m_EditorClassIdentifier: 
+  roleImageAry:
+  - ID: 1001
+    roleTopImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_9
+    roleBottomImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_0
+  - ID: 1002
+    roleTopImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_13
+    roleBottomImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_2
+  - ID: 1003
+    roleTopImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_15
+    roleBottomImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_3
+  - ID: 1004
+    roleTopImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_10
+    roleBottomImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_5
+  - ID: 1005
+    roleTopImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_11
+    roleBottomImage:
+      m_AssetGUID: 6a6ca22e2ff69c84e819ec5f763171b5
+      m_SubObjectName: hero1_6
+  - ID: 1006
+    roleTopImage:
+      m_AssetGUID: c5eca0994e4acd0429d3583b5f41d3fb
+      m_SubObjectName: 
+    roleBottomImage:
+      m_AssetGUID: 432b7be1952f3174d9d072fece73576a
+      m_SubObjectName: 
+  - ID: 1007
+    roleTopImage:
+      m_AssetGUID: cd2e60efcf8f0d247a5dbad7be711caa
+      m_SubObjectName: 
+    roleBottomImage:
+      m_AssetGUID: 5c21ae63bd76d4944b0d4f3e5b1c3e21
+      m_SubObjectName: 
+  - ID: 1008
+    roleTopImage:
+      m_AssetGUID: 607c08fdbe7d9cd4a963990e1cc22442
+      m_SubObjectName: 
+    roleBottomImage:
+      m_AssetGUID: 4f98a6057109513459c15daa23a2e979
+      m_SubObjectName: 

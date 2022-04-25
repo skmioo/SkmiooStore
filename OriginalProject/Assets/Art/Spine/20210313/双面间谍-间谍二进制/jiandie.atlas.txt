@@ -1,0 +1,104 @@
+
+jiandie.png
+size: 944,156
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1zuojiaozou
+  rotate: false
+  xy: 864, 2
+  size: 53, 48
+  orig: 450, 450
+  offset: 283, 4
+  index: -1
+2zuojiaozou
+  rotate: false
+  xy: 702, 3
+  size: 57, 114
+  orig: 450, 450
+  offset: 256, 22
+  index: -1
+sahngshen
+  rotate: false
+  xy: 2, 2
+  size: 92, 152
+  orig: 450, 450
+  offset: 174, 211
+  index: -1
+tou
+  rotate: false
+  xy: 540, 24
+  size: 112, 130
+  orig: 450, 450
+  offset: 177, 312
+  index: -1
+uoxiaobi
+  rotate: false
+  xy: 761, 3
+  size: 49, 114
+  orig: 450, 450
+  offset: 272, 267
+  index: -1
+yao
+  rotate: false
+  xy: 219, 10
+  size: 158, 144
+  orig: 450, 450
+  offset: 140, 104
+  index: -1
+yinying
+  rotate: false
+  xy: 702, 119
+  size: 237, 35
+  orig: 242, 35
+  offset: 2, 0
+  index: -1
+youdabi
+  rotate: false
+  xy: 654, 33
+  size: 46, 121
+  orig: 450, 450
+  offset: 168, 230
+  index: -1
+youdatui
+  rotate: false
+  xy: 474, 21
+  size: 64, 133
+  orig: 450, 450
+  offset: 148, 126
+  index: -1
+youxiaobi
+  rotate: false
+  xy: 812, 17
+  size: 50, 100
+  orig: 450, 450
+  offset: 148, 176
+  index: -1
+zuodabi
+  rotate: true
+  xy: 864, 52
+  size: 65, 78
+  orig: 450, 450
+  offset: 238, 271
+  index: -1
+zuodatui
+  rotate: false
+  xy: 379, 14
+  size: 93, 140
+  orig: 450, 450
+  offset: 203, 99
+  index: -1
+zuojiaozhan
+  rotate: false
+  xy: 152, 7
+  size: 65, 147
+  orig: 450, 450
+  offset: 120, 1
+  index: -1
+zuojiaozou
+  rotate: false
+  xy: 96, 6
+  size: 54, 148
+  orig: 450, 450
+  offset: 132, 5
+  index: -1

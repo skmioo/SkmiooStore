@@ -1,0 +1,267 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40f82ee646622846bd0dfcd423595ef, type: 3}
+  m_Name: ZH_TalentDataSet
+  m_EditorClassIdentifier: 
+  talentGroups:
+  - name: A
+    id: 4001
+    describe: 
+    trigger:
+    - name: 1001
+      id: 1001
+      describe: 
+      type: 0
+    orderEffect:
+    - name: 2001
+      id: 2001
+      describe: 
+      target: 0
+      type: 1
+      damageValue: 0
+      buff: []
+      tail: []
+    chaosEffect:
+    - name: 3001
+      id: 3001
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 8
+        valueType: 0
+        value: 0
+        round: 1
+        rate: 0
+      tail: []
+  - name: B
+    id: 4002
+    describe: 
+    trigger:
+    - name: 1101
+      id: 1101
+      describe: 
+      type: 1
+    - name: 1102
+      id: 1102
+      describe: 
+      type: 2
+    orderEffect:
+    - name: 2101
+      id: 2101
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 30
+        valueType: 0
+        value: 0
+        round: 1
+        rate: 0
+      tail: []
+    - name: 2102
+      id: 2102
+      describe: 
+      target: 7
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 9
+        valueType: 0
+        value: 0
+        round: 3
+        rate: 0
+      tail: []
+    - name: 2103
+      id: 2103
+      describe: 
+      target: 7
+      type: 2
+      damageValue: 10
+      buff: []
+      tail: []
+    - name: 2104
+      id: 2104
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 1
+        valueType: 1
+        value: 10
+        round: 3
+        rate: 0
+      - buffType: 3
+        valueType: 1
+        value: 10
+        round: 3
+        rate: 0
+      tail: []
+    chaosEffect:
+    - name: 3101
+      id: 3101
+      describe: 
+      target: 0
+      type: 2
+      damageValue: 10
+      buff: []
+      tail: []
+    - name: 3102
+      id: 3102
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 9
+        valueType: 0
+        value: 0
+        round: 3
+        rate: 0
+      tail: []
+    - name: 3103
+      id: 3103
+      describe: 
+      target: 8
+      type: 3
+      damageValue: 0
+      buff: []
+      tail:
+      - tailType: 0
+        buffType: 0
+        valueType: 0
+        maxValue: -5
+        minValue: -5
+        rate: 0
+  - name: C
+    id: 4003
+    describe: 
+    trigger:
+    - name: 1201
+      id: 1201
+      describe: 
+      type: 3
+    - name: 1202
+      id: 1202
+      describe: 
+      type: 4
+    orderEffect:
+    - name: 2201
+      id: 2201
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 1
+        valueType: 1
+        value: 15
+        round: 2
+        rate: 0
+      tail: []
+    - name: 2202
+      id: 2202
+      describe: 
+      target: 0
+      type: 3
+      damageValue: 0
+      buff: []
+      tail:
+      - tailType: 2
+        buffType: 0
+        valueType: 0
+        maxValue: 5
+        minValue: 3
+        rate: 0
+    - name: 2203
+      id: 2203
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 3
+        valueType: 1
+        value: 10
+        round: 2
+        rate: 0
+      tail: []
+    - name: 2204
+      id: 2204
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 21
+        valueType: 1
+        value: 100
+        round: 1
+        rate: 0
+      tail: []
+    chaosEffect:
+    - name: 3201
+      id: 3201
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 3
+        valueType: 1
+        value: -15
+        round: 2
+        rate: 100
+      tail: []
+    - name: 3202
+      id: 3202
+      describe: 
+      target: 0
+      type: 3
+      damageValue: 0
+      buff: []
+      tail:
+      - tailType: 0
+        buffType: 0
+        valueType: 0
+        maxValue: -3
+        minValue: -3
+        rate: 0
+    - name: 3203
+      id: 3203
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 13
+        valueType: 0
+        value: -1
+        round: 3
+        rate: 0
+      tail: []
+    - name: 3204
+      id: 3204
+      describe: 
+      target: 0
+      type: 0
+      damageValue: 0
+      buff:
+      - buffType: 20
+        valueType: 1
+        value: -100
+        round: 2
+        rate: 0
+      tail: []

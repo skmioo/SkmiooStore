@@ -1,0 +1,97 @@
+
+skeleton.png
+size: 379,546
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+驯兽者--拆分_0000_头
+  rotate: false
+  xy: 310, 190
+  size: 67, 83
+  orig: 450, 450
+  offset: 139, 356
+  index: -1
+驯兽者--拆分_0001_左小臂
+  rotate: false
+  xy: 322, 275
+  size: 47, 121
+  orig: 450, 450
+  offset: 266, 189
+  index: -1
+驯兽者--拆分_0002_左大臂
+  rotate: true
+  xy: 2, 12
+  size: 85, 147
+  orig: 450, 450
+  offset: 228, 276
+  index: -1
+驯兽者--拆分_0003_腰带
+  rotate: false
+  xy: 142, 106
+  size: 100, 111
+  orig: 450, 450
+  offset: 175, 153
+  index: -1
+驯兽者--拆分_0004_武器
+  rotate: false
+  xy: 2, 99
+  size: 138, 445
+  orig: 450, 450
+  offset: 231, 5
+  index: -1
+驯兽者--拆分_0005_甲片
+  rotate: false
+  xy: 244, 128
+  size: 64, 89
+  orig: 450, 450
+  offset: 241, 163
+  index: -1
+驯兽者--拆分_0006_上身
+  rotate: true
+  xy: 142, 430
+  size: 114, 178
+  orig: 450, 450
+  offset: 160, 236
+  index: -1
+驯兽者--拆分_0007_右臂
+  rotate: false
+  xy: 151, 2
+  size: 87, 102
+  orig: 450, 450
+  offset: 118, 207
+  index: -1
+驯兽者--拆分_0008_左脚
+  rotate: false
+  xy: 322, 398
+  size: 52, 146
+  orig: 450, 450
+  offset: 289, 0
+  index: -1
+驯兽者--拆分_0009_左腿
+  rotate: true
+  xy: 142, 314
+  size: 114, 178
+  orig: 450, 450
+  offset: 208, 75
+  index: -1
+驯兽者--拆分_0010_右脚
+  rotate: false
+  xy: 310, 129
+  size: 66, 59
+  orig: 450, 450
+  offset: 113, 9
+  index: -1
+驯兽者--拆分_0011_右小腿
+  rotate: true
+  xy: 240, 34
+  size: 70, 123
+  orig: 450, 450
+  offset: 139, 49
+  index: -1
+驯兽者--拆分_0012_右大腿
+  rotate: true
+  xy: 142, 219
+  size: 93, 134
+  orig: 450, 450
+  offset: 140, 113
+  index: -1

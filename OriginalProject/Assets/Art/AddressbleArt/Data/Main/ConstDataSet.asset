@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a34282f14966b1479686ba4aabe9268, type: 3}
+  m_Name: ConstDataSet
+  m_EditorClassIdentifier: 
+  str: "\u5E38\u91CF\u57FA\u7840\u7C7B\u6570\u636E\u96C6"
+  scriptableObjects:
+  - name: MapData
+    id: 9001
+    describe: "\u5730\u56FE\u6570\u636E\u96C6"
+    scriptableObject: {fileID: 11400000, guid: 6f5634f1eae0a38458a0f4d987775039, type: 2}
+  - name: MapItemData
+    id: 9002
+    describe: "\u5730\u56FE\u623F\u95F4\u3001\u9053\u8DEF\u6570\u636E\u96C6"
+    scriptableObject: {fileID: 11400000, guid: 0e9f039f534116944a3d218d106919c1, type: 2}
+  - name: MapAddRoomData
+    id: 9003
+    describe: "\u623F\u95F4\u589E\u91CF\u6570\u636E\u96C6"
+    scriptableObject: {fileID: 11400000, guid: a953e32cd1372fa448949c278eef818f, type: 2}

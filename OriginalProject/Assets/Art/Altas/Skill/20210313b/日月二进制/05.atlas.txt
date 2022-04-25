@@ -1,0 +1,27 @@
+
+05.png
+size: 447,126
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JIAOXIABO
+  rotate: true
+  xy: 2, 12
+  size: 112, 172
+  orig: 114, 178
+  offset: 1, 1
+  index: -1
+RI
+  rotate: false
+  xy: 317, 2
+  size: 128, 122
+  orig: 142, 126
+  offset: 1, 2
+  index: -1
+YUE
+  rotate: true
+  xy: 176, 5
+  size: 119, 139
+  orig: 132, 143
+  offset: 11, 2
+  index: -1

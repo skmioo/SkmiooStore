@@ -1,0 +1,13 @@
+
+qcjt.png
+size: 305,74
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_1
+  rotate: false
+  xy: 2, 2
+  size: 301, 70
+  orig: 776, 450
+  offset: 106, 187
+  index: -1

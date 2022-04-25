@@ -1,0 +1,1366 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c139d16f4692c48b1b5fbe7ad78348, type: 3}
+  m_Name: MapDataSet
+  m_EditorClassIdentifier: 
+  mapData:
+  - name: "\u8611\u83C7\u5730\u56FE"
+    id: 999
+    describe: "\u63CF\u8FF0\u5730\u70B9\u4F4D\u7F6E\uFF0C\u96BE\u5EA6\u7B49\u7B49"
+    describe_EN: 
+    miniMapmodel:
+      m_AssetGUID: 8a02a2eef1b71f64595f192a5d7c5edd
+      m_SubObjectName: 
+    randomRoutesID: 495ef4054b5ef4054c5ef4054d5ef4054e5ef405
+    startRouteID: 99901002
+    roomDatas:
+    - roomNumber: 1
+      roomID: 99909001
+      addRoom:
+        addRoomID: 0
+        roomNum: 0
+      routeDatas:
+      - routeKey: 12
+        routeCount: 6
+        addRoutes:
+        - addRoomID: 99901
+          roomNum: 3
+    - roomNumber: 2
+      roomID: 99909002
+      addRoom:
+        addRoomID: 0
+        roomNum: 0
+      routeDatas:
+      - routeKey: 23
+        routeCount: 5
+        addRoutes: []
+    - roomNumber: 3
+      roomID: 99909003
+      addRoom:
+        addRoomID: 0
+        roomNum: 0
+      routeDatas:
+      - routeKey: 34
+        routeCount: 5
+        addRoutes: []
+      - routeKey: 36
+        routeCount: 7
+        addRoutes: []
+    - roomNumber: 4
+      roomID: 99909002
+      addRoom:
+        addRoomID: 99901
+        roomNum: 0
+      routeDatas:
+      - routeKey: 45
+        routeCount: 6
+        addRoutes: []
+    - roomNumber: 5
+      roomID: 99909003
+      addRoom:
+        addRoomID: 0
+        roomNum: 0
+      routeDatas: []
+    - roomNumber: 6
+      roomID: 99909001
+      addRoom:
+        addRoomID: 0
+        roomNum: 0
+      routeDatas: []
+  nMapData:
+  - name: "\u9542\u7A7A\u4E4B\u5730"
+    id: 101
+    describe: 
+    describe_EN: 
+    rooms:
+    - position: {x: 3, y: 29}
+      roomType: 1
+      isExplore: 1
+      backgroundIndex: 0
+    - position: {x: 10, y: 27}
+      roomType: 4
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 10, y: 16}
+      roomType: 0
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 13, y: 10}
+      roomType: 6
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 17, y: 9}
+      roomType: 3
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 17, y: 17}
+      roomType: 4
+      isExplore: 0
+      backgroundIndex: 0
+    - position: {x: 24, y: 16}
+      roomType: 0
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 23, y: 5}
+      roomType: 4
+      isExplore: 0
+      backgroundIndex: 0
+    - position: {x: 26, y: 9}
+      roomType: 6
+      isExplore: 0
+      backgroundIndex: 2
+    - position: {x: 30, y: 13}
+      roomType: 6
+      isExplore: 0
+      backgroundIndex: 2
+    - position: {x: 30, y: 17}
+      roomType: 3
+      isExplore: 0
+      backgroundIndex: 0
+    - position: {x: 30, y: 24}
+      roomType: 4
+      isExplore: 0
+      backgroundIndex: 2
+    - position: {x: 23, y: 28}
+      roomType: 6
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 14, y: 24}
+      roomType: 3
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 18, y: 23}
+      roomType: 2
+      isExplore: 0
+      backgroundIndex: 0
+    routeGroups:
+    - routes:
+      - position: {x: 5, y: 29}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 6, y: 29}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 7, y: 29}
+        routeType: 1
+        backgroundIndex: 3
+      - position: {x: 7, y: 28}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 7, y: 27}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 8, y: 27}
+        routeType: 0
+        backgroundIndex: 2
+      leftBackgroundIndex: 0
+      rightBackgroundIndex: 0
+    - routes:
+      - position: {x: 10, y: 25}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 10, y: 24}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 10, y: 23}
+        routeType: 1
+        backgroundIndex: 1
+      - position: {x: 10, y: 22}
+        routeType: 2
+        backgroundIndex: 3
+      - position: {x: 10, y: 21}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 10, y: 20}
+        routeType: 2
+        backgroundIndex: 2
+      - position: {x: 10, y: 19}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 10, y: 18}
+        routeType: 0
+        backgroundIndex: 4
+      leftBackgroundIndex: 0
+      rightBackgroundIndex: 2
+    - routes:
+      - position: {x: 10, y: 14}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 10, y: 13}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 10, y: 12}
+        routeType: 2
+        backgroundIndex: 4
+      - position: {x: 10, y: 11}
+        routeType: 1
+        backgroundIndex: 0
+      - position: {x: 10, y: 10}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 11, y: 10}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 3
+    - routes:
+      - position: {x: 12, y: 16}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 13, y: 16}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 14, y: 16}
+        routeType: 1
+        backgroundIndex: 0
+      - position: {x: 14, y: 17}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 15, y: 17}
+        routeType: 1
+        backgroundIndex: 4
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 3
+    - routes:
+      - position: {x: 17, y: 15}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 17, y: 14}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 17, y: 13}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 17, y: 12}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 17, y: 11}
+        routeType: 0
+        backgroundIndex: 1
+      leftBackgroundIndex: 0
+      rightBackgroundIndex: 1
+    - routes:
+      - position: {x: 19, y: 9}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 20, y: 9}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 21, y: 9}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 22, y: 9}
+        routeType: 2
+        backgroundIndex: 2
+      - position: {x: 23, y: 9}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 24, y: 9}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 1
+      rightBackgroundIndex: 3
+    - routes:
+      - position: {x: 26, y: 7}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 26, y: 6}
+        routeType: 3
+        backgroundIndex: 4
+      - position: {x: 26, y: 5}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 25, y: 5}
+        routeType: 2
+        backgroundIndex: 1
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 0
+    - routes:
+      - position: {x: 26, y: 11}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 26, y: 12}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 26, y: 13}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 27, y: 13}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 28, y: 13}
+        routeType: 0
+        backgroundIndex: 1
+      leftBackgroundIndex: 3
+      rightBackgroundIndex: 0
+    - routes:
+      - position: {x: 19, y: 17}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 20, y: 17}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 21, y: 17}
+        routeType: 2
+        backgroundIndex: 2
+      - position: {x: 21, y: 16}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 22, y: 16}
+        routeType: 0
+        backgroundIndex: 2
+      leftBackgroundIndex: 3
+      rightBackgroundIndex: 3
+    - routes:
+      - position: {x: 26, y: 16}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 27, y: 16}
+        routeType: 2
+        backgroundIndex: 4
+      - position: {x: 27, y: 17}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 28, y: 17}
+        routeType: 0
+        backgroundIndex: 1
+      leftBackgroundIndex: 0
+      rightBackgroundIndex: 4
+    - routes:
+      - position: {x: 30, y: 19}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 30, y: 20}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 30, y: 21}
+        routeType: 1
+        backgroundIndex: 2
+      - position: {x: 30, y: 22}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 3
+      rightBackgroundIndex: 1
+    - routes:
+      - position: {x: 28, y: 24}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 27, y: 24}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 26, y: 24}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 25, y: 24}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 24, y: 24}
+        routeType: 3
+        backgroundIndex: 0
+      - position: {x: 23, y: 24}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 23, y: 25}
+        routeType: 2
+        backgroundIndex: 4
+      - position: {x: 23, y: 26}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 1
+      rightBackgroundIndex: 1
+    - routes:
+      - position: {x: 21, y: 28}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 20, y: 28}
+        routeType: 1
+        backgroundIndex: 4
+      - position: {x: 19, y: 28}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 18, y: 28}
+        routeType: 2
+        backgroundIndex: 2
+      - position: {x: 18, y: 27}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 18, y: 26}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 18, y: 25}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 1
+      rightBackgroundIndex: 1
+    - routes:
+      - position: {x: 12, y: 27}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 13, y: 27}
+        routeType: 2
+        backgroundIndex: 0
+      - position: {x: 14, y: 27}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 14, y: 26}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 2
+  - name: "\u51A5\u6CB3\u77FF\u6D1E"
+    id: 102
+    describe: 
+    describe_EN: 
+    rooms:
+    - position: {x: 2, y: 9}
+      roomType: 1
+      isExplore: 1
+      backgroundIndex: 1
+    - position: {x: 7, y: 6}
+      roomType: 3
+      isExplore: 0
+      backgroundIndex: 0
+    - position: {x: 15, y: 4}
+      roomType: 0
+      isExplore: 0
+      backgroundIndex: 0
+    - position: {x: 8, y: 12}
+      roomType: 4
+      isExplore: 1
+      backgroundIndex: 0
+    - position: {x: 14, y: 10}
+      roomType: 6
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 20, y: 5}
+      roomType: 4
+      isExplore: 0
+      backgroundIndex: 2
+    - position: {x: 27, y: 5}
+      roomType: 0
+      isExplore: 0
+      backgroundIndex: 1
+    - position: {x: 4, y: 18}
+      roomType: 3
+      isExplore: 1
+      backgroundIndex: 0
+    - position: {x: 11, y: 19}
+      roomType: 6
+      isExplore: 1
+      backgroundIndex: 0
+    - position: {x: 18, y: 17}
+      roomType: 4
+      isExplore: 1
+      backgroundIndex: 0
+    - position: {x: 21, y: 13}
+      roomType: 0
+      isExplore: 1
+      backgroundIndex: 2
+    - position: {x: 23, y: 21}
+      roomType: 4
+      isExplore: 1
+      backgroundIndex: 0
+    - position: {x: 19, y: 27}
+      roomType: 3
+      isExplore: 1
+      backgroundIndex: 2
+    - position: {x: 27, y: 27}
+      roomType: 3
+      isExplore: 1
+      backgroundIndex: 1
+    - position: {x: 28, y: 15}
+      roomType: 2
+      isExplore: 0
+      backgroundIndex: 1
+    routeGroups:
+    - routes:
+      - position: {x: 2, y: 7}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 2, y: 6}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 3, y: 6}
+        routeType: 2
+        backgroundIndex: 3
+      - position: {x: 4, y: 6}
+        routeType: 1
+        backgroundIndex: 4
+      - position: {x: 5, y: 6}
+        routeType: 0
+        backgroundIndex: 3
+      leftBackgroundIndex: 3
+      rightBackgroundIndex: 2
+    - routes:
+      - position: {x: 9, y: 6}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 10, y: 6}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 11, y: 6}
+        routeType: 3
+        backgroundIndex: 3
+      - position: {x: 11, y: 5}
+        routeType: 2
+        backgroundIndex: 4
+      - position: {x: 11, y: 4}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 12, y: 4}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 13, y: 4}
+        routeType: 0
+        backgroundIndex: 1
+      leftBackgroundIndex: 3
+      rightBackgroundIndex: 2
+    - routes:
+      - position: {x: 4, y: 9}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 5, y: 9}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 6, y: 9}
+        routeType: 2
+        backgroundIndex: 4
+      - position: {x: 7, y: 9}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 8, y: 9}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 8, y: 10}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 1
+      rightBackgroundIndex: 3
+    - routes:
+      - position: {x: 10, y: 12}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 11, y: 12}
+        routeType: 2
+        backgroundIndex: 3
+      - position: {x: 11, y: 11}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 11, y: 10}
+        routeType: 1
+        backgroundIndex: 1
+      - position: {x: 12, y: 10}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 3
+    - routes:
+      - position: {x: 16, y: 10}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 17, y: 10}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 18, y: 10}
+        routeType: 2
+        backgroundIndex: 1
+      - position: {x: 19, y: 10}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 20, y: 10}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 20, y: 9}
+        routeType: 1
+        backgroundIndex: 4
+      - position: {x: 20, y: 8}
+        routeType: 0
+        backgroundIndex: 0
+      - position: {x: 20, y: 7}
+        routeType: 0
+        backgroundIndex: 2
+      leftBackgroundIndex: 0
+      rightBackgroundIndex: 2
+    - routes:
+      - position: {x: 22, y: 5}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 23, y: 5}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 24, y: 5}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 25, y: 5}
+        routeType: 0
+        backgroundIndex: 4
+      leftBackgroundIndex: 1
+      rightBackgroundIndex: 0
+    - routes:
+      - position: {x: 23, y: 13}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 24, y: 13}
+        routeType: 1
+        backgroundIndex: 2
+      - position: {x: 24, y: 14}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 24, y: 15}
+        routeType: 2
+        backgroundIndex: 0
+      - position: {x: 25, y: 15}
+        routeType: 3
+        backgroundIndex: 3
+      - position: {x: 26, y: 15}
+        routeType: 0
+        backgroundIndex: 2
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 4
+    - routes:
+      - position: {x: 21, y: 15}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 21, y: 16}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 21, y: 17}
+        routeType: 1
+        backgroundIndex: 3
+      - position: {x: 20, y: 17}
+        routeType: 0
+        backgroundIndex: 2
+      leftBackgroundIndex: 4
+      rightBackgroundIndex: 4
+    - routes:
+      - position: {x: 16, y: 17}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 15, y: 17}
+        routeType: 3
+        backgroundIndex: 0
+      - position: {x: 15, y: 18}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 15, y: 19}
+        routeType: 2
+        backgroundIndex: 3
+      - position: {x: 14, y: 19}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 13, y: 19}
+        routeType: 0
+        backgroundIndex: 1
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 1
+    - routes:
+      - position: {x: 9, y: 19}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 8, y: 19}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 7, y: 19}
+        routeType: 2
+        backgroundIndex: 2
+      - position: {x: 7, y: 18}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 6, y: 18}
+        routeType: 0
+        backgroundIndex: 0
+      leftBackgroundIndex: 1
+      rightBackgroundIndex: 2
+    - routes:
+      - position: {x: 4, y: 16}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 4, y: 15}
+        routeType: 1
+        backgroundIndex: 1
+      - position: {x: 4, y: 14}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 4, y: 13}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 4, y: 12}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 5, y: 12}
+        routeType: 1
+        backgroundIndex: 0
+      - position: {x: 6, y: 12}
+        routeType: 0
+        backgroundIndex: 3
+      leftBackgroundIndex: 0
+      rightBackgroundIndex: 4
+    - routes:
+      - position: {x: 18, y: 19}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 18, y: 20}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 18, y: 21}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 19, y: 21}
+        routeType: 2
+        backgroundIndex: 4
+      - position: {x: 20, y: 21}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 21, y: 21}
+        routeType: 0
+        backgroundIndex: 4
+      leftBackgroundIndex: 1
+      rightBackgroundIndex: 1
+    - routes:
+      - position: {x: 23, y: 23}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 23, y: 24}
+        routeType: 1
+        backgroundIndex: 3
+      - position: {x: 23, y: 25}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 23, y: 26}
+        routeType: 2
+        backgroundIndex: 0
+      - position: {x: 23, y: 27}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 22, y: 27}
+        routeType: 3
+        backgroundIndex: 1
+      - position: {x: 21, y: 27}
+        routeType: 0
+        backgroundIndex: 2
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 4
+    - routes:
+      - position: {x: 25, y: 21}
+        routeType: 0
+        backgroundIndex: 1
+      - position: {x: 26, y: 21}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 27, y: 21}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 27, y: 22}
+        routeType: 2
+        backgroundIndex: 3
+      - position: {x: 27, y: 23}
+        routeType: 0
+        backgroundIndex: 4
+      - position: {x: 27, y: 24}
+        routeType: 1
+        backgroundIndex: 2
+      - position: {x: 27, y: 25}
+        routeType: 0
+        backgroundIndex: 3
+      leftBackgroundIndex: 0
+      rightBackgroundIndex: 3
+  - name: "\u6559\u7A0B\u5173\u5361"
+    id: 103
+    describe: 
+    describe_EN: 
+    rooms:
+    - position: {x: 2, y: 3}
+      roomType: 1
+      isExplore: 1
+      backgroundIndex: 0
+    - position: {x: 2, y: 11}
+      roomType: 3
+      isExplore: 0
+      backgroundIndex: 2
+    routeGroups:
+    - routes:
+      - position: {x: 2, y: 5}
+        routeType: 0
+        backgroundIndex: 2
+      - position: {x: 2, y: 6}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 2, y: 7}
+        routeType: 1
+        backgroundIndex: 1
+      - position: {x: 2, y: 8}
+        routeType: 0
+        backgroundIndex: 3
+      - position: {x: 2, y: 9}
+        routeType: 0
+        backgroundIndex: 2
+      leftBackgroundIndex: 2
+      rightBackgroundIndex: 3
+  nMapResources:
+    name: 
+    id: 0
+    describe: 
+    describe_EN: 
+    miniMap:
+      roomPrefab:
+        m_AssetGUID: 437935cd1f4c6a849b21672dda011a39
+        m_SubObjectName: 
+      routePrefab:
+        m_AssetGUID: 2e150426f525f80499728d8a1e6a6c1b
+        m_SubObjectName: 
+      mePos:
+        m_AssetGUID: 24fde9f8dd928a841813575d08458619
+        m_SubObjectName: 
+      roomResources:
+      - name: 
+        roomType: 1
+        sprite:
+        - m_AssetGUID: bdae7e2d4b85d9f40853b1d18882b963
+          m_SubObjectName: "\u5165\u53E3"
+        - m_AssetGUID: bdae7e2d4b85d9f40853b1d18882b963
+          m_SubObjectName: "\u5165\u53E3"
+        - m_AssetGUID: bdae7e2d4b85d9f40853b1d18882b963
+          m_SubObjectName: "\u5165\u53E3"
+      - name: 
+        roomType: 0
+        sprite:
+        - m_AssetGUID: b859b507fd92c3742a5cb2a418b9ff5f
+          m_SubObjectName: "\u672A\u63A2\u7D22\u623F\u95F4"
+        - m_AssetGUID: 65b549e455e658e44bbbd28a82b3e25c
+          m_SubObjectName: "\u666E\u901A\u623F\u95F4"
+        - m_AssetGUID: 65b549e455e658e44bbbd28a82b3e25c
+          m_SubObjectName: "\u666E\u901A\u623F\u95F4"
+      - name: 
+        roomType: 2
+        sprite:
+        - m_AssetGUID: b859b507fd92c3742a5cb2a418b9ff5f
+          m_SubObjectName: "\u672A\u63A2\u7D22\u623F\u95F4"
+        - m_AssetGUID: de293d9aa539be441b553a4c8c51ef55
+          m_SubObjectName: "boss\u623F\u95F4"
+        - m_AssetGUID: 65b549e455e658e44bbbd28a82b3e25c
+          m_SubObjectName: "\u666E\u901A\u623F\u95F4"
+      - name: 
+        roomType: 3
+        sprite:
+        - m_AssetGUID: b859b507fd92c3742a5cb2a418b9ff5f
+          m_SubObjectName: "\u672A\u63A2\u7D22\u623F\u95F4"
+        - m_AssetGUID: a7aaa50bd4fb0ed4486a592a94755c26
+          m_SubObjectName: "\u6218\u6597\u623F\u95F4"
+        - m_AssetGUID: 65b549e455e658e44bbbd28a82b3e25c
+          m_SubObjectName: "\u666E\u901A\u623F\u95F4"
+      - name: 
+        roomType: 4
+        sprite:
+        - m_AssetGUID: b859b507fd92c3742a5cb2a418b9ff5f
+          m_SubObjectName: "\u672A\u63A2\u7D22\u623F\u95F4"
+        - m_AssetGUID: 49945fa6b870d3d45b14ea36a52616a5
+          m_SubObjectName: "\u4EA4\u4E92\u7269\u623F\u95F4"
+        - m_AssetGUID: 65b549e455e658e44bbbd28a82b3e25c
+          m_SubObjectName: "\u666E\u901A\u623F\u95F4"
+      - name: 
+        roomType: 5
+        sprite:
+        - m_AssetGUID: b859b507fd92c3742a5cb2a418b9ff5f
+          m_SubObjectName: "\u672A\u63A2\u7D22\u623F\u95F4"
+        - m_AssetGUID: 49945fa6b870d3d45b14ea36a52616a5
+          m_SubObjectName: "\u4EA4\u4E92\u7269\u623F\u95F4"
+        - m_AssetGUID: 65b549e455e658e44bbbd28a82b3e25c
+          m_SubObjectName: "\u666E\u901A\u623F\u95F4"
+      - name: 
+        roomType: 6
+        sprite:
+        - m_AssetGUID: b859b507fd92c3742a5cb2a418b9ff5f
+          m_SubObjectName: "\u672A\u63A2\u7D22\u623F\u95F4"
+        - m_AssetGUID: 9b4fed7784f5f2042a1e46dc198e2e5b
+          m_SubObjectName: "\u7CBE\u82F1\u623F\u95F4"
+        - m_AssetGUID: 65b549e455e658e44bbbd28a82b3e25c
+          m_SubObjectName: "\u666E\u901A\u623F\u95F4"
+      routeResources:
+      - routeType: 0
+        sprite:
+        - m_AssetGUID: 8590fd08fbdce0542aa4e9c1cc1f02d0
+          m_SubObjectName: "\u666E\u901A\u9053\u8DEF-\u6697\uFF08\u672A\u63A2\u7D22\u7684\u9053\u8DEF\uFF09"
+        - m_AssetGUID: f46abe373baf2dd468d63bb258f8c8d6
+          m_SubObjectName: "\u666E\u901A\u9053\u8DEF-\u7070\uFF08\u5DF2\u63A2\u7D22\u7684\u666E\u901A\u9053\u8DEF\uFF09"
+        - m_AssetGUID: f46abe373baf2dd468d63bb258f8c8d6
+          m_SubObjectName: "\u666E\u901A\u9053\u8DEF-\u7070\uFF08\u5DF2\u63A2\u7D22\u7684\u666E\u901A\u9053\u8DEF\uFF09"
+      - routeType: 1
+        sprite:
+        - m_AssetGUID: 8590fd08fbdce0542aa4e9c1cc1f02d0
+          m_SubObjectName: "\u666E\u901A\u9053\u8DEF-\u6697\uFF08\u672A\u63A2\u7D22\u7684\u9053\u8DEF\uFF09"
+        - m_AssetGUID: bc3d6c21207953c42b65dc47dcd820a4
+          m_SubObjectName: "\u6218\u6597\u9053\u8DEF"
+        - m_AssetGUID: f46abe373baf2dd468d63bb258f8c8d6
+          m_SubObjectName: "\u666E\u901A\u9053\u8DEF-\u7070\uFF08\u5DF2\u63A2\u7D22\u7684\u666E\u901A\u9053\u8DEF\uFF09"
+      - routeType: 2
+        sprite:
+        - m_AssetGUID: 8590fd08fbdce0542aa4e9c1cc1f02d0
+          m_SubObjectName: "\u666E\u901A\u9053\u8DEF-\u6697\uFF08\u672A\u63A2\u7D22\u7684\u9053\u8DEF\uFF09"
+        - m_AssetGUID: a64168a916a6f1740b2a1a5c72aa678d
+          m_SubObjectName: "\u4EA4\u4E92\u7269\u9053\u8DEF"
+        - m_AssetGUID: a64168a916a6f1740b2a1a5c72aa678d
+          m_SubObjectName: "\u4EA4\u4E92\u7269\u9053\u8DEF"
+      - routeType: 3
+        sprite:
+        - m_AssetGUID: 8590fd08fbdce0542aa4e9c1cc1f02d0
+          m_SubObjectName: "\u666E\u901A\u9053\u8DEF-\u6697\uFF08\u672A\u63A2\u7D22\u7684\u9053\u8DEF\uFF09"
+        - m_AssetGUID: bc3d6c21207953c42b65dc47dcd820a4
+          m_SubObjectName: "\u6218\u6597\u9053\u8DEF"
+        - m_AssetGUID: f46abe373baf2dd468d63bb258f8c8d6
+          m_SubObjectName: "\u666E\u901A\u9053\u8DEF-\u7070\uFF08\u5DF2\u63A2\u7D22\u7684\u666E\u901A\u9053\u8DEF\uFF09"
+    mapElement:
+      leftLimit:
+        m_AssetGUID: 32843ed9dbf5f1a4ebb02680dc3b5ae1
+        m_SubObjectName: 
+      rightLimit:
+        m_AssetGUID: db0d29a6256d3c542af11e61748fbefe
+        m_SubObjectName: 
+      door:
+        m_AssetGUID: 0101264332a345f4d8c741051b8eb0b8
+        m_SubObjectName: 
+      roomBackground:
+        m_AssetGUID: b13b2b836eacdb144be9278e0959879c
+        m_SubObjectName: 
+      routeBackground:
+        m_AssetGUID: b949e30142700bf4b8d473a61d3a8245
+        m_SubObjectName: 
+    background:
+    - name: "\u9542\u7A7A\u4E4B\u5730"
+      nameType: 0
+      entrance:
+        m_AssetGUID: 2c0ce59340b53b14ca9ace531962fa8f
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u623F\u95F43"
+      rooms:
+      - m_AssetGUID: 3a7cf36cccb43424baf2aa70e6e19b91
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u623F\u95F41"
+      - m_AssetGUID: 4f0822048e1853048bb3fe5004879b7e
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u623F\u95F42"
+      - m_AssetGUID: 9f9bcba01694bc44b836e1bbcc24b9c6
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u623F\u95F44"
+      door:
+        m_AssetGUID: 763710eaadbe45448a13a19eb12fa50e
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF6-\u5165\u53E3"
+      routes:
+      - m_AssetGUID: 42b55671689642b4b9862646771fc5d6
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF1"
+      - m_AssetGUID: 9c9587abc5dccc5468d27538529006d4
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF2"
+      - m_AssetGUID: 790c00f7fc4ba3147a4eb7aff6f568b2
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF3"
+      - m_AssetGUID: f12c04773abd7e24dab508e7469283c2
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF4"
+      - m_AssetGUID: 1fa2ed3612f67c04ba7400ce13d07b2b
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF5"
+      road1:
+      - m_AssetGUID: bc0b6029ae192774a99be5d9a46e39cf
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F1"
+      - m_AssetGUID: 955b1ccb854064c42856efbe8d846853
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F2"
+      - m_AssetGUID: d31f5fcf1bb6f9843b115ffc8d0a2189
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F3"
+      - m_AssetGUID: 8bbfe1ae3fc104c489ef701f690279d5
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F4"
+      - m_AssetGUID: 220b9c4f8f258fd48b8fc4666efb3617
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F5"
+      road2:
+        m_AssetGUID: ee65f8042abcb5c4ca86542fca49e53f
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u4E2D\u666F"
+      road3:
+        m_AssetGUID: 96e5dfc6c2b2dd64cb38a1ef7e847b31
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u8FDC\u666F"
+      road4:
+        m_AssetGUID: c3f59c2f78b939e44b18ef0d1d3bbaee
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F\uFF08\u5165\u53E3\uFF09"
+    - name: "\u51A5\u6CB3\u77FF\u6D1E"
+      nameType: 1
+      entrance:
+        m_AssetGUID: f8be709505a18dd459049889e7b50ca3
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u623F\u95F41"
+      rooms:
+      - m_AssetGUID: 550d0a5ce533d6740b2b71542a949047
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u623F\u95F42"
+      - m_AssetGUID: 936c78ce3b79a1446985dbc5c4b88607
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u623F\u95F43"
+      - m_AssetGUID: 6731622a3a6cb28418fb4162e980e48d
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u623F\u95F44"
+      door:
+        m_AssetGUID: afd66fc5f8afcce42890e046007a1f57
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u9053\u8DEF6-\u5165\u53E3"
+      routes:
+      - m_AssetGUID: 2039d92cefdaa7f4080f2e3737607748
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u9053\u8DEF1"
+      - m_AssetGUID: ba2081016dc47ed47b476b57b7746851
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u9053\u8DEF2"
+      - m_AssetGUID: d5bfdf5cda1d840429df11155b520b4a
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u9053\u8DEF3"
+      - m_AssetGUID: 891bc190a5cf22b4eb8d72509300a5ec
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u9053\u8DEF4"
+      - m_AssetGUID: 09f2afffb0636a842b2a002eaee9d1f5
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E\u9053\u8DEF5"
+      road1:
+      - m_AssetGUID: d5501cf9329771740b0943a90b035a64
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E-\u9053\u8DEF-\u524D\u666F1"
+      - m_AssetGUID: b5a4d34d090660e4492b227a5c3a14ee
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E-\u9053\u8DEF-\u524D\u666F2"
+      - m_AssetGUID: a3def7b40106ef44a8aaae17c41aacaa
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E-\u9053\u8DEF-\u524D\u666F3"
+      - m_AssetGUID: bf07ffb4dac73de42ba0b11d9a3d12d0
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E-\u9053\u8DEF-\u524D\u666F4"
+      - m_AssetGUID: e4b14b9abb7ea3f41bfa3384637e4828
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E-\u9053\u8DEF-\u524D\u666F5"
+      road2:
+        m_AssetGUID: 88ae76aa4e3ef5c49a3f531399368bcf
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E-\u9053\u8DEF-\u4E2D\u666F"
+      road3:
+        m_AssetGUID: cad43e83104fde044beb2a3c0628c150
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E-\u9053\u8DEF-\u8FDC\u666F"
+      road4:
+        m_AssetGUID: 187edafc1e6d304429e92002ad9f0814
+        m_SubObjectName: "\u51A5\u6CB3\u77FF\u6D1E-\u9053\u8DEF-\u524D\u666F\uFF08\u5165\u53E3\uFF09"
+    - name: "\u6559\u7A0B\u5173\u5361"
+      nameType: 2
+      entrance:
+        m_AssetGUID: 2c0ce59340b53b14ca9ace531962fa8f
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u623F\u95F43"
+      rooms:
+      - m_AssetGUID: 3a7cf36cccb43424baf2aa70e6e19b91
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u623F\u95F41"
+      - m_AssetGUID: 4f0822048e1853048bb3fe5004879b7e
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u623F\u95F42"
+      - m_AssetGUID: 2c0ce59340b53b14ca9ace531962fa8f
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u623F\u95F43"
+      door:
+        m_AssetGUID: 763710eaadbe45448a13a19eb12fa50e
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF6-\u5165\u53E3"
+      routes:
+      - m_AssetGUID: 42b55671689642b4b9862646771fc5d6
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF1"
+      - m_AssetGUID: 9c9587abc5dccc5468d27538529006d4
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF2"
+      - m_AssetGUID: 790c00f7fc4ba3147a4eb7aff6f568b2
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF3"
+      - m_AssetGUID: f12c04773abd7e24dab508e7469283c2
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF4"
+      - m_AssetGUID: 1fa2ed3612f67c04ba7400ce13d07b2b
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730\u9053\u8DEF5"
+      road1:
+      - m_AssetGUID: bc0b6029ae192774a99be5d9a46e39cf
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F1"
+      - m_AssetGUID: 955b1ccb854064c42856efbe8d846853
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F2"
+      - m_AssetGUID: d31f5fcf1bb6f9843b115ffc8d0a2189
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F3"
+      - m_AssetGUID: 8bbfe1ae3fc104c489ef701f690279d5
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F4"
+      - m_AssetGUID: 220b9c4f8f258fd48b8fc4666efb3617
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F5"
+      road2:
+        m_AssetGUID: ee65f8042abcb5c4ca86542fca49e53f
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u4E2D\u666F"
+      road3:
+        m_AssetGUID: 96e5dfc6c2b2dd64cb38a1ef7e847b31
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u8FDC\u666F"
+      road4:
+        m_AssetGUID: c3f59c2f78b939e44b18ef0d1d3bbaee
+        m_SubObjectName: "\u9542\u7A7A\u4E4B\u5730-\u9053\u8DEF-\u524D\u666F\uFF08\u5165\u53E3\uFF09"
+    interactivePrefabs:
+    - name: "\u7ECF\u6587"
+      id: 0
+      describe: 
+      describe_EN: 
+      type: 0
+      InteractivePrefab:
+        m_AssetGUID: 8731629b1eee3aa4c9d34661e32f42a6
+        m_SubObjectName: 
+    - name: "\u51A5\u60F3\u53F0"
+      id: 1
+      describe: 
+      describe_EN: 
+      type: 1
+      InteractivePrefab:
+        m_AssetGUID: de0423c9e40645f4193e44e9fb0a527c
+        m_SubObjectName: 
+    - name: "\u796D\u575B"
+      id: 2
+      describe: 
+      describe_EN: 
+      type: 2
+      InteractivePrefab:
+        m_AssetGUID: 4e4e7844c7ef9d34ea44aba03a10ba22
+        m_SubObjectName: 
+    - name: "\u89E3\u6551"
+      id: 3
+      describe: 
+      describe_EN: 
+      type: 3
+      InteractivePrefab:
+        m_AssetGUID: bfa139c8b527a0d449f30f9df2664c2a
+        m_SubObjectName: 
+    - name: "\u5730\u4E0B\u6E38\u5546"
+      id: 4
+      describe: 
+      describe_EN: 
+      type: 4
+      InteractivePrefab:
+        m_AssetGUID: 11a6863871f40fc42b19fd7af49b9f1e
+        m_SubObjectName: 
+    addRoom:
+      m_AssetGUID: 73e0b4b7ffd536c4698b984f2be79a26
+      m_SubObjectName: 
+  mapCreateParameter:
+  - name: 
+    id: 0
+    describe: 
+    describe_EN: 
+    taskDifficulty: 0
+    mapSizeType: 0
+    mapSizeX: 20
+    mapSizeY: 20
+    roomTotalCount: 7
+    rooms:
+    - roomType: 1
+      minCount: 1
+      maxCount: 1
+    - roomType: 3
+      minCount: 1
+      maxCount: 2
+    - roomType: 4
+      minCount: 0
+      maxCount: 1
+    - roomType: 5
+      minCount: 1
+      maxCount: 1
+    - roomType: 6
+      minCount: 0
+      maxCount: 1
+    - roomType: 2
+      minCount: 0
+      maxCount: 0
+    routeTotalCount: 8
+    routes:
+    - routeType: 1
+      minCount: 4
+      maxCount: 8
+    - routeType: 2
+      minCount: 2
+      maxCount: 4
+    - routeType: 3
+      minCount: 0
+      maxCount: 1
+    minRouteConnect: 3
+    maxRouteConnect: 8
+  mapMonsterGroups:
+  - name: "\u9542\u7A7A\u4E4B\u5730"
+    id: 0
+    describe: 
+    describe_EN: 
+    nameType: 0
+    roomMonsters:
+    - monsterGroups:
+      - monsterGroup: c10b0000bf0b0000bf0b0000c20b0000
+      - monsterGroup: c10b0000c10b0000bf0b0000bf0b0000
+      - monsterGroup: c10b0000c10b0000bf0b0000c00b0000
+      - monsterGroup: bf0b0000b90b0000ba0b0000be0b0000
+      - monsterGroup: bf0b0000bf0b0000ba0b0000bb0b0000
+      roomType: 3
+    - monsterGroups:
+      - monsterGroup: c10b0000bf0b0000bf0b0000c20b0000
+      - monsterGroup: c10b0000c10b0000bf0b0000bf0b0000
+      - monsterGroup: c10b0000c10b0000bf0b0000c00b0000
+      - monsterGroup: b90b0000b90b0000c20b0000c20b0000
+      - monsterGroup: bc0b0000bd0b0000be0b0000c20b0000
+      roomType: 5
+    - monsterGroups:
+      - monsterGroup: c10b0000c10b0000bf0b0000c00b0000
+      - monsterGroup: bd0b0000bd0b0000c00b0000c00b0000
+      roomType: 6
+    - monsterGroups:
+      - monsterGroup: c00b0000c00b0000e50c0000
+      - monsterGroup: bd0b0000bd0b0000e70c0000
+      roomType: 2
+    routeMonsters:
+    - monsterGroups:
+      - monsterGroup: c10b0000bf0b0000bf0b0000bf0b0000
+      - monsterGroup: c10b0000bf0b0000bf0b0000bf0b0000
+      - monsterGroup: c10b0000bf0b0000c20b0000c20b0000
+      - monsterGroup: c10b0000c10b0000bf0b0000bf0b0000
+      - monsterGroup: c10b0000bd0b0000bb0b0000be0b0000
+      - monsterGroup: bf0b0000c10b0000ba0b0000ba0b0000
+      routeType: 1
+    - monsterGroups:
+      - monsterGroup: bd0b0000b90b0000c00b0000c00b0000
+      - monsterGroup: bc0b0000bc0b0000be0b0000be0b0000
+      routeType: 3
+  - name: "\u51A5\u6CB3\u77FF\u6D1E"
+    id: 1
+    describe: 
+    describe_EN: 
+    nameType: 1
+    roomMonsters:
+    - monsterGroups:
+      - monsterGroup: c30b0000c30b0000c40b0000c60b0000
+      - monsterGroup: c50b0000c30b0000c60b0000c60b0000
+      - monsterGroup: c50b0000c50b0000c30b0000c40b0000
+      - monsterGroup: c30b0000c30b0000bb0b0000bb0b0000
+      - monsterGroup: c30b0000c30b0000bb0b0000bb0b0000
+      roomType: 3
+    - monsterGroups:
+      - monsterGroup: c30b0000c30b0000c40b0000c60b0000
+      - monsterGroup: c50b0000c30b0000c60b0000c60b0000
+      - monsterGroup: c50b0000c50b0000c30b0000c40b0000
+      - monsterGroup: bd0b0000bd0b0000c60b0000c60b0000
+      - monsterGroup: c30b0000bd0b0000bd0b0000c60b0000
+      roomType: 5
+    - monsterGroups:
+      - monsterGroup: c50b0000c30b0000c70b0000
+      - monsterGroup: c30b0000c30b0000c70b0000
+      roomType: 6
+    - monsterGroups:
+      - monsterGroup: c50b0000c30b0000e60c0000
+      - monsterGroup: c50b0000c50b0000e80c0000
+      roomType: 2
+    routeMonsters:
+    - monsterGroups:
+      - monsterGroup: c30b0000c30b0000c40b0000c60b0000
+      - monsterGroup: c50b0000c30b0000c60b0000c60b0000
+      - monsterGroup: c50b0000c50b0000c30b0000c40b0000
+      - monsterGroup: c50b0000c50b0000c50b0000c50b0000
+      - monsterGroup: b90b0000b90b0000c40b0000c40b0000
+      routeType: 1
+    - monsterGroups:
+      - monsterGroup: c50b0000c30b0000c70b0000
+      - monsterGroup: bc0b0000bc0b0000c40b0000c40b0000
+      routeType: 3
+  - name: "\u6559\u7A0B\u5173\u5361"
+    id: 2
+    describe: 
+    describe_EN: 
+    nameType: 2
+    roomMonsters:
+    - monsterGroups:
+      - monsterGroup: b90b0000bd0b0000
+      roomType: 3
+    routeMonsters:
+    - monsterGroups:
+      - monsterGroup: b90b0000b90b0000b90b0000
+      routeType: 1
+  mapDroppings:
+  - name: "\u9542\u7A7A\u4E4B\u5730"
+    id: 0
+    describe: 
+    describe_EN: 
+    nameType: 0
+    roomDroppings:
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[250~400]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667618%[1~2]|\u866B\u679C35%[1~2]|\u8000\u77F323%[1~2]|\u8424\u77F318%[1~1]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[215~475]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667620%[2~3]|\u866B\u679C27%[2~3]|\u8000\u77F318%[2~3]|\u8424\u77F317%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~650]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667620%[2~3]|\u866B\u679C25%[3~5]|\u8000\u77F325%[2~4]|\u8424\u77F314%[2~3]}"
+      roomType: 3
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[250~400]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667618%[1~2]|\u866B\u679C35%[1~2]|\u8000\u77F323%[1~2]|\u77F3\u677F9%[1~1]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[215~475]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667620%[2~3]|\u866B\u679C27%[2~3]|\u8000\u77F318%[2~3]|\u77F3\u677F9%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~650]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667620%[2~3]|\u866B\u679C25%[3~5]|\u8000\u77F325%[2~4]|\u77F3\u677F7%[2~3]}"
+      roomType: 5
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~600]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u901A\u752850%[1~2]|\u7CBE\u826F35%[1~1]|\u7A00\u670915%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667625%[2~2]|\u866B\u679C25%[2~2]|\u8000\u77F325%[2~2]|\u5723\u726910%[1~1]|\u77F3\u677F14%[1~2]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[500~800]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u901A\u752830%[1~2]|\u7CBE\u826F40%[1~1]|\u7A00\u670930%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667625%[3~5]|\u866B\u679C25%[3~5]|\u8000\u77F325%[3~5]|\u5723\u726912%[1~1]|\u77F3\u677F25%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[600~1000]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u7CBE\u826F50%[1~1]|\u7A00\u670930%[1~1]|\u8D77\u6E9020%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667625%[6~8]|\u866B\u679C25%[6~8]|\u8000\u77F325%[6~8]|\u5723\u726914%[1~1]|\u77F3\u677F35%[1~2]}"
+      roomType: 6
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[500~800]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u7A00\u670950%[1~1]|\u8D77\u6E9050%[1~1]}&90%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667650%[4~6]|\u866B\u679C50%[4~6]|\u8000\u77F350%[4~6]|\u5723\u726970%[1~1]|\u8424\u77F340%[2~5]|\u77F3\u677F40%[2~5]|\u5B64\u672C40%[1~2]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[600~900]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u7A00\u670920%[1~1]|\u8D77\u6E9080%[1~1]}&90%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667650%[6~8]|\u866B\u679C50%[6~8]|\u8000\u77F350%[6~8]|\u5723\u726975%[1~1]|\u8424\u77F360%[2~6]|\u77F3\u677F60%[2~6]|\u5B64\u672C60%[5~6]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[700~1000]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8D77\u6E90100%[1~1]}&90%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667650%[8~10]|\u866B\u679C50%[8~10]|\u8000\u77F350%[8~10]|\u5723\u726980%[1~1]|\u8424\u77F3100%[3~8]|\u77F3\u677F100%[3~8]|\u5B64\u672C100%[5~9]}"
+      roomType: 2
+    routeDroppings:
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[250~400]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667618%[1~2]|\u866B\u679C35%[1~2]|\u8000\u77F323%[1~2]|\u8424\u77F318%[1~1]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[215~475]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667620%[2~3]|\u866B\u679C27%[2~3]|\u8000\u77F318%[2~3]|\u8424\u77F317%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~650]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667620%[2~3]|\u866B\u679C25%[3~5]|\u8000\u77F325%[2~4]|\u8424\u77F314%[2~3]}"
+      routeType: 1
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~600]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u901A\u752850%[1~2]|\u7CBE\u826F35%[1~1]|\u7A00\u670915%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667625%[2~2]|\u866B\u679C25%[2~2]|\u8000\u77F325%[2~2]|\u5723\u726910%[1~1]|\u77F3\u677F14%[1~2]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[500~800]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u901A\u752830%[1~2]|\u7CBE\u826F40%[1~1]|\u7A00\u670930%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667625%[3~5]|\u866B\u679C25%[3~5]|\u8000\u77F325%[3~5]|\u5723\u726912%[1~1]|\u77F3\u677F25%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[600~1000]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u7CBE\u826F50%[1~1]|\u7A00\u670930%[1~1]|\u8D77\u6E9020%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u5F71\u667625%[6~8]|\u866B\u679C25%[6~8]|\u8000\u77F325%[6~8]|\u5723\u726914%[1~1]|\u77F3\u677F35%[1~2]}"
+      routeType: 3
+  - name: "\u51A5\u6CB3\u77FF\u6D1E"
+    id: 0
+    describe: 
+    describe_EN: 
+    nameType: 1
+    roomDroppings:
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[250~400]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA818%[1~2]|\u661F\u706B35%[1~2]|\u8000\u77F323%[1~2]|\u9EEF\u667612%[1~1]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[215~475]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA820%[2~3]|\u661F\u706B27%[2~3]|\u8000\u77F318%[2~3]|\u9EEF\u667612%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~650]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA820%[2~3]|\u661F\u706B25%[3~5]|\u8000\u77F325%[2~4]|\u9EEF\u667610%[2~3]}"
+      roomType: 3
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[250~400]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA818%[1~2]|\u661F\u706B35%[1~2]|\u8000\u77F323%[1~2]|\u5B9D\u94BB6%[1~1]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[215~475]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA820%[2~3]|\u661F\u706B27%[2~3]|\u8000\u77F318%[2~3]|\u5B9D\u94BB6%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~650]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA820%[2~3]|\u661F\u706B25%[3~5]|\u8000\u77F325%[2~4]|\u5B9D\u94BB5%[2~3]}"
+      roomType: 5
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~600]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u901A\u752850%[1~2]|\u7CBE\u826F35%[1~1]|\u7A00\u670915%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA825%[2~2]|\u661F\u706B25%[2~2]|\u8000\u77F325%[2~2]|\u5723\u726910%[1~1]|\u5B9D\u94BB14%[1~2]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[500~800]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u901A\u752830%[1~2]|\u7CBE\u826F40%[1~1]|\u7A00\u670930%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA825%[3~5]|\u661F\u706B25%[3~5]|\u8000\u77F325%[3~5]|\u5723\u726912%[1~1]|\u5B9D\u94BB25%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[600~1000]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u7CBE\u826F50%[1~1]|\u7A00\u670930%[1~1]|\u8D77\u6E9020%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA825%[6~8]|\u661F\u706B25%[6~8]|\u8000\u77F325%[6~8]|\u5723\u726914%[1~1]|\u5B9D\u94BB35%[1~2]}"
+      roomType: 6
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[500~800]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u7A00\u670950%[1~1]|\u8D77\u6E9050%[1~1]}&90%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA850%[4~6]|\u661F\u706B50%[4~6]|\u8000\u77F350%[4~6]|\u5723\u726970%[1~1]|\u9EEF\u667640%[2~5]|\u5B9D\u94BB40%[2~5]|\u521A\u738940%[1~2]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[600~900]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u7A00\u670920%[1~1]|\u8D77\u6E9080%[1~1]}&90%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA850%[6~8]|\u661F\u706B50%[6~8]|\u8000\u77F350%[6~8]|\u5723\u726975%[1~1]|\u9EEF\u667660%[2~6]|\u5B9D\u94BB60%[2~6]|\u521A\u738960%[2~5]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[700~1000]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8D77\u6E90100%[1~1]}&90%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA850%[8~10]|\u661F\u706B50%[8~10]|\u8000\u77F350%[8~10]|\u5723\u726980%[1~1]|\u9EEF\u6676100%[3~8]|\u5B9D\u94BB100%[3~8]|\u521A\u7389100%[3~8]}"
+      roomType: 2
+    routeDroppings:
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[250~400]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA818%[1~2]|\u661F\u706B35%[1~2]|\u8000\u77F323%[1~2]|\u9EEF\u667612%[1~1]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[215~475]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA820%[2~3]|\u661F\u706B27%[2~3]|\u8000\u77F318%[2~3]|\u9EEF\u667612%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~650]}\r\n\u5355\u6743\u91CD\u7C7B:{100%{\u8089\u5E7225%[2~3]|\u8611\u83C725%[2~3]|\u5730\u9526\u834925%[2~3]|\u86C6\u866B\u553E\u6DB225%[2~3]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA820%[2~3]|\u661F\u706B25%[3~5]|\u8000\u77F325%[2~4]|\u9EEF\u667610%[2~3]}"
+      routeType: 1
+    - mapDroppings:
+      - taskDifficulty: 0
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[300~600]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u901A\u752850%[1~2]|\u7CBE\u826F35%[1~1]|\u7A00\u670915%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA825%[2~2]|\u661F\u706B25%[2~2]|\u8000\u77F325%[2~2]|\u5723\u726910%[1~1]|\u5B9D\u94BB14%[1~2]}"
+      - taskDifficulty: 1
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[500~800]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u901A\u752830%[1~2]|\u7CBE\u826F40%[1~1]|\u7A00\u670930%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA825%[3~5]|\u661F\u706B25%[3~5]|\u8000\u77F325%[3~5]|\u5723\u726912%[1~1]|\u5B9D\u94BB25%[1~2]}"
+      - taskDifficulty: 2
+        json: "\u5FC5\u6389\u7C7B:{\u9CDE\u7247[600~1000]}\r\n\u5355\u6743\u91CD\u7C7B:{33%{\u7CBE\u826F50%[1~1]|\u7A00\u670930%[1~1]|\u8D77\u6E9020%[1~1]}&100%{\u8089\u5E7225%[1~2]|\u8611\u83C725%[1~2]|\u5730\u9526\u834925%[1~2]|\u86C6\u866B\u553E\u6DB225%[1~2]}}\r\n\u591A\u6743\u91CD\u7C7B:{\u4EA1\u9AA825%[6~8]|\u661F\u706B25%[6~8]|\u8000\u77F325%[6~8]|\u5723\u726914%[1~1]|\u5B9D\u94BB35%[1~2]}"
+      routeType: 3

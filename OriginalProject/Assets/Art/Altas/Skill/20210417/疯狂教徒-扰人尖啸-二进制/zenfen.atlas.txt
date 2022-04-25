@@ -1,0 +1,41 @@
+
+zenfen.png
+size: 561,216
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+d1
+  rotate: true
+  xy: 487, 107
+  size: 107, 72
+  orig: 450, 480
+  offset: 110, 402
+  index: -1
+f1
+  rotate: false
+  xy: 487, 53
+  size: 20, 23
+  orig: 23, 25
+  offset: 1, 1
+  index: -1
+f2
+  rotate: false
+  xy: 487, 78
+  size: 25, 27
+  orig: 27, 30
+  offset: 1, 2
+  index: -1
+q1
+  rotate: false
+  xy: 2, 6
+  size: 248, 208
+  orig: 450, 480
+  offset: 122, 222
+  index: -1
+q2
+  rotate: false
+  xy: 252, 2
+  size: 233, 212
+  orig: 450, 480
+  offset: 130, 237
+  index: -1

@@ -1,0 +1,104 @@
+
+skeleton.png
+size: 651,187
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+塞壬藤曼-拆分_0000_头
+  rotate: false
+  xy: 472, 2
+  size: 105, 71
+  orig: 450, 450
+  offset: 183, 376
+  index: -1
+塞壬藤曼-拆分_0001_左大臂
+  rotate: false
+  xy: 243, 37
+  size: 82, 148
+  orig: 450, 450
+  offset: 214, 266
+  index: -1
+塞壬藤曼-拆分_0002_左手
+  rotate: true
+  xy: 243, 3
+  size: 32, 142
+  orig: 450, 450
+  offset: 185, 54
+  index: -1
+塞壬藤曼-拆分_0003_左小臂
+  rotate: false
+  xy: 489, 86
+  size: 94, 99
+  orig: 450, 450
+  offset: 197, 183
+  index: -1
+塞壬藤曼-拆分_0004_上身
+  rotate: false
+  xy: 2, 3
+  size: 106, 182
+  orig: 450, 450
+  offset: 148, 205
+  index: -1
+塞壬藤曼-拆分_0005_右手
+  rotate: false
+  xy: 359, 61
+  size: 51, 124
+  orig: 450, 450
+  offset: 89, 135
+  index: -1
+塞壬藤曼-拆分_0006_右臂
+  rotate: false
+  xy: 579, 2
+  size: 65, 82
+  orig: 450, 450
+  offset: 125, 238
+  index: -1
+塞壬藤曼-拆分_0007_右大腿
+  rotate: false
+  xy: 172, 22
+  size: 69, 163
+  orig: 450, 450
+  offset: 136, 109
+  index: -1
+塞壬藤曼-拆分_0008_右小腿
+  rotate: false
+  xy: 451, 75
+  size: 36, 110
+  orig: 450, 450
+  offset: 147, 14
+  index: -1
+塞壬藤曼-拆分_0009_左大腿
+  rotate: false
+  xy: 110, 18
+  size: 60, 167
+  orig: 450, 450
+  offset: 217, 96
+  index: -1
+塞壬藤曼-拆分_0010_左小腿
+  rotate: false
+  xy: 327, 47
+  size: 30, 138
+  orig: 450, 450
+  offset: 240, 3
+  index: -1
+塞壬藤曼-拆分_0011_左后大腿
+  rotate: true
+  xy: 585, 103
+  size: 82, 64
+  orig: 450, 450
+  offset: 250, 189
+  index: -1
+塞壬藤曼-拆分_0012_左后小腿
+  rotate: true
+  xy: 387, 9
+  size: 50, 83
+  orig: 450, 450
+  offset: 283, 132
+  index: -1
+塞壬藤曼-拆分_0013_左后脚
+  rotate: false
+  xy: 412, 64
+  size: 37, 121
+  orig: 450, 450
+  offset: 295, 34
+  index: -1

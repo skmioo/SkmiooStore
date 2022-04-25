@@ -1,0 +1,62 @@
+
+skeleton.png
+size: 1404,435
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+7msj.com1
+  rotate: false
+  xy: 2, 6
+  size: 590, 427
+  orig: 616, 452
+  offset: 10, 1
+  index: -1
+7msj.com10
+  rotate: true
+  xy: 1150, 226
+  size: 207, 252
+  orig: 209, 254
+  offset: 1, 1
+  index: -1
+7msj.com3
+  rotate: false
+  xy: 1285, 6
+  size: 44, 70
+  orig: 46, 72
+  offset: 1, 1
+  index: -1
+7msj.com4
+  rotate: false
+  xy: 1331, 30
+  size: 35, 46
+  orig: 37, 48
+  offset: 1, 1
+  index: -1
+7msj.com5
+  rotate: true
+  xy: 1285, 78
+  size: 58, 105
+  orig: 60, 107
+  offset: 1, 1
+  index: -1
+7msj.com6
+  rotate: true
+  xy: 594, 37
+  size: 396, 554
+  orig: 396, 554
+  offset: 0, 0
+  index: -1
+7msj.com8
+  rotate: true
+  xy: 1285, 138
+  size: 86, 117
+  orig: 88, 119
+  offset: 1, 1
+  index: -1
+7msj.com9
+  rotate: false
+  xy: 1150, 2
+  size: 133, 222
+  orig: 135, 224
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,236 @@
+﻿[
+  {
+    "id": 1001,
+    "name": "星际战犯",
+    "describe": "联邦流放法规19-3条“公然违反联邦军令，裁决为星际战犯，判处终身流放”战争不光会磨练英雄，也会培养恶魔，这是一群训练有素的“危险品”对于如何处理过期危险品，那些联邦贵族向来很有办法。",
+    "roleType": "Hero",
+    "vocation": "星际战犯",
+    "ownedSkill": [
+      5001,
+      5000,5002,5003
+    ],
+    "animatorPath": "heroes/星际战犯/星际战犯_idle",
+    "roleLife": {
+      "hp": 50,
+      "defence": 20,
+      "minAtk": 8,
+      "maxAtk": 16,
+      "atkRatio": 0,
+      "dodge": 0,
+      "crits": 5,
+      "rate": 0,
+      "speed": 1,
+      "bleed": 20,
+      "poison": 20,
+      "debuff": 20,
+      "vertigo": 30,
+      "position": 30,
+      "death": 20
+    }
+  },
+  {
+    "id": 1002,
+    "name": "行星劫匪",
+    "describe": "觅食才是人类的天性，茫茫星空皆是我“觅食”的对象",
+    "roleType": "Hero",
+    "vocation": "行星劫匪",
+    "ownedSkill": [
+      5001,
+      5000,
+      5002,
+      5003
+    ],
+    "animatorPath": "heroes/行星劫匪/行星劫匪_idle",
+    "roleLife": {
+      "hp": 40,
+      "defence": 15,
+      "minAtk": 4,
+      "maxAtk": 8,
+      "atkRatio": 0,
+      "dodge": 10,
+      "crits": 10,
+      "rate": 0,
+      "speed": 3,
+      "bleed": 18,
+      "poison": 18,
+      "debuff": 18,
+      "vertigo": 20,
+      "position": 20,
+      "death": 10
+    }
+  },
+  {
+    "id": 1003,
+    "name": "雇佣杀手",
+    "describe": "联邦流放法规1-5条“犯故意杀人罪，判处终身流放”什么人都是有一个价格的，包括我在内别把生命看得太高贵，也别太轻视它据说，他会不择手段的达成目的，甚至是下毒。",
+    "roleType": "Hero",
+    "vocation": "雇佣杀手",
+    "ownedSkill": [
+      5001,
+      5000
+    ],
+    "animatorPath": "heroes/雇佣杀手/雇佣杀手_idle",
+    "roleLife": {
+      "hp": 25,
+      "defence": 50,
+      "minAtk": 12,
+      "maxAtk": 20,
+      "atkRatio": 0,
+      "dodge": 15,
+      "crits": 15,
+      "rate": 5,
+      "speed": 10,
+      "bleed": 25,
+      "poison": 25,
+      "debuff": 0,
+      "vertigo": 0,
+      "position": 50,
+      "death": 10
+    }
+  },
+  {
+    "id": 1004,
+    "name": "邪恶发明家",
+    "describe": "“那些蠢货的老师...那些蠢货的官员...那些不理解我的蠢货们...”",
+    "roleType": "Hero",
+    "vocation": "邪恶发明家",
+    "ownedSkill": [
+      5001,
+      5000
+    ],
+    "animatorPath": "heroes/邪恶发明家/邪恶发明家_idle",
+    "roleLife": {
+      "hp": 20,
+      "defence": 20,
+      "minAtk": 0,
+      "maxAtk": 20,
+      "atkRatio": 0,
+      "dodge": 20,
+      "crits": 30,
+      "rate": 0,
+      "speed": 5,
+      "bleed": 5,
+      "poison": 5,
+      "debuff": 5,
+      "vertigo": 5,
+      "position": 5,
+      "death": 5
+    }
+  },
+  {
+    "id": 1005,
+    "name": "亡命赌徒",
+    "describe": "据说他有自己的底线，也因为那个底线而被流放可笑的是，为了守护自己的底线，他的办法是用戒毒/赌来激发自己的戒断反应“在这片星空牢笼中，还有什么比赌博和毒品更能让人开怀大笑呢？!!",
+    "roleType": "Hero",
+    "vocation": "亡命赌徒",
+    "ownedSkill": [
+      5001,
+      5000
+    ],
+    "animatorPath": "heroes/亡命赌徒/亡命赌徒_idle",
+    "roleLife": {
+      "hp": 30,
+      "defence": 10,
+      "minAtk": 10,
+      "maxAtk": 15,
+      "atkRatio": 0,
+      "dodge": 5,
+      "crits": 2,
+      "rate": 5,
+      "speed": 2,
+      "bleed": 28,
+      "poison": 28,
+      "debuff": 5,
+      "vertigo": 5,
+      "position": 5,
+      "death": 30
+    }
+  },
+  {
+    "id": 1006,
+    "name": "双面间谍",
+    "describe": "一个有些疯癫的间谍，据说他身体寄居着两个人格，一个擅长间谍活动，一个擅长杀戮，至于怎么调节...只有他自己知道“你在哪，我的姐妹”",
+    "roleType": "Hero",
+    "vocation": "双面间谍",
+    "ownedSkill": [
+      5001,
+      5000
+    ],
+    "animatorPath": "heroes/双面间谍/双面间谍_idle",
+    "roleLife": {
+      "hp": 25,
+      "defence": 5,
+      "minAtk": 8,
+      "maxAtk": 10,
+      "atkRatio": 0,
+      "dodge": 10,
+      "crits": 10,
+      "rate": 0,
+      "speed": 6,
+      "bleed": 20,
+      "poison": 20,
+      "debuff": 15,
+      "vertigo": 5,
+      "position": 10,
+      "death": 10
+    }
+  },
+  {
+    "id": 1007,
+    "name": "奴隶商人",
+    "describe": "联邦流放法规78-9条“贩卖联邦公民，判处终身流放”他们很少与人沟通，标志性的半面具绝不会轻易摘下不要称呼他们为“奴隶”商人，否则你会成为那斗篷下的“收藏品”",
+    "roleType": "Hero",
+    "vocation": "奴隶商人",
+    "ownedSkill": [
+      5001,
+      5000
+    ],
+    "animatorPath": "heroes/奴隶商人/奴隶商人_idle",
+    "roleLife": {
+      "hp": 24,
+      "defence": 5,
+      "minAtk": 5,
+      "maxAtk": 10,
+      "atkRatio": 0,
+      "dodge": 0,
+      "crits": 5,
+      "rate": 5,
+      "speed": 5,
+      "bleed": 5,
+      "poison": 0,
+      "debuff": 5,
+      "vertigo": 5,
+      "position": 5,
+      "death": 5
+    }
+  },
+  {
+    "id": 1008,
+    "name": "神秘学者",
+    "describe": "联邦流放法规33-4条“传播宗教，判处终身流放”星际中的游历学者，偶然接触了遗迹中古代的神学教义他们自称是神在人间的使徒，追随者已遍布联邦星域",
+    "roleType": "Hero",
+    "vocation": "神秘学者",
+    "ownedSkill": [
+      5001,
+      5000
+    ],
+    "animatorPath": "heroes/神秘学者/神秘学者_idle",
+    "roleLife": {
+      "hp": 20,
+      "defence": 0,
+      "minAtk": 4,
+      "maxAtk": 8,
+      "atkRatio": 0,
+      "dodge": 0,
+      "crits": 4,
+      "rate": 10,
+      "speed": 3,
+      "bleed": 5,
+      "poison": 5,
+      "debuff": 5,
+      "vertigo": 5,
+      "position": 5,
+      "death": 5
+    }
+  }
+]

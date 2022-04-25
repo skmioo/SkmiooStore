@@ -1,0 +1,55 @@
+
+duyeguai.png
+size: 748,283
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yinying
+  rotate: false
+  xy: 501, 125
+  size: 237, 35
+  orig: 242, 35
+  offset: 2, 0
+  index: -1
+毒液怪-拆分_0000_头
+  rotate: true
+  xy: 2, 100
+  size: 181, 189
+  orig: 450, 450
+  offset: 78, 250
+  index: -1
+毒液怪-拆分_0001_左手
+  rotate: true
+  xy: 193, 114
+  size: 167, 306
+  orig: 450, 450
+  offset: 196, 8
+  index: -1
+毒液怪-拆分_0002_肚子
+  rotate: true
+  xy: 193, 12
+  size: 100, 371
+  orig: 450, 450
+  offset: 153, 10
+  index: -1
+毒液怪-拆分_0003_身体
+  rotate: true
+  xy: 2, 2
+  size: 96, 167
+  orig: 450, 450
+  offset: 171, 108
+  index: -1
+毒液怪-拆分_0004_尾
+  rotate: true
+  xy: 566, 11
+  size: 112, 136
+  orig: 450, 450
+  offset: 279, 25
+  index: -1
+毒液怪-拆分_0005_右手
+  rotate: true
+  xy: 501, 162
+  size: 119, 245
+  orig: 450, 450
+  offset: 94, 8
+  index: -1

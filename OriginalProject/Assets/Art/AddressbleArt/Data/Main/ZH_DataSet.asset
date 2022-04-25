@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a34282f14966b1479686ba4aabe9268, type: 3}
+  m_Name: ZH_DataSet
+  m_EditorClassIdentifier: 
+  str: "\u4E2D\u6587\u8BED\u8A00\u5305\u7C7B\u6570\u636E\u96C6"
+  scriptableObjects:
+  - name: RoleData
+    id: 1001
+    describe: "\u89D2\u8272\u57FA\u7840\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: fff7b05e8ce0fdb4b894c2dafb4bfc8a, type: 2}
+  - name: SkillData
+    id: 1002
+    describe: "UI\u9762\u677F\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: 01a639f684fd7b4498ef1e4ee8e04cff, type: 2}
+  - name: ObjData
+    id: 1003
+    describe: "\u7269\u54C1\u57FA\u7840\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: e0ede3c38a167e34185f725ef075615b, type: 2}
+  - name: TaskData
+    id: 1004
+    describe: "\u4EFB\u52A1\u57FA\u7840\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: e6ec0b7e846286d48be528a401ab08a3, type: 2}
+  - name: MapData
+    id: 1005
+    describe: "\u7269\u54C1\u57FA\u7840\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: 6f5634f1eae0a38458a0f4d987775039, type: 2}
+  - name: MapItemData
+    id: 1006
+    describe: "\u7269\u54C1\u57FA\u7840\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: e0ede3c38a167e34185f725ef075615b, type: 2}
+  - name: MapAddRoomData
+    id: 1007
+    describe: "\u7269\u54C1\u57FA\u7840\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: e0ede3c38a167e34185f725ef075615b, type: 2}
+  - name: BuildData
+    id: 1008
+    describe: "\u5EFA\u7B51\u5347\u7EA7\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: aad967b85e95af3498128f67cdefc123, type: 2}
+  - name: MedalData
+    id: 1009
+    describe: "\u52CB\u7AE0\u5C5E\u6027\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: 23508f15097c9014aa69187f02adcfe0, type: 2}
+  - name: SacredData
+    id: 1010
+    describe: "\u5723\u7269\u5C5E\u6027\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: d62f3f982dc7fba4082e46cefebe517b, type: 2}
+  - name: TalentData
+    id: 1011
+    describe: "\u5929\u8D4B\u8BCD\u6761\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: 65c552b479b334c489be6e31cadce1eb, type: 2}
+  - name: SettingDataSet
+    id: 1012
+    describe: "\u7CFB\u7EDF\u8BBE\u7F6E\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: 50255ddfbce69f74399024f8810ed8e6, type: 2}
+  - name: InteractiveData
+    id: 1013
+    describe: "\u4EA4\u4E92\u7269\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: fab43aad73b501d40aaf5349c033cef7, type: 2}
+  - name: AudioClipData
+    id: 1014
+    describe: "\u97F3\u6548\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: d9ee163ab887fc34da4c7247c278f08d, type: 2}
+  - name: LanguageData
+    id: 1015
+    describe: "\u591A\u8BED\u8A00\u6570\u636E"
+    scriptableObject: {fileID: 11400000, guid: b10093336503b6941a806ace34cf41d0, type: 2}

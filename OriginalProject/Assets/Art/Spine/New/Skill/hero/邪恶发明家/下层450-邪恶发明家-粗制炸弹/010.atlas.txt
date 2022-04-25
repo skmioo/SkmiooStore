@@ -1,0 +1,13 @@
+
+010.png
+size: 124,103
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zhushe
+  rotate: false
+  xy: 2, 2
+  size: 120, 99
+  orig: 777, 450
+  offset: 568, 230
+  index: -1

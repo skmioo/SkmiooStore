@@ -1,0 +1,41 @@
+
+驯兽者-呼唤.png
+size: 322,133
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 73, 7
+  size: 124, 158
+  orig: 137, 160
+  offset: 13, 1
+  index: -1
+2
+  rotate: false
+  xy: 2, 4
+  size: 69, 127
+  orig: 75, 130
+  offset: 1, 2
+  index: -1
+3
+  rotate: false
+  xy: 275, 40
+  size: 45, 91
+  orig: 49, 94
+  offset: 4, 3
+  index: -1
+4
+  rotate: false
+  xy: 233, 38
+  size: 40, 93
+  orig: 44, 96
+  offset: 4, 3
+  index: -1
+5
+  rotate: true
+  xy: 233, 2
+  size: 34, 81
+  orig: 39, 84
+  offset: 0, 3
+  index: -1

@@ -1,0 +1,111 @@
+
+skeleton.png
+size: 553,284
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+起源神仆-拆分_0000_头
+  rotate: false
+  xy: 408, 20
+  size: 88, 97
+  orig: 450, 450
+  offset: 169, 351
+  index: -1
+起源神仆-拆分_0001_左手
+  rotate: false
+  xy: 405, 119
+  size: 42, 33
+  orig: 450, 450
+  offset: 146, 235
+  index: -1
+起源神仆-拆分_0002_左小臂
+  rotate: true
+  xy: 2, 2
+  size: 83, 71
+  orig: 450, 450
+  offset: 175, 237
+  index: -1
+起源神仆-拆分_0003_左大臂
+  rotate: true
+  xy: 251, 19
+  size: 66, 95
+  orig: 450, 450
+  offset: 213, 265
+  index: -1
+起源神仆-拆分_0004_身体-拷贝-7
+  rotate: true
+  xy: 2, 87
+  size: 195, 283
+  orig: 450, 450
+  offset: 154, 121
+  index: -1
+起源神仆-拆分_0005_武器
+  rotate: false
+  xy: 405, 154
+  size: 59, 128
+  orig: 450, 450
+  offset: 90, 221
+  index: -1
+起源神仆-拆分_0006_右小臂
+  rotate: true
+  xy: 466, 194
+  size: 88, 85
+  orig: 450, 450
+  offset: 112, 271
+  index: -1
+起源神仆-拆分_0007_右大臂
+  rotate: false
+  xy: 206, 18
+  size: 43, 67
+  orig: 450, 450
+  offset: 169, 271
+  index: -1
+起源神仆-拆分_0008_气罐
+  rotate: false
+  xy: 287, 117
+  size: 116, 165
+  orig: 450, 450
+  offset: 260, 229
+  index: -1
+起源神仆-拆分_0009_右小腿
+  rotate: false
+  xy: 75, 10
+  size: 62, 75
+  orig: 450, 450
+  offset: 154, 25
+  index: -1
+起源神仆-拆分_0010_右大腿
+  rotate: true
+  xy: 139, 16
+  size: 69, 65
+  orig: 450, 450
+  offset: 161, 82
+  index: -1
+起源神仆-拆分_0011_右脚
+  rotate: true
+  xy: 498, 63
+  size: 63, 44
+  orig: 450, 450
+  offset: 126, 6
+  index: -1
+起源神仆-拆分_0012_左大腿
+  rotate: false
+  xy: 466, 128
+  size: 62, 64
+  orig: 450, 450
+  offset: 245, 91
+  index: -1
+起源神仆-拆分_0013_左脚
+  rotate: true
+  xy: 498, 15
+  size: 46, 43
+  orig: 450, 450
+  offset: 274, 0
+  index: -1
+起源神仆-拆分_0014_左小腿
+  rotate: false
+  xy: 348, 8
+  size: 58, 107
+  orig: 450, 450
+  offset: 261, 14
+  index: -1

@@ -1,0 +1,118 @@
+
+skeleton.png
+size: 690,317
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+鳞甲兽-拆分_0000_头
+  rotate: false
+  xy: 450, 244
+  size: 133, 71
+  orig: 450, 450
+  offset: 20, 340
+  index: -1
+鳞甲兽-拆分_0001_下嘴
+  rotate: false
+  xy: 616, 59
+  size: 72, 42
+  orig: 450, 450
+  offset: 49, 315
+  index: -1
+鳞甲兽-拆分_0002_左手
+  rotate: false
+  xy: 546, 7
+  size: 42, 53
+  orig: 450, 450
+  offset: 182, 148
+  index: -1
+鳞甲兽-拆分_0003_左小臂
+  rotate: true
+  xy: 492, 110
+  size: 60, 53
+  orig: 450, 450
+  offset: 194, 179
+  index: -1
+鳞甲兽-拆分_0004_左上肢
+  rotate: false
+  xy: 494, 2
+  size: 50, 58
+  orig: 450, 450
+  offset: 210, 206
+  index: -1
+鳞甲兽-拆分_0005_左脚
+  rotate: true
+  xy: 450, 106
+  size: 64, 40
+  orig: 450, 450
+  offset: 271, 0
+  index: -1
+鳞甲兽-拆分_0006_左小腿
+  rotate: true
+  xy: 590, 4
+  size: 53, 42
+  orig: 450, 450
+  offset: 297, 25
+  index: -1
+鳞甲兽-拆分_0007_左大腿
+  rotate: true
+  xy: 578, 103
+  size: 90, 91
+  orig: 450, 450
+  offset: 260, 51
+  index: -1
+鳞甲兽-拆分_0008_身体
+  rotate: false
+  xy: 2, 3
+  size: 446, 312
+  orig: 450, 450
+  offset: 4, 101
+  index: -1
+鳞甲兽-拆分_0009_右手
+  rotate: false
+  xy: 494, 62
+  size: 73, 46
+  orig: 450, 450
+  offset: 111, 181
+  index: -1
+鳞甲兽-拆分_0010_右小臂
+  rotate: false
+  xy: 569, 62
+  size: 45, 39
+  orig: 450, 450
+  offset: 136, 186
+  index: -1
+鳞甲兽-拆分_0011_右大臂
+  rotate: false
+  xy: 450, 17
+  size: 42, 84
+  orig: 450, 450
+  offset: 162, 188
+  index: -1
+鳞甲兽-拆分_0012_右大腿
+  rotate: true
+  xy: 450, 172
+  size: 70, 96
+  orig: 450, 450
+  offset: 183, 65
+  index: -1
+鳞甲兽-拆分_0013_右小腿
+  rotate: true
+  xy: 634, 8
+  size: 49, 50
+  orig: 450, 450
+  offset: 189, 35
+  index: -1
+鳞甲兽-拆分_0014_右腿
+  rotate: true
+  xy: 548, 188
+  size: 54, 28
+  orig: 450, 450
+  offset: 170, 18
+  index: -1
+鳞甲兽-拆分_0015_尾巴
+  rotate: true
+  xy: 585, 195
+  size: 120, 103
+  orig: 450, 450
+  offset: 317, 76
+  index: -1

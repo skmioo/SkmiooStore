@@ -1,0 +1,104 @@
+
+skeleton.png
+size: 723,277
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+冲角盾鳞-拆分_0000_头
+  rotate: true
+  xy: 237, 83
+  size: 192, 191
+  orig: 450, 450
+  offset: 22, 187
+  index: -1
+冲角盾鳞-拆分_0001_左前大腿
+  rotate: false
+  xy: 430, 125
+  size: 94, 150
+  orig: 450, 450
+  offset: 173, 117
+  index: -1
+冲角盾鳞-拆分_0002_左前小腿
+  rotate: false
+  xy: 534, 2
+  size: 59, 122
+  orig: 450, 450
+  offset: 208, 34
+  index: -1
+冲角盾鳞-拆分_0003_左脚
+  rotate: false
+  xy: 654, 224
+  size: 56, 51
+  orig: 450, 450
+  offset: 204, 5
+  index: -1
+冲角盾鳞-拆分_0004_左后大腿
+  rotate: true
+  xy: 595, 25
+  size: 99, 126
+  orig: 450, 450
+  offset: 263, 93
+  index: -1
+冲角盾鳞-拆分_0005_左后小腿
+  rotate: false
+  xy: 477, 3
+  size: 55, 81
+  orig: 450, 450
+  offset: 340, 43
+  index: -1
+冲角盾鳞-拆分_0006_左后脚
+  rotate: false
+  xy: 482, 98
+  size: 43, 25
+  orig: 450, 450
+  offset: 354, 23
+  index: -1
+冲角盾鳞-拆分_0007_身体
+  rotate: true
+  xy: 2, 7
+  size: 268, 233
+  orig: 450, 450
+  offset: 106, 92
+  index: -1
+冲角盾鳞-拆分_0008_右前脚
+  rotate: false
+  xy: 430, 86
+  size: 50, 37
+  orig: 450, 450
+  offset: 123, 21
+  index: -1
+冲角盾鳞-拆分_0009_右前小腿
+  rotate: false
+  xy: 322, 15
+  size: 49, 66
+  orig: 450, 450
+  offset: 143, 38
+  index: -1
+冲角盾鳞-拆分_0010_右前大腿
+  rotate: false
+  xy: 526, 126
+  size: 126, 149
+  orig: 450, 450
+  offset: 84, 14
+  index: -1
+冲角盾鳞-拆分_0011_右后小腿
+  rotate: true
+  xy: 373, 16
+  size: 65, 102
+  orig: 450, 450
+  offset: 233, 23
+  index: -1
+冲角盾鳞-拆分_0012_右后大腿
+  rotate: false
+  xy: 654, 136
+  size: 49, 86
+  orig: 450, 450
+  offset: 250, 85
+  index: -1
+冲角盾鳞-拆分_0013_尾巴
+  rotate: true
+  xy: 237, 6
+  size: 75, 83
+  orig: 450, 450
+  offset: 351, 63
+  index: -1

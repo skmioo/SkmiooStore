@@ -1,0 +1,97 @@
+
+renmianyizhu.png
+size: 207,895
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yinying
+  rotate: true
+  xy: 170, 656
+  size: 237, 35
+  orig: 242, 35
+  offset: 2, 0
+  index: -1
+人面异蛛-拆分_0000_头
+  rotate: true
+  xy: 2, 131
+  size: 94, 108
+  orig: 450, 450
+  offset: 120, 329
+  index: -1
+人面异蛛-拆分_0001_左小臂
+  rotate: true
+  xy: 2, 788
+  size: 105, 166
+  orig: 450, 450
+  offset: 181, 120
+  index: -1
+人面异蛛-拆分_0002_左大臂
+  rotate: true
+  xy: 2, 227
+  size: 87, 120
+  orig: 450, 450
+  offset: 222, 257
+  index: -1
+人面异蛛-拆分_0003_左袍
+  rotate: false
+  xy: 2, 372
+  size: 146, 414
+  orig: 450, 450
+  offset: 176, 33
+  index: -1
+人面异蛛-拆分_0004_右袍
+  rotate: false
+  xy: 150, 348
+  size: 54, 306
+  orig: 450, 450
+  offset: 124, 34
+  index: -1
+人面异蛛-拆分_0005_上身
+  rotate: true
+  xy: 2, 316
+  size: 54, 133
+  orig: 450, 450
+  offset: 151, 232
+  index: -1
+人面异蛛-拆分_0006_腿1
+  rotate: true
+  xy: 172, 5
+  size: 53, 25
+  orig: 450, 450
+  offset: 98, 22
+  index: -1
+人面异蛛-拆分_0007_腿2
+  rotate: false
+  xy: 137, 287
+  size: 62, 59
+  orig: 450, 450
+  offset: 143, 0
+  index: -1
+人面异蛛-拆分_0008_腿3
+  rotate: true
+  xy: 2, 2
+  size: 53, 54
+  orig: 450, 450
+  offset: 255, 0
+  index: -1
+人面异蛛-拆分_0009_腿4
+  rotate: false
+  xy: 112, 21
+  size: 58, 37
+  orig: 450, 450
+  offset: 299, 14
+  index: -1
+人面异蛛-拆分_0010_下身
+  rotate: false
+  xy: 124, 60
+  size: 79, 225
+  orig: 450, 450
+  offset: 148, 21
+  index: -1
+人面异蛛-拆分_0011_右手
+  rotate: true
+  xy: 2, 57
+  size: 72, 108
+  orig: 450, 450
+  offset: 114, 184
+  index: -1

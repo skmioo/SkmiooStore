@@ -1,0 +1,20 @@
+
+youer.png
+size: 315,202
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JINENG
+  rotate: true
+  xy: 2, 2
+  size: 198, 200
+  orig: 205, 214
+  offset: 6, 12
+  index: -1
+WUQI
+  rotate: true
+  xy: 204, 88
+  size: 112, 109
+  orig: 114, 111
+  offset: 1, 1
+  index: -1

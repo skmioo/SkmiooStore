@@ -1,0 +1,13 @@
+
+defeat.png
+size: 252,453
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+雇佣杀手-被击
+  rotate: false
+  xy: 2, 2
+  size: 248, 449
+  orig: 450, 450
+  offset: 101, 1
+  index: -1

@@ -1,0 +1,118 @@
+
+skeleton.png
+size: 1032,176
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+上身
+  rotate: true
+  xy: 313, 60
+  size: 114, 175
+  orig: 450, 450
+  offset: 172, 221
+  index: -1
+兽皮
+  rotate: false
+  xy: 2, 34
+  size: 186, 140
+  orig: 450, 450
+  offset: 119, 270
+  index: -1
+右大腿
+  rotate: false
+  xy: 490, 21
+  size: 104, 153
+  orig: 450, 450
+  offset: 152, 99
+  index: -1
+右大臂
+  rotate: false
+  xy: 765, 81
+  size: 67, 93
+  orig: 450, 450
+  offset: 124, 254
+  index: -1
+右小腿
+  rotate: false
+  xy: 901, 91
+  size: 58, 83
+  orig: 450, 450
+  offset: 150, 36
+  index: -1
+右小臂
+  rotate: false
+  xy: 686, 64
+  size: 77, 110
+  orig: 450, 450
+  offset: 125, 168
+  index: -1
+右护膝
+  rotate: false
+  xy: 961, 112
+  size: 69, 62
+  orig: 450, 450
+  offset: 152, 75
+  index: -1
+右脚（走）
+  rotate: false
+  xy: 970, 49
+  size: 59, 61
+  orig: 450, 450
+  offset: 152, 0
+  index: -1
+头
+  rotate: true
+  xy: 817, 11
+  size: 68, 91
+  orig: 450, 450
+  offset: 211, 359
+  index: -1
+左大腿
+  rotate: false
+  xy: 596, 24
+  size: 88, 150
+  orig: 450, 450
+  offset: 232, 101
+  index: -1
+左大臂
+  rotate: true
+  xy: 313, 10
+  size: 48, 93
+  orig: 450, 450
+  offset: 271, 264
+  index: -1
+左小腿
+  rotate: false
+  xy: 834, 88
+  size: 65, 86
+  orig: 450, 450
+  offset: 252, 36
+  index: -1
+左小臂
+  rotate: true
+  xy: 686, 2
+  size: 60, 129
+  orig: 450, 450
+  offset: 267, 181
+  index: -1
+左护膝
+  rotate: true
+  xy: 910, 9
+  size: 80, 58
+  orig: 450, 450
+  offset: 250, 80
+  index: -1
+左脚
+  rotate: false
+  xy: 408, 4
+  size: 72, 54
+  orig: 450, 450
+  offset: 268, 2
+  index: -1
+腰带
+  rotate: false
+  xy: 190, 8
+  size: 121, 166
+  orig: 450, 450
+  offset: 173, 93
+  index: -1

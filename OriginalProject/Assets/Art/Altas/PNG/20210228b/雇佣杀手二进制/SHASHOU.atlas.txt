@@ -1,0 +1,132 @@
+
+SHASHOU.png
+size: 210,723
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+DAIBI01
+  rotate: true
+  xy: 142, 235
+  size: 59, 66
+  orig: 61, 68
+  offset: 1, 1
+  index: -1
+GONGJISHOU
+  rotate: false
+  xy: 143, 403
+  size: 58, 110
+  orig: 60, 113
+  offset: 1, 1
+  index: -1
+PIJIAN
+  rotate: true
+  xy: 2, 619
+  size: 102, 206
+  orig: 102, 206
+  offset: 0, 0
+  index: -1
+PIJIAN2
+  rotate: true
+  xy: 2, 515
+  size: 102, 206
+  orig: 102, 206
+  offset: 0, 0
+  index: -1
+SHANGSHEN
+  rotate: true
+  xy: 2, 336
+  size: 86, 138
+  orig: 104, 138
+  offset: 0, 0
+  index: -1
+TOU
+  rotate: true
+  xy: 2, 229
+  size: 105, 109
+  orig: 105, 109
+  offset: 0, 0
+  index: -1
+YOUTUI
+  rotate: true
+  xy: 2, 424
+  size: 89, 139
+  orig: 93, 141
+  offset: 1, 1
+  index: -1
+ZHAN_01
+  rotate: false
+  xy: 2, 2
+  size: 80, 131
+  orig: 82, 133
+  offset: 1, 1
+  index: -1
+ZHAN_02
+  rotate: false
+  xy: 84, 8
+  size: 33, 31
+  orig: 36, 33
+  offset: 1, 1
+  index: -1
+ZOU_01
+  rotate: true
+  xy: 2, 135
+  size: 92, 120
+  orig: 96, 122
+  offset: 3, 1
+  index: -1
+ZOU_02
+  rotate: false
+  xy: 84, 41
+  size: 37, 45
+  orig: 39, 47
+  offset: 1, 1
+  index: -1
+ZUOBI
+  rotate: false
+  xy: 113, 230
+  size: 25, 34
+  orig: 27, 36
+  offset: 1, 1
+  index: -1
+ZUOIJIAN
+  rotate: false
+  xy: 113, 266
+  size: 27, 68
+  orig: 40, 70
+  offset: 1, 1
+  index: -1
+ZUOJIAO
+  rotate: true
+  xy: 84, 88
+  size: 45, 38
+  orig: 48, 40
+  offset: 2, 1
+  index: -1
+ZUOSHOU
+  rotate: true
+  xy: 123, 7
+  size: 41, 42
+  orig: 43, 47
+  offset: 1, 4
+  index: -1
+ZUOTUI
+  rotate: false
+  xy: 124, 50
+  size: 78, 140
+  orig: 80, 142
+  offset: 1, 1
+  index: -1
+ZUOXIAOBI
+  rotate: true
+  xy: 140, 192
+  size: 41, 53
+  orig: 44, 55
+  offset: 1, 1
+  index: -1
+ZUOXIAOTUI
+  rotate: false
+  xy: 142, 296
+  size: 54, 105
+  orig: 56, 107
+  offset: 1, 1
+  index: -1

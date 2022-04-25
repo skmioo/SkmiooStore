@@ -1,0 +1,34 @@
+
+jingjidici.png
+size: 575,389
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shangshen
+  rotate: false
+  xy: 336, 192
+  size: 219, 195
+  orig: 450, 450
+  offset: 92, 103
+  index: -1
+tou
+  rotate: true
+  xy: 336, 39
+  size: 151, 237
+  orig: 450, 450
+  offset: 75, 212
+  index: -1
+xaishen
+  rotate: false
+  xy: 2, 5
+  size: 332, 382
+  orig: 450, 450
+  offset: 59, 3
+  index: -1
+yinying
+  rotate: false
+  xy: 336, 2
+  size: 237, 35
+  orig: 242, 35
+  offset: 2, 0
+  index: -1

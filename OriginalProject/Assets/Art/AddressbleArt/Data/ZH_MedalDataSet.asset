@@ -1,0 +1,347 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbc3435896dac54b8015e6d5b8a1718, type: 3}
+  m_Name: ZH_MedalDataSet
+  m_EditorClassIdentifier: 
+  medalAttributes:
+  - name: "\u6700\u5927\u751F\u547D"
+    id: 10001
+    describe: 
+    buffType: 6
+    valueType: 0
+    initValue: 5
+    addValue: 5
+    rollMin: 0
+    rollMax: 8
+  - name: "\u653B\u51FB\u4E0A\u9650"
+    id: 10002
+    describe: 
+    buffType: 4
+    valueType: 0
+    initValue: 4
+    addValue: 4
+    rollMin: 9
+    rollMax: 13
+  - name: "\u51CF\u4F24"
+    id: 10003
+    describe: 
+    buffType: 3
+    valueType: 1
+    initValue: 0
+    addValue: 4
+    rollMin: 14
+    rollMax: 19
+  - name: "\u66B4\u51FB"
+    id: 10004
+    describe: 
+    buffType: 2
+    valueType: 1
+    initValue: 0
+    addValue: 4
+    rollMin: 20
+    rollMax: 25
+  - name: "\u901F\u5EA6"
+    id: 10005
+    describe: 
+    buffType: 15
+    valueType: 0
+    initValue: 0
+    addValue: 1
+    rollMin: 26
+    rollMax: 33
+  - name: "\u7CBE\u51C6"
+    id: 10006
+    describe: 
+    buffType: 0
+    valueType: 0
+    initValue: 0
+    addValue: 5
+    rollMin: 34
+    rollMax: 39
+  - name: "\u95EA\u907F"
+    id: 10007
+    describe: 
+    buffType: 13
+    valueType: 0
+    initValue: 0
+    addValue: 5
+    rollMin: 34
+    rollMax: 39
+  - name: "\u6D41\u8840\u6297\u6027"
+    id: 10008
+    describe: 
+    buffType: 16
+    valueType: 1
+    initValue: 0
+    addValue: 4
+    rollMin: 46
+    rollMax: 57
+  - name: "\u4E2D\u6BD2\u6297\u6027"
+    id: 10009
+    describe: 
+    buffType: 17
+    valueType: 1
+    initValue: 0
+    addValue: 4
+    rollMin: 58
+    rollMax: 70
+  - name: "\u4F4D\u79FB\u6297\u6027"
+    id: 10010
+    describe: 
+    buffType: 20
+    valueType: 1
+    initValue: 0
+    addValue: 8
+    rollMin: 71
+    rollMax: 75
+  - name: "\u7729\u6655\u6297\u6027"
+    id: 10011
+    describe: 
+    buffType: 19
+    valueType: 1
+    initValue: 0
+    addValue: 5
+    rollMin: 76
+    rollMax: 85
+  - name: "\u6B7B\u4EA1\u6297\u6027"
+    id: 10012
+    describe: 
+    buffType: 21
+    valueType: 1
+    initValue: 0
+    addValue: 2
+    rollMin: 86
+    rollMax: 91
+  - name: "\u51CF\u76CA\u6297\u6027"
+    id: 10013
+    describe: 
+    buffType: 18
+    valueType: 1
+    initValue: 0
+    addValue: 5
+    rollMin: 92
+    rollMax: 100
+  - name: "\u653B\u51FB\u4E0B\u9650"
+    id: 10014
+    describe: 
+    buffType: 5
+    valueType: 0
+    initValue: 2
+    addValue: 2
+    rollMin: 9
+    rollMax: 13
+  medalEntries:
+  - name: "\u6D4B\u8BD5\u901A\u7528\u8BCD\u6761"
+    id: 0
+    describe: "\u8FD9\u662F\u4E00\u6761\u6D4B\u8BD5\u901A\u7528\u8BCD\u6761"
+    objActions:
+    - limitType: 8
+      limitValue: 0
+      vocation: 0
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 15
+    - limitType: 8
+      limitValue: 0
+      vocation: 0
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: 5
+  - name: "\u6D4B\u8BD5\u901A\u7528\u8BCD\u67612"
+    id: 1
+    describe: "\u8FD9\u662F\u4E00\u6761\u6D4B\u8BD5\u901A\u7528\u8BCD\u67612"
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 0
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 0
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: 1
+  medalDatas:
+  - name: "\u767D\u9AA8\u52CB\u7AE0"
+    id: 5001
+    describe: 
+    level: 1
+    icon:
+      m_AssetGUID: c9da8c0f12afeec47b29ca78aab5e5f8
+      m_SubObjectName: "\u767D\u9AA8\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 6
+    entryRollCount: 0
+    entryRollRange: 
+    attributeRollCount: 5
+  - name: "\u767D\u9AA8\u52CB\u7AE0"
+    id: 5002
+    describe: 
+    level: 1
+    icon:
+      m_AssetGUID: c9da8c0f12afeec47b29ca78aab5e5f8
+      m_SubObjectName: "\u767D\u9AA8\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 0
+    entryRollCount: 1
+    entryRollRange: 0000000001000000
+    attributeRollCount: 5
+  - name: "\u9752\u77F3\u52CB\u7AE0"
+    id: 5003
+    describe: 
+    level: 2
+    icon:
+      m_AssetGUID: b32209e234ba93c45a6d5b055f68efd0
+      m_SubObjectName: "\u9752\u77F3\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 6
+    entryRollCount: 0
+    entryRollRange: 
+    attributeRollCount: 6
+  - name: "\u9752\u77F3\u52CB\u7AE0"
+    id: 5004
+    describe: 
+    level: 2
+    icon:
+      m_AssetGUID: b32209e234ba93c45a6d5b055f68efd0
+      m_SubObjectName: "\u9752\u77F3\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 0
+    entryRollCount: 1
+    entryRollRange: 0000000001000000
+    attributeRollCount: 6
+  - name: "\u8D64\u94F6\u52CB\u7AE0"
+    id: 5005
+    describe: 
+    level: 3
+    icon:
+      m_AssetGUID: 555a61bc2551d304299cf0246fab4e8e
+      m_SubObjectName: "\u8D64\u94F6\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 6
+    entryRollCount: 0
+    entryRollRange: 
+    attributeRollCount: 7
+  - name: "\u8D64\u94F6\u52CB\u7AE0"
+    id: 5006
+    describe: 
+    level: 3
+    icon:
+      m_AssetGUID: 555a61bc2551d304299cf0246fab4e8e
+      m_SubObjectName: "\u8D64\u94F6\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 0
+    entryRollCount: 1
+    entryRollRange: 0000000001000000
+    attributeRollCount: 7
+  - name: "\u9ED1\u91D1\u52CB\u7AE0"
+    id: 5007
+    describe: 
+    level: 4
+    icon:
+      m_AssetGUID: a0f8ab83e2fdc604aaf49905ba881195
+      m_SubObjectName: "\u9ED1\u91D1\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 6
+    entryRollCount: 0
+    entryRollRange: 
+    attributeRollCount: 8
+  - name: "\u9ED1\u91D1\u52CB\u7AE0"
+    id: 5008
+    describe: 
+    level: 4
+    icon:
+      m_AssetGUID: a0f8ab83e2fdc604aaf49905ba881195
+      m_SubObjectName: "\u9ED1\u91D1\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 0
+    entryRollCount: 1
+    entryRollRange: 0000000001000000
+    attributeRollCount: 8
+  - name: "\u8840\u9AD3\u52CB\u7AE0"
+    id: 5009
+    describe: 
+    level: 5
+    icon:
+      m_AssetGUID: 26ae8156c7838a547926d47921d0e54a
+      m_SubObjectName: "\u8840\u9AD3\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 6
+    entryRollCount: 0
+    entryRollRange: 
+    attributeRollCount: 9
+  - name: "\u8840\u9AD3\u52CB\u7AE0"
+    id: 5010
+    describe: 
+    level: 5
+    icon:
+      m_AssetGUID: 26ae8156c7838a547926d47921d0e54a
+      m_SubObjectName: "\u8840\u9AD3\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 0
+    entryRollCount: 1
+    entryRollRange: 0000000001000000
+    attributeRollCount: 9
+  - name: "\u539F\u9EEF\u52CB\u7AE0"
+    id: 5011
+    describe: 
+    level: 6
+    icon:
+      m_AssetGUID: c83d1c7b85ffbaa49841b39f46e51846
+      m_SubObjectName: "\u539F\u9EEF\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 6
+    entryRollCount: 0
+    entryRollRange: 
+    attributeRollCount: 10
+  - name: "\u539F\u9EEF\u52CB\u7AE0"
+    id: 5012
+    describe: 
+    level: 6
+    icon:
+      m_AssetGUID: c83d1c7b85ffbaa49841b39f46e51846
+      m_SubObjectName: "\u539F\u9EEF\u52CB\u7AE0"
+    iconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    levelType: 0
+    entryRollCount: 1
+    entryRollRange: 0000000001000000
+    attributeRollCount: 10

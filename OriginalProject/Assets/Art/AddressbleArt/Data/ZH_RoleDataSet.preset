@@ -1,0 +1,1044 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ZH_RoleDataSet
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 021a81b7d5079704abf27e6550151b1f,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TipsA
+    value: "\u82E5\u60F3\u589E\u52A0\u89D2\u8272,\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E00\u4E2A\u6BD4\u5F53\u524D\u503C\u66F4\u5927\u7684\u503C,\u59825\u21926"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TipsB
+    value: "\uFF01\uFF01\uFF01\u82E5\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E86\u66F4\u5C0F\u7684\u503C,\u53EF\u80FD\u4F1A\u9020\u6210\u6570\u636E\u4E22\u5931"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TipsC
+    value: "\uFF01\uFF01\uFF01\u9F20\u6807\u653E\u5728\u5B57\u6BB5\u4E0A\u6709\u63D0\u793A"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.size
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].name
+    value: "\u661F\u9645\u6218\u72AF"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].id
+    value: 100001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].describe
+    value: "\u8054\u90A6\u6D41\u653E\u6CD5\u89C419-3\u6761\u201C\u516C\u7136\u8FDD\u53CD\u8054\u90A6\u519B\u4EE4\uFF0C\u88C1\u51B3\u4E3A\u661F\u9645\u6218\u72AF\uFF0C\u5224\u5904\u7EC8\u8EAB\u6D41\u653E\u201D\u6218\u4E89\u4E0D\u5149\u4F1A\u78E8\u7EC3\u82F1\u96C4\uFF0C\u4E5F\u4F1A\u57F9\u517B\u6076\u9B54\uFF0C\u8FD9\u662F\u4E00\u7FA4\u8BAD\u7EC3\u6709\u7D20\u7684\u201C\u5371\u9669\u54C1\u201D\u5BF9\u4E8E\u5982\u4F55\u5904\u7406\u8FC7\u671F\u5371\u9669\u54C1\uFF0C\u90A3\u4E9B\u8054\u90A6\u8D35\u65CF\u5411\u6765\u5F88\u6709\u529E\u6CD5\u3002"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].RoleHaveSkill.Array.size
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].RoleHaveSkill.Array.data[0]
+    value: 5001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].RoleHaveSkill.Array.data[1]
+    value: 5002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].RoleHaveSkill.Array.data[2]
+    value: 5003
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].RoleHaveSkill.Array.data[3]
+    value: 5004
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].RoleHaveSkill.Array.data[4]
+    value: 5005
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].RoleHaveSkill.Array.data[5]
+    value: 5006
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].RoleHaveSkill.Array.data[6]
+    value: 5007
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleMode.m_AssetGUID
+    value: 82d5794c68d270844ba1e0c2d1c48ce3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.hp
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.defence
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.minAtk
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.maxAtk
+    value: 16
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.dodge
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.crits
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.rate
+    value: 0.8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.speed
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.bleed
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.poison
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.debuff
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.vertigo
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.position
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].roleLife.death
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].Icon.m_AssetGUID
+    value: 14aa3aa1db8bb4a8d85264344e513b53
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[0].Icon.m_SubObjectName
+    value: role_1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].name
+    value: "\u884C\u661F\u52AB\u532A"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].id
+    value: 100002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].describe
+    value: "\u89C5\u98DF\u624D\u662F\u4EBA\u7C7B\u7684\u5929\u6027\uFF0C\u832B\u832B\u661F\u7A7A\u7686\u662F\u6211\u201C\u89C5\u98DF\u201D\u7684\u5BF9\u8C61"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].RoleHaveSkill.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].RoleHaveSkill.Array.data[0]
+    value: 5001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].RoleHaveSkill.Array.data[1]
+    value: 5002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleMode.m_AssetGUID
+    value: 82d5794c68d270844ba1e0c2d1c48ce3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.hp
+    value: 40
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.defence
+    value: 0.15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.minAtk
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.maxAtk
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.dodge
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.crits
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.rate
+    value: 0.9
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.speed
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.bleed
+    value: 0.18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.poison
+    value: 0.18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.debuff
+    value: 0.18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.vertigo
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.position
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].roleLife.death
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].vocation
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].Icon.m_AssetGUID
+    value: 6343f598d3189499686cffcf87d25cba
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[1].Icon.m_SubObjectName
+    value: role_2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].name
+    value: "\u96C7\u4F63\u6740\u624B"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].id
+    value: 100003
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].describe
+    value: "\u8054\u90A6\u6D41\u653E\u6CD5\u89C41-5\u6761\r\n\u201C\u72AF\u6545\u610F\u6740\u4EBA\u7F6A\uFF0C\u5224\u5904\u7EC8\u8EAB\u6D41\u653E\u201D\r\n\r\n\u4EC0\u4E48\u4EBA\u90FD\u662F\u6709\u4E00\u4E2A\u4EF7\u683C\u7684\uFF0C\u5305\u62EC\u6211\u5728\u5185\r\n\u522B\u628A\u751F\u547D\u770B\u5F97\u592A\u9AD8\u8D35\uFF0C\u4E5F\u522B\u592A\u8F7B\u89C6\u5B83\r\n\u636E\u8BF4\uFF0C\u4ED6\u4F1A\u4E0D\u62E9\u624B\u6BB5\u7684\u8FBE\u6210\u76EE\u7684\uFF0C\u751A\u81F3\u662F\u4E0B\u6BD2"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].RoleHaveSkill.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].RoleHaveSkill.Array.data[0]
+    value: 5001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].RoleHaveSkill.Array.data[1]
+    value: 5002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleMode.m_AssetGUID
+    value: 82d5794c68d270844ba1e0c2d1c48ce3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.hp
+    value: 25
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.defence
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.minAtk
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.maxAtk
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.dodge
+    value: 0.15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.crits
+    value: 0.15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.rate
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.speed
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.bleed
+    value: 0.25
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.poison
+    value: 0.25
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.debuff
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.vertigo
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.position
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].roleLife.death
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].vocation
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].Icon.m_AssetGUID
+    value: f67885b445bc84c8db01040fb4a2e47e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[2].Icon.m_SubObjectName
+    value: role_3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].name
+    value: "\u90AA\u6076\u53D1\u660E\u5BB6"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].id
+    value: 100004
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].describe
+    value: "\u201C\u90A3\u4E9B\u8822\u8D27\u7684\u8001\u5E08...\u90A3\u4E9B\u8822\u8D27\u7684\u5B98\u5458...\u90A3\u4E9B\u4E0D\u7406\u89E3\u6211\u7684\u8822\u8D27\u4EEC...\u201D"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].RoleHaveSkill.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].RoleHaveSkill.Array.data[0]
+    value: 5001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].RoleHaveSkill.Array.data[1]
+    value: 5002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleMode.m_AssetGUID
+    value: 82d5794c68d270844ba1e0c2d1c48ce3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.hp
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.defence
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.minAtk
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.maxAtk
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.dodge
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.crits
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.rate
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.speed
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.bleed
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.poison
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.debuff
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.vertigo
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.position
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].roleLife.death
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].vocation
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].Icon.m_AssetGUID
+    value: 3a36812c68cfd4fdd9d15d1958cb0445
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[3].Icon.m_SubObjectName
+    value: role_4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].name
+    value: "\u4EA1\u547D\u8D4C\u5F92"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].id
+    value: 100005
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].describe
+    value: "\u636E\u8BF4\u4ED6\u6709\u81EA\u5DF1\u7684\u5E95\u7EBF\uFF0C\u4E5F\u56E0\u4E3A\u90A3\u4E2A\u5E95\u7EBF\u800C\u88AB\u6D41\u653E\r\n\u53EF\u7B11\u7684\u662F\uFF0C\u4E3A\u4E86\u5B88\u62A4\u81EA\u5DF1\u7684\u5E95\u7EBF\uFF0C\u4ED6\u7684\u529E\u6CD5\u662F\u7528\u6212\u6BD2/\u8D4C\u6765\u6FC0\u53D1\u81EA\u5DF1\u7684\u6212\u65AD\u53CD\u5E94\r\n\r\n\u201C\u5728\u8FD9\u7247\u661F\u7A7A\u7262\u7B3C\u4E2D\uFF0C\u8FD8\u6709\u4EC0\u4E48\u6BD4\u8D4C\u535A\u548C\u6BD2\u54C1\u66F4\u80FD\u8BA9\u4EBA\u5F00\u6000\u5927\u7B11\u5462\uFF1F!!\u201D"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].RoleHaveSkill.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].RoleHaveSkill.Array.data[0]
+    value: 5001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].RoleHaveSkill.Array.data[1]
+    value: 5002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleMode.m_AssetGUID
+    value: 82d5794c68d270844ba1e0c2d1c48ce3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.hp
+    value: 30
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.defence
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.minAtk
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.maxAtk
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.dodge
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.crits
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.rate
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.speed
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.bleed
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.poison
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.debuff
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.vertigo
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.position
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].roleLife.death
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].vocation
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].Icon.m_AssetGUID
+    value: 6c5d76651ae3f4530a73f9b85ee061ee
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[4].Icon.m_SubObjectName
+    value: role_5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].name
+    value: "\u53CC\u9762\u95F4\u8C0D"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].id
+    value: 100006
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].describe
+    value: "\u636E\u8BF4\u4ED6\u6709\u81EA\u5DF1\u7684\u5E95\u7EBF\uFF0C\u4E5F\u56E0\u4E3A\u90A3\u4E2A\u5E95\u7EBF\u800C\u88AB\u6D41\u653E\r\n\u53EF\u7B11\u7684\u662F\uFF0C\u4E3A\u4E86\u5B88\u62A4\u81EA\u5DF1\u7684\u5E95\u7EBF\uFF0C\u4ED6\u7684\u529E\u6CD5\u662F\u7528\u6212\u6BD2/\u8D4C\u6765\u6FC0\u53D1\u81EA\u5DF1\u7684\u6212\u65AD\u53CD\u5E94\r\n\r\n\u201C\u5728\u8FD9\u7247\u661F\u7A7A\u7262\u7B3C\u4E2D\uFF0C\u8FD8\u6709\u4EC0\u4E48\u6BD4\u8D4C\u535A\u548C\u6BD2\u54C1\u66F4\u80FD\u8BA9\u4EBA\u5F00\u6000\u5927\u7B11\u5462\uFF1F!!\u201D"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].RoleHaveSkill.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].RoleHaveSkill.Array.data[0]
+    value: 5001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].RoleHaveSkill.Array.data[1]
+    value: 5002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleMode.m_AssetGUID
+    value: 82d5794c68d270844ba1e0c2d1c48ce3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.hp
+    value: 30
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.defence
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.minAtk
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.maxAtk
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.dodge
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.crits
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.rate
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.speed
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.bleed
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.poison
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.debuff
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.vertigo
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.position
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].roleLife.death
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].vocation
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].Icon.m_AssetGUID
+    value: 6c5d76651ae3f4530a73f9b85ee061ee
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[5].Icon.m_SubObjectName
+    value: role_5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].name
+    value: "\u795E\u79D8\u5B66\u8005"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].id
+    value: 100006
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].describe
+    value: "\u8054\u90A6\u6D41\u653E\u6CD5\u89C433-4\u6761\r\n\u201C\u4F20\u64AD\u5B97\u6559\uFF0C\u5224\u5904\u7EC8\u8EAB\u6D41\u653E\u201D\r\n\u661F\u9645\u4E2D\u7684\u6E38\u5386\u5B66\u8005\uFF0C\u5076\u7136\u63A5\u89E6\u4E86\u9057\u8FF9\u4E2D\u53E4\u4EE3\u7684\u795E\u5B66\u6559\u4E49\r\n\u4ED6\u4EEC\u81EA\u79F0\u662F\u795E\u5728\u4EBA\u95F4\u7684\u4F7F\u5F92\uFF0C\u8FFD\u968F\u8005\u5DF2\u904D\u5E03\u8054\u90A6\u661F\u57DF"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].RoleHaveSkill.Array.size
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].RoleHaveSkill.Array.data[0]
+    value: 5101
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].RoleHaveSkill.Array.data[1]
+    value: 5102
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].RoleHaveSkill.Array.data[2]
+    value: 5103
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].RoleHaveSkill.Array.data[3]
+    value: 5104
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].RoleHaveSkill.Array.data[4]
+    value: 5105
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].RoleHaveSkill.Array.data[5]
+    value: 5106
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].RoleHaveSkill.Array.data[6]
+    value: 5107
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleMode.m_AssetGUID
+    value: 82d5794c68d270844ba1e0c2d1c48ce3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.hp
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.defence
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.minAtk
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.maxAtk
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.dodge
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.crits
+    value: 0.04
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.rate
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.speed
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.bleed
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.poison
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.debuff
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.vertigo
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.position
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].roleLife.death
+    value: 0.35
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].vocation
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].Icon.m_AssetGUID
+    value: 274338d0da45d450ebcd1e29b8ea3499
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: heroData.Array.data[6].Icon.m_SubObjectName
+    value: role_7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].name
+    value: "\u6559\u4F17"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].id
+    value: 900001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].describe
+    value: "\u5C0F\u602A"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleType
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].RoleHaveSkill.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].RoleHaveSkill.Array.data[0]
+    value: 6001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].RoleHaveSkill.Array.data[1]
+    value: 6002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleMode.m_AssetGUID
+    value: 1dae5f285bfb11e4086ecf1170f18853
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.hp
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.defence
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.minAtk
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.maxAtk
+    value: 6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.dodge
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.crits
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.rate
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.speed
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.bleed
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.poison
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.debuff
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.vertigo
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.position
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].roleLife.death
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[0].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].name
+    value: "\u9884\u8A00"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].id
+    value: 900002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].describe
+    value: "\u5C0F\u602A"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleType
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].RoleHaveSkill.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].RoleHaveSkill.Array.data[0]
+    value: 6001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].RoleHaveSkill.Array.data[1]
+    value: 6002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleMode.m_AssetGUID
+    value: bfb2335d7d9db8743b3f372896a64a92
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleMode.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.hp
+    value: 40
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.defence
+    value: 0.15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.minAtk
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.maxAtk
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.atkRatio
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.dodge
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.crits
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.rate
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.speed
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.bleed
+    value: 0.18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.poison
+    value: 0.18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.debuff
+    value: 0.18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.vertigo
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.position
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].roleLife.death
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enemyData.Array.data[1].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []

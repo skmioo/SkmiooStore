@@ -1,0 +1,20 @@
+
+04.png
+size: 317,229
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+QIANG01
+  rotate: false
+  xy: 195, 16
+  size: 120, 211
+  orig: 131, 222
+  offset: 6, 6
+  index: -1
+QIANGYING
+  rotate: true
+  xy: 2, 2
+  size: 225, 191
+  orig: 231, 195
+  offset: 2, 2
+  index: -1

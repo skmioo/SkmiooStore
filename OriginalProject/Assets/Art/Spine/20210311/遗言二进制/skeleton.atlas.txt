@@ -1,0 +1,97 @@
+
+skeleton.png
+size: 858,196
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+遗言-拆分_0000_头
+  rotate: false
+  xy: 792, 113
+  size: 64, 81
+  orig: 450, 450
+  offset: 174, 368
+  index: -1
+遗言-拆分_0001_左肩甲
+  rotate: false
+  xy: 508, 4
+  size: 84, 75
+  orig: 450, 450
+  offset: 277, 312
+  index: -1
+遗言-拆分_0002_左手
+  rotate: true
+  xy: 595, 83
+  size: 111, 82
+  orig: 450, 450
+  offset: 248, 195
+  index: -1
+遗言-拆分_0003_左大臂
+  rotate: false
+  xy: 417, 60
+  size: 86, 134
+  orig: 450, 450
+  offset: 279, 234
+  index: -1
+遗言-拆分_0004_武器
+  rotate: false
+  xy: 594, 5
+  size: 257, 74
+  orig: 450, 450
+  offset: 94, 163
+  index: -1
+遗言-拆分_0005_腰带
+  rotate: true
+  xy: 505, 81
+  size: 113, 88
+  orig: 450, 450
+  offset: 178, 178
+  index: -1
+遗言-拆分_0006_左下甲
+  rotate: false
+  xy: 741, 100
+  size: 49, 94
+  orig: 450, 450
+  offset: 286, 126
+  index: -1
+遗言-拆分_0007_右下甲
+  rotate: true
+  xy: 792, 89
+  size: 22, 64
+  orig: 450, 450
+  offset: 158, 138
+  index: -1
+遗言-拆分_0008_左脚
+  rotate: true
+  xy: 481, 7
+  size: 51, 25
+  orig: 450, 450
+  offset: 285, 0
+  index: -1
+遗言-拆分_0009_右脚
+  rotate: true
+  xy: 417, 3
+  size: 55, 27
+  orig: 450, 450
+  offset: 138, 1
+  index: -1
+遗言-拆分_0010_身体
+  rotate: true
+  xy: 2, 2
+  size: 192, 413
+  orig: 450, 450
+  offset: 149, 5
+  index: -1
+遗言-拆分_0011_右手
+  rotate: false
+  xy: 679, 85
+  size: 60, 109
+  orig: 450, 450
+  offset: 136, 203
+  index: -1
+遗言-拆分_0012_右肩甲
+  rotate: false
+  xy: 446, 4
+  size: 33, 54
+  orig: 450, 450
+  offset: 155, 305
+  index: -1

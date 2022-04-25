@@ -1,0 +1,20 @@
+
+fkjt.png
+size: 1016,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: false
+  xy: 2, 2
+  size: 241, 114
+  orig: 241, 114
+  offset: 0, 0
+  index: -1
+body_1
+  rotate: false
+  xy: 2, 118
+  size: 752, 896
+  orig: 752, 896
+  offset: 0, 0
+  index: -1

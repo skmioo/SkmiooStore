@@ -1,0 +1,111 @@
+
+feiyingguanmu.png
+size: 618,530
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+yinying
+  rotate: false
+  xy: 358, 250
+  size: 237, 35
+  orig: 242, 35
+  offset: 2, 0
+  index: -1
+飞蝇灌木-拆分_0000_耳左
+  rotate: false
+  xy: 2, 209
+  size: 259, 67
+  orig: 450, 450
+  offset: 168, 314
+  index: -1
+飞蝇灌木-拆分_0001_头
+  rotate: false
+  xy: 358, 287
+  size: 150, 129
+  orig: 450, 450
+  offset: 34, 245
+  index: -1
+飞蝇灌木-拆分_0002_耳右
+  rotate: false
+  xy: 105, 2
+  size: 182, 75
+  orig: 450, 450
+  offset: 159, 344
+  index: -1
+飞蝇灌木-拆分_0003_脖子
+  rotate: false
+  xy: 515, 150
+  size: 98, 98
+  orig: 450, 450
+  offset: 148, 220
+  index: -1
+飞蝇灌木-拆分_0004_叶子1-
+  rotate: false
+  xy: 2, 19
+  size: 101, 188
+  orig: 450, 450
+  offset: 109, 83
+  index: -1
+飞蝇灌木-拆分_0005_叶子2
+  rotate: true
+  xy: 402, 52
+  size: 117, 95
+  orig: 450, 450
+  offset: 132, 142
+  index: -1
+飞蝇灌木-拆分_0006_叶子3-
+  rotate: false
+  xy: 356, 171
+  size: 157, 77
+  orig: 450, 450
+  offset: 217, 239
+  index: -1
+飞蝇灌木-拆分_0007_叶子4
+  rotate: false
+  xy: 358, 418
+  size: 197, 110
+  orig: 450, 450
+  offset: 221, 144
+  index: -1
+飞蝇灌木-拆分_0008_叶子5
+  rotate: false
+  xy: 105, 79
+  size: 150, 128
+  orig: 450, 450
+  offset: 163, 79
+  index: -1
+飞蝇灌木-拆分_0009_叶子6
+  rotate: false
+  xy: 499, 10
+  size: 116, 138
+  orig: 450, 450
+  offset: 33, 96
+  index: -1
+飞蝇灌木-拆分_0010_右腿2
+  rotate: false
+  xy: 289, 13
+  size: 111, 156
+  orig: 450, 450
+  offset: 98, 0
+  index: -1
+飞蝇灌木-拆分_0011_右腿1
+  rotate: false
+  xy: 510, 287
+  size: 106, 129
+  orig: 450, 450
+  offset: 78, 33
+  index: -1
+飞蝇灌木-拆分_0012_左腿1
+  rotate: true
+  xy: 263, 193
+  size: 83, 91
+  orig: 450, 450
+  offset: 291, 39
+  index: -1
+飞蝇灌木-拆分_0013_左腿2
+  rotate: false
+  xy: 2, 278
+  size: 354, 250
+  orig: 450, 450
+  offset: 22, 22
+  index: -1

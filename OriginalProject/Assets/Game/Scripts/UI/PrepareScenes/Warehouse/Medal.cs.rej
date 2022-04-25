@@ -1,0 +1,10 @@
+diff a/darkest/Assets/Game/Scripts/UI/PrepareScenes/Warehouse/Medal.cs b/darkest/Assets/Game/Scripts/UI/PrepareScenes/Warehouse/Medal.cs	(rejected hunks)
+@@ -72,7 +72,7 @@
+                 ObjData objData = objDataDict[id];
+                 GameObject go = Instantiate(objItem, medalBoxs[i]);
+                 obj = go.GetComponent<ObjItem>();
+-                obj.InitItem(objData, modeData.MedalModes[i].count,medalBoxs[i]);
++                obj.InitItem(objData, modeData.MedalModes[i].count, medalBoxs[i]);
+ 
+                 ItemListener(go);
+             }

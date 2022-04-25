@@ -1,0 +1,55 @@
+
+xianxuemuyu.png
+size: 749,144
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+xue03
+  rotate: false
+  xy: 643, 48
+  size: 104, 94
+  orig: 104, 96
+  offset: 0, 0
+  index: -1
+xue04
+  rotate: true
+  xy: 636, 7
+  size: 39, 52
+  orig: 43, 57
+  offset: 2, 2
+  index: -1
+xue05
+  rotate: false
+  xy: 490, 77
+  size: 151, 65
+  orig: 156, 69
+  offset: 2, 2
+  index: -1
+xue2
+  rotate: false
+  xy: 490, 5
+  size: 87, 70
+  orig: 92, 74
+  offset: 3, 2
+  index: -1
+xue3
+  rotate: false
+  xy: 579, 30
+  size: 55, 45
+  orig: 60, 49
+  offset: 3, 2
+  index: -1
+xueshanggou
+  rotate: true
+  xy: 291, 2
+  size: 140, 197
+  orig: 152, 207
+  offset: 10, 9
+  index: -1
+xuexiagou
+  rotate: false
+  xy: 2, 12
+  size: 287, 130
+  orig: 292, 136
+  offset: 3, 3
+  index: -1

@@ -1,0 +1,41 @@
+
+dongwu.png
+size: 288,538
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: false
+  xy: 2, 325
+  size: 254, 211
+  orig: 256, 216
+  offset: 1, 1
+  index: -1
+body_1
+  rotate: false
+  xy: 2, 139
+  size: 194, 184
+  orig: 200, 187
+  offset: 6, 2
+  index: -1
+body_2
+  rotate: true
+  xy: 2, 2
+  size: 135, 196
+  orig: 135, 197
+  offset: 0, 0
+  index: -1
+body_3
+  rotate: true
+  xy: 198, 164
+  size: 159, 71
+  orig: 159, 71
+  offset: 0, 0
+  index: -1
+body_4
+  rotate: true
+  xy: 200, 52
+  size: 110, 86
+  orig: 110, 86
+  offset: 0, 0
+  index: -1

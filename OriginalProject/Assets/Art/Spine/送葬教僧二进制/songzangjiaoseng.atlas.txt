@@ -1,0 +1,104 @@
+
+songzangjiaoseng.png
+size: 975,526
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dayi
+  rotate: true
+  xy: 2, 6
+  size: 194, 318
+  orig: 550, 550
+  offset: 185, 156
+  index: -1
+shangshen
+  rotate: false
+  xy: 322, 6
+  size: 110, 194
+  orig: 550, 550
+  offset: 206, 292
+  index: -1
+shidai
+  rotate: false
+  xy: 2, 202
+  size: 460, 322
+  orig: 550, 550
+  offset: 75, 223
+  index: -1
+tou
+  rotate: false
+  xy: 517, 84
+  size: 136, 134
+  orig: 550, 550
+  offset: 185, 412
+  index: -1
+xiashen
+  rotate: false
+  xy: 783, 264
+  size: 153, 260
+  orig: 550, 550
+  offset: 221, 63
+  index: -1
+yinying
+  rotate: true
+  xy: 938, 287
+  size: 237, 35
+  orig: 242, 35
+  offset: 2, 0
+  index: -1
+youbi
+  rotate: true
+  xy: 517, 17
+  size: 65, 128
+  orig: 550, 550
+  offset: 188, 311
+  index: -1
+youdatui
+  rotate: false
+  xy: 434, 32
+  size: 81, 168
+  orig: 550, 550
+  offset: 209, 137
+  index: -1
+youjiao
+  rotate: true
+  xy: 743, 2
+  size: 94, 98
+  orig: 550, 550
+  offset: 160, 7
+  index: -1
+youshou
+  rotate: false
+  xy: 464, 220
+  size: 317, 304
+  orig: 550, 550
+  offset: 49, 66
+  index: -1
+youxiaotui
+  rotate: false
+  xy: 655, 79
+  size: 86, 139
+  orig: 550, 550
+  offset: 187, 88
+  index: -1
+zuodabi
+  rotate: true
+  xy: 743, 98
+  size: 99, 119
+  orig: 550, 550
+  offset: 288, 346
+  index: -1
+zuojiao
+  rotate: false
+  xy: 864, 91
+  size: 81, 106
+  orig: 550, 550
+  offset: 312, 5
+  index: -1
+zuoshou
+  rotate: true
+  xy: 783, 199
+  size: 63, 144
+  orig: 550, 550
+  offset: 336, 233
+  index: -1

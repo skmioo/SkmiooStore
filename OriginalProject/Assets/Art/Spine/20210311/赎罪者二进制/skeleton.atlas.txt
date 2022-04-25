@@ -1,0 +1,125 @@
+
+skeleton.png
+size: 285,642
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+赎罪者-拆分_0000_面部
+  rotate: false
+  xy: 244, 568
+  size: 38, 72
+  orig: 450, 450
+  offset: 180, 363
+  index: -1
+赎罪者-拆分_0001_左大臂
+  rotate: false
+  xy: 225, 11
+  size: 58, 83
+  orig: 450, 450
+  offset: 265, 274
+  index: -1
+赎罪者-拆分_0002_左小臂
+  rotate: true
+  xy: 150, 267
+  size: 64, 132
+  orig: 450, 450
+  offset: 281, 181
+  index: -1
+赎罪者-拆分_0003_右斗篷
+  rotate: true
+  xy: 2, 441
+  size: 76, 227
+  orig: 450, 450
+  offset: 130, 96
+  index: -1
+赎罪者-拆分_0004_右小臂
+  rotate: true
+  xy: 2, 200
+  size: 102, 119
+  orig: 450, 450
+  offset: 90, 203
+  index: -1
+赎罪者-拆分_0005_右大臂
+  rotate: false
+  xy: 241, 210
+  size: 35, 55
+  orig: 450, 450
+  offset: 163, 267
+  index: -1
+赎罪者-拆分_0006_左斗篷
+  rotate: true
+  xy: 2, 519
+  size: 121, 240
+  orig: 450, 450
+  offset: 220, 96
+  index: -1
+赎罪者-拆分_0007_斗篷
+  rotate: true
+  xy: 2, 304
+  size: 135, 146
+  orig: 450, 450
+  offset: 165, 302
+  index: -1
+赎罪者-拆分_0008_气罐
+  rotate: true
+  xy: 2, 93
+  size: 105, 112
+  orig: 450, 450
+  offset: 243, 333
+  index: -1
+赎罪者-拆分_0009_腰带
+  rotate: false
+  xy: 231, 355
+  size: 49, 157
+  orig: 450, 450
+  offset: 199, 91
+  index: -1
+赎罪者-拆分_0010_下身
+  rotate: true
+  xy: 2, 2
+  size: 89, 106
+  orig: 450, 450
+  offset: 189, 131
+  index: -1
+赎罪者-拆分_0011_上身
+  rotate: false
+  xy: 228, 96
+  size: 54, 84
+  orig: 450, 450
+  offset: 195, 244
+  index: -1
+赎罪者-拆分_0012_右腿
+  rotate: true
+  xy: 116, 103
+  size: 77, 110
+  orig: 450, 450
+  offset: 140, 87
+  index: -1
+赎罪者-拆分_0013_右脚
+  rotate: true
+  xy: 116, 48
+  size: 53, 107
+  orig: 450, 450
+  offset: 125, 17
+  index: -1
+赎罪者-拆分_0014_左大腿
+  rotate: false
+  xy: 150, 333
+  size: 79, 106
+  orig: 450, 450
+  offset: 238, 82
+  index: -1
+赎罪者-拆分_0015_左脚
+  rotate: true
+  xy: 123, 182
+  size: 83, 116
+  orig: 450, 450
+  offset: 276, 1
+  index: -1
+赎罪者-拆分_0016_后斗篷
+  rotate: false
+  xy: 244, 514
+  size: 36, 52
+  orig: 450, 450
+  offset: 185, 103
+  index: -1

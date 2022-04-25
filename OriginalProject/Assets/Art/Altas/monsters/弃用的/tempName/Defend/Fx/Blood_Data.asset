@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a64e5b0e436d4bed9780211ae245f7b, type: 3}
+  m_Name: Blood_Data
+  m_EditorClassIdentifier: 
+  dataName: Blood
+  dragonBonesJSON: {fileID: 4900000, guid: 485e078d206805a45b468d7fa08ed82c, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: d3f11996ab125a14ca6099fcb096baa3, type: 3}
+    texture: {fileID: 2800000, guid: 7ed0c8a29b771894e9fa9d2c44598c54, type: 3}
+    material: {fileID: 2100000, guid: 4ba9ca1556d1d3a499ee3172c13a9d2c, type: 2}
+    uiMaterial: {fileID: 0}

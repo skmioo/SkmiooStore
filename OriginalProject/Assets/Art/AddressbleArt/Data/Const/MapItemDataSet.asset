@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49339834a6a82c418f0d36406ecc461, type: 3}
+  m_Name: MapItemDataSet
+  m_EditorClassIdentifier: 
+  roomData:
+  - name: "\u8611\u83C7\u623F\u95F4\u8D77\u70B9"
+    id: 99909002
+    describe: "\u8611\u83C7\u623F\u95F4\u8D77\u70B9"
+    roomModel:
+      m_AssetGUID: 19f9678bc0073dd4690098b85061d036
+      m_SubObjectName: 
+    roomType: 2
+  - name: "\u8611\u83C7\u623F\u95F41"
+    id: 99909001
+    describe: "\u8611\u83C7\u623F\u95F41"
+    roomModel:
+      m_AssetGUID: 594f876d62760bf49ae14dec1037b2dc
+      m_SubObjectName: 
+    roomType: 2
+  - name: "\u8611\u83C7\u623F\u95F42"
+    id: 99909003
+    describe: "\u8611\u83C7\u623F\u95F42"
+    roomModel:
+      m_AssetGUID: 90dcf89996922534689a19ef3360ecf6
+      m_SubObjectName: 
+    roomType: 2
+  routeData:
+  - name: "\u8611\u83C7\u9053\u8DEF0"
+    id: 99901001
+    describe: "\u8611\u83C7\u9053\u8DEF0"
+    roomModel:
+      m_AssetGUID: 346bf2aa6f2c6fc4e992b4cde6e4afba
+      m_SubObjectName: 
+    routeType: 2
+  - name: "\u8611\u83C7\u9053\u8DEF1"
+    id: 99901002
+    describe: "\u8611\u83C7\u9053\u8DEF0"
+    roomModel:
+      m_AssetGUID: 9c6f53f8a03825942953b57123187a69
+      m_SubObjectName: 
+    routeType: 2
+  - name: "\u8611\u83C7\u9053\u8DEF2"
+    id: 99901003
+    describe: "\u8611\u83C7\u9053\u8DEF2"
+    roomModel:
+      m_AssetGUID: 26191c196cf14894ab017f70595c5694
+      m_SubObjectName: 
+    routeType: 2
+  - name: "\u8611\u83C7\u9053\u8DEF3"
+    id: 99901004
+    describe: "\u8611\u83C7\u9053\u8DEF4"
+    roomModel:
+      m_AssetGUID: 72e97730a49e7bf499de1d462f4a9352
+      m_SubObjectName: 
+    routeType: 2
+  - name: "\u8611\u83C7\u9053\u8DEF4"
+    id: 99901005
+    describe: "\u8611\u83C7\u9053\u8DEF4"
+    roomModel:
+      m_AssetGUID: c447ebe4a58eb824284ea28830681391
+      m_SubObjectName: 
+    routeType: 2
+  - name: "\u8611\u83C7\u9053\u8DEF5"
+    id: 99901006
+    describe: "\u8611\u83C7\u9053\u8DEF4"
+    roomModel:
+      m_AssetGUID: 5f2f3d4a04177fa49815acb9d0ccc7b5
+      m_SubObjectName: 
+    routeType: 2

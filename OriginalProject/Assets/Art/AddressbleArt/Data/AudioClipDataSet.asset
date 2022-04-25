@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6784cec82da497e4b928cf1feb549738, type: 3}
+  m_Name: AudioClipDataSet
+  m_EditorClassIdentifier: 
+  TipsA: "\u97F3\u6548\u6570\u636E\u7C7B"
+  TipsB: "\u82E5\u60F3\u589E\u52A0\u89D2\u8272,\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E00\u4E2A\u6BD4\u5F53\u524D\u503C\u66F4\u5927\u7684\u503C,\u59825\u21926"
+  TipsC: "\uFF01\uFF01\uFF01\u82E5\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E86\u66F4\u5C0F\u7684\u503C,\u53EF\u80FD\u4F1A\u9020\u6210\u6570\u636E\u4E22\u5931"
+  TipsD: "\uFF01\uFF01\uFF01\u9F20\u6807\u653E\u5728\u5B57\u6BB5\u4E0A\u6709\u63D0\u793A"
+  audioClipDatas: []

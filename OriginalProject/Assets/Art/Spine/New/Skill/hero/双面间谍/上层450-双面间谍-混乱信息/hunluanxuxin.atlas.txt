@@ -1,0 +1,27 @@
+
+hunluanxuxin.png
+size: 311,81
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+niu0
+  rotate: true
+  xy: 2, 7
+  size: 72, 106
+  orig: 674, 551
+  offset: 499, 327
+  index: -1
+niu02
+  rotate: true
+  xy: 110, 2
+  size: 77, 97
+  orig: 674, 551
+  offset: 404, 278
+  index: -1
+niu03
+  rotate: true
+  xy: 209, 2
+  size: 77, 100
+  orig: 674, 551
+  offset: 567, 285
+  index: -1

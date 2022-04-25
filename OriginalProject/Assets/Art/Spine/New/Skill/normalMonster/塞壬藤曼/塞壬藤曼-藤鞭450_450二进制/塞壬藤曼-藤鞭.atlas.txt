@@ -1,0 +1,13 @@
+
+塞壬藤曼-藤鞭.png
+size: 342,279
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_1
+  rotate: false
+  xy: 2, 2
+  size: 338, 275
+  orig: 338, 275
+  offset: 0, 0
+  index: -1

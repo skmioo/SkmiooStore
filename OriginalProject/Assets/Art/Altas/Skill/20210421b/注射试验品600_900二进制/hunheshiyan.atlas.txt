@@ -1,0 +1,13 @@
+
+hunheshiyan.png
+size: 226,117
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+zhushe
+  rotate: false
+  xy: 2, 2
+  size: 222, 113
+  orig: 660, 450
+  offset: 395, 203
+  index: -1

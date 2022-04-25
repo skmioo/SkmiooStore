@@ -1,0 +1,61 @@
+﻿[
+  {
+    "id": 2001,
+    "name": "刃鳞",
+    "describe": "小怪",
+    "roleType": "Enemy",
+    "vocation": "小怪",
+    "ownedSkill": [
+      7001,
+      7000
+    ],
+    "animatorPath": "monsters/噬矿虫/噬矿虫_idle",
+    "roleLife": {
+      "hp": 50,
+      "defence": 20,
+      "minAtk": 8,
+      "maxAtk": 16,
+      "atkRatio": 0,
+      "dodge": 0,
+      "crits": 5,
+      "rate": 0,
+      "speed": 7,
+      "bleed": 20,
+      "poison": 20,
+      "debuff": 20,
+      "vertigo": 30,
+      "position": 30,
+      "death": 20
+    }
+  },
+  {
+    "id": 2002,
+    "name": "虫子",
+    "describe": "小怪",
+    "roleType": "Enemy",
+    "vocation": "小怪",
+    "ownedSkill": [
+      7001,
+      7000
+    ],
+    "animatorPath": "monsters/鳞甲兽/鳞甲兽_idle",
+    "roleLife": {
+      "hp": 40,
+      "defence": 15,
+      "minAtk": 4,
+      "maxAtk": 8,
+      "atkRatio": 0,
+      "dodge": 10,
+      "crits": 10,
+      "rate": 0,
+      "speed": 1,
+      "bleed": 18,
+      "poison": 18,
+      "debuff": 18,
+      "vertigo": 20,
+      "position": 20,
+      "death": 10
+    }
+
+  }
+]

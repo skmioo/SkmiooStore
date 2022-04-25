@@ -1,0 +1,48 @@
+
+沼地猎手-缠绕.png
+size: 295,307
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_1
+  rotate: true
+  xy: 188, 9
+  size: 112, 94
+  orig: 112, 94
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: false
+  xy: 126, 123
+  size: 80, 182
+  orig: 80, 182
+  offset: 0, 0
+  index: -1
+body_3
+  rotate: true
+  xy: 2, 2
+  size: 94, 184
+  orig: 94, 184
+  offset: 0, 0
+  index: -1
+body_4
+  rotate: true
+  xy: 208, 196
+  size: 109, 85
+  orig: 109, 85
+  offset: 0, 0
+  index: -1
+body_5
+  rotate: true
+  xy: 208, 133
+  size: 61, 76
+  orig: 61, 76
+  offset: 0, 0
+  index: -1
+body_6
+  rotate: false
+  xy: 2, 98
+  size: 122, 207
+  orig: 122, 207
+  offset: 0, 0
+  index: -1

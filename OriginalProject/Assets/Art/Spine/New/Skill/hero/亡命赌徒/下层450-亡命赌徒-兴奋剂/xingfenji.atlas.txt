@@ -1,0 +1,20 @@
+
+xingfenji.png
+size: 714,308
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_1
+  rotate: true
+  xy: 472, 6
+  size: 300, 240
+  orig: 300, 240
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: true
+  xy: 2, 2
+  size: 304, 468
+  orig: 307, 468
+  offset: 3, 0
+  index: -1

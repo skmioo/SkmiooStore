@@ -1,0 +1,20 @@
+
+010.png
+size: 161,168
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JINENG
+  rotate: false
+  xy: 2, 67
+  size: 157, 99
+  orig: 450, 450
+  offset: 267, 229
+  index: -1
+WUQI
+  rotate: false
+  xy: 2, 2
+  size: 122, 63
+  orig: 450, 450
+  offset: 308, 252
+  index: -1

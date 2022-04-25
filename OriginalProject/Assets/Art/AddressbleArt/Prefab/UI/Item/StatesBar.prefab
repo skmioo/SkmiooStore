@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4936017966501479734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7708747508026385044}
+  - component: {fileID: 2462456159471434199}
+  - component: {fileID: 4766944560801618949}
+  - component: {fileID: 2786433679672715771}
+  - component: {fileID: 270521628729444030}
+  m_Layer: 8
+  m_Name: StatesBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7708747508026385044
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936017966501479734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.71, y: 1.99}
+  m_SizeDelta: {x: 1.999259, y: 1.044658}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2462456159471434199
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936017966501479734}
+  m_CullTransparentMesh: 0
+--- !u!114 &4766944560801618949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936017966501479734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0c0652fd654976c4f8ead9d908bda30e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2786433679672715771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936017966501479734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee5efb10a431e64090805b2771cd312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statesIcons: {fileID: 270521628729444030}
+  waitTime: 1
+--- !u!114 &270521628729444030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936017966501479734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d10bf0c6c91da094db00fd43a67d47dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  group: "\u72B6\u6001\u56FE\u6807"
+  keys:
+  - "\u66B4\u51FB"
+  - "\u5272\u793C"
+  - "\u4E2D\u6BD2"
+  - "\u6D41\u8840"
+  - "\u6301\u7EED\u6CBB\u7597"
+  - "\u4EBA\u5FC3\u60F6\u60F6"
+  - "\u5D29\u6E83"
+  - "\u5145\u5206\u51C6\u5907"
+  - "\u51CF\u76CA"
+  - "\u58EB\u6C14\u7206\u53D1"
+  - "\u5B88\u62A4"
+  - "\u6FC0\u52B1"
+  - "\u6FD2\u6B7B"
+  - "\u70B8\u5F39"
+  - "\u72C2\u8E81"
+  - "\u8D66\u514D"
+  - "\u9677\u9631"
+  - "\u672A\u547D\u4E2D"
+  - "\u62B5\u6297"
+  - "\u95EA\u907F"
+  - "\u5929\u8D4B\u6FC0\u53D1"
+  - "\u589E\u76CA"
+  - "\u541E\u566C"
+  - "\u53CD\u51FB"
+  - "\u5305\u88F9"
+  - "\u6CBB\u7597"
+  - "\u6807\u8BB0"
+  - "\u7729\u6655"
+  values:
+  - {fileID: 21300000, guid: 0c0652fd654976c4f8ead9d908bda30e, type: 3}
+  - {fileID: 21300000, guid: 64c10eb0389fe2245984bc140b44accb, type: 3}
+  - {fileID: 21300000, guid: ff2bdcc1bf5f16446843e865fdc9e000, type: 3}
+  - {fileID: 21300000, guid: 4f04c9f1a5bfdf24394405e9be333a71, type: 3}
+  - {fileID: 21300000, guid: 2473e61d142785848adf989c675c3f04, type: 3}
+  - {fileID: 21300000, guid: 460692e601a61b04096b8f6742685372, type: 3}
+  - {fileID: 21300000, guid: d1371e51b6be6c245b4165b91720cc9f, type: 3}
+  - {fileID: 21300000, guid: 884262f7b4201f44fbef774c9d3a4baa, type: 3}
+  - {fileID: 21300000, guid: 137e6392b78b31944ba16f366e56aab5, type: 3}
+  - {fileID: 21300000, guid: 3e5772bb185b0534e93040c76ca4d16c, type: 3}
+  - {fileID: 21300000, guid: 3e90a9d3536a36749bdf1f43f581f74d, type: 3}
+  - {fileID: 21300000, guid: d44549217be52934ab0db2571c83536b, type: 3}
+  - {fileID: 21300000, guid: 34e186a4bf748ac4292dbb98fbdf95d2, type: 3}
+  - {fileID: 21300000, guid: 7009aaa976a863347b526509d4f2486e, type: 3}
+  - {fileID: 21300000, guid: e48f63849e85d0743a9a26078d4e8a75, type: 3}
+  - {fileID: 21300000, guid: 5357369f50b8d6840b4dd2f1d2ed7c47, type: 3}
+  - {fileID: 21300000, guid: 78681d77883a70c439dcf388dcfdb31c, type: 3}
+  - {fileID: 21300000, guid: d14651453055b8849afd7206ca729e15, type: 3}
+  - {fileID: 21300000, guid: 9934ac632cfb783409662b40a852a897, type: 3}
+  - {fileID: 21300000, guid: f9a22581a2e86e94da3217cbb13f53d1, type: 3}
+  - {fileID: 21300000, guid: 1d17a62578bbb2843a817c28e0220200, type: 3}
+  - {fileID: 21300000, guid: 6000040b8ff586b429738635d8277ae1, type: 3}
+  - {fileID: 21300000, guid: 4f74e718cc707f14abb42619facd8a75, type: 3}
+  - {fileID: 21300000, guid: 0ac5aeaa9aaa8de41932fcc70f8c4601, type: 3}
+  - {fileID: 21300000, guid: 2774c7b3cbf5f774885961ba6a75e25e, type: 3}
+  - {fileID: 21300000, guid: bb63900dbb0eaf34cb44420acb1f863f, type: 3}
+  - {fileID: 21300000, guid: f107c7afcb6f38e489811d9d89fbd850, type: 3}
+  - {fileID: 21300000, guid: 6c2ab4a87a52dca44852a07d0518a671, type: 3}
+  priority: 000000000500000015000000140000000b00000000000000020000000e00000010000000000000000c000000090000000300000013000000080000000400000000000000020000000a00000001000000010000000f000000070000000d0000000600000008000000090000000000000000000000

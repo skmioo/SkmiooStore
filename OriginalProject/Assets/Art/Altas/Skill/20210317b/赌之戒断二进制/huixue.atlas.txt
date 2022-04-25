@@ -1,0 +1,27 @@
+
+huixue.png
+size: 422,167
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+c3
+  rotate: false
+  xy: 2, 2
+  size: 173, 163
+  orig: 450, 450
+  offset: 163, 210
+  index: -1
+c4
+  rotate: false
+  xy: 177, 2
+  size: 171, 163
+  orig: 450, 450
+  offset: 163, 210
+  index: -1
+tou
+  rotate: true
+  xy: 350, 60
+  size: 105, 70
+  orig: 450, 450
+  offset: 187, 359
+  index: -1

@@ -1,0 +1,13 @@
+
+attack.png
+size: 352,453
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+雇佣杀手-攻击1
+  rotate: false
+  xy: 2, 2
+  size: 348, 449
+  orig: 450, 450
+  offset: 48, 0
+  index: -1

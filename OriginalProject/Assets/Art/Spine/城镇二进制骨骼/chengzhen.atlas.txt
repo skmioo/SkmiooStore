@@ -1,0 +1,125 @@
+
+chengzhen.png
+size: 2000,1537
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: true
+  xy: 1771, 12
+  size: 199, 172
+  orig: 203, 172
+  offset: 3, 0
+  index: -1
+body_1
+  rotate: true
+  xy: 705, 27
+  size: 185, 317
+  orig: 187, 319
+  offset: 2, 1
+  index: -1
+body_10
+  rotate: true
+  xy: 1240, 319
+  size: 134, 389
+  orig: 138, 394
+  offset: 2, 0
+  index: -1
+body_11
+  rotate: true
+  xy: 1024, 21
+  size: 191, 279
+  orig: 193, 281
+  offset: 1, 1
+  index: -1
+body_12
+  rotate: false
+  xy: 1305, 32
+  size: 257, 141
+  orig: 262, 145
+  offset: 3, 1
+  index: -1
+body_13
+  rotate: false
+  xy: 1678, 175
+  size: 91, 152
+  orig: 91, 152
+  offset: 0, 0
+  index: -1
+body_14
+  rotate: true
+  xy: 1964, 1069
+  size: 73, 28
+  orig: 73, 28
+  offset: 0, 0
+  index: -1
+body_15
+  rotate: true
+  xy: 1924, 845
+  size: 297, 38
+  orig: 297, 38
+  offset: 0, 0
+  index: -1
+body_16
+  rotate: false
+  xy: 2, 455
+  size: 1920, 1080
+  orig: 1920, 1080
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: true
+  xy: 1631, 329
+  size: 124, 155
+  orig: 127, 157
+  offset: 0, 0
+  index: -1
+body_3
+  rotate: false
+  xy: 1788, 213
+  size: 199, 240
+  orig: 204, 277
+  offset: 3, 29
+  index: -1
+body_4
+  rotate: false
+  xy: 1924, 749
+  size: 74, 94
+  orig: 79, 101
+  offset: 3, 2
+  index: -1
+body_5
+  rotate: true
+  xy: 2, 5
+  size: 448, 701
+  orig: 449, 706
+  offset: 1, 5
+  index: -1
+body_6
+  rotate: true
+  xy: 1240, 237
+  size: 80, 436
+  orig: 84, 463
+  offset: 2, 11
+  index: -1
+body_7
+  rotate: true
+  xy: 705, 214
+  size: 239, 533
+  orig: 241, 538
+  offset: 2, 3
+  index: -1
+body_8
+  rotate: false
+  xy: 1924, 1144
+  size: 71, 391
+  orig: 76, 394
+  offset: 4, 2
+  index: -1
+body_9
+  rotate: true
+  xy: 1564, 2
+  size: 171, 159
+  orig: 212, 178
+  offset: 8, 1
+  index: -1

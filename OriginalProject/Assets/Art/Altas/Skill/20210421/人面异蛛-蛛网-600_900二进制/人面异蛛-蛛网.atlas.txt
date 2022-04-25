@@ -1,0 +1,27 @@
+
+人面异蛛-蛛网.png
+size: 182,248
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: true
+  xy: 71, 102
+  size: 144, 109
+  orig: 144, 109
+  offset: 0, 0
+  index: -1
+body_1
+  rotate: true
+  xy: 2, 2
+  size: 244, 67
+  orig: 244, 67
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: false
+  xy: 71, 47
+  size: 105, 53
+  orig: 105, 53
+  offset: 0, 0
+  index: -1

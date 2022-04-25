@@ -1,0 +1,157 @@
+
+kaishiyemian.png
+size: 2001,1882
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ascacsfca0
+  rotate: true
+  xy: 2, 1498
+  size: 293, 428
+  orig: 310, 444
+  offset: 5, 3
+  index: -1
+ascacsfca1
+  rotate: false
+  xy: 2, 1043
+  size: 1455, 295
+  orig: 1468, 310
+  offset: 4, 0
+  index: -1
+ascacsfca11
+  rotate: true
+  xy: 1049, 1751
+  size: 129, 322
+  orig: 135, 328
+  offset: 4, 2
+  index: -1
+ascacsfca12
+  rotate: true
+  xy: 1373, 1687
+  size: 193, 284
+  orig: 199, 290
+  offset: 4, 2
+  index: -1
+ascacsfca13
+  rotate: false
+  xy: 432, 1440
+  size: 399, 329
+  orig: 410, 338
+  offset: 3, 5
+  index: -1
+ascacsfca15
+  rotate: false
+  xy: 1659, 1671
+  size: 280, 209
+  orig: 358, 275
+  offset: 14, 12
+  index: -1
+ascacsfca16
+  rotate: false
+  xy: 2, 1815
+  size: 69, 65
+  orig: 96, 92
+  offset: 24, 4
+  index: -1
+ascacsfca17
+  rotate: false
+  xy: 397, 1793
+  size: 142, 87
+  orig: 195, 124
+  offset: 1, 3
+  index: -1
+ascacsfca2
+  rotate: false
+  xy: 541, 1771
+  size: 506, 109
+  orig: 506, 109
+  offset: 0, 0
+  index: -1
+ascacsfca3
+  rotate: false
+  xy: 73, 1793
+  size: 322, 87
+  orig: 322, 87
+  offset: 0, 0
+  index: -1
+ascacsfca4
+  rotate: false
+  xy: 833, 1340
+  size: 1166, 329
+  orig: 1170, 329
+  offset: 4, 0
+  index: -1
+ascacsfca5
+  rotate: false
+  xy: 2, 619
+  size: 1922, 422
+  orig: 1922, 445
+  offset: 0, 0
+  index: -1
+ascacsfca8
+  rotate: false
+  xy: 2, 2
+  size: 1920, 615
+  orig: 1922, 657
+  offset: 1, 26
+  index: -1
+
+kaishiyemian2.png
+size: 1926,1838
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ascacsfca10
+  rotate: false
+  xy: 2, 2
+  size: 1922, 750
+  orig: 1922, 758
+  offset: 0, 4
+  index: -1
+ascacsfca18
+  rotate: false
+  xy: 2, 754
+  size: 1922, 1082
+  orig: 1922, 1082
+  offset: 0, 0
+  index: -1
+
+kaishiyemian3.png
+size: 1926,1653
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ascacsfca6
+  rotate: false
+  xy: 2, 1000
+  size: 1922, 651
+  orig: 1922, 651
+  offset: 0, 0
+  index: -1
+ascacsfca7
+  rotate: false
+  xy: 2, 2
+  size: 1920, 996
+  orig: 1922, 998
+  offset: 1, 1
+  index: -1
+
+kaishiyemian4.png
+size: 1924,1354
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ascacsfca14
+  rotate: true
+  xy: 2, 2
+  size: 660, 745
+  orig: 676, 765
+  offset: 2, 19
+  index: -1
+ascacsfca9
+  rotate: false
+  xy: 2, 664
+  size: 1920, 688
+  orig: 1922, 1012
+  offset: 1, 1
+  index: -1

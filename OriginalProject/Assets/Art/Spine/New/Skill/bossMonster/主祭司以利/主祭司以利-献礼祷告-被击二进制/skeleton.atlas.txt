@@ -1,0 +1,20 @@
+
+skeleton.png
+size: 298,338
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+7msj.com0
+  rotate: false
+  xy: 2, 2
+  size: 294, 157
+  orig: 297, 178
+  offset: 2, 16
+  index: -1
+7msj.com1
+  rotate: false
+  xy: 2, 161
+  size: 289, 175
+  orig: 294, 195
+  offset: 2, 20
+  index: -1

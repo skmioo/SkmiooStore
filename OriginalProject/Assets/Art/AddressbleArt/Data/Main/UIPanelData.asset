@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3659c2fc2fd584fb86ee82a25a0530, type: 3}
+  m_Name: UIPanelData
+  m_EditorClassIdentifier: 
+  panelDatas:
+  - name: "\u6D4B\u8BD5UI\u9762\u677F"
+    id: 700010
+    describe: "\u6D4B\u8BD5UI\u9762\u677F"
+    describe_EN: 
+    panelType: 0
+    PanelMode:
+      m_AssetGUID: e84e1ca1408af184089d7f57e99a3cd9
+      m_SubObjectName: 
+  - name: "\u6D4B\u8BD5UI\u9762\u677F"
+    id: 700011
+    describe: "\u6D4B\u8BD5UI\u9762\u677F"
+    describe_EN: 
+    panelType: 1
+    PanelMode:
+      m_AssetGUID: e84e1ca1408af184089d7f57e99a3cd9
+      m_SubObjectName: 
+  - name: "\u65B0\u6E38\u620F"
+    id: 700012
+    describe: "\u65B0\u6E38\u620FUI\u9762\u677F"
+    describe_EN: 
+    panelType: 10
+    PanelMode:
+      m_AssetGUID: fc2a7275cd79db449a9dd9dd9d7a1d54
+      m_SubObjectName: 
+  - name: "\u7EE7\u7EED\u6E38\u620F"
+    id: 700013
+    describe: "\u7EE7\u7EED\u6E38\u620FUI\u9762\u677F"
+    describe_EN: 
+    panelType: 11
+    PanelMode:
+      m_AssetGUID: 6c3dc323535a1954fa885b4481965002
+      m_SubObjectName: 
+  - name: "\u6E38\u620F\u8BBE\u7F6E"
+    id: 700014
+    describe: "\u6E38\u620F\u8BBE\u7F6EUI\u9762\u677F"
+    describe_EN: 
+    panelType: 12
+    PanelMode:
+      m_AssetGUID: ed9ec436d7265664099f9bcd104fa610
+      m_SubObjectName: 
+  - name: "\u5236\u4F5C\u7EC4"
+    id: 700015
+    describe: "\u5236\u4F5C\u7EC4UI\u9762\u677F"
+    describe_EN: 
+    panelType: 13
+    PanelMode:
+      m_AssetGUID: f4a13d5dfee2a4a49af27367a42b1634
+      m_SubObjectName: 
+  - name: "\u89D2\u8272\u4FE1\u606F"
+    id: 700016
+    describe: "\u5236\u4F5C\u7EC4UI\u9762\u677F"
+    describe_EN: 
+    panelType: 14
+    PanelMode:
+      m_AssetGUID: 6b58cd236b3c8a740857f100f7d6d5aa
+      m_SubObjectName: 
+  - name: "\u6280\u80FD\u5347\u7EA7"
+    id: 700017
+    describe: "\u5236\u4F5C\u7EC4UI\u9762\u677F"
+    describe_EN: 
+    panelType: 15
+    PanelMode:
+      m_AssetGUID: a4cbf98464a7b8145a376aed32beb085
+      m_SubObjectName: 
+  - name: "\u63A7\u5236\u9009\u9879"
+    id: 700018
+    describe: "\u63A7\u5236\u9009\u9879UI\u9762\u677F"
+    describe_EN: 
+    panelType: 16
+    PanelMode:
+      m_AssetGUID: a0cbd25b638d46546932f419cc530ff7
+      m_SubObjectName: 
+  - name: "\u952E\u76D8\u8BBE\u7F6E"
+    id: 700019
+    describe: "\u952E\u76D8\u8BBE\u7F6EUI\u9762\u677F"
+    describe_EN: 
+    panelType: 17
+    PanelMode:
+      m_AssetGUID: 41d849b20ccb5834998c97fe0235acb6
+      m_SubObjectName: 
+  - name: "\u97F3\u9891\u9009\u9879"
+    id: 700020
+    describe: "\u97F3\u9891\u9009\u9879UI\u9762\u677F"
+    describe_EN: 
+    panelType: 19
+    PanelMode:
+      m_AssetGUID: f9b407f520dffc84b8964ce24c7ec498
+      m_SubObjectName: 
+  - name: "\u56FE\u50CF\u9009\u9879"
+    id: 700021
+    describe: "\u56FE\u50CF\u9009\u9879UI\u9762\u677F"
+    describe_EN: 
+    panelType: 18
+    PanelMode:
+      m_AssetGUID: b3dee447315206c47a4598c3d1b090d6
+      m_SubObjectName: 
+  - name: "\u5176\u4ED6\u8BBE\u7F6E"
+    id: 700022
+    describe: "\u5176\u4ED6\u9009\u9879UI\u9762\u677F"
+    describe_EN: 
+    panelType: 20
+    PanelMode:
+      m_AssetGUID: 1ffd0464991d7a24f87f6efe0ee805ae
+      m_SubObjectName: 
+  - name: "\u4E8C\u6B21\u786E\u8BA4\u7A97\u53E3"
+    id: 700023
+    describe: "\u4E8C\u6B21\u786E\u8BA4\u7A97\u53E3UI\u9762\u677F"
+    describe_EN: 
+    panelType: 21
+    PanelMode:
+      m_AssetGUID: f21a6e2039263b34bbf569729809fc81
+      m_SubObjectName: 
+  - name: "\u8FDB\u5165\u5173\u5361Loding\u754C\u9762"
+    id: 700024
+    describe: "\u6BCF\u4E2A\u5173\u5361\u8FDB\u5165\u65F6\u7684\u52A0\u8F7Dloading\u56FE"
+    describe_EN: 
+    panelType: 22
+    PanelMode:
+      m_AssetGUID: 08d82451a46c2244683d8726cc6e82c7
+      m_SubObjectName: 

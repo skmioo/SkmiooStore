@@ -1,0 +1,48 @@
+
+skeleton.png
+size: 564,248
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+粘稠怪-拆分_0000_角2
+  rotate: false
+  xy: 238, 4
+  size: 78, 62
+  orig: 450, 450
+  offset: 347, 135
+  index: -1
+粘稠怪-拆分_0001_角3
+  rotate: true
+  xy: 318, 20
+  size: 46, 43
+  orig: 450, 450
+  offset: 50, 107
+  index: -1
+粘稠怪-拆分_0002_右身
+  rotate: false
+  xy: 238, 68
+  size: 153, 178
+  orig: 450, 450
+  offset: 28, 8
+  index: -1
+粘稠怪-拆分_0003_左身
+  rotate: true
+  xy: 2, 2
+  size: 244, 234
+  orig: 450, 450
+  offset: 179, 6
+  index: -1
+粘稠怪-拆分_0004_骷髅
+  rotate: true
+  xy: 393, 3
+  size: 106, 169
+  orig: 450, 450
+  offset: 134, 24
+  index: -1
+粘稠怪-拆分_0005_角1
+  rotate: true
+  xy: 393, 111
+  size: 135, 153
+  orig: 450, 450
+  offset: 74, 162
+  index: -1

@@ -1,0 +1,13 @@
+
+mangfu.png
+size: 418,493
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_1
+  rotate: false
+  xy: 2, 2
+  size: 414, 489
+  orig: 414, 493
+  offset: 0, 0
+  index: -1

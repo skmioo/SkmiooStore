@@ -1,0 +1,1792 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c020225956353e649b23e42e8b605136, type: 3}
+  m_Name: ZH_ObjectDataSet
+  m_EditorClassIdentifier: 
+  TipsA: "\u82E5\u60F3\u589E\u52A0\u6570\u636E,\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E00\u4E2A\u6BD4\u5F53\u524D\u503C\u66F4\u5927\u7684\u503C,\u59825\u21926"
+  TipsB: "\uFF01\uFF01\uFF01\u82E5\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E86\u66F4\u5C0F\u7684\u503C,\u53EF\u80FD\u4F1A\u9020\u6210\u6570\u636E\u4E22\u5931"
+  TipsC: "\uFF01\uFF01\uFF01\u9F20\u6807\u653E\u5728\u5B57\u6BB5\u4E0A\u6709\u63D0\u793A"
+  porpDatas:
+  - name: "\u9CDE\u7247"
+    id: 7001
+    describe: "\u901A\u7528\u8D27\u5E01\r\n\u9E9F\u7532\u517D\u7684\u9CDE\u7247\uFF0C\u662F\u8FD9\u4E2A\u661F\u7403\u552F\u4E00\u7684\u901A\u7528\u8D27\u5E01"
+    describe_EN: 'Common currency
+
+      Scales of Squamate are the only common currency
+      on the planet'
+    Icon:
+      m_AssetGUID: 4a970d87bac0bd84d964fe7ce5ff0387
+      m_SubObjectName: "\u9CDE\u7247"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 5
+    ownerType: 2
+    buy: 1
+    sell: 1
+    settlement: 0
+    maxCount: 3000
+    objActions: []
+    specialEffect: 0
+  - name: "\u5F71\u6676"
+    id: 7002
+    describe: "\u7528\u6765\u5347\u7EA7\u57CE\u9547\u5EFA\u7B51\r\n\u5F62\u6210\u4E8E\u5E7D\u6697\u5904\u7684\u6C34\u6676\uFF0C\u6C72\u53D6\u6076\u5FF5\u751F\u957F\uFF0C\u62E5\u6709\u8BE1\u5F02\u7684\u529B\u91CF\r\n\u201C\u53EF\u7528\u6765\u7597\u4F24\uFF0C\u4F46\u4E0D\u8FC7\u662F\u65E9\u6B7B\u548C\u665A\u6B7B\u7684\u533A\u522B\u201D"
+    describe_EN: 'Used to upgrade buildings
+
+      Crystal formed in dark, absorbs
+      evil.
+
+      "Save people from death,for now."'
+    Icon:
+      m_AssetGUID: b134b05052e418047b4ea787bce1c8ce
+      m_SubObjectName: "\u5F71\u6676"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 5
+    ownerType: 2
+    buy: 800
+    sell: 400
+    settlement: 0
+    maxCount: 12
+    objActions: []
+    specialEffect: 0
+  - name: "\u866B\u679C"
+    id: 7003
+    describe: "\u7528\u6765\u5347\u7EA7\u57CE\u9547\u5EFA\u7B51\r\n\u5F02\u661F\u7684\u7279\u4EA7\uFF0C\u65E0\u6CD5\u5C06\u5176\u6309\u690D\u7269\u6216\u52A8\u7269\u5F52\u7C7B\r\n\u201C\u5F53\u4F60\u6293\u4F4F\u5B83\u7684\u65F6\u5019\uFF0C\u5B83\u4E5F\u4F1A\u6293\u4F4F\u4F60\u2026\u2026\u201D"
+    describe_EN: 'Used to upgrade buildings
+
+      Specialty of star,can''t be classified
+      as plant or animal
+
+      "When you catch it, it will catch you too..."'
+    Icon:
+      m_AssetGUID: f2a0a203de035f7499ab28cc23087d2a
+      m_SubObjectName: "\u866B\u679C"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 5
+    ownerType: 2
+    buy: 800
+    sell: 400
+    settlement: 0
+    maxCount: 12
+    objActions: []
+    specialEffect: 0
+  - name: "\u8000\u77F3"
+    id: 7004
+    describe: "\u7528\u6765\u5347\u7EA7\u57CE\u9547\u5EFA\u7B51\r\n\u5730\u5E95\u4E16\u754C\u7684\u5149\u6E90\u548C\u80FD\u6E90\r\n\u54EA\u91CC\u6709\u6B7B\u4EA1\uFF0C\u54EA\u91CC\u5C31\u6709\u7260\u95EA\u8000"
+    describe_EN: 'Used to upgrade buildings
+
+      Light and energy in the underground
+      world
+
+      "It shines in the place of death."'
+    Icon:
+      m_AssetGUID: a8c9d4fe6ccf0a9408229ed900de9bee
+      m_SubObjectName: "\u8000\u77F3"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 5
+    ownerType: 2
+    buy: 800
+    sell: 400
+    settlement: 0
+    maxCount: 12
+    objActions: []
+    specialEffect: 0
+  - name: "\u661F\u706B"
+    id: 7005
+    describe: "\u7528\u6765\u5347\u7EA7\u57CE\u9547\u5EFA\u7B51\r\n\u661F\u9645\u65F6\u4EE3\u7684\u7535\u5B50\u70DF\uFF0C\u5982\u4ECA\u88AB\u5F53\u4F5C\u706B\u79CD\u548C\u80FD\u6E90\u4F7F\u7528\r\n\u201C\u8FD9\u662F\u6587\u660E\u4E16\u754C\u7684\u7ED3\u6676\uFF0C\u62BD\u4E00\u6839\uFF0C\u5C11\u4E00\u6839\u4E86\u2026\u2026\u201D"
+    describe_EN: "Used to upgrade buildings\r\ne-cigarettes from Interstellar age\uFF0Cnow
+      used as a fire and energy source\r\n\u201CThe crystallization of civilization!\u201D"
+    Icon:
+      m_AssetGUID: 301b9409571865d4a93b73eb2c2615b6
+      m_SubObjectName: "\u661F\u706B"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 5
+    ownerType: 2
+    buy: 800
+    sell: 400
+    settlement: 0
+    maxCount: 12
+    objActions: []
+    specialEffect: 0
+  - name: "\u4EA1\u9AA8"
+    id: 7006
+    describe: "\u7528\u6765\u5347\u7EA7\u57CE\u9547\u5EFA\u7B51\r\n\u5F02\u517D\u6B7B\u4EA1\u540E\u7559\u4E0B\u7684\u672A\u77E5\u6B8B\u9AB8\uFF0C\u5145\u6EE1\u7740\u4E0D\u7965\u7684\u6C14\u606F\r\n\u78E8\u788E\u540E\u53EF\u5F53\u4F5C\u81F4\u5E7B\u5242\u548C\u6B62\u75DB\u5242\u4F7F\u7528"
+    describe_EN: 'Used to upgrade buildings
+
+      bones of dead monster,full of
+      Ominous
+
+      "It can be used as hallucinogen and analgesic after grinding"'
+    Icon:
+      m_AssetGUID: 6701d8e69b85f0d4dbf161c9bfad094a
+      m_SubObjectName: "\u4EA1\u9AA8"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 5
+    ownerType: 2
+    buy: 800
+    sell: 400
+    settlement: 0
+    maxCount: 12
+    objActions: []
+    specialEffect: 0
+  - name: "\u98DF\u8150\u86C6\u866B\u7684\u553E\u6DB2"
+    id: 6004
+    describe: "\u7528\u6765\u6CBB\u6108\u4E2D\u6BD2\u72B6\u6001\r\n\u201C\u5F88\u6076\u5FC3...\u4F46\u5F88\u597D\u7528\u201D"
+    describe_EN: 'Cure poisoning
+
+      "Disgusting... But effectively"'
+    Icon:
+      m_AssetGUID: 8ffd82aad5858cf49b8f8ff6e8b86ac7
+      m_SubObjectName: "\u98DF\u8150\u86C6\u866B\u7684\u553E\u6DB2"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 4
+    ownerType: 1
+    buy: 100
+    sell: 75
+    settlement: 25
+    maxCount: 12
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 27
+      tailType: 4
+      valueType: 0
+      value: 0
+    specialEffect: 0
+  - name: "\u5730\u9526\u8349"
+    id: 6003
+    describe: "\u7528\u6765\u6CBB\u6108\u6D41\u8840\u72B6\u6001\r\n\u201C\u56BC\u4E00\u56BC\uFF0C\u6478\u4E00\u6478\u201D"
+    describe_EN: 'Heal bleeding
+
+      "Chew and touch"'
+    Icon:
+      m_AssetGUID: bebb9158c8f932246ab186d7de023a92
+      m_SubObjectName: "\u5730\u9526\u8349"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 4
+    ownerType: 1
+    buy: 200
+    sell: 150
+    settlement: 50
+    maxCount: 12
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 7
+      tailType: 4
+      valueType: 0
+      value: 0
+    specialEffect: 0
+  - name: "\u4F4E\u8BED\u8611\u83C7"
+    id: 6002
+    describe: "\u7528\u6765\u63D0\u53475\u70B9\u58EB\u6C14\uFF0C\u6218\u6597\u4E2D\u6700\u591A\u53EF\u75282\u4E2A\r\n\u201C\u8033\u8FB9\u7684\u4F4E\u8BED\uFF0C\u773C\u524D\u7684\u5730\u72F1\u201D"
+    describe_EN: 'Increase morale by 5 points. up to 2 times in battle.
+
+      "Whispers
+      in ear, hell in sight"'
+    Icon:
+      m_AssetGUID: 2b3e821366e50ea499db8d5e12c22e25
+      m_SubObjectName: "\u4F4E\u8BED\u8611\u83C7"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 4
+    ownerType: 1
+    buy: 400
+    sell: 300
+    settlement: 100
+    maxCount: 12
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 0
+      valueType: 0
+      value: 5
+    specialEffect: 0
+  - name: "\u9CDE\u7532\u517D\u8089\u5E72"
+    id: 6001
+    describe: "\u7528\u6765\u6062\u590D5\u751F\u547D\uFF0C\u4E00\u573A\u6218\u6597\u6700\u591A\u4F7F\u75282\u4E2A\r\n\u201C\u8FD9\u4E2A\u661F\u7403\u6700\u7F8E\u5473\u7684\u98DF\u7269\u201D"
+    describe_EN: "Recover 5 HP\uFF0Cup to 2 times in battle.\r\n\"The most delicious
+      food on the planet\""
+    Icon:
+      m_AssetGUID: cb597ec733b39af4190e2cb3618389f1
+      m_SubObjectName: "\u9CDE\u7532\u517D\u8089\u5E72"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 2
+    heroVocation: 10
+    levelType: 4
+    ownerType: 1
+    buy: 60
+    sell: 45
+    settlement: 5
+    maxCount: 12
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 2
+      valueType: 0
+      value: 5
+    specialEffect: 0
+  ornamentsDatas:
+  - name: "\u521D\u59CB\u4E4B\u820C"
+    id: 4001
+    describe: "*\u201C\u521D\u59CB\u201D\u4E4B\u820C*\r\n\u4F24\u5BB3+20%\r\n\u66B4\u51FB+8%\r\n\u901F\u5EA6+4\r\n\u7729\u6655\u6297\u6027-30%\r\nOrigin\u6559\u4F1A\u5185\u7B2C\u4E00\u6761\u88AB\u5272\u4E0B\u7684\u820C\u5934\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '*"Initial" tongue*
+
+      Damage + 20%
+
+      Critical + 8%
+
+      Speed
+      + 4
+
+      Vertigo resistance - 30%
+
+      The first tongue cut off in Origin
+      Church
+
+      *Occupation limit: General*'
+    Icon:
+      m_AssetGUID: 46f2841bd9788a04d9b2dc3170d30a93
+      m_SubObjectName: "\u521D\u59CB\u4E4B\u820C"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 0
+    ownerType: 0
+    buy: 20000
+    sell: 5000
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 20
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 8
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: 4
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 19
+      tailType: 0
+      valueType: 1
+      value: -30
+    specialEffect: 0
+  - name: "\u6C89\u9ED8\u7684\u5723\u7ECF"
+    id: 4002
+    describe: "*\u7F04\u9ED8\u5723\u7ECF*\r\n\u6CBB\u7597+75%\r\n\u6B7B\u4EA1\u6297\u6027+30%\r\n\u51CF\u4F24-20%\r\n\u901F\u5EA6-3\r\n\u53E4\u65E7\u7684\u5C01\u9762\u4E0A\u9690\u7EA6\u523B\u7740\u300A\u5723\u7ECF\u300B\u2026\u2026\u8FD8\u753B\u7740\u534A\u622A\u820C\u5934\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u795E\u79D8\u5B66\u8005*"
+    describe_EN: "*Silent Bible*\r\nTreatment + 75%\r\nDeath resistance + 30%\r\ndamage
+      reduction - 20%\r\nSpeed - 3\r\nThe old cover was vaguely carved with a Bible\u2026\u2026and
+      half a tongue\r\n*Occupation limit: Mystic scholar*"
+    Icon:
+      m_AssetGUID: 0a863e4da3031094ab52220655bd22a9
+      m_SubObjectName: "\u6C89\u9ED8\u7684\u5723\u7ECF"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 7
+    levelType: 0
+    ownerType: 0
+    buy: 20000
+    sell: 5000
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 44
+      tailType: 0
+      valueType: 1
+      value: 75
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 21
+      tailType: 0
+      valueType: 1
+      value: 30
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: -20
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: -3
+    specialEffect: 0
+  - name: "\u53F9\u606F\u4E4B\u5899"
+    id: 4003
+    describe: "*\u53F9\u606F\u4E4B\u5899*\r\n\u6700\u5927\u751F\u547D+20%\r\n\u53D7\u5230\u4F24\u5BB3-10%\r\n\u53CD\u5F39\u4F4D\u79FB\u6548\u679C\r\n\u201C\u51B3\u4E0D\u540E\u9000\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Wailing wall*
+
+      Max life +20%
+
+      Damage - 10%
+
+      Displacement
+      resistance +300%
+
+      ""Never back""
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: c1ce0f4bd89851a4598349429d473ae0
+      m_SubObjectName: "\u53F9\u606F\u4E4B\u5899"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 0
+    ownerType: 0
+    buy: 20000
+    sell: 5000
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 6
+      tailType: 0
+      valueType: 1
+      value: 20
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: 10
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 20
+      tailType: 0
+      valueType: 1
+      value: 300
+    specialEffect: 0
+  - name: "\u884C\u5211\u5243\u5200"
+    id: 4004
+    describe: "*\u884C\u5211\u5243\u5200*\r\n\u4F24\u5BB3+20%\r\n\u66B4\u51FB+20%\r\n\u901F\u5EA6+5\r\n\u8FDB\u5165\u6218\u6597\u540E\u89E6\u53D1\u6D41\u8840\u72B6\u6001\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u96C7\u4F63\u6740\u624B*"
+    describe_EN: '"*Execution razor*
+
+      Damage + 20%
+
+      Critical  + 20%
+
+      Speed
+      + 5
+
+      Each time you enter a battle, yourself trigger a bleeding state
+
+      *Occupation
+      limit: Contract killer*"'
+    Icon:
+      m_AssetGUID: e811cafdb8605044580bace733c2beb7
+      m_SubObjectName: "\u884C\u5211\u5243\u5200"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 2
+    levelType: 0
+    ownerType: 0
+    buy: 20000
+    sell: 5000
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 20
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 20
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: 5
+    specialEffect: 4
+  - name: "\u6B7B\u4EA1\u9AB0\u76C5"
+    id: 4005
+    describe: "*\u6B7B\u4EA1\u9AB0\u76C5*\r\n\u751F\u547D\u503C\u226544%\u65F6\u5168\u5C5E\u6027+4\r\n\u5426\u5219\u5168\u5C5E\u6027-4\r\n\u600E\u4E48\u516D\u4E2A\u9762\u5168\u662F4\uFF1F\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u4EA1\u547D\u8D4C\u5F92*"
+    describe_EN: "\"*Death dice*\nAll attributes + 4 when HP \u2265 44%\nOtherwise
+      all properties - 4\nWhy all sides are 4?\n*Occupation limit: Desperate gambler*\""
+    Icon:
+      m_AssetGUID: b2630b6e75e0616438075a20e5b3dccd
+      m_SubObjectName: "\u6B7B\u4EA1\u9AB0\u76C5"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 4
+    levelType: 1
+    ownerType: 0
+    buy: 10000
+    sell: 2500
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 1
+      limitValue: 44
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 4
+    - limitType: 1
+      limitValue: 44
+      vocation: 10
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: 4
+    - limitType: 1
+      limitValue: 44
+      vocation: 10
+      buffType: 0
+      tailType: 0
+      valueType: 0
+      value: 4
+    - limitType: 1
+      limitValue: 44
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: 4
+    - limitType: 1
+      limitValue: 44
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 4
+    - limitType: 1
+      limitValue: 44
+      vocation: 10
+      buffType: 13
+      tailType: 0
+      valueType: 0
+      value: 4
+    - limitType: 2
+      limitValue: 44
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: -4
+    - limitType: 2
+      limitValue: 44
+      vocation: 10
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: -4
+    - limitType: 2
+      limitValue: 44
+      vocation: 10
+      buffType: 0
+      tailType: 0
+      valueType: 0
+      value: -4
+    - limitType: 2
+      limitValue: 44
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: -4
+    - limitType: 2
+      limitValue: 44
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: -4
+    - limitType: 2
+      limitValue: 44
+      vocation: 10
+      buffType: 13
+      tailType: 0
+      valueType: 0
+      value: -4
+    specialEffect: 0
+  - name: "\u5F02\u5316\u4E4B\u80EB"
+    id: 4006
+    describe: "*\u5F02\u5316\u4E4B\u80EB*\r\n\u51CF\u4F24+5%\r\n\u95EA\u907F+2\r\n\u901F\u5EA6+3\r\n\u5957\u88C5\u6548\u679C\uFF1A\u5C5E\u6027\u7FFB\u500D\r\n\u7591\u4F3C\u4EBA\u578B\u751F\u7269\u7684\u817F\u9AA8\u3002\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Alienate shin*
+
+      Damage Reduce +5%
+
+      Dodge +2
+
+      Speed
+      +3
+
+      Alienation suit: 1 / 2
+
+      Packaged effect: double attributes
+
+      *Occupation
+      limit: General*"'
+    Icon:
+      m_AssetGUID: 46481501a8179454da06a7845a7ce24d
+      m_SubObjectName: "\u5F02\u5316\u4E4B\u80EB"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 1
+    ownerType: 0
+    buy: 10000
+    sell: 2500
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 13
+      tailType: 0
+      valueType: 0
+      value: 2
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: 3
+    specialEffect: 1
+  - name: "\u5F02\u5316\u4E4B\u722A"
+    id: 4007
+    describe: "*\u5F02\u5316\u4E4B\u722A*\r\n\u4F24\u5BB3+5%\r\n\u66B4\u51FB+2\r\n\u7CBE\u51C6+3\r\n\u5957\u88C5\u6548\u679C\uFF1A\u5C5E\u6027\u7FFB\u500D\r\n\u7591\u4F3C\u4EBA\u578B\u751F\u7269\u7684\u638C\u9AA8\u3002\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Alienate claw*
+
+      Damage + 5%
+
+      Critical  + 2
+
+      Accuracy
+      + 3
+
+      Alienation suit: 1 / 2
+
+      Packaged effect: double attributes
+
+      *Occupation
+      limit: General*"'
+    Icon:
+      m_AssetGUID: aa0dc0f4cde62284ba17c3d0e158f976
+      m_SubObjectName: "\u5F02\u5316\u4E4B\u722A"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 1
+    ownerType: 0
+    buy: 10000
+    sell: 2500
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 0
+      value: 2
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 0
+      tailType: 0
+      valueType: 0
+      value: 3
+    specialEffect: 1
+  - name: "\u65E0\u67C4\u5315\u9996"
+    id: 4008
+    describe: "*\u65E0\u67C4\u5315\u9996*\r\n\u4F24\u5BB3+20%\r\n\u66B4\u51FB+10%\r\n\u6BCF\u56DE\u5408\u53D7\u52301\uFF5E2\u70B9\u4F24\u5BB3\r\n\u201C\u75DB\u82E6\u4F1A\u5E26\u6765\u529B\u91CF\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Handleless dagger*
+
+      Damage + 20%
+
+      Critical + 10%
+
+      Get
+      1-2 damage per round
+
+      ""Pain brings strength""
+
+      *Occupation limit:
+      General*"'
+    Icon:
+      m_AssetGUID: 5b06cb2a5876ace48a08c85cf9afdfba
+      m_SubObjectName: "\u65E0\u67C4\u5315\u9996"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 1
+    ownerType: 0
+    buy: 10000
+    sell: 2500
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 20
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 10
+    specialEffect: 2
+  - name: "\u5F02\u5316\u6D46\u679C "
+    id: 4009
+    describe: "*\u5F02\u5316\u6D46\u679C*\r\n\u66B4\u51FB+5%\r\n\u4F24\u5BB3+5%\r\n\u7729\u6655\u57FA\u7840\u6982\u7387+50%\r\n\u4E2D\u6BD2\u57FA\u7840\u6982\u7387+25%\r\n\u201C\u603B\u611F\u89C9\u6709\u90A3\u91CC\u4E0D\u5BF9\u52B2\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u90AA\u6076\u53D1\u660E\u5BB6*"
+    describe_EN: '"*Alienate berry*
+
+      Critical + 5%
+
+      Damage + 5%
+
+      Basic
+      probability of stunned + 50%
+
+      Basic probability of poisioning + 25%
+
+      ""There''s
+      always something wrong with it""
+
+      *Occupation limit: Evil inventor*"'
+    Icon:
+      m_AssetGUID: eca8d83f9cac4ee48ad20db5742f97e0
+      m_SubObjectName: "\u5F02\u5316\u6D46\u679C"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 3
+    levelType: 1
+    ownerType: 0
+    buy: 10000
+    sell: 2500
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 48
+      tailType: 0
+      valueType: 1
+      value: 50
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 51
+      tailType: 0
+      valueType: 1
+      value: 25
+    specialEffect: 0
+  - name: "\u884C\u8005"
+    id: 4010
+    describe: "*\u884C\u8005*\r\n\u4F24\u5BB3+5%\r\n\u751F\u547D+5%\r\n\u9996\u56DE\u5408\u4F18\u5148\u884C\u52A8\r\n\u201C\u8FD8\u4E0D\u591F\u2026\u2026\u8FD8\u4E0D\u591F\uFF01\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u53CC\u9762\u95F4\u8C0D*"
+    describe_EN: '"*Pedestrian*
+
+      Damage + 5%
+
+      Life + 5%
+
+      First
+      round priority
+
+      ""Not enough... Not enough!""
+
+      *Occupation limit:
+      Double Agent*"'
+    Icon:
+      m_AssetGUID: 2f84a481e1964e5499c1281bc733e427
+      m_SubObjectName: "\u884C\u8005"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 5
+    levelType: 1
+    ownerType: 0
+    buy: 10000
+    sell: 2500
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 6
+      tailType: 0
+      valueType: 1
+      value: 5
+    specialEffect: 3
+  - name: "\u996E\u8840\u5723\u676F"
+    id: 4011
+    describe: "*\u996E\u8840\u5723\u676F*\r\n\u66B4\u51FB+6%\r\n\u8FD1\u6218\u6280\u80FD\u4F24\u5BB3+18%\r\n\u51CF\u76CA\u6297\u6027-60%\r\n\u201C\u559D\u4E86\u5B83\uFF0C\u5C31\u518D\u4E0D\u4F1A\u6709\u70E6\u607C\u4E86\u3002\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Grail of Blood*
+
+      Critical + 6%
+
+      Melee skill damage
+      + 18%
+
+      Reduced benefit resistance - 60%
+
+      ""Drink it, and you won''t
+      have any more worries.""
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: 819884f2f0f8c7c4a89b0d047015cc0a
+      m_SubObjectName: "\u996E\u8840\u5723\u676F"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 5000
+    sell: 1250
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 6
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 45
+      tailType: 0
+      valueType: 1
+      value: 18
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 18
+      tailType: 0
+      valueType: 1
+      value: -60
+    specialEffect: 0
+  - name: "\u754F\u6B7B\u5047\u9762"
+    id: 4012
+    describe: "*\u754F\u6B7B\u5047\u9762*\r\n\u751F\u547D+20%\r\n\u5168\u6297\u6027+35%\r\n\u6240\u53D7\u58EB\u6C14\u4F24\u5BB3+20%\r\n\u201C\u53EA\u6709\u6B7B\u4EA1\u624D\u80FD\u5F81\u670D\u6211\uFF01\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Death fearing mask*
+
+      Life +20%
+
+      All resistance +35%
+
+      Morale
+      damage +20%""
+
+      Only death can conquer me!""
+
+      *Occupation limit:
+      General*"'
+    Icon:
+      m_AssetGUID: 9746f4d0809468f4dafcbd95a3f9ac58
+      m_SubObjectName: "\u6015\u6B7B\u8005\u7684\u5047\u9762"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 5000
+    sell: 1250
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 6
+      tailType: 0
+      valueType: 1
+      value: 20
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 16
+      tailType: 0
+      valueType: 1
+      value: 35
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 17
+      tailType: 0
+      valueType: 1
+      value: 35
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 18
+      tailType: 0
+      valueType: 1
+      value: 35
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 19
+      tailType: 0
+      valueType: 1
+      value: 35
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 20
+      tailType: 0
+      valueType: 1
+      value: 35
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 21
+      tailType: 0
+      valueType: 1
+      value: 35
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 46
+      tailType: 0
+      valueType: 1
+      value: 20
+    specialEffect: 0
+  - name: "\u6076\u8BED\u7ECF\u6587"
+    id: 4013
+    describe: "*\u6076\u8BED\u7ECF\u6587*\r\n\u4F24\u5BB3+5%\r\n\u901F\u5EA6+3\r\n\u53D7\u5230\u6CBB\u7597\u6548\u679C-10%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Vicious Scripture*
+
+      Damage + 5%
+
+      Speed + 3
+
+      Received
+      treatment effect - 10%
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: e500935e99a6ad348a4cd090683fe015
+      m_SubObjectName: "\u6076\u8BED\u7ECF\u6587"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 5000
+    sell: 1250
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: 3
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 47
+      tailType: 0
+      valueType: 1
+      value: -10
+    specialEffect: 0
+  - name: "\u6C89\u91CD\u6307\u864E"
+    id: 4014
+    describe: "*\u6C89\u91CD\u6307\u864E*\r\n\u66B4\u51FB+5%\r\n\u901F\u5EA6-5%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Painful brass knuckles*
+
+      Critical hit + 5%
+
+      Speed
+      - 5%
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: c07991ae5d2cfda448881891dfa34a16
+      m_SubObjectName: "\u6C89\u91CD\u6307\u864E"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 5000
+    sell: 1250
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 1
+      value: -5
+    specialEffect: 0
+  - name: "\u6E90\u751F\u690D\u7269"
+    id: 4015
+    describe: "*\u6E90\u751F\u690D\u7269*\r\n\u6700\u5927\u751F\u547D-10%\r\n\u4F24\u5BB3+5%\r\n\u201D\u968F\u5904\u53EF\u89C1\u7684\u690D\u7269\u201C\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: "\"*Source flora*\nMaximum life - 10%\nDamage + 5%\n\u201DPlants
+      visible everywhere\u201C\n*Occupation limit: General*\""
+    Icon:
+      m_AssetGUID: e6dc250a2fb88c54cb1ec7e47ccf9679
+      m_SubObjectName: "\u539F\u751F\u690D\u7269"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 5000
+    sell: 1250
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 6
+      tailType: 0
+      valueType: 1
+      value: -10
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 5
+    specialEffect: 0
+  - name: "\u9CDE\u7532\u76FE"
+    id: 4016
+    describe: "*\u9CDE\u7532\u76FE*\r\n\u6700\u5927\u751F\u547D+20%\r\n\u95EA\u907F-3\r\n\u201C\u8DB3\u591F\u575A\u5B9E\uFF0C\u4F46\u4E0D\u591F\u7075\u6D3B\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Scaly shield*
+
+      Maximum life + 20%
+
+      Dodge - 3
+
+      ""Solid
+      enough, but not flexible""
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: 5575b73cc32828645b801e2db4b632cb
+      m_SubObjectName: "\u9CDE\u7532\u76FE"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 5000
+    sell: 1250
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 6
+      tailType: 0
+      valueType: 1
+      value: 20
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 13
+      tailType: 0
+      valueType: 0
+      value: -3
+    specialEffect: 0
+  - name: "\u72C2\u66B4\u62A4\u7B26"
+    id: 4017
+    describe: "*\u72C2\u66B4\u62A4\u7B26*\r\n\u4F24\u5BB3+20%\r\n\u5F53\u751F\u547D\u5C0F\u4E8E50%\u65F6\uFF0C\u4F24\u5BB3-10%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Rampage amulet*
+
+      Damage + 20%
+
+      When life is less
+      than 50%, damage - 10%
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: 218e4970aab2e584094cb6b0fd6c77f6
+      m_SubObjectName: "\u72C2\u66B4\u62A4\u7B26"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 5000
+    sell: 1250
+    settlement: 0
+    maxCount: 3
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 20
+    - limitType: 2
+      limitValue: 50
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: -10
+    specialEffect: 0
+  - name: "\u6551\u8D4E\u62A4\u7B26"
+    id: 4018
+    describe: "*\u6551\u8D4E\u62A4\u7B26*\r\n\u51CF\u4F24+5%\r\n\u5F53\u751F\u547D\u5C0F\u4E8E35%\u65F6\uFF0C\u51CF\u4F24+25%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"* Redemption Amulet*
+
+      damage reduce+ 5%
+
+      damage Reduce
+      + 25% when health is less than 35%
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: c7f2c4b8be98e88478c7386df112e768
+      m_SubObjectName: "\u6551\u8D4E\u62A4\u7B26"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 5000
+    sell: 1250
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 2
+      limitValue: 35
+      vocation: 10
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: 25
+    specialEffect: 0
+  - name: "\u7729\u6655\u62A4\u7B26"
+    id: 4019
+    describe: "*\u7729\u6655\u62A4\u7B26*\r\n\u95EA\u907F-1\r\n\u7729\u6655\u6280\u80FD\u6982\u7387+30%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Stun amulet*
+
+      Dodge - 1
+
+      Stun skill probability +
+      30%
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: 5ea0c4e0f4e77094ab43d655b46e999b
+      m_SubObjectName: "\u7729\u6655\u62A4\u7B26"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 13
+      tailType: 0
+      valueType: 0
+      value: -1
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 48
+      tailType: 0
+      valueType: 1
+      value: 30
+    specialEffect: 0
+  - name: "\u9632\u5FA1\u62A4\u7B26"
+    id: 4020
+    describe: "*\u9632\u5FA1\u62A4\u7B26*\r\n\u51CF\u4F24+4%\r\n\u4F24\u5BB3-1%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"* Defense amulet *
+
+      damage reduce + 4%
+
+      Damage-1%
+
+      *Occupation
+      limit: General*"'
+    Icon:
+      m_AssetGUID: d6cd8c5ec0dafaf4ca50f48b1abf9c0c
+      m_SubObjectName: "\u9632\u5FA1\u62A4\u7B26"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 3
+      tailType: 0
+      valueType: 1
+      value: 4
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: -1
+    specialEffect: 0
+  - name: "\u95EA\u907F\u62A4\u7B26"
+    id: 4021
+    describe: "*\u95EA\u907F\u62A4\u7B26*\r\n\u95EA\u907F+5\r\n\u901F\u5EA6-2\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Dodge Amulet*
+
+      Dodge + 5
+
+      Speed - 2
+
+      *Occupation
+      limit: General*"'
+    Icon:
+      m_AssetGUID: 4ef2d7c2215c62448a079a8e19bfd0e3
+      m_SubObjectName: "\u95EA\u907F\u62A4\u7B26"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 13
+      tailType: 0
+      valueType: 0
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: -2
+    specialEffect: 0
+  - name: "\u7075\u5DE7\u62A4\u7B26"
+    id: 4022
+    describe: "*\u7075\u5DE7\u62A4\u7B26*\r\n\u901F\u5EA6+2\r\n\u7729\u6655\u6297\u6027-15%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Dexterity amulet*
+
+      Speed + 2
+
+      stun resistance-15%
+
+      *Occupation
+      limit: General*"'
+    Icon:
+      m_AssetGUID: 64c3cb4d72472f34588ba64d23983431
+      m_SubObjectName: "\u654F\u6377\u62A4\u7B26"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: 2
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 19
+      tailType: 0
+      valueType: 1
+      value: -15
+    specialEffect: 0
+  - name: "\u590D\u4EC7\u62A4\u7B26"
+    id: 4023
+    describe: "*\u590D\u4EC7\u62A4\u7B26*\r\n\u66B4\u51FB+3%\r\n\u751F\u547D-5%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Revenge amulet*
+
+      Critical + 3%
+
+      Life - 5%
+
+      *Occupation
+      limit: General*"'
+    Icon:
+      m_AssetGUID: eeac55e3ffd89ca4a83b9e5e6620a8b5
+      m_SubObjectName: "\u590D\u4EC7\u62A4\u7B26"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 3
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 6
+      tailType: 0
+      valueType: 1
+      value: -5
+    specialEffect: 0
+  - name: "\u8FC7\u671F\u7684\u6740\u866B\u5242"
+    id: 4024
+    describe: "*\u8FC7\u671F\u6740\u866B\u5242*\r\n\u4F24\u5BB3+5%\n\u4E2D\u6BD2\u6297\u6027-30%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Expired insecticide*
+
+      Damage + 15% (alien) = > damage +
+      5%
+
+      Poisoning resistance - 30%
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: aae3bdeaf85427b438ba274bb377cf36
+      m_SubObjectName: "\u6740\u866B\u5242"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 1
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 17
+      tailType: 0
+      valueType: 1
+      value: -30
+    specialEffect: 0
+  - name: "\u591C\u4E4B\u82B1"
+    id: 4025
+    describe: "*\u591C\u4E4B\u82B1*\r\n\u66B4\u51FB+2%\r\n\u201C\u53EA\u5728\u591C\u665A\u624D\u4F1A\u5F00\u82B1\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"* Flowers of the night*
+
+      Critical + 2%
+
+      ""It blooms
+      only at night""
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: f56b130116e28244ea4bfb48a49fa6bc
+      m_SubObjectName: "\u591C\u4E4B\u82B1"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 2
+      tailType: 0
+      valueType: 1
+      value: 2
+    specialEffect: 0
+  - name: "\u6C34\u4E4B\u82B1"
+    id: 4026
+    describe: "*\u6C34\u4E4B\u82B1*\r\n\u6CBB\u7597+5%\r\n\u201C\u6C34\u5E95\u76DB\u5F00\u7684\u82B1\u201D\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"* Flowers of Water *
+
+      Treatment +5%
+
+      ""Flowers in
+      bloom under the water""
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: 57d0ce20bc444d64695413d50ba37820
+      m_SubObjectName: "\u6C34\u4E4B\u82B1"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 44
+      tailType: 0
+      valueType: 1
+      value: 5
+    specialEffect: 0
+  - name: "\u7634\u4E4B\u82B1"
+    id: 4027
+    describe: "*\u7634\u4E4B\u82B1*\r\n\u51CF\u76CA\u6280\u80FD\u6982\u7387+5%\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"* Flower of the Miasma*
+
+      Benefit reduction skill probability
+      + 5%
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: 6100ef59567069a4a87dce201490dd1e
+      m_SubObjectName: "\u7634\u4E4B\u82B1"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 2
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 49
+      tailType: 0
+      valueType: 1
+      value: 5
+    specialEffect: 0
+  - name: "\u77F3\u4E4B\u82B1"
+    id: 4028
+    describe: "*\u77F3\u4E4B\u82B1*\r\n\u7729\u6655\u6982\u7387+5%\r\n\u901F\u5EA6-1\r\n*\u804C\u4E1A\u9650\u5B9A\uFF1A\u901A\u7528*"
+    describe_EN: '"*Flower of the stone*
+
+      Stunned probability + 5%
+
+      Speed
+      - 1
+
+      *Occupation limit: General*"'
+    Icon:
+      m_AssetGUID: f569c10860f89684a84f340e518de4b8
+      m_SubObjectName: "\u77F3\u4E4B\u82B1"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 0
+    heroVocation: 10
+    levelType: 6
+    ownerType: 0
+    buy: 2500
+    sell: 625
+    settlement: 0
+    maxCount: 1
+    objActions:
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 48
+      tailType: 0
+      valueType: 1
+      value: 5
+    - limitType: 0
+      limitValue: 0
+      vocation: 10
+      buffType: 15
+      tailType: 0
+      valueType: 0
+      value: -1
+    specialEffect: 0
+  treasuresDatas:
+  - name: "\u60E8\u767D\u8424\u77F3"
+    id: 0
+    describe: 
+    describe_EN: 
+    Icon:
+      m_AssetGUID: 068aa2847a43b6340b194106299ed235
+      m_SubObjectName: "\u60E8\u767D\u8424\u77F3"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 4
+    heroVocation: 0
+    levelType: 0
+    ownerType: 0
+    buy: 0
+    sell: 0
+    settlement: 1000
+    maxCount: 5
+    objActions: []
+    specialEffect: 0
+    ownerMapArea: 0
+  - name: "\u82E6\u75DB\u77F3\u677F"
+    id: 1
+    describe: 
+    describe_EN: 
+    Icon:
+      m_AssetGUID: e8f2f4b8d2fdad741b4c3e6afc61b2a5
+      m_SubObjectName: "\u82E6\u75DB\u77F3\u677F"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 4
+    heroVocation: 0
+    levelType: 0
+    ownerType: 0
+    buy: 0
+    sell: 0
+    settlement: 2000
+    maxCount: 5
+    objActions: []
+    specialEffect: 0
+    ownerMapArea: 0
+  - name: "\u5723\u7ECF\u5B64\u672C"
+    id: 2
+    describe: 
+    describe_EN: 
+    Icon:
+      m_AssetGUID: 015cb0e4e3654054aa8770d4349ab85b
+      m_SubObjectName: "\u5723\u7ECF\u5B64\u672C"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 4
+    heroVocation: 0
+    levelType: 0
+    ownerType: 0
+    buy: 0
+    sell: 0
+    settlement: 5000
+    maxCount: 5
+    objActions: []
+    specialEffect: 0
+    ownerMapArea: 0
+  - name: "\u9EEF\u5F71\u7ED3\u6676"
+    id: 3
+    describe: 
+    describe_EN: 
+    Icon:
+      m_AssetGUID: 4c1aeeb808e8b6945bbd77291cf6c3cb
+      m_SubObjectName: "\u9EEF\u5F71\u7ED3\u6676"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 4
+    heroVocation: 0
+    levelType: 0
+    ownerType: 0
+    buy: 0
+    sell: 0
+    settlement: 1500
+    maxCount: 5
+    objActions: []
+    specialEffect: 0
+    ownerMapArea: 1
+  - name: "\u51A5\u6CB3\u5B9D\u94BB"
+    id: 4
+    describe: 
+    describe_EN: 
+    Icon:
+      m_AssetGUID: a5a90299812088141a42af6c1d8824f8
+      m_SubObjectName: "\u51A5\u6CB3\u5B9D\u94BB"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 4
+    heroVocation: 0
+    levelType: 0
+    ownerType: 0
+    buy: 0
+    sell: 0
+    settlement: 3000
+    maxCount: 5
+    objActions: []
+    specialEffect: 0
+    ownerMapArea: 1
+  - name: "\u5BD2\u6F6D\u521A\u7389"
+    id: 5
+    describe: 
+    describe_EN: 
+    Icon:
+      m_AssetGUID: 92e6e0ec3dca8d049b87d286d16cd069
+      m_SubObjectName: "\u5BD2\u6F6D\u521A\u7389"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 4
+    heroVocation: 0
+    levelType: 0
+    ownerType: 0
+    buy: 0
+    sell: 0
+    settlement: 5000
+    maxCount: 5
+    objActions: []
+    specialEffect: 0
+    ownerMapArea: 1
+  - name: "\u5BD2\u6CC9\u8424\u77F3"
+    id: 6
+    describe: 
+    describe_EN: 
+    Icon:
+      m_AssetGUID: 771acd3a22e4a7243afbe8d207720aea
+      m_SubObjectName: "\u5BD2\u6CC9\u8424\u77F3"
+    IconBg:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    objType: 4
+    heroVocation: 0
+    levelType: 0
+    ownerType: 0
+    buy: 0
+    sell: 0
+    settlement: 5000
+    maxCount: 5
+    objActions: []
+    specialEffect: 0
+    ownerMapArea: 1

@@ -1,0 +1,627 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5b18f5714d9074f9e9817cf1a9a5e5, type: 3}
+  m_Name: LanguageDataSet
+  m_EditorClassIdentifier: 
+  TipsA: "\u591A\u8BED\u8A00\u6570\u636E\u7C7B"
+  TipsB: "\u82E5\u60F3\u589E\u52A0\u89D2\u8272,\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E00\u4E2A\u6BD4\u5F53\u524D\u503C\u66F4\u5927\u7684\u503C,\u59825\u21926"
+  TipsC: "\uFF01\uFF01\uFF01\u82E5\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E86\u66F4\u5C0F\u7684\u503C,\u53EF\u80FD\u4F1A\u9020\u6210\u6570\u636E\u4E22\u5931"
+  TipsD: "\uFF01\uFF01\uFF01\u9F20\u6807\u653E\u5728\u5B57\u6BB5\u4E0A\u6709\u63D0\u793A"
+  LanguageDatas:
+  - id: 1001
+    skillID: -1
+    model: "\u89D2\u8272\u57FA\u7840\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u653B\u51FB"
+    en: Attact
+  - id: 1002
+    skillID: -1
+    model: "\u89D2\u8272\u57FA\u7840\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u51CF\u4F24"
+    en: Damage reduction
+  - id: 1003
+    skillID: -1
+    model: "\u89D2\u8272\u57FA\u7840\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u7CBE\u51C6"
+    en: Experise
+  - id: 1004
+    skillID: -1
+    model: "\u89D2\u8272\u57FA\u7840\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u901F\u5EA6"
+    en: Speed
+  - id: 1005
+    skillID: -1
+    model: "\u89D2\u8272\u57FA\u7840\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u95EA\u907F"
+    en: Dodge
+  - id: 1006
+    skillID: -1
+    model: "\u89D2\u8272\u57FA\u7840\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u66B4\u51FB"
+    en: Critical strike
+  - id: 1007
+    skillID: -1
+    model: "\u89D2\u8272\u57FA\u7840\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6700\u5927\u751F\u547D"
+    en: Max Life
+  - id: 1101
+    skillID: -1
+    model: "\u89D2\u8272\u9690\u85CF\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4E2D\u6BD2\u6297\u6027"
+    en: Poison resistance
+  - id: 1102
+    skillID: -1
+    model: "\u89D2\u8272\u9690\u85CF\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u7729\u6655\u6297\u6027"
+    en: Stun resistance
+  - id: 1103
+    skillID: -1
+    model: "\u89D2\u8272\u9690\u85CF\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6D41\u8840\u6297\u6027"
+    en: Bleed resistance
+  - id: 1104
+    skillID: -1
+    model: "\u89D2\u8272\u9690\u85CF\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6B7B\u4EA1\u6297\u6027"
+    en: Death resistance
+  - id: 1105
+    skillID: -1
+    model: "\u89D2\u8272\u9690\u85CF\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4F4D\u79FB\u6297\u6027"
+    en: Move resistance
+  - id: 1106
+    skillID: -1
+    model: "\u89D2\u8272\u9690\u85CF\u5C5E\u6027"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u66B4\u51FB\u6297\u6027"
+    en: Critical resistance
+  - id: 1201
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5929\u8D4B"
+    en: Masteries
+  - id: 1202
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u89E6\u53D1\u6761\u4EF6"
+    en: Trigger condition
+  - id: 1203
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6218\u6597\u4E2D\u6D41\u8840\u7ED3\u675F\u540E"
+    en: '"In combat'
+  - id: 1204
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6218\u6597\u4E2D\u88AB\u6CBB\u75973\u6B21\u540E"
+    en: '"In combat'
+  - id: 1205
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6218\u6597\u4E2D\u4F4D\u79FB2\u6B21\u540E"
+    en: '"In combat'
+  - id: 1206
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6218\u6597\u4E2D\u91CA\u653E\u6CBB\u7597\u6280\u80FD\u540E"
+    en: '"In combat'
+  - id: 1207
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6218\u6597\u4E2D\u88AB\u66B4\u51FB\u540E"
+    en: '"In combat'
+  - id: 1208
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u79E9\u5E8F\u6548\u679C"
+    en: Order
+  - id: 1209
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u83B7\u5F97\u989D\u5916\u884C\u52A8\u70B9"
+    en: Gain extra action point
+  - id: 1210
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u83B7\u5F97\u201C\u5145\u5206\u51C6\u5907\u201D\u72B6\u6001\uFF081\u56DE\u5408\uFF09"
+    en: Get "Full preparation" state(1 round)
+  - id: 1211
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u968F\u673A\u201C\u6807\u8BB0\u201D\u4E00\u4E2A\u654C\u4EBA\uFF083\u56DE\u5408\uFF09"
+    en: Random "Mark" 1 enemy(3 rounds)
+  - id: 1212
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5BF9\u968F\u673A\u654C\u4EBA\u9020\u6210\u4F24\u5BB3"
+    en: Dealing damage to random enemy
+  - id: 1213
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u4F24\u5BB3+10%\uFF0C\u51CF\u4F24+10%\uFF083\u56DE\u5408\uFF09"
+    en: '"Damage +10% '
+  - id: 1214
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u4F24\u5BB3+15%\uFF082\u56DE\u5408\uFF09"
+    en: Damage +15%(2 rounds)
+  - id: 1215
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u6062\u590D3\uFF5E5\u70B9\u751F\u547D\u503C"
+    en: Restore 3~5 HP
+  - id: 1216
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u51CF\u4F24+10%\uFF082\u56DE\u5408\uFF09"
+    en: Damage reduction +10%(2 rounds)
+  - id: 1217
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u6B7B\u4EA1\u6297\u6027+100%\uFF081\u56DE\u5408\uFF09"
+    en: Death Res +100%(1 round)
+  - id: 1218
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6DF7\u4E71\u6548\u679C"
+    en: Chaos
+  - id: 1219
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u7729\u6655\uFF081\u56DE\u5408\uFF09"
+    en: Daze(1 round)
+  - id: 1220
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u53D7\u523010\u70B9\u4F24\u5BB3"
+    en: Get 10 damage
+  - id: 1221
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u201C\u6807\u8BB0\u201D\uFF083\u56DE\u5408\uFF09"
+    en: Self "mark"(3 round)
+  - id: 1222
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u76F8\u90BB\u961F\u53CB\u58EB\u6C14-5"
+    en: Adjcent teammate' morale -5
+  - id: 1223
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u51CF\u4F24-15%\uFF082\u56DE\u5408\uFF09"
+    en: Damage reduction -15%
+  - id: 1224
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u58EB\u6C14-3"
+    en: Self morale -3
+  - id: 1225
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u95EA\u907F-1\uFF083\u56DE\u5408\uFF09"
+    en: Dodge -1(3 rounds)
+  - id: 1226
+    skillID: -1
+    model: "\u5929\u8D4B"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u81EA\u8EAB\u4F4D\u79FB\u6297\u6027-100%\uFF082\u56DE\u5408\uFF09"
+    en: Move res -100%(2 rounds)
+  - id: 1301
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u666E\u901A\u623F\u95F4"
+    en: Normal room
+  - id: 1302
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5165\u53E3"
+    en: Enrance
+  - id: 1303
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4EA4\u4E92\u7269\u623F\u95F4"
+    en: Interact room
+  - id: 1304
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6709\u4EA4\u4E92\u7269\u7684\u6218\u6597\u623F\u95F4"
+    en: Interact combat room
+  - id: 1305
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u7CBE\u82F1\u6218\u6597\u623F\u95F4"
+    en: Elite combat room
+  - id: 1306
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6218\u6597\u623F\u95F4"
+    en: Combat room
+  - id: 1307
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "Boss\u6218\u6597\u623F\u95F4"
+    en: Boss room
+  - id: 1308
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6218\u6597\u9053\u8DEF"
+    en: Combat path
+  - id: 1309
+    skillID: -1
+    model: "\u5C0F\u5730\u56FE\u4FE1\u606F"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4EA4\u4E92\u7269\u9053\u8DEF"
+    en: Interact path
+  - id: 1401
+    skillID: -1
+    model: "\u6218\u6597\u4EA4\u4E92"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4F60\u786E\u5B9A\u8981\u8DF3\u8FC7\u5F53\u524D\u56DE\u5408\u5417"
+    en: "Skip current round\uFF1F"
+  - id: 1501
+    skillID: -1
+    model: "\u7ECF\u6587\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u7ECF\u8FC7\u591A\u6B21\u5C1D\u8BD5\uFF0C\u4F60\u7834\u89E3\u4E86\u4E00\u6BB5\u7ECF\u6587"
+    en: You decipher the scripture after attempts
+  - id: 1502
+    skillID: -1
+    model: "\u7ECF\u6587\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4F60\u5DF2\u83B7\u5F97\u7ECF\u6587"
+    en: Get the scripture
+  - id: 1601
+    skillID: -1
+    model: "\u51A5\u60F3\u53F0\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u9009\u62E9\u51A5\u60F3\u89D2\u8272"
+    en: Choose meditator
+  - id: 1602
+    skillID: -1
+    model: "\u51A5\u60F3\u53F0\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u51A5\u60F3\u540E\uFF0C\u8BE5\u89D2\u8272\u58EB\u6C14\u6280\u80FD\u5C06\u53D1\u751F\u5F02\u53D8
+      \\n \u82E5\u5F02\u53D8\u6B21\u6570\u8D85\u8FC7\u4E0A\u9650\uFF0C\u5C06\u968F\u673A\u66FF\u6362\u5DF2\u5F02\u53D8\u6548\u679C"
+    en: '"After meditation'
+  - id: 1603
+    skillID: -1
+    model: "\u51A5\u60F3\u53F0\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u968F\u673A\u5DF2\u5F02\u53D8\u6548\u679C\u5C06\u4F1A\u88AB\u66FF\u6362\uFF0C\u786E\u5B9A\u5F02\u53D8\uFF1F"
+    en: "Random mutated effects will now be replaced\uFF0Care you sure\uFF1F"
+  - id: 1604
+    skillID: -1
+    model: "\u51A5\u60F3\u53F0\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "{\u58EB\u6C14\u6280\u80FD}\u83B7\u5F97{\u8BCD\u6761\u6548\u679C}"
+    en: '{} get{}'
+  - id: 1605
+    skillID: -1
+    model: "\u51A5\u60F3\u53F0\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6B64\u5904\u65E0\u6CD5\u51A5\u60F3"
+    en: Can't meditate here
+  - id: 1701
+    skillID: -1
+    model: "\u796D\u575B\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u8D2A\u5A6A\u796D\u575B"
+    en: Greedy altar
+  - id: 1702
+    skillID: -1
+    model: "\u796D\u575B\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u611A\u6627\u796D\u575B"
+    en: Ignorance altar
+  - id: 1703
+    skillID: -1
+    model: "\u796D\u575B\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u732E\u4E0A\u751F\u547D\uFF0C\u6362\u53D6\u56DE\u62A5\uFF0C\u8FD9\u5F88\u516C\u5E73\u3002"
+    en: '"Life for payment'
+  - id: 1704
+    skillID: -1
+    model: "\u796D\u575B\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u8FD9\u5C31\u662F\u4EE3\u4EF7\uFF0C\u4F46\u6CA1\u6709\u4EBA\u771F\u7684\u60F3\u505C\u4E0B\u3002"
+    en: '"That''s the price'
+  - id: 1705
+    skillID: -1
+    model: "\u796D\u575B\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4E0E\u56DE\u62A5\u76F8\u6BD4\uFF0C\u751F\u547D\u7684\u4EE3\u4EF7\u4E0D\u503C\u4E00\u63D0\u3002"
+    en: Life is nothing compared to the rewards.
+  - id: 1706
+    skillID: -1
+    model: "\u796D\u575B\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u8D2A\u5A6A\u8005\u604B\u751F\uFF0C\u611A\u6627\u8005\u754F\u6B7B"
+    en: '"Greed loves life'
+  - id: 1707
+    skillID: -1
+    model: "\u796D\u575B\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u8D2A\u5A6A\u7684\u4EBA\u7EC8\u4F1A\u5C1D\u5230\u6076\u679C"
+    en: Greedy man will suffer
+  - id: 1801
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5168\u961F\u4F24\u5BB3+15%"
+    en: Team damage +15%
+  - id: 1802
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5168\u961F\u51CF\u4F24+15%"
+    en: Team damage reduce +15%
+  - id: 1803
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5168\u961F\u4E2D\u6BD2\u3001\u6D41\u8840\u3001\u4F4D\u79FB\u6297\u6027+20%"
+    en: Team poision/bleed/move res+20%
+  - id: 1804
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5168\u961F\u901F\u5EA6+5"
+    en: Team speed+5%
+  - id: 1805
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5168\u961F\u66B4\u51FB+5%"
+    en: Team critical strike +5%
+  - id: 1806
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6BCF\u6B21\u6218\u6597\u7ED3\u675F\u5168\u4F53\u6062\u590D10\u70B9\u751F\u547D"
+    en: Team restore 10 HP after combate
+  - id: 1807
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6BCF\u6B21\u6218\u6597\u7ED3\u675F\u5168\u4F53\u6062\u590D10\u70B9\u58EB\u6C14"
+    en: Team restore 10 morale after combat
+  - id: 1808
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5168\u961F\u6CBB\u7597\u6548\u679C+20%"
+    en: Team heal effect +20%
+  - id: 1809
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5168\u961F\u66B4\u51FB+20%"
+    en: Team critical strike +20%
+  - id: 1810
+    skillID: -1
+    model: "\u796D\u575B\u795D\u798F\u6548\u679C"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5168\u961F\u83B7\u5F97\u72B6\u6001\u201C\u5145\u5206\u51C6\u5907\u201D"
+    en: Team get"Full prepartion"state
+  - id: 1901
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5782\u6B7B\u4E4B\u4EBA"
+    en: Dying
+  - id: 1902
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u730E\u5934"
+    en: Headhunter
+  - id: 1903
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u8001\u5343"
+    en: Card shark
+  - id: 1904
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5546\u4EBA"
+    en: Tradesman
+  - id: 1905
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u9970\u54C1\u8D29\u5B50"
+    en: Jewelry dealer
+  - id: 1906
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u77FF\u5DE5"
+    en: Miner
+  - id: 1907
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u8010\u5FC3\u7B49\u5F85\u547D\u8FD0\u7684\u56DE\u9988\uFF0C\u4EA6\u6216\u6076\u62A5"
+    en: '"Patiently wait for the gift of fate'
+  - id: 1908
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5584\u4E3E\uFF1F\u4EA6\u6216\u662F\u611A\u884C\uFF1F \u5373\u4F7F\u8DB3\u8FF9\u904D\u5E03\u661F\u7A7A\uFF0C
+      \u4EBA\u7C7B\u4E5F\u7EC8\u9003\u4E0D\u8FC7\u5FC3\u5E95\u7684\u7262\u7B3C"
+    en: "Good or evil\uFF0CNo one can escape from the prison in heart"
+  - id: 1909
+    skillID: -1
+    model: "\u89E3\u6551\u4EA4\u4E92\u7269"
+    type: "\u6309\u94AE"
+    cn: "\u89E3\u6551"
+    en: Rescue
+  - id: 2001
+    skillID: -1
+    model: "\u5730\u4E0B\u6E38\u5546\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u751F\u547D\u3001\u5C0A\u4E25\u3001\u4EBA\u6027\uFF0C\u4E07\u7269\u90FD\u6709\u5176\u4EF7\u683C\u3002"
+    en: "\"Life\u3001honour\u3001humanity"
+  - id: 2002
+    skillID: -1
+    model: "\u5730\u4E0B\u6E38\u5546\u4EA4\u4E92\u7269"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u786E\u5B9A\u8D2D\u4E70{\u7269\u54C1\u540D\u79F0}?"
+    en: Buy " "?
+  - id: 2101
+    skillID: -1
+    model: "\u6218\u6597\u7ED3\u7B97\u754C\u9762"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u80DC\u5229"
+    en: Victory
+  - id: 2102
+    skillID: -1
+    model: "\u6218\u6597\u7ED3\u7B97\u754C\u9762"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u641C\u7D22\u5C38\u9AB8\u53D1\u73B0"
+    en: Loots
+  - id: 2103
+    skillID: -1
+    model: "\u6218\u6597\u7ED3\u7B97\u754C\u9762"
+    type: "\u6309\u94AE"
+    cn: "\u62FF\u53D6"
+    en: Take away
+  - id: 2104
+    skillID: -1
+    model: "\u6218\u6597\u7ED3\u7B97\u754C\u9762"
+    type: "\u6309\u94AE"
+    cn: "\u653E\u5F03"
+    en: Give up
+  - id: 2201
+    skillID: -1
+    model: "\u64A4\u9000\u6309\u94AE"
+    type: "hover\u63CF\u8FF0"
+    cn: "\u9003\u8DD1\uFF08\u6218\u6597\u5185\uFF09"
+    en: Escape
+  - id: 2202
+    skillID: -1
+    model: "\u64A4\u9000\u6309\u94AE"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u61E6\u592B\uFF0C\u771F\u7684\u8981\u9003\u79BB\u6218\u6597\u5417\uFF1F"
+    en: "Really?You coward\uFF01"
+  - id: 2203
+    skillID: -1
+    model: "\u64A4\u9000\u6309\u94AE"
+    type: "hover\u63CF\u8FF0"
+    cn: "\u64A4\u79BB\u4EFB\u52A1"
+    en: Retreat
+  - id: 2204
+    skillID: -1
+    model: "\u64A4\u9000\u6309\u94AE"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6015\u6B7B\u7684\u80C6\u5C0F\u9B3C\uFF0C\u8981\u56DE\u5BB6\u4E86\u5417\uFF1F"
+    en: Going home you spooky?
+  - id: 2301
+    skillID: -1
+    model: "\u4EFB\u52A1\u5931\u8D25\u7ED3\u7B97\u754C\u9762"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4EFB\u52A1\u5931\u8D25"
+    en: Mission failed
+  - id: 2302
+    skillID: -1
+    model: "\u4EFB\u52A1\u5931\u8D25\u7ED3\u7B97\u754C\u9762"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4EFB\u52A1\u5956\u52B1"
+    en: Mission reward
+  - id: 2303
+    skillID: -1
+    model: "\u4EFB\u52A1\u5931\u8D25\u7ED3\u7B97\u754C\u9762"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u89D2\u8272\u4FE1\u606F"
+    en: Character information
+  - id: 2304
+    skillID: -1
+    model: "\u4EFB\u52A1\u5931\u8D25\u7ED3\u7B97\u754C\u9762"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6536\u85CF\u7684\u5B9D\u7269"
+    en: Collected treasure
+  - id: 2305
+    skillID: -1
+    model: "\u4EFB\u52A1\u5931\u8D25\u7ED3\u7B97\u754C\u9762"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u6536\u85CF\u7684\u8D44\u6E90"
+    en: Collected resource
+  - id: 2306
+    skillID: -1
+    model: "\u4EFB\u52A1\u5931\u8D25\u7ED3\u7B97\u754C\u9762"
+    type: "\u6309\u94AE"
+    cn: "\u8FD4\u56DE\u8425\u5730"
+    en: Back to campsite
+  - id: 2401
+    skillID: -1
+    model: "\u4EFB\u52A1\u5B8C\u6210\u7ED3\u7B97\u754C\u9762"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u4EFB\u52A1\u5B8C\u6210"
+    en: Mission completed
+  - id: 2501
+    skillID: -1
+    model: "\u5F3A\u5236\u9003\u79BB\u4EFB\u52A1"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u672A\u8FBE\u6210\u4EFB\u52A1\u76EE\u6807\uFF0C\u64A4\u79BB\u4F1A\u964D\u4F4E\u51FA\u5F81\u961F\u5458\u58EB\u6C1420\u70B9\uFF0C\u4F60\u786E\u5B9A\u8981\u64A4\u79BB\u5417\uFF1F"
+    en: '"Retreatment without achieve the goal will reduce 20 team morales'
+  - id: 2601
+    skillID: -1
+    model: "\u6280\u80FD\u901A\u7528\u63CF\u8FF0"
+    type: "\u6587\u5B57\u63CF\u8FF0"
+    cn: "\u5355\u4F53"
+    en: Individual

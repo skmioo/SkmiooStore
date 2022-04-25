@@ -1,0 +1,20 @@
+
+qianxing.png
+size: 334,369
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+q1
+  rotate: false
+  xy: 2, 2
+  size: 330, 365
+  orig: 450, 450
+  offset: 74, 0
+  index: -1
+q2
+  rotate: false
+  xy: 2, 2
+  size: 330, 365
+  orig: 450, 450
+  offset: 74, 0
+  index: -1

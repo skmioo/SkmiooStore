@@ -1,0 +1,34 @@
+
+zhuli.png
+size: 309,155
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JINENG01
+  rotate: false
+  xy: 2, 72
+  size: 266, 81
+  orig: 273, 83
+  offset: 6, 1
+  index: -1
+JINENG02
+  rotate: false
+  xy: 2, 2
+  size: 235, 68
+  orig: 240, 78
+  offset: 3, 5
+  index: -1
+JINENG3
+  rotate: true
+  xy: 270, 56
+  size: 97, 37
+  orig: 104, 51
+  offset: 4, 7
+  index: -1
+KAPAI
+  rotate: true
+  xy: 239, 6
+  size: 64, 29
+  orig: 66, 31
+  offset: 1, 1
+  index: -1

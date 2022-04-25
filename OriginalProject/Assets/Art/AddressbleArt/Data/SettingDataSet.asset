@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5060890f419ccd44e86415e2cdc12e51, type: 3}
+  m_Name: SettingDataSet
+  m_EditorClassIdentifier: 
+  keySettingData:
+    name: KeySettingData
+    id: 1101
+    describe: 
+    keySettings: []
+  imageSettingData:
+    name: ImageSettingData
+    id: 1102
+    describe: 
+    windowModeType: 0
+    resolution: {x: 0, y: 0}
+  audioSettingData:
+    name: AudioSettingData
+    id: 1103
+    describe: "\u97F3\u9891\u8BBE\u7F6E\u6570\u636E"
+    mute: 0
+    backtageMute: 0
+    masterVolumn: 100
+    soundVolumn: 100

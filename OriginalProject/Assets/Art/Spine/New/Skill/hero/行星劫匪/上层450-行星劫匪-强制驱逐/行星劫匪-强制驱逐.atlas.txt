@@ -1,0 +1,20 @@
+
+行星劫匪-强制驱逐.png
+size: 737,424
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_1
+  rotate: true
+  xy: 519, 202
+  size: 220, 216
+  orig: 223, 221
+  offset: 2, 2
+  index: -1
+body_2
+  rotate: true
+  xy: 2, 2
+  size: 420, 515
+  orig: 423, 515
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,90 @@
+
+skeleton.png
+size: 647,270
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+人面异蛛-拆分_0000_头
+  rotate: true
+  xy: 525, 4
+  size: 94, 108
+  orig: 450, 450
+  offset: 120, 329
+  index: -1
+人面异蛛-拆分_0001_左小臂
+  rotate: false
+  xy: 418, 21
+  size: 105, 166
+  orig: 450, 450
+  offset: 181, 120
+  index: -1
+人面异蛛-拆分_0002_左大臂
+  rotate: true
+  xy: 525, 100
+  size: 87, 120
+  orig: 450, 450
+  offset: 222, 257
+  index: -1
+人面异蛛-拆分_0003_左袍
+  rotate: true
+  xy: 2, 122
+  size: 146, 414
+  orig: 450, 450
+  offset: 176, 33
+  index: -1
+人面异蛛-拆分_0004_右袍
+  rotate: true
+  xy: 2, 66
+  size: 54, 306
+  orig: 450, 450
+  offset: 124, 34
+  index: -1
+人面异蛛-拆分_0005_上身
+  rotate: true
+  xy: 2, 10
+  size: 54, 133
+  orig: 450, 450
+  offset: 151, 232
+  index: -1
+人面异蛛-拆分_0006_腿1
+  rotate: true
+  xy: 384, 67
+  size: 53, 25
+  orig: 450, 450
+  offset: 98, 22
+  index: -1
+人面异蛛-拆分_0007_腿2
+  rotate: true
+  xy: 137, 2
+  size: 62, 59
+  orig: 450, 450
+  offset: 143, 0
+  index: -1
+人面异蛛-拆分_0008_腿3
+  rotate: false
+  xy: 198, 10
+  size: 53, 54
+  orig: 450, 450
+  offset: 255, 0
+  index: -1
+人面异蛛-拆分_0009_腿4
+  rotate: true
+  xy: 253, 6
+  size: 58, 37
+  orig: 450, 450
+  offset: 299, 14
+  index: -1
+人面异蛛-拆分_0010_下身
+  rotate: true
+  xy: 418, 189
+  size: 79, 225
+  orig: 450, 450
+  offset: 148, 21
+  index: -1
+人面异蛛-拆分_0011_右手
+  rotate: false
+  xy: 310, 12
+  size: 72, 108
+  orig: 450, 450
+  offset: 114, 184
+  index: -1

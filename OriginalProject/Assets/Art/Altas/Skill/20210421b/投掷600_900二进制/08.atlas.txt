@@ -1,0 +1,20 @@
+
+08.png
+size: 242,267
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+FUTOU
+  rotate: false
+  xy: 2, 2
+  size: 238, 95
+  orig: 240, 97
+  offset: 1, 1
+  index: -1
+JINENNG
+  rotate: false
+  xy: 2, 99
+  size: 219, 166
+  orig: 223, 191
+  offset: 2, 23
+  index: -1

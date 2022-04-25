@@ -1,0 +1,3242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021a81b7d5079704abf27e6550151b1f, type: 3}
+  m_Name: A_ZH_RoleDateSet_L
+  m_EditorClassIdentifier: 
+  TipsA: "\u82E5\u60F3\u589E\u52A0\u89D2\u8272,\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E00\u4E2A\u6BD4\u5F53\u524D\u503C\u66F4\u5927\u7684\u503C,\u59825\u21926"
+  TipsB: "\uFF01\uFF01\uFF01\u82E5\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E86\u66F4\u5C0F\u7684\u503C,\u53EF\u80FD\u4F1A\u9020\u6210\u6570\u636E\u4E22\u5931"
+  TipsC: "\uFF01\uFF01\uFF01\u9F20\u6807\u653E\u5728\u5B57\u6BB5\u4E0A\u6709\u63D0\u793A"
+  heroData:
+  - name: "\u661F\u9645\u6218\u72AF"
+    id: 1001
+    describe: 
+    icon:
+      m_AssetGUID: 9ddf86d8286264f42bc2f668f7a5c512
+      m_SubObjectName: "\u661F\u9645\u6218\u72AF-\u5934\u50CF"
+    image:
+      m_AssetGUID: 8c7cb3fcd8adb5242960b4509794d404
+      m_SubObjectName: "\u661F\u9645\u6218\u72AF-\u7ACB\u7ED8"
+    roleType: 0
+    vocation: 0
+    roleHaveSkill: f3030000f4030000f5030000f6030000f7030000f8030000f9030000
+    roleMode:
+      m_AssetGUID: bdc63d8748335f24a84f701bb77f220a
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 110
+    minMorale: 0
+    maxInjuries: 100
+    minInjuries: 0
+    hp: 50
+    defence: 20
+    minAtk: 8
+    maxAtk: 16
+    dodge: 0
+    crits: 5
+    rate: 0
+    speed: 0
+    bleed: 20
+    poison: 20
+    debuff: 20
+    vertigo: 30
+    position: 30
+    death: 20
+    preferMove: 0
+    moveDistance: 0
+  - name: "\u795E\u79D8\u5B66\u8005"
+    id: 1002
+    describe: 
+    icon:
+      m_AssetGUID: a089398b2e4a1ad4fb1ffc0526d3f4d3
+      m_SubObjectName: "\u795E\u79D8\u5B66\u8005-\u5934\u50CF"
+    image:
+      m_AssetGUID: d4b61d23eb2ff1f4a83438ae995e686c
+      m_SubObjectName: "\u795E\u79D8\u5B66\u8005-\u7ACB\u7ED8"
+    roleType: 0
+    vocation: 7
+    roleHaveSkill: fd030000fe030000ff03000000040000010400000204000003040000
+    roleMode:
+      m_AssetGUID: 087fd7dc209fbf34e941d5c3d80025ce
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 110
+    minMorale: 0
+    maxInjuries: 100
+    minInjuries: 0
+    hp: 20
+    defence: 0
+    minAtk: 4
+    maxAtk: 8
+    dodge: 0
+    crits: 4
+    rate: 0
+    speed: 0
+    bleed: 5
+    poison: 5
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 35
+    preferMove: 0
+    moveDistance: 0
+  - name: "\u53CC\u9762\u95F4\u8C0D"
+    id: 1003
+    describe: 
+    icon:
+      m_AssetGUID: 396069e02c34dce4c959c22a31b3b0ee
+      m_SubObjectName: "\u53CC\u9762\u95F4\u8C0D-\u5934\u50CF"
+    image:
+      m_AssetGUID: 1dbb4a71b09838c468cbb9c5298110dc
+      m_SubObjectName: "\u53CC\u9762\u95F4\u8C0D-\u95F4\u8C0D-\u7ACB\u7ED8"
+    roleType: 0
+    vocation: 5
+    roleHaveSkill: 0704000008040000090400000a0400000b0400000c0400000d040000
+    roleMode:
+      m_AssetGUID: d0849e5c7d0afe84a98938701187bffa
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 110
+    minMorale: 0
+    maxInjuries: 100
+    minInjuries: 0
+    hp: 25
+    defence: 5
+    minAtk: 8
+    maxAtk: 10
+    dodge: 10
+    crits: 10
+    rate: 0
+    speed: 0
+    bleed: 20
+    poison: 20
+    debuff: 15
+    vertigo: 5
+    position: 10
+    death: 10
+    preferMove: 0
+    moveDistance: 0
+  - name: "\u884C\u661F\u52AB\u532A"
+    id: 1004
+    describe: 
+    icon:
+      m_AssetGUID: 90739eaba072e4b4f990b3770840366f
+      m_SubObjectName: "\u884C\u661F\u52AB\u532A-\u5934\u50CF"
+    image:
+      m_AssetGUID: 9869a7f3fa8aae143ab845188ee7b16c
+      m_SubObjectName: "\u884C\u661F\u52AB\u532A-\u7ACB\u7ED8"
+    roleType: 0
+    vocation: 1
+    roleHaveSkill: 11040000120400001304000014040000150400001604000017040000
+    roleMode:
+      m_AssetGUID: 9c81d0215f82d394c84fe2d95c08f257
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 110
+    minMorale: 0
+    maxInjuries: 100
+    minInjuries: 0
+    hp: 40
+    defence: 15
+    minAtk: 4
+    maxAtk: 8
+    dodge: 10
+    crits: 10
+    rate: 0
+    speed: 0
+    bleed: 18
+    poison: 18
+    debuff: 18
+    vertigo: 20
+    position: 20
+    death: 10
+    preferMove: 0
+    moveDistance: 0
+  - name: "\u96C7\u4F63\u6740\u624B"
+    id: 1005
+    describe: 
+    icon:
+      m_AssetGUID: 8f511233e5ab89a44bb786a3fe9f8a4f
+      m_SubObjectName: "\u96C7\u4F63\u6740\u624B-\u5934\u50CF"
+    image:
+      m_AssetGUID: f43b5e3696225534cb8e99fe0899599a
+      m_SubObjectName: "\u96C7\u4F63\u6740\u624B-\u7ACB\u7ED8"
+    roleType: 0
+    vocation: 2
+    roleHaveSkill: 1b0400001c0400001d0400001e0400001f0400002004000021040000
+    roleMode:
+      m_AssetGUID: 95d11c10daefe1342a3407850e2bec37
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 110
+    minMorale: 0
+    maxInjuries: 100
+    minInjuries: 0
+    hp: 25
+    defence: 5
+    minAtk: 12
+    maxAtk: 20
+    dodge: 15
+    crits: 15
+    rate: 0
+    speed: 0
+    bleed: 25
+    poison: 25
+    debuff: 0
+    vertigo: 0
+    position: 50
+    death: 10
+    preferMove: 0
+    moveDistance: 0
+  - name: "\u90AA\u6076\u53D1\u660E\u5BB6"
+    id: 1006
+    describe: 
+    icon:
+      m_AssetGUID: 19146b85bc925994a9fba2b281bd20cb
+      m_SubObjectName: "\u90AA\u6076\u53D1\u660E\u5BB6-\u5934\u50CF"
+    image:
+      m_AssetGUID: 50d4031ec15e80c4a969cedca791ffdf
+      m_SubObjectName: "\u90AA\u6076\u53D1\u660E\u5BB6-\u7ACB\u7ED8"
+    roleType: 0
+    vocation: 3
+    roleHaveSkill: 25040000260400002704000028040000290400002a0400002b040000
+    roleMode:
+      m_AssetGUID: 53908150593400544affb9324da95575
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 110
+    minMorale: 0
+    maxInjuries: 100
+    minInjuries: 0
+    hp: 20
+    defence: 20
+    minAtk: 0
+    maxAtk: 20
+    dodge: 20
+    crits: 30
+    rate: 0
+    speed: 0
+    bleed: 5
+    poison: 5
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 5
+    preferMove: 0
+    moveDistance: 0
+  - name: "\u4EA1\u547D\u8D4C\u5F92"
+    id: 1007
+    describe: 
+    icon:
+      m_AssetGUID: 3178b6ca7446d7a4ca8b8f6a45cea46f
+      m_SubObjectName: "\u4EA1\u547D\u8D4C\u5F92-\u5934\u50CF"
+    image:
+      m_AssetGUID: ccd9c40d5def2c24c921e0316b9775eb
+      m_SubObjectName: "\u4EA1\u547D\u8D4C\u5F92-\u7ACB\u7ED8"
+    roleType: 0
+    vocation: 4
+    roleHaveSkill: 2f040000300400003104000032040000330400003404000035040000
+    roleMode:
+      m_AssetGUID: 461200fb1201474449cfd60dc2f1b670
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 110
+    minMorale: 0
+    maxInjuries: 100
+    minInjuries: 0
+    hp: 30
+    defence: 10
+    minAtk: 10
+    maxAtk: 15
+    dodge: 5
+    crits: 5
+    rate: 0
+    speed: 0
+    bleed: 28
+    poison: 28
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 30
+    preferMove: 0
+    moveDistance: 0
+  - name: "\u5974\u96B6\u5546\u4EBA"
+    id: 1008
+    describe: 
+    icon:
+      m_AssetGUID: d34c695a695a20949a764fe086a50291
+      m_SubObjectName: "\u5974\u96B6\u5546\u4EBA-\u5934\u50CF"
+    image:
+      m_AssetGUID: 42ca620803022ec42b8af55e1c5860c2
+      m_SubObjectName: "\u5974\u96B6\u5546\u4EBA-\u7ACB\u7ED8"
+    roleType: 0
+    vocation: 6
+    roleHaveSkill: 390400003a0400003b0400003c0400003d0400003e0400003f040000
+    roleMode:
+      m_AssetGUID: 82d5794c68d270844ba1e0c2d1c48ce3
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 110
+    minMorale: 0
+    maxInjuries: 100
+    minInjuries: 0
+    hp: 24
+    defence: 5
+    minAtk: 5
+    maxAtk: 10
+    dodge: 0
+    crits: 5
+    rate: 0
+    speed: 0
+    bleed: 5
+    poison: 5
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 5
+    preferMove: 0
+    moveDistance: 0
+  enemyData:
+  - name: "\u8654\u8BDA\u6559\u5F92"
+    id: 3001
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: d1070000d2070000
+    roleMode:
+      m_AssetGUID: 4814136479b05fd47801df3b57f9a457
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 15
+    defence: 0
+    minAtk: 1
+    maxAtk: 3
+    dodge: 2
+    crits: 5
+    rate: 0
+    speed: 1
+    bleed: 18
+    poison: 18
+    debuff: 18
+    vertigo: 20
+    position: 20
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  - name: "\u9A6F\u517D\u8005"
+    id: 3002
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: d3070000d4070000d5070000
+    roleMode:
+      m_AssetGUID: d016b00ca9b25d741b38c1dc9f13a4e1
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 20
+    defence: 0
+    minAtk: 1
+    maxAtk: 3
+    dodge: 3
+    crits: 5
+    rate: 0
+    speed: 2
+    bleed: 25
+    poison: 25
+    debuff: 0
+    vertigo: 0
+    position: 50
+    death: 0
+    preferMove: 1
+    moveDistance: 1
+  - name: "\u8D77\u6E90\u795E\u4EC6"
+    id: 3003
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: e2070000e3070000
+    roleMode:
+      m_AssetGUID: 6502202ee73310247bc24c5ae6d3b327
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 20
+    defence: 0
+    minAtk: 1
+    maxAtk: 4
+    dodge: 5
+    crits: 5
+    rate: 0
+    speed: 5
+    bleed: 10
+    poison: 10
+    debuff: 50
+    vertigo: 30
+    position: 20
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  - name: "\u9057\u8A00"
+    id: 3004
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: db070000dc070000dd070000
+    roleMode:
+      m_AssetGUID: 9aa8cf38727f8bc4ca84f76708a79dd8
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 25
+    defence: 0
+    minAtk: 1
+    maxAtk: 3
+    dodge: 5
+    crits: 5
+    rate: 0
+    speed: 3
+    bleed: 20
+    poison: 20
+    debuff: 15
+    vertigo: 5
+    position: 10
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  - name: "\u75AF\u72C2\u6559\u5F92"
+    id: 3005
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: de070000df070000
+    roleMode:
+      m_AssetGUID: a26fa945901a0ea488ea71e89bcd2b28
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 25
+    defence: 0
+    minAtk: 2
+    maxAtk: 6
+    dodge: 25
+    crits: 5
+    rate: 0
+    speed: 4
+    bleed: 5
+    poison: 0
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  - name: "\u8D4E\u7F6A\u8005"
+    id: 3006
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: e0070000e1070000
+    roleMode:
+      m_AssetGUID: 8a7d02fcefdb6bc4096cfc52bcb3483b
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 25
+    defence: 0
+    minAtk: 2
+    maxAtk: 4
+    dodge: 10
+    crits: 5
+    rate: 0
+    speed: 3
+    bleed: 5
+    poison: 5
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 0
+    preferMove: 1
+    moveDistance: 1
+  - name: "\u9CDE\u7532\u517D"
+    id: 3007
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: d6070000d7070000
+    roleMode:
+      m_AssetGUID: 0b001313a14076c4d847f7f1f58aa706
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 30
+    defence: 0
+    minAtk: 1
+    maxAtk: 3
+    dodge: 4
+    crits: 5
+    rate: 0
+    speed: 3
+    bleed: 5
+    poison: 5
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  - name: "\u4EBA\u9762\u5F02\u86DB"
+    id: 3008
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 12
+    roleHaveSkill: d8070000d9070000da070000
+    roleMode:
+      m_AssetGUID: 357701827a0a65542af271b1f244e573
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 30
+    defence: 0
+    minAtk: 1
+    maxAtk: 3
+    dodge: 4
+    crits: 5
+    rate: 0
+    speed: 3
+    bleed: 5
+    poison: 5
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 0
+    preferMove: 1
+    moveDistance: 1
+  - name: "\u51B2\u89D2\u76FE\u9CDE"
+    id: 3009
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 12
+    roleHaveSkill: e4070000e5070000
+    roleMode:
+      m_AssetGUID: e084c09d3effbbd49bde3ac4676c5439
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 35
+    defence: 0
+    minAtk: 1
+    maxAtk: 3
+    dodge: 15
+    crits: 5
+    rate: 0
+    speed: 2
+    bleed: 50
+    poison: 100
+    debuff: 25
+    vertigo: 45
+    position: 80
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  - name: "\u585E\u58EC\u85E4\u8513"
+    id: 3010
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: ef070000f0070000
+    roleMode:
+      m_AssetGUID: 77758a3ec4ee2ef49894170d53b5c8f4
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 20
+    defence: 0
+    minAtk: 2
+    maxAtk: 5
+    dodge: 1
+    crits: 5
+    rate: 0
+    speed: 2
+    bleed: 50
+    poison: 100
+    debuff: 25
+    vertigo: 45
+    position: 80
+    death: 0
+    preferMove: 1
+    moveDistance: 1
+  - name: "\u6CBC\u5730\u730E\u624B"
+    id: 3011
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: e6070000e7070000
+    roleMode:
+      m_AssetGUID: 4fdf2c2ce2ed1504a8a88d8560075b98
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 45
+    defence: 0
+    minAtk: 1
+    maxAtk: 2
+    dodge: 15
+    crits: 5
+    rate: 0
+    speed: 2
+    bleed: 28
+    poison: 28
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  - name: "\u8150\u6DB2\u4E4B\u75AE"
+    id: 3012
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: e8070000e9070000
+    roleMode:
+      m_AssetGUID: 5b24927f02d3a9e4aaa9617fe3ba8bb7
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 58
+    defence: 0
+    minAtk: 1
+    maxAtk: 2
+    dodge: 10
+    crits: 5
+    rate: 0
+    speed: 5
+    bleed: 20
+    poison: 20
+    debuff: 15
+    vertigo: 5
+    position: 10
+    death: 0
+    preferMove: 1
+    moveDistance: 1
+  - name: "\u7C98\u7A20\u602A"
+    id: 3013
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: ec070000
+    roleMode:
+      m_AssetGUID: 703bcf2f2567f6346ac5170d0b5d4953
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 10
+    defence: 0
+    minAtk: 3
+    maxAtk: 5
+    dodge: 15
+    crits: 5
+    rate: 0
+    speed: 10
+    bleed: 5
+    poison: 5
+    debuff: 5
+    vertigo: 5
+    position: 5
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  - name: "\u8346\u68D8\u5730\u523A"
+    id: 3014
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: ea070000eb070000
+    roleMode:
+      m_AssetGUID: 680463a43a0f07c488ea711d3e5fd5a7
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 30
+    defence: 0
+    minAtk: 2
+    maxAtk: 6
+    dodge: 1
+    crits: 5
+    rate: 0
+    speed: 2
+    bleed: 50
+    poison: 100
+    debuff: 25
+    vertigo: 45
+    position: 80
+    death: 0
+    preferMove: 1
+    moveDistance: 1
+  - name: "\u98DE\u8747\u704C\u6728"
+    id: 3015
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 11
+    roleHaveSkill: ed070000ee070000
+    roleMode:
+      m_AssetGUID: e5f498e52462bda44947fd864e2732e9
+      m_SubObjectName: 
+    size: 2
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 40
+    defence: 0
+    minAtk: 4
+    maxAtk: 8
+    dodge: 1
+    crits: 5
+    rate: 0
+    speed: 2
+    bleed: 50
+    poison: 100
+    debuff: 25
+    vertigo: 45
+    position: 80
+    death: 0
+    preferMove: 1
+    moveDistance: 1
+  - name: "\u4E3B\u796D\u7940"
+    id: 3301
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 12
+    roleHaveSkill: c30b0000c40b0000c50b0000c60b0000
+    roleMode:
+      m_AssetGUID: 4c57c6fb90813664daa63d68c5d5d63a
+      m_SubObjectName: 
+    size: 1
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 125
+    defence: 10
+    minAtk: 10
+    maxAtk: 15
+    dodge: 20
+    crits: 10
+    rate: 100
+    speed: 8
+    bleed: 10
+    poison: 100
+    debuff: 50
+    vertigo: 50
+    position: 50
+    death: 0
+    preferMove: 1
+    moveDistance: 2
+  - name: "\u7C98\u7A20\u5723\u8005"
+    id: 3302
+    describe: 
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 12
+    roleHaveSkill: cd0b0000ce0b0000cf0b0000d00b0000
+    roleMode:
+      m_AssetGUID: f5ec3cf06e769b14981d8324c48a0c88
+      m_SubObjectName: 
+    size: 2
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 200
+    defence: 0
+    minAtk: 10
+    maxAtk: 15
+    dodge: 0
+    crits: 5
+    rate: 100
+    speed: 6
+    bleed: 100
+    poison: 100
+    debuff: 25
+    vertigo: 45
+    position: 80
+    death: 0
+    preferMove: 1
+    moveDistance: 1
+  - name: "\u9001\u846C\u6559\u50E7"
+    id: 3303
+    describe: "\u5B97\u6559\u4E2D\u7684\u9001\u846C\u4EBA\uFF0C\u4ED6\u4EEC\u53CC\u76EE\u5931\u660E\uFF0C\u4F46\u5374\u80FD\u5E38\u5E74\u5728\u9542\u7A7A\u4E4B\u5730\u6E38\u8361\uFF0C\u7528\u55C5\u89C9\u5BFB\u627E\u610F\u5916\u8DCC\u843D\u7684\u5C38\u4F53\uFF0C\u8C01\u4E5F\u4E0D\u77E5\u9053\u8FD9\u4E9B\u5C38\u4F53\u540E\u6765\u53BB\u4E86\u54EA\u91CC\uFF0C\u4ED6\u4EEC\u603B\u662F\u5355\u72EC\u51FA\u6CA1\uFF0C\u5B97\u6559\u4E2D\u7684\u75AF\u5B50\u90FD\u4F1A\u8FDC\u79BB\u4ED6\u4EEC\uFF0C\u5982\u679C\u5728\u9542\u7A7A\u4E4B\u5730\u4E0D\u5E78\u9047\u5230\uFF0C\u53EA\u80FD\u671F\u76FC\u4F60\u7684\u8EAB\u4E0A\uFF0C\u6CA1\u6709\u6B7B\u4EBA\u7684\u5473\u9053\u4E86"
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 12
+    roleHaveSkill: d10b0000d20b0000
+    roleMode:
+      m_AssetGUID: 1edfdc3c4b615eb418d14cd3b8342bac
+      m_SubObjectName: 
+    size: 2
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 150
+    defence: 15
+    minAtk: 10
+    maxAtk: 15
+    dodge: 20
+    crits: 10
+    rate: 100
+    speed: 8
+    bleed: 10
+    poison: 100
+    debuff: 50
+    vertigo: 50
+    position: 50
+    death: 0
+    preferMove: 0
+    moveDistance: 2
+  - name: "\u77FF\u6D1E\u884C\u8005"
+    id: 3304
+    describe: "\u65E9\u671F\u6D41\u653E\u8005\uFF0C\u4EBA\u4F53\u5F02\u5316\uFF0C\u53EF\u4EE5\u5438\u6536\u51A5\u6CB3\u77FF\u6D1E\u4E2D\u7684\u77FF\u7269\u751F\u5B58\uFF0C\u8EAB\u4F53\u4E0E\u77FF\u77F3\u878D\u5408\uFF0C\u7ED9\u4E88\u4ED6\u6E90\u6E90\u4E0D\u65AD\u7684\u80FD\u6E90\uFF0C\u8FD9\u6216\u8BB8\u662F\u5728\u8FD9\u4E2A\u7834\u8D25\u661F\u7403\u751F\u5B58\u4E0B\u53BB\u7684\u7EC8\u6781\u5F62\u6001"
+    icon:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    image:
+      m_AssetGUID: 
+      m_SubObjectName: 
+    roleType: 1
+    vocation: 12
+    roleHaveSkill: d30b0000d40b0000
+    roleMode:
+      m_AssetGUID: 428efbcfba53ddd4ca2200b8c1194389
+      m_SubObjectName: 
+    size: 2
+    actNum: 1
+    maxMorale: 0
+    minMorale: 0
+    maxInjuries: 0
+    minInjuries: 0
+    hp: 200
+    defence: 30
+    minAtk: 10
+    maxAtk: 15
+    dodge: 0
+    crits: 5
+    rate: 100
+    speed: 6
+    bleed: 100
+    poison: 100
+    debuff: 25
+    vertigo: 45
+    position: 80
+    death: 0
+    preferMove: 0
+    moveDistance: 1
+  enemySeniorData:
+  - taskDifficulty: 0
+    roleData:
+      name: "\u8654\u8BDA\u6559\u5F92"
+      id: 3001
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 15
+      defence: 0
+      minAtk: 1
+      maxAtk: 3
+      dodge: 2
+      crits: 1
+      rate: 1
+      speed: 1
+      bleed: 18
+      poison: 18
+      debuff: 18
+      vertigo: 20
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u8654\u8BDA\u6559\u5F92"
+      id: 3001
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 18
+      defence: 0
+      minAtk: 2
+      maxAtk: 4
+      dodge: 3
+      crits: 2
+      rate: 2
+      speed: 2
+      bleed: 24
+      poison: 24
+      debuff: 24
+      vertigo: 25
+      position: 25
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u8654\u8BDA\u6559\u5F92"
+      id: 3001
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 22
+      defence: 0
+      minAtk: 3
+      maxAtk: 5
+      dodge: 4
+      crits: 3
+      rate: 3
+      speed: 3
+      bleed: 30
+      poison: 30
+      debuff: 30
+      vertigo: 30
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u9A6F\u517D\u8005"
+      id: 3002
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 18
+      defence: 0
+      minAtk: 1
+      maxAtk: 3
+      dodge: 3
+      crits: 0
+      rate: 2
+      speed: 3
+      bleed: 10
+      poison: 10
+      debuff: 10
+      vertigo: 10
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u9A6F\u517D\u8005"
+      id: 3002
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 21
+      defence: 0
+      minAtk: 2
+      maxAtk: 4
+      dodge: 4
+      crits: 1
+      rate: 3
+      speed: 4
+      bleed: 15
+      poison: 15
+      debuff: 15
+      vertigo: 15
+      position: 45
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u9A6F\u517D\u8005"
+      id: 3002
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 24
+      defence: 0
+      minAtk: 3
+      maxAtk: 5
+      dodge: 5
+      crits: 2
+      rate: 4
+      speed: 5
+      bleed: 20
+      poison: 20
+      debuff: 20
+      vertigo: 20
+      position: 50
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u8D77\u6E90\u795E\u4EC6"
+      id: 3003
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 20
+      defence: 0
+      minAtk: 1
+      maxAtk: 4
+      dodge: 1
+      crits: 3
+      rate: 1
+      speed: 2
+      bleed: 10
+      poison: 10
+      debuff: 30
+      vertigo: 30
+      position: 10
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u8D77\u6E90\u795E\u4EC6"
+      id: 3003
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 24
+      defence: 0
+      minAtk: 2
+      maxAtk: 6
+      dodge: 2
+      crits: 4
+      rate: 2
+      speed: 3
+      bleed: 15
+      poison: 15
+      debuff: 40
+      vertigo: 40
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u8D77\u6E90\u795E\u4EC6"
+      id: 3003
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 28
+      defence: 0
+      minAtk: 3
+      maxAtk: 8
+      dodge: 3
+      crits: 5
+      rate: 3
+      speed: 4
+      bleed: 20
+      poison: 20
+      debuff: 50
+      vertigo: 50
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u9057\u8A00"
+      id: 3004
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 30
+      defence: 5
+      minAtk: 3
+      maxAtk: 5
+      dodge: 1
+      crits: 5
+      rate: 3
+      speed: 3
+      bleed: 20
+      poison: 20
+      debuff: 15
+      vertigo: 30
+      position: 35
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u9057\u8A00"
+      id: 3004
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 35
+      defence: 7
+      minAtk: 4
+      maxAtk: 6
+      dodge: 2
+      crits: 5
+      rate: 4
+      speed: 4
+      bleed: 30
+      poison: 30
+      debuff: 20
+      vertigo: 40
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u9057\u8A00"
+      id: 3004
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 42
+      defence: 10
+      minAtk: 5
+      maxAtk: 7
+      dodge: 3
+      crits: 5
+      rate: 5
+      speed: 5
+      bleed: 40
+      poison: 40
+      debuff: 25
+      vertigo: 50
+      position: 45
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u75AF\u72C2\u6559\u5F92"
+      id: 3005
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 20
+      defence: 0
+      minAtk: 2
+      maxAtk: 3
+      dodge: 6
+      crits: 2
+      rate: 3
+      speed: 4
+      bleed: 10
+      poison: 10
+      debuff: 10
+      vertigo: 10
+      position: 10
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u75AF\u72C2\u6559\u5F92"
+      id: 3005
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 22
+      defence: 0
+      minAtk: 3
+      maxAtk: 4
+      dodge: 7
+      crits: 3
+      rate: 4
+      speed: 5
+      bleed: 15
+      poison: 15
+      debuff: 15
+      vertigo: 15
+      position: 15
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u75AF\u72C2\u6559\u5F92"
+      id: 3005
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 23
+      defence: 0
+      minAtk: 4
+      maxAtk: 5
+      dodge: 8
+      crits: 4
+      rate: 5
+      speed: 6
+      bleed: 20
+      poison: 20
+      debuff: 20
+      vertigo: 20
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u8D4E\u7F6A\u8005"
+      id: 3006
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 15
+      defence: 0
+      minAtk: 1
+      maxAtk: 3
+      dodge: 4
+      crits: 3
+      rate: 2
+      speed: 3
+      bleed: 5
+      poison: 5
+      debuff: 5
+      vertigo: 5
+      position: 5
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u8D4E\u7F6A\u8005"
+      id: 3006
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 18
+      defence: 0
+      minAtk: 2
+      maxAtk: 4
+      dodge: 5
+      crits: 3
+      rate: 3
+      speed: 5
+      bleed: 10
+      poison: 10
+      debuff: 10
+      vertigo: 10
+      position: 10
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u8D4E\u7F6A\u8005"
+      id: 3006
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 21
+      defence: 0
+      minAtk: 3
+      maxAtk: 5
+      dodge: 6
+      crits: 3
+      rate: 4
+      speed: 8
+      bleed: 15
+      poison: 15
+      debuff: 15
+      vertigo: 15
+      position: 15
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u9CDE\u7532\u517D"
+      id: 3007
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 20
+      defence: 6
+      minAtk: 4
+      maxAtk: 4
+      dodge: 1
+      crits: 1
+      rate: 2
+      speed: 3
+      bleed: 20
+      poison: 20
+      debuff: 15
+      vertigo: 20
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u9CDE\u7532\u517D"
+      id: 3007
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 25
+      defence: 8
+      minAtk: 5
+      maxAtk: 5
+      dodge: 2
+      crits: 1
+      rate: 2
+      speed: 4
+      bleed: 30
+      poison: 30
+      debuff: 20
+      vertigo: 30
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u9CDE\u7532\u517D"
+      id: 3007
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 30
+      defence: 10
+      minAtk: 6
+      maxAtk: 6
+      dodge: 3
+      crits: 2
+      rate: 2
+      speed: 5
+      bleed: 40
+      poison: 40
+      debuff: 25
+      vertigo: 40
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u4EBA\u9762\u5F02\u86DB"
+      id: 3008
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 24
+      defence: 0
+      minAtk: 2
+      maxAtk: 5
+      dodge: 1
+      crits: 3
+      rate: 2
+      speed: 3
+      bleed: 20
+      poison: 20
+      debuff: 15
+      vertigo: 20
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u4EBA\u9762\u5F02\u86DB"
+      id: 3008
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 40
+      defence: 0
+      minAtk: 4
+      maxAtk: 8
+      dodge: 3
+      crits: 5
+      rate: 2
+      speed: 5
+      bleed: 40
+      poison: 40
+      debuff: 25
+      vertigo: 40
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u4EBA\u9762\u5F02\u86DB"
+      id: 3008
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 40
+      defence: 0
+      minAtk: 4
+      maxAtk: 8
+      dodge: 3
+      crits: 5
+      rate: 2
+      speed: 5
+      bleed: 40
+      poison: 40
+      debuff: 25
+      vertigo: 40
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u51B2\u89D2\u76FE\u9CDE"
+      id: 3009
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 22
+      defence: 3
+      minAtk: 3
+      maxAtk: 4
+      dodge: 1
+      crits: 0
+      rate: 1
+      speed: 2
+      bleed: 20
+      poison: 20
+      debuff: 15
+      vertigo: 20
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u51B2\u89D2\u76FE\u9CDE"
+      id: 3009
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 26
+      defence: 4
+      minAtk: 4
+      maxAtk: 5
+      dodge: 1
+      crits: 0
+      rate: 1
+      speed: 4
+      bleed: 30
+      poison: 30
+      debuff: 20
+      vertigo: 30
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u51B2\u89D2\u76FE\u9CDE"
+      id: 3009
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 30
+      defence: 5
+      minAtk: 5
+      maxAtk: 6
+      dodge: 1
+      crits: 2
+      rate: 1
+      speed: 6
+      bleed: 40
+      poison: 40
+      debuff: 25
+      vertigo: 40
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u585E\u58EC\u85E4\u66FC"
+      id: 3010
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 20
+      defence: 0
+      minAtk: 2
+      maxAtk: 3
+      dodge: 2
+      crits: 2
+      rate: 2
+      speed: 5
+      bleed: 5
+      poison: 40
+      debuff: 40
+      vertigo: 20
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u585E\u58EC\u85E4\u66FC"
+      id: 3010
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 23
+      defence: 0
+      minAtk: 4
+      maxAtk: 5
+      dodge: 3
+      crits: 4
+      rate: 3
+      speed: 6
+      bleed: 10
+      poison: 50
+      debuff: 50
+      vertigo: 30
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u585E\u58EC\u85E4\u66FC"
+      id: 3010
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 25
+      defence: 0
+      minAtk: 6
+      maxAtk: 7
+      dodge: 4
+      crits: 6
+      rate: 4
+      speed: 8
+      bleed: 15
+      poison: 60
+      debuff: 60
+      vertigo: 40
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u6CBC\u5730\u730E\u624B"
+      id: 3011
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 18
+      defence: 0
+      minAtk: 2
+      maxAtk: 4
+      dodge: 0
+      crits: 1
+      rate: 1
+      speed: 2
+      bleed: 5
+      poison: 5
+      debuff: 5
+      vertigo: 5
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u6CBC\u5730\u730E\u624B"
+      id: 3011
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 20
+      defence: 0
+      minAtk: 3
+      maxAtk: 5
+      dodge: 0
+      crits: 1
+      rate: 2
+      speed: 3
+      bleed: 10
+      poison: 10
+      debuff: 10
+      vertigo: 10
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u6CBC\u5730\u730E\u624B"
+      id: 3011
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 22
+      defence: 0
+      minAtk: 4
+      maxAtk: 6
+      dodge: 1
+      crits: 1
+      rate: 3
+      speed: 4
+      bleed: 15
+      poison: 15
+      debuff: 15
+      vertigo: 15
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u8150\u6DB2\u4E4B\u75AE"
+      id: 3012
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 16
+      defence: 0
+      minAtk: 1
+      maxAtk: 2
+      dodge: 0
+      crits: 1
+      rate: 1
+      speed: 2
+      bleed: 5
+      poison: 40
+      debuff: 5
+      vertigo: 5
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u8150\u6DB2\u4E4B\u75AE"
+      id: 3012
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 18
+      defence: 0
+      minAtk: 2
+      maxAtk: 3
+      dodge: 0
+      crits: 1
+      rate: 2
+      speed: 3
+      bleed: 10
+      poison: 50
+      debuff: 10
+      vertigo: 10
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u8150\u6DB2\u4E4B\u75AE"
+      id: 3012
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 20
+      defence: 0
+      minAtk: 3
+      maxAtk: 4
+      dodge: 1
+      crits: 1
+      rate: 3
+      speed: 4
+      bleed: 15
+      poison: 60
+      debuff: 15
+      vertigo: 15
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u7C98\u7A20\u602A"
+      id: 3013
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 15
+      defence: 10
+      minAtk: 1
+      maxAtk: 2
+      dodge: 0
+      crits: 1
+      rate: 1
+      speed: 2
+      bleed: 5
+      poison: 5
+      debuff: 5
+      vertigo: 5
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u7C98\u7A20\u602A"
+      id: 3013
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 18
+      defence: 12
+      minAtk: 2
+      maxAtk: 3
+      dodge: 0
+      crits: 1
+      rate: 2
+      speed: 3
+      bleed: 10
+      poison: 10
+      debuff: 10
+      vertigo: 10
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u7C98\u7A20\u602A"
+      id: 3013
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 21
+      defence: 15
+      minAtk: 3
+      maxAtk: 4
+      dodge: 1
+      crits: 1
+      rate: 3
+      speed: 4
+      bleed: 15
+      poison: 15
+      debuff: 15
+      vertigo: 15
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u8346\u68D8\u5730\u523A"
+      id: 3014
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 24
+      defence: 0
+      minAtk: 2
+      maxAtk: 5
+      dodge: 1
+      crits: 2
+      rate: 3
+      speed: 3
+      bleed: 20
+      poison: 20
+      debuff: 20
+      vertigo: 20
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u8346\u68D8\u5730\u523A"
+      id: 3014
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 27
+      defence: 0
+      minAtk: 3
+      maxAtk: 6
+      dodge: 2
+      crits: 3
+      rate: 4
+      speed: 4
+      bleed: 30
+      poison: 30
+      debuff: 30
+      vertigo: 30
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u8346\u68D8\u5730\u523A"
+      id: 3014
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 30
+      defence: 0
+      minAtk: 4
+      maxAtk: 7
+      dodge: 3
+      crits: 4
+      rate: 5
+      speed: 5
+      bleed: 40
+      poison: 40
+      debuff: 40
+      vertigo: 40
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u98DE\u8747\u704C\u6728"
+      id: 3015
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 18
+      defence: 0
+      minAtk: 1
+      maxAtk: 5
+      dodge: 3
+      crits: 4
+      rate: 4
+      speed: 5
+      bleed: 10
+      poison: 30
+      debuff: 10
+      vertigo: 10
+      position: 20
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 1
+    roleData:
+      name: "\u98DE\u8747\u704C\u6728"
+      id: 3015
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 27
+      defence: 0
+      minAtk: 3
+      maxAtk: 6
+      dodge: 2
+      crits: 3
+      rate: 4
+      speed: 4
+      bleed: 30
+      poison: 30
+      debuff: 30
+      vertigo: 30
+      position: 30
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 2
+    roleData:
+      name: "\u98DE\u8747\u704C\u6728"
+      id: 3015
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: 
+      roleMode:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      size: 0
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 24
+      defence: 0
+      minAtk: 3
+      maxAtk: 7
+      dodge: 7
+      crits: 6
+      rate: 6
+      speed: 5
+      bleed: 30
+      poison: 50
+      debuff: 30
+      vertigo: 30
+      position: 40
+      death: 0
+      preferMove: 0
+      moveDistance: 0
+  - taskDifficulty: 0
+    roleData:
+      name: "\u4E3B\u796D\u7940"
+      id: 3301
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: c30b0000c40b0000c50b0000c60b0000
+      roleMode:
+        m_AssetGUID: 4c57c6fb90813664daa63d68c5d5d63a
+        m_SubObjectName: 
+      size: 1
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 125
+      defence: 10
+      minAtk: 10
+      maxAtk: 15
+      dodge: 20
+      crits: 10
+      rate: 100
+      speed: 8
+      bleed: 10
+      poison: 100
+      debuff: 50
+      vertigo: 50
+      position: 50
+      death: 0
+      preferMove: 1
+      moveDistance: 2
+  - taskDifficulty: 1
+    roleData:
+      name: "\u4E3B\u796D\u7940"
+      id: 3301
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: c30b0000c40b0000c50b0000c60b0000
+      roleMode:
+        m_AssetGUID: 4c57c6fb90813664daa63d68c5d5d63a
+        m_SubObjectName: 
+      size: 1
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 125
+      defence: 10
+      minAtk: 10
+      maxAtk: 15
+      dodge: 20
+      crits: 10
+      rate: 100
+      speed: 8
+      bleed: 10
+      poison: 100
+      debuff: 50
+      vertigo: 50
+      position: 50
+      death: 0
+      preferMove: 1
+      moveDistance: 2
+  - taskDifficulty: 2
+    roleData:
+      name: "\u4E3B\u796D\u7940"
+      id: 3301
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: c30b0000c40b0000c50b0000c60b0000
+      roleMode:
+        m_AssetGUID: 4c57c6fb90813664daa63d68c5d5d63a
+        m_SubObjectName: 
+      size: 1
+      actNum: 0
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 125
+      defence: 10
+      minAtk: 10
+      maxAtk: 15
+      dodge: 20
+      crits: 10
+      rate: 100
+      speed: 8
+      bleed: 10
+      poison: 100
+      debuff: 50
+      vertigo: 50
+      position: 50
+      death: 0
+      preferMove: 1
+      moveDistance: 2
+  - taskDifficulty: 0
+    roleData:
+      name: "\u7C98\u7A20\u5723\u8005"
+      id: 3302
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: cd0b0000ce0b0000cf0b0000d00b0000
+      roleMode:
+        m_AssetGUID: f5ec3cf06e769b14981d8324c48a0c88
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 200
+      defence: 0
+      minAtk: 10
+      maxAtk: 15
+      dodge: 0
+      crits: 5
+      rate: 100
+      speed: 6
+      bleed: 100
+      poison: 100
+      debuff: 25
+      vertigo: 45
+      position: 80
+      death: 0
+      preferMove: 1
+      moveDistance: 1
+  - taskDifficulty: 1
+    roleData:
+      name: "\u7C98\u7A20\u5723\u8005"
+      id: 3302
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: cd0b0000ce0b0000cf0b0000d00b0000
+      roleMode:
+        m_AssetGUID: f5ec3cf06e769b14981d8324c48a0c88
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 200
+      defence: 0
+      minAtk: 10
+      maxAtk: 15
+      dodge: 0
+      crits: 5
+      rate: 100
+      speed: 6
+      bleed: 100
+      poison: 100
+      debuff: 25
+      vertigo: 45
+      position: 80
+      death: 0
+      preferMove: 1
+      moveDistance: 1
+  - taskDifficulty: 2
+    roleData:
+      name: "\u7C98\u7A20\u5723\u8005"
+      id: 3302
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: cd0b0000ce0b0000cf0b0000d00b0000
+      roleMode:
+        m_AssetGUID: f5ec3cf06e769b14981d8324c48a0c88
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 200
+      defence: 0
+      minAtk: 10
+      maxAtk: 15
+      dodge: 0
+      crits: 5
+      rate: 100
+      speed: 6
+      bleed: 100
+      poison: 100
+      debuff: 25
+      vertigo: 45
+      position: 80
+      death: 0
+      preferMove: 1
+      moveDistance: 1
+  - taskDifficulty: 0
+    roleData:
+      name: "\u9001\u846C\u6559\u50E7"
+      id: 3303
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: d10b0000d20b0000
+      roleMode:
+        m_AssetGUID: 1edfdc3c4b615eb418d14cd3b8342bac
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 150
+      defence: 15
+      minAtk: 10
+      maxAtk: 15
+      dodge: 20
+      crits: 108
+      rate: 100
+      speed: 8
+      bleed: 10
+      poison: 100
+      debuff: 50
+      vertigo: 50
+      position: 50
+      death: 0
+      preferMove: 1
+      moveDistance: 2
+  - taskDifficulty: 1
+    roleData:
+      name: "\u9001\u846C\u6559\u50E7"
+      id: 3303
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: d10b0000d20b0000
+      roleMode:
+        m_AssetGUID: 1edfdc3c4b615eb418d14cd3b8342bac
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 150
+      defence: 15
+      minAtk: 10
+      maxAtk: 15
+      dodge: 20
+      crits: 108
+      rate: 100
+      speed: 8
+      bleed: 10
+      poison: 100
+      debuff: 50
+      vertigo: 50
+      position: 50
+      death: 0
+      preferMove: 1
+      moveDistance: 2
+  - taskDifficulty: 2
+    roleData:
+      name: "\u9001\u846C\u6559\u50E7"
+      id: 3303
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: d10b0000d20b0000
+      roleMode:
+        m_AssetGUID: 1edfdc3c4b615eb418d14cd3b8342bac
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 150
+      defence: 15
+      minAtk: 10
+      maxAtk: 15
+      dodge: 20
+      crits: 108
+      rate: 100
+      speed: 8
+      bleed: 10
+      poison: 100
+      debuff: 50
+      vertigo: 50
+      position: 50
+      death: 0
+      preferMove: 1
+      moveDistance: 2
+  - taskDifficulty: 0
+    roleData:
+      name: "\u77FF\u6D1E\u884C\u8005"
+      id: 3304
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: d30b0000d40b0000
+      roleMode:
+        m_AssetGUID: 428efbcfba53ddd4ca2200b8c1194389
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 200
+      defence: 30
+      minAtk: 10
+      maxAtk: 15
+      dodge: 0
+      crits: 5
+      rate: 100
+      speed: 6
+      bleed: 100
+      poison: 100
+      debuff: 25
+      vertigo: 45
+      position: 80
+      death: 0
+      preferMove: 1
+      moveDistance: 1
+  - taskDifficulty: 1
+    roleData:
+      name: "\u77FF\u6D1E\u884C\u8005"
+      id: 3304
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: d30b0000d40b0000
+      roleMode:
+        m_AssetGUID: 428efbcfba53ddd4ca2200b8c1194389
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 200
+      defence: 30
+      minAtk: 10
+      maxAtk: 15
+      dodge: 0
+      crits: 5
+      rate: 100
+      speed: 6
+      bleed: 100
+      poison: 100
+      debuff: 25
+      vertigo: 45
+      position: 80
+      death: 0
+      preferMove: 1
+      moveDistance: 1
+  - taskDifficulty: 2
+    roleData:
+      name: "\u77FF\u6D1E\u884C\u8005"
+      id: 3304
+      describe: 
+      icon:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      image:
+        m_AssetGUID: 
+        m_SubObjectName: 
+      roleType: 0
+      vocation: 0
+      roleHaveSkill: d30b0000d40b0000
+      roleMode:
+        m_AssetGUID: 428efbcfba53ddd4ca2200b8c1194389
+        m_SubObjectName: 
+      size: 2
+      actNum: 1
+      maxMorale: 0
+      minMorale: 0
+      maxInjuries: 0
+      minInjuries: 0
+      hp: 200
+      defence: 30
+      minAtk: 10
+      maxAtk: 15
+      dodge: 0
+      crits: 5
+      rate: 100
+      speed: 6
+      bleed: 100
+      poison: 100
+      debuff: 25
+      vertigo: 45
+      position: 80
+      death: 0
+      preferMove: 1
+      moveDistance: 1

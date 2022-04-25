@@ -1,0 +1,460 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0692fab2f84394f82d40ea8703c8ea, type: 3}
+  m_Name: ZH_TaskData
+  m_EditorClassIdentifier: 
+  taskRewardDatas:
+  - name: 
+    id: 0
+    describe: 
+    describe_EN: 
+    taskDifficult: 0
+    mapSize: 0
+    medalLevelLimit: 0
+    money: 3000
+    minResource: 3
+    maxResource: 4
+    ornamentDrops:
+    - level: 6
+      count: 1
+      probability: 100
+    medalDrops:
+    - level: 1
+      count: 1
+      probability: 85
+    - level: 1
+      count: 2
+      probability: 15
+    warningValueAdd: 2
+  - name: 
+    id: 1
+    describe: 
+    describe_EN: 
+    taskDifficult: 0
+    mapSize: 1
+    medalLevelLimit: 1
+    money: 4500
+    minResource: 4
+    maxResource: 5
+    ornamentDrops:
+    - level: 6
+      count: 1
+      probability: 60
+    - level: 6
+      count: 2
+      probability: 40
+    medalDrops:
+    - level: 2
+      count: 1
+      probability: 85
+    - level: 2
+      count: 2
+      probability: 15
+    warningValueAdd: 4
+  - name: 
+    id: 2
+    describe: 
+    describe_EN: 
+    taskDifficult: 1
+    mapSize: 0
+    medalLevelLimit: 2
+    money: 4500
+    minResource: 4
+    maxResource: 5
+    ornamentDrops:
+    - level: 2
+      count: 1
+      probability: 80
+    - level: 2
+      count: 2
+      probability: 20
+    medalDrops:
+    - level: 3
+      count: 1
+      probability: 85
+    - level: 3
+      count: 2
+      probability: 15
+    warningValueAdd: 6
+  - name: 
+    id: 3
+    describe: 
+    describe_EN: 
+    taskDifficult: 1
+    mapSize: 1
+    medalLevelLimit: 3
+    money: 6750
+    minResource: 6
+    maxResource: 7
+    ornamentDrops:
+    - level: 2
+      count: 2
+      probability: 80
+    - level: 1
+      count: 1
+      probability: 20
+    medalDrops:
+    - level: 4
+      count: 1
+      probability: 85
+    - level: 4
+      count: 2
+      probability: 15
+    warningValueAdd: 8
+  - name: 
+    id: 4
+    describe: 
+    describe_EN: 
+    taskDifficult: 2
+    mapSize: 0
+    medalLevelLimit: 4
+    money: 6000
+    minResource: 6
+    maxResource: 7
+    ornamentDrops:
+    - level: 1
+      count: 1
+      probability: 90
+    - level: 0
+      count: 1
+      probability: 10
+    medalDrops:
+    - level: 5
+      count: 1
+      probability: 85
+    - level: 5
+      count: 2
+      probability: 15
+    warningValueAdd: 10
+  - name: 
+    id: 5
+    describe: 
+    describe_EN: 
+    taskDifficult: 2
+    mapSize: 1
+    medalLevelLimit: 5
+    money: 9000
+    minResource: 7
+    maxResource: 8
+    ornamentDrops:
+    - level: 1
+      count: 2
+      probability: 50
+    - level: 0
+      count: 1
+      probability: 50
+    medalDrops:
+    - level: 5
+      count: 2
+      probability: 70
+    - level: 6
+      count: 1
+      probability: 30
+    warningValueAdd: 12
+  taskRewardResources:
+  - nameType: 0
+    taskResourceInfoList:
+    - difficultiesLimit: 0
+      mapSizeLimit: 0
+      resourceIds:
+      - id: 7001
+        count: 3000
+      - id: 7002
+        count: 1
+      - id: 7003
+        count: 4
+      - id: 7004
+        count: 4
+    - difficultiesLimit: 0
+      mapSizeLimit: 1
+      resourceIds:
+      - id: 7001
+        count: 4500
+      - id: 7002
+        count: 2
+      - id: 7003
+        count: 5
+      - id: 7004
+        count: 5
+    - difficultiesLimit: 1
+      mapSizeLimit: 0
+      resourceIds:
+      - id: 7001
+        count: 4500
+      - id: 7002
+        count: 3
+      - id: 7003
+        count: 5
+      - id: 7004
+        count: 6
+    - difficultiesLimit: 1
+      mapSizeLimit: 1
+      resourceIds:
+      - id: 7001
+        count: 6750
+      - id: 7002
+        count: 4
+      - id: 7003
+        count: 6
+      - id: 7004
+        count: 6
+    - difficultiesLimit: 2
+      mapSizeLimit: 0
+      resourceIds:
+      - id: 7001
+        count: 6000
+      - id: 7002
+        count: 4
+      - id: 7003
+        count: 8
+      - id: 7004
+        count: 8
+    - difficultiesLimit: 2
+      mapSizeLimit: 1
+      resourceIds:
+      - id: 7001
+        count: 9000
+      - id: 7002
+        count: 5
+      - id: 7003
+        count: 9
+      - id: 7004
+        count: 9
+  - nameType: 1
+    taskResourceInfoList:
+    - difficultiesLimit: 0
+      mapSizeLimit: 0
+      resourceIds:
+      - id: 7001
+        count: 3000
+      - id: 7006
+        count: 2
+      - id: 7005
+        count: 5
+      - id: 7003
+        count: 2
+    - difficultiesLimit: 0
+      mapSizeLimit: 1
+      resourceIds:
+      - id: 7001
+        count: 4500
+      - id: 7006
+        count: 3
+      - id: 7005
+        count: 5
+      - id: 7003
+        count: 4
+    - difficultiesLimit: 1
+      mapSizeLimit: 0
+      resourceIds:
+      - id: 7001
+        count: 4500
+      - id: 7006
+        count: 4
+      - id: 7005
+        count: 6
+      - id: 7003
+        count: 4
+    - difficultiesLimit: 1
+      mapSizeLimit: 1
+      resourceIds:
+      - id: 7001
+        count: 6750
+      - id: 7006
+        count: 4
+      - id: 7005
+        count: 7
+      - id: 7003
+        count: 5
+    - difficultiesLimit: 2
+      mapSizeLimit: 0
+      resourceIds:
+      - id: 7001
+        count: 6000
+      - id: 7006
+        count: 4
+      - id: 7005
+        count: 9
+      - id: 7003
+        count: 5
+    - difficultiesLimit: 2
+      mapSizeLimit: 1
+      resourceIds:
+      - id: 7001
+        count: 9000
+      - id: 7006
+        count: 5
+      - id: 7005
+        count: 11
+      - id: 7003
+        count: 6
+  taskDatas:
+  - name: "\u626B\u8361"
+    id: 0
+    describe: "\u5B8C\u6210\u6240\u6709\u6218\u6597\u623F\u95F4"
+    describe_EN: Complete all battle rooms
+    taskType: 0
+    difficultiesLimit: 000000000100000002000000
+    mapSizeLimit: 0000000001000000
+    probability: 20
+  - name: "\u4FA6\u67E5"
+    id: 0
+    describe: "\u63A2\u7D22\u5173\u5361\u518590%\u7684\u623F\u95F4"
+    describe_EN: Explore 90% of the rooms in the level
+    taskType: 1
+    difficultiesLimit: 000000000100000002000000
+    mapSizeLimit: 0000000001000000
+    probability: 30
+  - name: "\u968F\u673ABOSS\u4EFB\u52A1"
+    id: 0
+    describe: "\u51FB\u6740BOSS"
+    describe_EN: Kill the boss
+    taskType: 3
+    difficultiesLimit: 0100000002000000
+    mapSizeLimit: 01000000
+    probability: 10
+  - name: "\u56FA\u5B9Aboss\u4EFB\u52A1"
+    id: 0
+    describe: "\u51FB\u6740BOSS"
+    describe_EN: Kill the boss
+    taskType: 2
+    difficultiesLimit: 01000000
+    mapSizeLimit: 01000000
+    probability: 10
+  taskInformation:
+  - mapName: 0
+    taskInformation:
+    - taskTypes: 01000000
+      taskInfo:
+      - name: "\u4FA6\u67E5"
+        id: 1011
+        describe: "\u4E00\u961FOrigin\u6559\u5F92\u6B63\u5728\u8FD9\u91CC\u641C\u96C6\u7269\u8D44\uFF0C\u6211\u4EEC\u5E94\u8BE5\u524D\u53BB\u770B\u770B\uFF0C\u4ED6\u4EEC\u641C\u96C6\u7684\u600E\u4E48\u6837\u4E86..."
+        describe_EN: A group of origin believers are collecting materials. We should
+          go to see what they have collected
+        triggerKeys: 
+      - name: "\u4FA6\u67E5"
+        id: 1012
+        describe: "\u9542\u7A7A\u4E4B\u5730\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF02"
+        describe_EN: "\u9542\u7A7A\u4E4B\u5730\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF02"
+        triggerKeys: 
+      - name: "\u4FA6\u67E5"
+        id: 1013
+        describe: "\u9542\u7A7A\u4E4B\u5730\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF03"
+        describe_EN: "\u9542\u7A7A\u4E4B\u5730\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF03"
+        triggerKeys: 
+      - name: "\u4FA6\u67E5"
+        id: 1014
+        describe: "\u9542\u7A7A\u4E4B\u5730\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF04"
+        describe_EN: "\u9542\u7A7A\u4E4B\u5730\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF04"
+        triggerKeys: 
+    - taskTypes: 02000000
+      taskInfo:
+      - name: "\u6740\u6B7B\u4E3B\u796D\u53F8\u4EE5\u5229"
+        id: 1004
+        describe: "\u6211\u4EEC\u5728\u9542\u7A7A\u4E4B\u5730\u7684\u884C\u52A8\u5DF2\u7ECF\u60CA\u52A8\u4E86Origin\u9AD8\u5C42\uFF0C\u4E3B\u796D\u53F8\u4EE5\u5229\u6B63\u5728\u90A3\u91CC\u641C\u6355\u53CD\u6297\u8005\uFF0C\u4E5F\u8BB8\u6211\u4EEC\u53EF\u4EE5\u4E3B\u52A8\u51FA\u51FB\uFF0C\u5F7B\u5E95\u89E3\u51B3\u8FD9\u4E2A\u523D\u5B50\u624B\u2014\u2014\u8981\u5C0F\u5FC3\uFF0C\u8FD9\u5BB6\u4F19\u53EF\u4E0D\u662F\u597D\u5BF9\u4ED8\u7684"
+        describe_EN: "\u6211\u4EEC\u5728\u9542\u7A7A\u4E4B\u5730\u7684\u884C\u52A8\u5DF2\u7ECF\u60CA\u52A8\u4E86Origin\u9AD8\u5C42\uFF0C\u4E3B\u796D\u53F8\u4EE5\u5229\u6B63\u5728\u90A3\u91CC\u641C\u6355\u53CD\u6297\u8005\uFF0C\u4E5F\u8BB8\u6211\u4EEC\u53EF\u4EE5\u4E3B\u52A8\u51FA\u51FB\uFF0C\u5F7B\u5E95\u89E3\u51B3\u8FD9\u4E2A\u523D\u5B50\u624B\u2014\u2014\u8981\u5C0F\u5FC3\uFF0C\u8FD9\u5BB6\u4F19\u53EF\u4E0D\u662F\u597D\u5BF9\u4ED8\u7684"
+        triggerKeys: e50c0000
+    - taskTypes: 03000000
+      taskInfo:
+      - name: "\u6740\u6B7B\u9001\u846C\u6559\u50E7"
+        id: 1005
+        describe: "\u4ED6\u625B\u7740\u5C38\u4F53\u5F80\u8FD4\u4E8E\u6559\u4F1A\u548C\u91CE\u5916\uFF0C\u7ECF\u8FC7\u89C2\u5BDF\u4ED6\u4E0D\u4F1A\u50CF\u5176\u4ED6\u6559\u5F92\u4E00\u6837\u75AF\u72C2\u7684\u653B\u51FB\u6211\u4EEC\u8FD9\u4E9B\u201C\u5F02\u6559\u5F92\u201D\uFF0C\u5C31\u7B97\u8FD9\u662F\u796D\u53F8\u7684\u547D\u4EE4\u3002\u4ED6\u773C\u4E2D\u597D\u50CF\u53EA\u6709\u4ED6\u548C\u4ED6\u7684\u5C38\u4F53\uFF0C\u6211\u4EEC\u53EF\u4EE5\u548C\u5E73\u76F8\u5904\uFF0C\u5982\u679C\u5C38\u4F53\u4E0A\u7684\u966A\u846C\u54C1\u4E0D\u662F\u90A3\u4E48\u503C\u94B1\u7684\u8BDD\u2026\u2026"
+        describe_EN: "\u4ED6\u625B\u7740\u5C38\u4F53\u5F80\u8FD4\u4E8E\u6559\u4F1A\u548C\u91CE\u5916\uFF0C\u7ECF\u8FC7\u89C2\u5BDF\u4ED6\u4E0D\u4F1A\u50CF\u5176\u4ED6\u6559\u5F92\u4E00\u6837\u75AF\u72C2\u7684\u653B\u51FB\u6211\u4EEC\u8FD9\u4E9B\u201C\u5F02\u6559\u5F92\u201D\uFF0C\u5C31\u7B97\u8FD9\u662F\u796D\u53F8\u7684\u547D\u4EE4\u3002\u4ED6\u773C\u4E2D\u597D\u50CF\u53EA\u6709\u4ED6\u548C\u4ED6\u7684\u5C38\u4F53\uFF0C\u6211\u4EEC\u53EF\u4EE5\u548C\u5E73\u76F8\u5904\uFF0C\u5982\u679C\u5C38\u4F53\u4E0A\u7684\u966A\u846C\u54C1\u4E0D\u662F\u90A3\u4E48\u503C\u94B1\u7684\u8BDD\u2026\u2026"
+        triggerKeys: e70c0000
+    - taskTypes: 00000000
+      taskInfo:
+      - name: "\u626B\u8361"
+        id: 1021
+        describe: "\u6709\u4EBA\u5728\u897F\u8FB9\u7684\u5CA9\u6D1E\u4E2D\u53D1\u73B0\u4E86\u5927\u91CF\u7684\u5F02\u517D\u8E2A\u8FF9\uFF0C\u8FD9\u4E9B\u5F02\u517D\u5DF2\u7ECF\u5BF9\u6211\u4EEC\u4EA7\u751F\u4E86\u4E25\u91CD\u5A01\u80C1\uFF0C\u527F\u706D\u5B83\u4EEC\uFF0C\u786E\u4FDD\u6211\u4EEC\u8425\u5730\u7684\u5B89\u5168"
+        describe_EN: A large number of monsters have been found in the western cave.
+          These monsters have posed a serious threat to us. We should eliminate them
+          and keep our camp safe
+        triggerKeys: 
+      - name: "\u626B\u8361"
+        id: 1022
+        describe: "\u51FB\u9000\u90A3\u4E9B\u5F98\u5F8A\u5728\u9542\u7A7A\u4E4B\u5730\u7684Origin\u6559\u5F92\uFF0C\u8BA9\u4ED6\u4EEC\u77E5\u9053\u4EC0\u4E48\u53EB\u6B64\u8DEF\u4E0D\u901A"
+        describe_EN: "repel those origin believers in the Hollow ground\uFF0CLet
+          them know what dead end means"
+        triggerKeys: 
+      - name: "\u626B\u8361"
+        id: 1023
+        describe: "\u9542\u7A7A\u4E4B\u5730\u626B\u8361\u4EFB\u52A1\u63CF\u8FF03"
+        describe_EN: "\u9542\u7A7A\u4E4B\u5730\u626B\u8361\u4EFB\u52A1\u63CF\u8FF03"
+        triggerKeys: 
+      - name: "\u626B\u8361"
+        id: 1024
+        describe: "\u9542\u7A7A\u4E4B\u5730\u626B\u8361\u4EFB\u52A1\u63CF\u8FF04"
+        describe_EN: "\u9542\u7A7A\u4E4B\u5730\u626B\u8361\u4EFB\u52A1\u63CF\u8FF04"
+        triggerKeys: 
+  - mapName: 1
+    taskInformation:
+    - taskTypes: 01000000
+      taskInfo:
+      - name: "\u4FA6\u67E5"
+        id: 2011
+        describe: "\u65B0\u7684\u5F02\u517D\u51FA\u73B0\u5728\u4E86\u5730\u4E0B\u6D1E\u7A74\uFF0C\u6211\u4EEC\u5BF9\u8FD9\u4E9B\u6050\u6016\u7684\u602A\u7269\u4E00\u65E0\u6240\u77E5\uFF0C\u53BB\u5C3D\u53EF\u80FD\u591A\u7684\u6D88\u706D\u5B83\u4EEC\uFF0C\u4EE5\u4FBF\u83B7\u5F97\u66F4\u591A\u4FE1\u606F"
+        describe_EN: New monsters have appeared in the cave, and we know nothing
+          about them. Destroy them as much as possible in order to get more information
+        triggerKeys: 
+      - name: "\u4FA6\u67E5"
+        id: 2012
+        describe: "\u51A5\u6CB3\u77FF\u6D1E\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF02"
+        describe_EN: "\u51A5\u6CB3\u77FF\u6D1E\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF02"
+        triggerKeys: 
+      - name: "\u4FA6\u67E5"
+        id: 2013
+        describe: "\u51A5\u6CB3\u77FF\u6D1E\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF03"
+        describe_EN: "\u51A5\u6CB3\u77FF\u6D1E\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF03"
+        triggerKeys: 
+      - name: "\u4FA6\u67E5"
+        id: 2014
+        describe: "\u51A5\u6CB3\u77FF\u6D1E\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF04"
+        describe_EN: "\u51A5\u6CB3\u77FF\u6D1E\u4FA6\u5BDF\u4EFB\u52A1\u63CF\u8FF04"
+        triggerKeys: 
+    - taskTypes: 00000000
+      taskInfo:
+      - name: "\u626B\u8361"
+        id: 2021
+        describe: "Origin\u7684\u722A\u7259\u548C\u539F\u751F\u5F02\u517D\u904D\u5E03\u5728\u77FF\u6D1E\u7684\u6BCF\u4E2A\u89D2\u843D\uFF0C\u6211\u4EEC\u9700\u8981\u4E00\u961F\u52C7\u58EB\u524D\u53BB\u627E\u5230\u4ED6\u4EEC\uFF0C\u5E76\u8BA9\u4ED6\u4EEC\u611F\u53D7\u4E00\u4E0B\u6211\u4EEC\u7684\u529B\u91CF"
+        describe_EN: "Origin's mines and native monsters are all over the mine\uFF0CWe
+          need some warriors to find them and let them feel our strength"
+        triggerKeys: 
+      - name: "\u626B\u8361"
+        id: 2022
+        describe: "Origin\u5360\u9886\u4E86\u90E8\u5206\u6D1E\u7A74\uFF0C\u5E76\u4FEE\u5EFA\u4E86\u4E00\u4E9B\u4E34\u65F6\u54E8\u6240\uFF0C\u662F\u65F6\u5019\u6E05\u7406\u4E00\u4E0B\u4E86"
+        describe_EN: Origin has occupied part of the caves and built temporary posts.
+          It's time to clean them up
+        triggerKeys: 
+      - name: "\u626B\u8361"
+        id: 2023
+        describe: "\u51A5\u6CB3\u77FF\u6D1E\u626B\u8361\u4EFB\u52A1\u63CF\u8FF03"
+        describe_EN: "\u51A5\u6CB3\u77FF\u6D1E\u626B\u8361\u4EFB\u52A1\u63CF\u8FF03"
+        triggerKeys: 
+      - name: "\u626B\u8361"
+        id: 2024
+        describe: "\u51A5\u6CB3\u77FF\u6D1E\u626B\u8361\u4EFB\u52A1\u63CF\u8FF04"
+        describe_EN: "\u51A5\u6CB3\u77FF\u6D1E\u626B\u8361\u4EFB\u52A1\u63CF\u8FF04"
+        triggerKeys: 
+    - taskTypes: 02000000
+      taskInfo:
+      - name: "\u6740\u6B7B\u7C98\u7A20\u5723\u8005"
+        id: 2004
+        describe: "\u6076\u5FC3\u7684\u4E1C\u897F\u5E94\u8BE5\u7528\u6076\u5FC3\u7684\u65B9\u5F0F\u5BF9\u5F85\uFF0C\u6B64\u65F6\uFF0C\u5BA1\u5224\u5B98\u7684\u90A3\u53EA\u201C\u7C98\u7A20\u5723\u8005\u201D\u6B63\u5728\u51A5\u6CB3\u77FF\u6D1E\u9644\u8FD1\u8086\u8650\uFF0C\u6211\u4EEC\u9700\u8981\u5E72\u6389\u5B83\uFF0C\u4E3A\u90A3\u4E9B\u6B7B\u5728\u5B83\u809A\u5B50\u91CC\u7684\u4EBA\u62A5\u4EC7"
+        describe_EN: "\u6076\u5FC3\u7684\u4E1C\u897F\u5E94\u8BE5\u7528\u6076\u5FC3\u7684\u65B9\u5F0F\u5BF9\u5F85\uFF0C\u6B64\u65F6\uFF0C\u5BA1\u5224\u5B98\u7684\u90A3\u53EA\u201C\u7C98\u7A20\u5723\u8005\u201D\u6B63\u5728\u51A5\u6CB3\u77FF\u6D1E\u9644\u8FD1\u8086\u8650\uFF0C\u6211\u4EEC\u9700\u8981\u5E72\u6389\u5B83\uFF0C\u4E3A\u90A3\u4E9B\u6B7B\u5728\u5B83\u809A\u5B50\u91CC\u7684\u4EBA\u62A5\u4EC7"
+        triggerKeys: e60c0000
+    - taskTypes: 03000000
+      taskInfo:
+      - name: "\u6740\u6B7B\u77FF\u6D1E\u884C\u8005"
+        id: 2005
+        describe: "\u8FD9\u4E2A\u5F3A\u58EE\u53C8\u6267\u7740\u7684\u77FF\u5DE5\u6BCF\u5929\u4E0D\u662F\u5728\u6536\u96C6\u77FF\u77F3\u5C31\u662F\u5728\u6316\u77FF\u7684\u8DEF\u4E0A\uFF0C\u4ED6\u50CF\u6761\u91CE\u72D7\u4F3C\u7684\u5B88\u7740\u4ED6\u5F00\u53D1\u7684\u77FF\u533A\u4E0D\u8BA9\u4EBA\u8E0F\u8DB3\u4E00\u6B65\uFF0C\u53C8\u4ECE\u4E0D\u4E70\u5356\u4ED6\u7684\u6536\u85CF\u54C1\u2026\u770B\u6765\u60F3\u8981\u4E0A\u4E58\u8D27\uFF0C\u53EA\u80FD\u89E3\u51B3\u6389\u4ED6\u4E86\u3002"
+        describe_EN: "\u8FD9\u4E2A\u5F3A\u58EE\u53C8\u6267\u7740\u7684\u77FF\u5DE5\u6BCF\u5929\u4E0D\u662F\u5728\u6536\u96C6\u77FF\u77F3\u5C31\u662F\u5728\u6316\u77FF\u7684\u8DEF\u4E0A\uFF0C\u4ED6\u50CF\u6761\u91CE\u72D7\u4F3C\u7684\u5B88\u7740\u4ED6\u5F00\u53D1\u7684\u77FF\u533A\u4E0D\u8BA9\u4EBA\u8E0F\u8DB3\u4E00\u6B65\uFF0C\u53C8\u4ECE\u4E0D\u4E70\u5356\u4ED6\u7684\u6536\u85CF\u54C1\u2026\u770B\u6765\u60F3\u8981\u4E0A\u4E58\u8D27\uFF0C\u53EA\u80FD\u89E3\u51B3\u6389\u4ED6\u4E86\u3002"
+        triggerKeys: e80c0000

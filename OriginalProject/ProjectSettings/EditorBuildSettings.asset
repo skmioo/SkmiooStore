@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Game/Scenes/Z_Start_0.unity
+    guid: 5a06c5276934e254ea0271153a84458d
+  - enabled: 1
+    path: Assets/Game/Scenes/Z_PrepareScenes.unity
+    guid: ae6af49cf71b9b246a5bdc4739c406dc
+  - enabled: 1
+    path: Assets/Game/Scenes/Z_battle_T.unity
+    guid: ef0bb5f946f707f4f89e88205ff2a0f3
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 3146a00959eb510409e94f00427ff8e1,
+      type: 2}

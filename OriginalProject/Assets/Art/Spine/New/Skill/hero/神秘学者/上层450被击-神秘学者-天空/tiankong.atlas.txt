@@ -1,0 +1,27 @@
+
+tiankong.png
+size: 421,117
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_3
+  rotate: true
+  xy: 2, 25
+  size: 90, 255
+  orig: 92, 277
+  offset: 1, 21
+  index: -1
+q
+  rotate: true
+  xy: 259, 51
+  size: 64, 160
+  orig: 64, 161
+  offset: 0, 0
+  index: -1
+w
+  rotate: true
+  xy: 259, 2
+  size: 47, 147
+  orig: 48, 148
+  offset: 0, 0
+  index: -1

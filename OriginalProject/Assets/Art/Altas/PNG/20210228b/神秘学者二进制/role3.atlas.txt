@@ -1,0 +1,125 @@
+
+role3.png
+size: 130,627
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+qun
+  rotate: true
+  xy: 2, 426
+  size: 115, 124
+  orig: 125, 126
+  offset: 10, 2
+  index: -1
+shenti
+  rotate: true
+  xy: 2, 543
+  size: 82, 125
+  orig: 82, 125
+  offset: 0, 0
+  index: -1
+shu1
+  rotate: false
+  xy: 2, 47
+  size: 71, 69
+  orig: 71, 69
+  offset: 0, 0
+  index: -1
+shu2
+  rotate: false
+  xy: 2, 169
+  size: 85, 65
+  orig: 85, 65
+  offset: 0, 0
+  index: -1
+tou
+  rotate: true
+  xy: 2, 236
+  size: 77, 88
+  orig: 94, 88
+  offset: 15, 0
+  index: -1
+youjiao1
+  rotate: false
+  xy: 75, 12
+  size: 48, 38
+  orig: 48, 38
+  offset: 0, 0
+  index: -1
+youjiao2
+  rotate: false
+  xy: 75, 52
+  size: 48, 43
+  orig: 48, 43
+  offset: 0, 0
+  index: -1
+youshou
+  rotate: false
+  xy: 101, 322
+  size: 21, 18
+  orig: 21, 18
+  offset: 0, 0
+  index: -1
+youtui1
+  rotate: false
+  xy: 92, 244
+  size: 36, 69
+  orig: 36, 69
+  offset: 0, 0
+  index: -1
+youtui2
+  rotate: false
+  xy: 92, 157
+  size: 31, 85
+  orig: 32, 86
+  offset: 0, 0
+  index: -1
+zuobi1
+  rotate: true
+  xy: 2, 118
+  size: 49, 83
+  orig: 57, 83
+  offset: 8, 0
+  index: -1
+zuoi2
+  rotate: true
+  xy: 2, 387
+  size: 37, 114
+  orig: 37, 114
+  offset: 0, 0
+  index: -1
+zuojiao1
+  rotate: false
+  xy: 101, 342
+  size: 27, 43
+  orig: 39, 43
+  offset: 12, 0
+  index: -1
+zuojiao2
+  rotate: false
+  xy: 2, 2
+  size: 58, 43
+  orig: 58, 43
+  offset: 0, 0
+  index: -1
+zuotui1
+  rotate: false
+  xy: 87, 97
+  size: 38, 58
+  orig: 38, 58
+  offset: 0, 0
+  index: -1
+zuotui2a
+  rotate: true
+  xy: 2, 351
+  size: 34, 97
+  orig: 34, 97
+  offset: 0, 0
+  index: -1
+zuotui2b
+  rotate: true
+  xy: 2, 315
+  size: 34, 97
+  orig: 34, 97
+  offset: 0, 0
+  index: -1

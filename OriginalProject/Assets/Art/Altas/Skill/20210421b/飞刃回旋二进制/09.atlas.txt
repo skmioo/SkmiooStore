@@ -1,0 +1,13 @@
+
+09.png
+size: 312,151
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JINENG02
+  rotate: false
+  xy: 2, 2
+  size: 308, 147
+  orig: 594, 450
+  offset: 271, 173
+  index: -1

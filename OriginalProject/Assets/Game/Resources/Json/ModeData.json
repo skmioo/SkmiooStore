@@ -1,0 +1,86 @@
+﻿[
+  {
+    "id": 999,
+    "name": "存档1",
+    "describe": "。。。",
+    "heroLists": [
+      {
+        "heroId": 1001,
+        "morale": 100,
+        "injuries": 0,
+        "skillModes": [
+          {
+            "skillId": 5000,
+            "level": 1
+          },
+          {
+            "skillId": 5001,
+            "level": 2
+          },
+
+          {
+            "skillId": 5002,
+            "level": 3
+          },
+          {
+            "skillId": 5003,
+            "level": 3
+          }
+        ]
+      },
+      {
+        "heroId": 1002,
+        "morale": 100,
+        "injuries": 0,
+        "skillModes": [
+          {
+            "skillId": 5000,
+            "level": 1
+          },
+          {
+            "skillId": 5001,
+            "level": 2
+          },
+          {
+            "skillId": 5002,
+            "level": 3
+          },
+          {
+            "skillId": 5003,
+            "level": 3
+          }
+        ]
+      },
+      {
+        "heroId": 1003,
+        "morale": 100,
+        "injuries": 0,
+        "skillModes": [
+          {
+            "skillId": 5000,
+            "level": 1
+          },
+          {
+            "skillId": 5001,
+            "level": 2
+          }
+        ]
+      },
+      {
+        "heroId": 1004,
+        "morale": 100,
+        "injuries": 0,
+        "skillModes": [
+          {
+            "skillId": 5000,
+            "level": 1
+          },
+          {
+            "skillId": 5001,
+            "level": 2
+          }
+        ]
+      }
+    ]
+  }
+]

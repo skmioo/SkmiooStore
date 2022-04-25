@@ -1,0 +1,20 @@
+
+腐液之疮-吞噬.png
+size: 592,284
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_0
+  rotate: false
+  xy: 300, 2
+  size: 290, 280
+  orig: 290, 280
+  offset: 0, 0
+  index: -1
+body_4
+  rotate: false
+  xy: 2, 5
+  size: 296, 277
+  orig: 302, 281
+  offset: 3, 2
+  index: -1

@@ -1,0 +1,20 @@
+
+11.png
+size: 496,252
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body_6
+  rotate: false
+  xy: 2, 2
+  size: 340, 248
+  orig: 537, 450
+  offset: 65, 103
+  index: -1
+body_7
+  rotate: false
+  xy: 344, 87
+  size: 150, 163
+  orig: 537, 450
+  offset: 284, 142
+  index: -1

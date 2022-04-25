@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: kaishiyemian_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 9c1f0c519e78f744f8aee8e1926d566f, type: 3}
+  materials:
+  - {fileID: 2100000, guid: bfc8b5788e0eae74a87357294f61b353, type: 2}
+  - {fileID: 2100000, guid: beefbf1f1e667c54a9e9c8da64f85563, type: 2}
+  - {fileID: 2100000, guid: 02f12512dedbedc46bf1498abc498e61, type: 2}
+  - {fileID: 2100000, guid: 9971236756c22914d9d0af8ad1cb6cf5, type: 2}

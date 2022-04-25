@@ -1,0 +1,111 @@
+
+stand.png
+size: 424,284
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+上身
+  rotate: false
+  xy: 211, 5
+  size: 102, 136
+  orig: 450, 450
+  offset: 208, 248
+  index: -1
+右大肩
+  rotate: false
+  xy: 2, 78
+  size: 100, 204
+  orig: 450, 450
+  offset: 150, 149
+  index: -1
+右大腿
+  rotate: false
+  xy: 184, 143
+  size: 89, 139
+  orig: 450, 450
+  offset: 157, 114
+  index: -1
+右大臂
+  rotate: false
+  xy: 31, 10
+  size: 59, 66
+  orig: 450, 450
+  offset: 124, 230
+  index: -1
+右小腿（走）
+  rotate: false
+  xy: 315, 57
+  size: 92, 120
+  orig: 450, 450
+  offset: 122, 33
+  index: -1
+右小臂
+  rotate: true
+  xy: 92, 18
+  size: 58, 110
+  orig: 450, 450
+  offset: 88, 143
+  index: -1
+右脚（走）
+  rotate: false
+  xy: 275, 190
+  size: 37, 45
+  orig: 450, 450
+  offset: 115, 0
+  index: -1
+头部
+  rotate: true
+  xy: 315, 179
+  size: 103, 107
+  orig: 450, 450
+  offset: 182, 342
+  index: -1
+左大腿
+  rotate: false
+  xy: 104, 142
+  size: 78, 140
+  orig: 450, 450
+  offset: 234, 116
+  index: -1
+左大臂
+  rotate: false
+  xy: 275, 143
+  size: 25, 34
+  orig: 450, 450
+  offset: 256, 251
+  index: -1
+左小腿
+  rotate: true
+  xy: 104, 86
+  size: 54, 105
+  orig: 450, 450
+  offset: 284, 34
+  index: -1
+左小臂
+  rotate: false
+  xy: 315, 2
+  size: 41, 53
+  orig: 450, 450
+  offset: 265, 216
+  index: -1
+左手
+  rotate: false
+  xy: 358, 13
+  size: 41, 42
+  orig: 450, 450
+  offset: 293, 195
+  index: -1
+左肩
+  rotate: false
+  xy: 2, 8
+  size: 27, 68
+  orig: 450, 450
+  offset: 265, 263
+  index: -1
+左脚
+  rotate: true
+  xy: 275, 237
+  size: 45, 38
+  orig: 450, 450
+  offset: 317, 7
+  index: -1

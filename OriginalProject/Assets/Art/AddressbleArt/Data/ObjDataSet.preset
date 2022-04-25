@@ -1,0 +1,616 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ObjDataSet
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: c020225956353e649b23e42e8b605136,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TipsA
+    value: "\u82E5\u60F3\u589E\u52A0\u6570\u636E,\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E00\u4E2A\u6BD4\u5F53\u524D\u503C\u66F4\u5927\u7684\u503C,\u59825\u21926"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TipsB
+    value: "\uFF01\uFF01\uFF01\u82E5\u5728\u5927\u5C0F\u4E2D\u8F93\u5165\u4E86\u66F4\u5C0F\u7684\u503C,\u53EF\u80FD\u4F1A\u9020\u6210\u6570\u636E\u4E22\u5931"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TipsC
+    value: "\uFF01\uFF01\uFF01\u9F20\u6807\u653E\u5728\u5B57\u6BB5\u4E0A\u6709\u63D0\u793A"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].name
+    value: "\u4F4E\u8BED\u8611\u83C7"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].id
+    value: 570001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].describe
+    value: "\u7528\u6765\u6CBB\u6108\u6D41\u8840\u72B6\u6001\r\n\u201C\u56BC\u4E00\u56BC\uFF0C\u6478\u4E00\u6478\u201D"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].Icon.m_AssetGUID
+    value: 06dd9dbb116180a4e8297f882fdac2f0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].Icon.m_SubObjectName
+    value: inv_trinket+ancestors_signet_ring
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].IconBg.m_AssetGUID
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].IconBg.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objType
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].heroVocation
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].levelType
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].ownerType
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].buy
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].sell
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].settlement
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].maxCount
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objActions.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objActions.Array.data[0].limitType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objActions.Array.data[0].limitValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objActions.Array.data[0].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objActions.Array.data[0].buffType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objActions.Array.data[0].tailType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objActions.Array.data[0].valueType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].objActions.Array.data[0].value
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[0].specialEffect
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].name
+    value: "\u9CDE\u7532\u517D\u8089\u5E72"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].id
+    value: 570002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].describe
+    value: "\u7528\u6765\u6062\u590D5\u751F\u547D\uFF0C\u6218\u6597\u4E2D\u4E0D\u53EF\u4F7F\u7528\r\n\u201C\u8FD9\u4E2A\u661F\u7403\u6700\u7F8E\u5473\u7684\u98DF\u7269\u201D"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].Icon.m_AssetGUID
+    value: 309cd4e312cdb8e468a223bf5798cee6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].Icon.m_SubObjectName
+    value: inv_trinket+antiq_1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].IconBg.m_AssetGUID
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].IconBg.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objType
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].heroVocation
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].levelType
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].ownerType
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].buy
+    value: 50
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].sell
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].settlement
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].maxCount
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objActions.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objActions.Array.data[0].limitType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objActions.Array.data[0].limitValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objActions.Array.data[0].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objActions.Array.data[0].buffType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objActions.Array.data[0].tailType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objActions.Array.data[0].valueType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].objActions.Array.data[0].value
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[1].specialEffect
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].name
+    value: "\u6D4B\u8BD5\u7528\u7684\u4E1C\u897F"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].id
+    value: 570003
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].describe
+    value: "\u6D4B\u8BD5\u7528\u7684\u7269\u54C10213"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].Icon.m_AssetGUID
+    value: 466b1c359fb6083409770dc269e2e658
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].Icon.m_SubObjectName
+    value: inv_trinket+ancestors_map
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].IconBg.m_AssetGUID
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].IconBg.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objType
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].heroVocation
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].levelType
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].ownerType
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].buy
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].sell
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].settlement
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].maxCount
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objActions.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objActions.Array.data[0].limitType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objActions.Array.data[0].limitValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objActions.Array.data[0].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objActions.Array.data[0].buffType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objActions.Array.data[0].tailType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objActions.Array.data[0].valueType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].objActions.Array.data[0].value
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: porpDatas.Array.data[2].specialEffect
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].name
+    value: "\u201C\u521D\u59CB\u201D\u4E4B\u820C"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].id
+    value: 580001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].describe
+    value: "\u201C\u521D\u59CB\u201D\u4E4B\u820C\r\nOrigin\u6559\u4F1A\u5185\u7B2C\u4E00\u6761\u88AB\u5272\u4E0B\u7684\u820C\u5934"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].Icon.m_AssetGUID
+    value: c9e127a1b8475124f8dfd2d4734ab407
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].Icon.m_SubObjectName
+    value: inv_gem+pewrelic
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].IconBg.m_AssetGUID
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].IconBg.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].heroVocation
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].levelType
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].ownerType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].buy
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].sell
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].settlement
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].maxCount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[0].limitType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[0].limitValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[0].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[0].buffType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[0].tailType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[0].valueType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[0].value
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[1].limitType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[1].limitValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[1].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[1].buffType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[1].tailType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[1].valueType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[1].value
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[2].limitType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[2].limitValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[2].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[2].buffType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[2].tailType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[2].valueType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].objActions.Array.data[2].value
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[0].specialEffect
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].name
+    value: "\u6C89\u9ED8\u7684\u5723\u7ECF"
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].id
+    value: 580002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].describe
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].Icon.m_AssetGUID
+    value: 7d3be42ee2b6e69408270d2920102712
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].Icon.m_SubObjectName
+    value: inv_heirloom+deed
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].IconBg.m_AssetGUID
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].IconBg.m_SubObjectName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].heroVocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].levelType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].ownerType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].buy
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].sell
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].settlement
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].maxCount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[0].limitType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[0].limitValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[0].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[0].buffType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[0].tailType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[0].valueType
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[0].value
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[1].limitType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[1].limitValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[1].vocation
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[1].buffType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[1].tailType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[1].valueType
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].objActions.Array.data[1].value
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ornamentsDatas.Array.data[1].specialEffect
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: treasuresDatas.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Spell
+  - Grid
+  - EnemyController
+  - PlayerController
+  - BG
+  - Team_WaitingStart
+  - Camp
+  - ObjItemBox
+  - CameraLimit
+  - RoomRightLimit
+  - RoomLeftLimit
+  - MedalBox
+  - OrnamentsBox
+  - W_MedalBox
+  - W_OrnamentsBox
+  - GetPropBox
+  - UndergroudShop
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - UI_
+  - FightingCamera
+  - FightingRoundCamera
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Effect
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Mask
+    uniqueID: 4066959493
+    locked: 0
+  - name: Pop
+    uniqueID: 1188634679
+    locked: 0

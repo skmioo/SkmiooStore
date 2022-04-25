@@ -1,0 +1,55 @@
+
+xueci.png
+size: 524,145
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 325, 13
+  size: 46, 92
+  orig: 48, 95
+  offset: 1, 1
+  index: -1
+2
+  rotate: true
+  xy: 419, 15
+  size: 44, 91
+  orig: 47, 94
+  offset: 1, 1
+  index: -1
+3
+  rotate: true
+  xy: 325, 61
+  size: 82, 123
+  orig: 84, 126
+  offset: 1, 1
+  index: -1
+4
+  rotate: true
+  xy: 202, 20
+  size: 36, 91
+  orig: 39, 94
+  offset: 1, 1
+  index: -1
+5
+  rotate: true
+  xy: 202, 58
+  size: 85, 121
+  orig: 88, 123
+  offset: 2, 1
+  index: -1
+6
+  rotate: true
+  xy: 450, 64
+  size: 79, 72
+  orig: 83, 74
+  offset: 2, 1
+  index: -1
+7
+  rotate: false
+  xy: 2, 2
+  size: 198, 141
+  orig: 201, 144
+  offset: 2, 1
+  index: -1
