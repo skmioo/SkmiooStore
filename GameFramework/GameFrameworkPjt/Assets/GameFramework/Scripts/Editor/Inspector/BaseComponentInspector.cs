@@ -188,8 +188,8 @@ namespace UnityGameFramework.Editor
             {
                 NoneOptionName
             };
-
-            versionHelperTypeNames.AddRange(Type.GetRuntimeTypeNames(typeof(Version.IVersionHelper)));
+			//获取到所有继承于Version.IVersionHelper的类
+			versionHelperTypeNames.AddRange(Type.GetRuntimeTypeNames(typeof(Version.IVersionHelper)));
             m_VersionHelperTypeNames = versionHelperTypeNames.ToArray();
             m_VersionHelperTypeNameIndex = 0;
             if (!string.IsNullOrEmpty(m_VersionHelperTypeName.stringValue))
