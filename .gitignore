@@ -261,3 +261,5 @@ __pycache__/
 *.pyc
 EditorAndLua/Temp/
 EditorAndLua/Library/
+GameFramework/GameFrameworkPjt/Temp/
+GameFramework/GameFrameworkPjt/Library/

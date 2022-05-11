@@ -1,0 +1,11 @@
+ManifestFileVersion: 0
+CRC: 904358022
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui
+      Dependencies: {}
+    Info_1:
+      Name: perfab/ui
+      Dependencies:
+        Dependency_0: ui

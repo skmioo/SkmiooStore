@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 2328061658
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bfdb614745b80e60fff1535d95a52825
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8f81471f4cfc7bf93c7fa752ebb4eb40
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 687078895
+  Script: {instanceID: 0}
+Assets:
+- Assets/UI/Common/Grid.png
+- Assets/UI/Common/Brick_Normal.JPG
+- Assets/UI/Common.spriteatlas
+- Assets/UI/Common/Checkerboard.png
+- Assets/UI/Common/Floor.png
+- Assets/UI/Common/Brick_Diffuse.JPG
+- Assets/UI/Common/Block.JPG
+- Assets/UI/Common/Grid 1.png
+- Assets/UI/Common/Grid 2.png
+Dependencies: []
