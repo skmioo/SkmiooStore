@@ -132,7 +132,7 @@ namespace UnityGameFramework.Runtime
 
         public void UnLoadAllData()
         {
-            m_DataManager.LoadAllData();
+            m_DataManager.UnLoadAllData();
         }
     }
 }
