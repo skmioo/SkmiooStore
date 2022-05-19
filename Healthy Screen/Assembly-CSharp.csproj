@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\setPage.cs" />
+    <None Include="Assets\Resources\OpenWeb.txt" />
+    <None Include="Assets\Resources\sstm.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/SkmiooStore/Healthy Screen/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

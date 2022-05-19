@@ -16,8 +16,62 @@ public class setPage : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		if (!System.IO.File.Exists(file))
+		{
+			ShowTip("无法找到Host文件！");
+			return;
+		}
 		string text = System.IO.File.ReadAllText(file);
 		//Debug.Log(text);
+		initAndAddLocalWeb();
+		enableOpenWeb();
+	}
+
+	void enableOpenWeb()
+	{
+		string text = System.IO.File.ReadAllText(file);
+		string local = Resources.Load<TextAsset>("OpenWeb").text;
+		string[] urls = local.Split('\n');
+		string add = string.Empty;
+		foreach (string u in urls)
+		{
+			add = u.Trim();
+			if (add.Length < 3)
+				continue;
+			if (text.Contains(add))
+			{
+				if (text.Contains(string.Format(appendWeb, add)))
+				{
+					text = text.Replace(string.Format(appendWeb, add), "");
+				}else
+				{
+					text = text.Replace( add, string.Format( "www.{0}.com", UnityEngine.Random.Range(1,99999999)));
+				}
+			}
+		}
+
+		System.IO.File.WriteAllText(file, text);
+	}
+
+	void initAndAddLocalWeb()
+	{
+		string text = System.IO.File.ReadAllText(file);
+		string local = Resources.Load<TextAsset>("sstm").text;
+		string[] urls = local.Split('\n');
+		string add = string.Empty;
+		StringBuilder sb = new StringBuilder();
+		sb.Append(text);
+		foreach (string u in urls)
+		{
+			add = u.Trim();
+			if (add.Length > 1 && !text.Contains(add))
+			{
+				sb.AppendLine();
+				sb.Append(add);
+			}
+		}
+		System.IO.File.WriteAllText(file, sb.ToString());
+		//Debug.Log("local:" + local);
 	}
 
 	private void Update()
@@ -40,17 +94,16 @@ public class setPage : MonoBehaviour
 							"http:/" };
 	string[] endCheck = { "com" ,
 							"cc",
+							"net",
+							"tv",
+							"cn",
+							"org",
 							};
 	public void AddWeb()
 	{
 		if (input.text.Length < 5)
 			return;
 		string text = System.IO.File.ReadAllText(file);
-		if (text.Contains(input.text))
-		{
-			showhasPage();
-			return;
-		}
 		string web = input.text;
 		for (int i = 0; i < startCheck.Length; i++)
 		{
@@ -70,7 +123,17 @@ public class setPage : MonoBehaviour
 		{
 			web = web.Substring(0, web.Length - 1);
 		}
-
+		
+		if (text.Contains(web))
+		{
+			//已存在该网页
+			showhasPage();
+			if (toggle.isOn)
+			{
+				clearWeb();
+			}
+			return;
+		}
 		StringBuilder sb = new StringBuilder();
 		sb.Append(text);
 		sb.AppendLine();
