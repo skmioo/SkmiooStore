@@ -12,6 +12,7 @@ Shader "Unity Shaders Book/Chapter 13/Motion Blur With Depth Texture" {
 		
 		sampler2D _MainTex;
 		half4 _MainTex_TexelSize;
+		//camera.depthTextureMode |= DepthTextureMode.Depth;
 		sampler2D _CameraDepthTexture;
 		float4x4 _CurrentViewProjectionInverseMatrix;
 		float4x4 _PreviousViewProjectionMatrix;
@@ -40,9 +41,12 @@ Shader "Unity Shaders Book/Chapter 13/Motion Blur With Depth Texture" {
 		
 		fixed4 frag(v2f i) : SV_Target {
 			// Get the depth buffer value at this pixel.
+			//x,y,z的值的范围都是（0,1）转换到计算的范围(-1,1)
 			float d = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv_depth);
 			// H is the viewport position at this pixel in the range -1 to 1.
 			float4 H = float4(i.uv.x * 2 - 1, i.uv.y * 2 - 1, d * 2 - 1, 1);
+
+			//转换到世界坐标系下
 			// Transform by the view-projection inverse.
 			float4 D = mul(_CurrentViewProjectionInverseMatrix, H);
 			// Divide by w to get the world position. 
@@ -73,7 +77,7 @@ Shader "Unity Shaders Book/Chapter 13/Motion Blur With Depth Texture" {
 		ENDCG
 		
 		Pass {      
-			ZTest Always Cull Off ZWrite Off
+			ZTest Always Cull off ZWrite off
 			    	
 			CGPROGRAM  
 			

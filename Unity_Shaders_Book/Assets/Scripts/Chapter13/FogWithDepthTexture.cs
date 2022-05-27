@@ -45,7 +45,29 @@ public class FogWithDepthTexture : PostEffectsBase {
 	void OnEnable() {
 		camera.depthTextureMode |= DepthTextureMode.Depth;
 	}
-	
+	public GameObject cube;
+	public GameObject cube2;
+	private void Start()
+	{
+		float fov = camera.fieldOfView;
+		float near = camera.nearClipPlane;
+		float aspect = camera.aspect;
+
+		float halfHeight = near * Mathf.Tan(fov * 0.5f * Mathf.Deg2Rad);
+		Vector3 toRight = cameraTransform.right * halfHeight * aspect;
+		Vector3 toTop = cameraTransform.up * halfHeight;
+
+		Vector3 topLeft = cameraTransform.forward * near + toTop - toRight;
+		cube.transform.position = topLeft + cameraTransform.position;
+
+
+		float scale = topLeft.magnitude / near;
+
+		topLeft.Normalize();
+		topLeft *= scale;
+		cube2.transform.position = topLeft + cameraTransform.position;
+	}
+
 	void OnRenderImage (RenderTexture src, RenderTexture dest) {
 		if (material != null) {
 			Matrix4x4 frustumCorners = Matrix4x4.identity;
@@ -62,6 +84,12 @@ public class FogWithDepthTexture : PostEffectsBase {
 			float scale = topLeft.magnitude / near;
 
 			topLeft.Normalize();
+			//  depth	   Near	
+			// ------  =  -----
+			//  dist		TL （topLeft点的长度）
+
+			//dist = depth * (TL / Near)
+			//scale = (TL / Near)
 			topLeft *= scale;
 
 			Vector3 topRight = cameraTransform.forward * near + toRight + toTop;

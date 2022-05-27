@@ -29,8 +29,9 @@ public class MotionBlurWithDepthTexture : PostEffectsBase {
 	private Matrix4x4 previousViewProjectionMatrix;
 	
 	void OnEnable() {
+		//获取深度纹理 shader中声明 _CameraDepthTexture
 		camera.depthTextureMode |= DepthTextureMode.Depth;
-
+		//projectionMatrix 投影矩阵 worldToCameraMatrix 视角矩阵
 		previousViewProjectionMatrix = camera.projectionMatrix * camera.worldToCameraMatrix;
 	}
 	
