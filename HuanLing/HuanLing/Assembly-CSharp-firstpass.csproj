@@ -549,6 +549,18 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Assets/Plugins/3party/DoTween/Plugins/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Assets/Plugins/3party/DoTween/Plugins/DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Assets/Plugins/3party/DoTween/Plugins/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Assets/Plugins/3party/DoTween/Plugins/DOTween50.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -557,18 +569,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween50">
-      <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Assets/Plugins/3party/DoTween/Plugins/DOTween50.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween46">
-      <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Assets/Plugins/3party/DoTween/Plugins/DOTween46.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Assets/Plugins/3party/DoTween/Plugins/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween43">
-      <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Assets/Plugins/3party/DoTween/Plugins/DOTween43.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>E:/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

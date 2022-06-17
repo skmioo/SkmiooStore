@@ -6,10 +6,10 @@ using UnityEngine;
 
 namespace UnityEngine.Networking
 {
-    /// <summary>
-    /// 内部的错误，如果抛出该错误，说明出现内部逻辑（而不是网络错误或者文件操作错误）
-    /// </summary>
-    class UnityLoadInnerExceptin : Exception
+	/// <summary>
+	/// 内部的错误，如果抛出该错误，说明出现内部逻辑（而不是网络错误或者文件操作错误）
+	/// </summary>
+	public class UnityLoadInnerExceptin : Exception
     {
         public UnityLoadInnerExceptin(string msg)
             : base(msg)
@@ -1011,12 +1011,30 @@ namespace UnityEngine.Networking
                 return false;
             }
         }
-        private bool ApplyFileOp(ref Stream stream, string path, FileOp op, string destPath = null)
+
+		/// <summary>
+		/// 文件操作管理
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <param name="path"></param>
+		/// <param name="op"></param>
+		/// <param name="destPath"></param>
+		/// <returns></returns>
+		private bool ApplyFileOp(ref Stream stream, string path, FileOp op, string destPath = null)
         {
             string error;
             return ApplyFileOp(out error, ref stream, path, op, destPath);
         }
-        private bool ApplyFileOp(out string error, ref Stream stream, string path, FileOp op, string destPath = null)
+
+		/// <summary>
+		/// 文件操作管理
+		/// </summary>
+		/// <param name="stream"></param>
+		/// <param name="path"></param>
+		/// <param name="op"></param>
+		/// <param name="destPath"></param>
+		/// <returns></returns>
+		private bool ApplyFileOp(out string error, ref Stream stream, string path, FileOp op, string destPath = null)
         {
             bool ret = true;
             error = null;
