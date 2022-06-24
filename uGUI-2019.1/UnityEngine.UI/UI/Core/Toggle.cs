@@ -45,6 +45,7 @@ namespace UnityEngine.UI
         public ToggleTransition toggleTransition = ToggleTransition.Fade;
 
         /// <summary>
+        /// 用来显示当前是否为选中的图片
         /// Graphic the toggle should be working with.
         /// </summary>
         public Graphic graphic;

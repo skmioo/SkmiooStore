@@ -60,6 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EditorTest\_01_DrawGizmos.cs" />
+    <Compile Include="Assets\Scripts\EditorTest\_02_Property.cs" />
+    <Compile Include="Assets\Scripts\EditorTest\_03_CustomList.cs" />
+    <Compile Include="Assets\Scripts\EditorTest\_04_ReorderableList.cs" />
     <Compile Include="Assets\Scripts\Event\EventTest.cs" />
     <Compile Include="Assets\Scripts\Mesh\TestTriangle.cs" />
     <Compile Include="Assets\Scripts\MyLoader\MyAppVersion.cs" />
@@ -88,13 +92,23 @@
     <Compile Include="Assets\Scripts\Net\MyNetFrame.cs" />
     <Compile Include="Assets\Scripts\TestCode\StructAndClass.cs" />
     <Compile Include="Assets\Scripts\TestCode\TestEqual.cs" />
+    <Compile Include="Assets\Scripts\TestCode\TestUIDepth.cs" />
+    <Compile Include="Assets\Scripts\TestCode\TestUIDir.cs" />
     <Compile Include="Assets\Scripts\坐标系\Test坐标.cs" />
+    <Compile Include="Assets\testShader\Scripts\ExampleClass.cs" />
+    <Compile Include="Assets\testShader\Scripts\TestMultiCompile.cs" />
+    <Compile Include="Assets\testShader\Scripts\TestQualityChange.cs" />
+    <None Include="Assets\Shaders\UYShader_Scene_LM_Normal.shader" />
     <None Include="Assets\Shaders\UYShader_Scene_FakeLM_AlphaTest.shader" />
     <None Include="Assets\AssetsData\Shader\UYShader_Scene_FakeLM_Normal.shader" />
+    <None Include="Assets\testShader\Shaders\TestMultiCompileByScript.shader" />
     <None Include="Assets\AssetsData\Shader\UYShader_Scene_FakeLM_AlphaTest.shader" />
+    <None Include="Assets\Shaders\TestDefine.shader" />
     <None Include="Assets\Shaders\UYShader_Scene_FakeLM_Normal.shader" />
+    <None Include="Assets\testShader\Shader研究.txt" />
     <None Include="Assets\AssetsData\Shader\UYShader_Scene_FakeLM_Alpha.shader" />
     <None Include="Assets\Shaders\UYShader_Scene_FakeLM_Alpha.shader" />
+    <None Include="Assets\testShader\Shaders\TestMultiCompileByShaderKeywordEnum.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

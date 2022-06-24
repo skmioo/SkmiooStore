@@ -5,6 +5,7 @@ namespace UnityEngine.UI
 {
     [Serializable]
     /// <summary>
+    /// 图片动画状态
     /// Structure to store the state of a sprite transition on a Selectable.
     /// </summary>
     public struct SpriteState : IEquatable<SpriteState>

@@ -8,6 +8,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 鼠标或触摸进入当前对象
     /// Interface to implement if you wish to receive OnPointerEnter callbacks.
     /// </summary>
     /// <remarks>
@@ -22,6 +23,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 鼠标或触摸进入退出当前对象
     /// Interface to implement if you wish to receive OnPointerExit callbacks.
     /// </summary>
     /// <remarks>
@@ -36,6 +38,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 鼠标或者触摸按下
     /// Interface to implement if you wish to receive OnPointerDown callbacks.
     /// </summary>
     /// <remarks>
@@ -50,6 +53,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    ///  鼠标或者触摸松开时
     /// Interface to implement if you wish to receive OnPointerUp callbacks.
     /// Note: In order to receive OnPointerUp callbacks, you must also implement the EventSystems.IPointerDownHandler|IPointerDownHandler interface
     /// </summary>
@@ -65,6 +69,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 鼠标或触摸松开并且与按下时是同一个响应物体时执行
     /// Interface to implement if you wish to receive OnPointerClick callbacks.
     /// </summary>
     /// <remarks>
@@ -98,6 +103,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 在鼠标或触摸位置发生偏移（偏移值大于一个很小的常量）时执行
     /// Interface to implement if you wish to receive OnBeginDrag callbacks.
     /// Note: You need to implement IDragHandler in addition to IBeginDragHandler.
     /// </summary>
@@ -113,6 +119,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 在鼠标或者触摸按下且当前对象可以响应拖拽事件时
     /// Interface to implement if you wish to receive OnInitializePotentialDrag callbacks.
     /// </summary>
     /// <remarks>
@@ -215,6 +222,7 @@ namespace UnityEngine.EventSystems
     ///         return comp;
     ///     }
     /// }
+    /// 对象正在被拖拽且鼠标或触摸移动时
     /// </code>
     /// </example>
     public interface IDragHandler : IEventSystemHandler
@@ -226,6 +234,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 对象正在被拖拽且鼠标或触摸松开时
     /// Interface to implement if you wish to receive OnEndDrag callbacks.
     /// Note: You need to implement IDragHandler in addition to IEndDragHandler.
     /// </summary>
@@ -260,6 +269,7 @@ namespace UnityEngine.EventSystems
     /// }
     /// </code>
     /// </example>
+    /// 鼠标或触摸松开且对象未响应
     /// <remarks>
     /// Criteria for this event is implementation dependent. For example see StandAloneInputModule.
     /// </remarks>
@@ -272,6 +282,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 当鼠标滚动差值大于零
     /// Interface to implement if you wish to receive OnScroll callbacks.
     /// </summary>
     /// <remarks>
@@ -286,6 +297,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 当输入模块切换到StandaloneInputModule时执行
     /// Interface to implement if you wish to receive OnUpdateSelected callbacks.
     /// </summary>
     /// <remarks>
@@ -314,6 +326,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 当鼠标移动导致被选中的对象改变时
     /// Interface to implement if you wish to receive OnSelect callbacks.
     /// </summary>
     /// <remarks>
@@ -325,6 +338,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 当鼠标移动导致被选中的对象改变时
     /// Interface to implement if you wish to receive OnDeselect callbacks.
     /// </summary>
     /// <remarks>
@@ -339,6 +353,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 导航事件可用情况下，按下上下左右键，
     /// Interface to implement if you wish to receive OnMove callbacks.
     /// </summary>
     /// <remarks>
@@ -353,6 +368,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 按下确认键执行
     /// Interface to implement if you wish to receive OnSubmit callbacks.
     /// </summary>
     /// <remarks>
@@ -364,6 +380,7 @@ namespace UnityEngine.EventSystems
     }
 
     /// <summary>
+    /// 按下取消键执行
     /// Interface to implement if you wish to receive OnCancel callbacks.
     /// </summary>
     /// <remarks>

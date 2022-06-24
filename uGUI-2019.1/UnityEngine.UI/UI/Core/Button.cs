@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 
 namespace UnityEngine.UI
 {
+    /// <summary>
+    /// 实现IPointerClickHandler
+    /// </summary>
     // Button that's meant to work with mouse or touch-based devices.
     [AddComponentMenu("UI/Button", 30)]
     public class Button : Selectable, IPointerClickHandler, ISubmitHandler

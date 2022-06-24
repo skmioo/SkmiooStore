@@ -4,6 +4,11 @@ using UnityEngine.Events;
 namespace UnityEngine.UI
 {
     /// <summary>
+    /// 
+    /// 对CanvasUpdateRegistry进行封装，本身是ICanvasElement，维护着一个 ObjectPool<LayoutRebuilder> s_Rebuilders
+    /// LayoutRebuilder 更新RectTransform布局 (通过注册CanvasUpdateRegistry的方式)
+    /// 所有的布局更新采用此处的void Rebuild(CanvasUpdate executing)进行布局更新
+    /// 
     /// Wrapper class for managing layout rebuilding of CanvasElement.
     /// </summary>
     public class LayoutRebuilder : ICanvasElement
@@ -72,10 +77,16 @@ namespace UnityEngine.UI
             s_Rebuilders.Release(rebuilder);
         }
 
+        /// <summary>
+        /// 通过 if (!CanvasUpdateRegistry.TryRegisterCanvasElementForLayoutRebuild(rebuilder))
+        /// 实现ICanvasElement的监听 (Rebuild(CanvasUpdate executing)方法)
+        /// </summary>
+        /// <param name="executing"></param>
         public void Rebuild(CanvasUpdate executing)
         {
             switch (executing)
             {
+                //布局更新
                 case CanvasUpdate.Layout:
                     // It's unfortunate that we'll perform the same GetComponents querys for the tree 2 times,
                     // but each tree have to be fully iterated before going to the next action,
@@ -151,6 +162,8 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 重新计算其布局
+        /// 将给定的 RectTransform 标记为需要在下一次布局传递期间《重新计算其布局》。
         /// Mark the given RectTransform as needing it's layout to be recalculated during the next layout pass.
         /// </summary>
         /// <param name="rect">Rect to rebuild.</param>

@@ -165,6 +165,9 @@ namespace UnityEngine.EventSystems
             }
         }
 
+        /// <summary>
+        /// 更新鼠标位置信息
+        /// </summary>
         public override void UpdateModule()
         {
             if (!eventSystem.isFocused && ShouldIgnoreEventsOnNoFocus())
@@ -559,6 +562,7 @@ namespace UnityEngine.EventSystems
             ProcessMousePress(mouseData.GetButtonState(PointerEventData.InputButton.Middle).eventData);
             ProcessDrag(mouseData.GetButtonState(PointerEventData.InputButton.Middle).eventData.buttonData);
 
+            //Approximately 大约 sqrMagnitude 长度 sqr((x*x+y*y))
             if (!Mathf.Approximately(leftButtonData.buttonData.scrollDelta.sqrMagnitude, 0.0f))
             {
                 var scrollHandler = ExecuteEvents.GetEventHandler<IScrollHandler>(leftButtonData.buttonData.pointerCurrentRaycast.gameObject);

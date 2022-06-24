@@ -4,18 +4,34 @@ using System.Collections.Generic;
 
 namespace UnityEngine.UI.Collections
 {
+    /// <summary>
+    /// 比较费内存，但插入速度快
+    /// 查询速度快
+    /// 删除速度快
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     internal class IndexedSet<T> : IList<T>
     {
+        //这是一个容器，它提供：
+        // - 唯一的item
+        // - 快速随机移除
+        // - 快速唯一包含到最后
+        // - 顺序访问
         //This is a container that gives:
         //  - Unique items
         //  - Fast random removal
         //  - Fast unique inclusion to the end
         //  - Sequential access
+
+        //缺点：
+        // - 使用更多内存
+        // - 排序不是持久的
+        // - 不是序列化友好的。
         //Downsides:
         //  - Uses more memory
         //  - Ordering is not persistent
         //  - Not Serialization Friendly.
-
+        //我们使用字典来加速列表查找，这使得保证没有重复（集合）变得更快
         //We use a Dictionary to speed up list lookup, this makes it cheaper to guarantee no duplicates (set)
         //When removing we move the last item to the removed item position, this way we only need to update the index cache of a single item. (fast removal)
         //Order of the elements is not guaranteed. A removal will change the order of the items.
@@ -92,6 +108,11 @@ namespace UnityEngine.UI.Collections
             throw new NotSupportedException("Random Insertion is semantically invalid, since this structure does not guarantee ordering.");
         }
 
+        /// <summary>
+        /// 快速移除
+        /// 当该对象是最后一个是直接移除，如果不是最后一个跟最后一个位置交换，并移除最后一个的数据(目标移除位置)
+        /// </summary>
+        /// <param name="index"></param>
         public void RemoveAt(int index)
         {
             T item = m_List[index];

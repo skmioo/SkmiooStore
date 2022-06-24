@@ -129,6 +129,10 @@ namespace UnityEngine.UI
             }
         }
 
+        /// <summary>
+        /// 填充顶点信息到VertexHelper
+        /// </summary>
+        /// <param name="vh"></param>
         protected override void OnPopulateMesh(VertexHelper vh)
         {
             Texture tex = mainTexture;

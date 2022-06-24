@@ -10,6 +10,10 @@ namespace UnityEngine.UI
     [SelectionBase]
     [DisallowMultipleComponent]
     /// <summary>
+    /// 选择 点击
+    /// Selectable实现的是最基础的点击移动选中事件
+    /// 点击动画，导航到下一个Selectable控件 
+    /// 除了最常用的Button，它还是Scrollbar、Dropdown、Slider、Toggle、InputField这些组件的基类
     /// Simple selectable object - derived from to create a selectable control.
     /// </summary>
     public class Selectable
@@ -20,9 +24,12 @@ namespace UnityEngine.UI
         IPointerEnterHandler, IPointerExitHandler,
         ISelectHandler, IDeselectHandler
     {
+        //所有的Selectable物体
         private static Selectable[] s_Selectables = new Selectable[10];
+        //所有的Selectable物体个数
         private static int s_SelectableCount = 0;
 
+        //如果s_Selectables存在需要移出的s_IsDirty则为true
         // If any selectable in s_Selectables are to be removed
         private static bool s_IsDirty = false;
 
@@ -47,6 +54,7 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 获取所有的s_Selectables的副本
         /// </example>
         public static Selectable[] allSelectablesArray
         {
@@ -62,6 +70,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 所有的Selectable物体个数
         /// How many selectable elements are currently active.
         /// </summary>
         public static int allSelectableCount { get { return s_SelectableCount; } }
@@ -112,12 +121,17 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 把selectables的值拷贝到s_Selectables中
+        /// copyCount 拷贝的个数
         /// </example>
         public static int AllSelectablesNoAlloc(Selectable[] selectables)
         {
+            // 移除s_Selectables中所有无效或需要移出的
             if (s_IsDirty)
                 RemoveInvalidSelectables();
 
+            //如果s_SelectableCount小于selectables.Length，有效数据是 s_SelectableCount，拷贝s_SelectableCount个
+            //如果s_SelectableCount大于selectables.Length,有效数据是 selectables.Length，拷贝selectables.Length个
             int copyCount = selectables.Length < s_SelectableCount ? selectables.Length : s_SelectableCount;
 
             Array.Copy(s_Selectables, selectables, copyCount);
@@ -131,6 +145,7 @@ namespace UnityEngine.UI
         private Navigation m_Navigation = Navigation.defaultNavigation;
 
         /// <summary>
+        /// 过渡动画
         ///Transition mode for a Selectable.
         /// </summary>
         public enum Transition
@@ -167,28 +182,48 @@ namespace UnityEngine.UI
         private ColorBlock m_Colors = ColorBlock.defaultColorBlock;
 
         // Sprites used for a Image swap-based transition.
+        //图片动画状态
         [FormerlySerializedAs("spriteState")]
         [SerializeField]
         private SpriteState m_SpriteState;
 
+        /// <summary>
+        /// 动画触发名称
+        /// </summary>
         [FormerlySerializedAs("animationTriggers")]
         [SerializeField]
         private AnimationTriggers m_AnimationTriggers = new AnimationTriggers();
 
+        /// <summary>
+        /// 是否可交互
+        /// </summary>
         [Tooltip("Can the Selectable be interacted with?")]
         [SerializeField]
         private bool m_Interactable = true;
 
+        /// <summary>
+        /// 目标纹理 Graphic
+        /// </summary>
         // Graphic that will be colored.
         [FormerlySerializedAs("highlightGraphic")]
         [FormerlySerializedAs("m_HighlightGraphic")]
         [SerializeField]
         private Graphic m_TargetGraphic;
 
-
+        /// <summary>
+        /// 检测自身跟父类的CanvasGroup上
+        /// CanvasGroup上  interactable = false 那么  m_GroupsAllowInteraction = false;不可交互
+        /// ignoreParentGroups为true(允许可交互) m_GroupsAllowInteraction = true；可交互
+        /// 如果没有CanvasGroup  m_GroupsAllowInteraction = true；可交互
+        /// </summary>
         private bool m_GroupsAllowInteraction = true;
-        private bool m_WillRemove = false;
 
+        /// <summary>
+        /// OnEnable  m_WillRemove = false
+        /// OnDisable m_WillRemove = true
+        /// </summary>
+        private bool m_WillRemove = false;
+        
         /// <summary>
         /// The Navigation setting for this selectable object.
         /// </summary>
@@ -232,6 +267,7 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 过渡动画
         /// </example>
         public Transition        transition        { get { return m_Transition; } set { if (SetPropertyUtility.SetStruct(ref m_Transition, value))        OnSetProperty(); } }
 
@@ -258,6 +294,7 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 过渡动画 颜色值
         /// </example>
         public ColorBlock        colors            { get { return m_Colors; } set { if (SetPropertyUtility.SetStruct(ref m_Colors, value))            OnSetProperty(); } }
 
@@ -287,6 +324,7 @@ namespace UnityEngine.UI
         //     }
         // }
         // </code>
+        // 动画图片
         // </example>
         public SpriteState       spriteState       { get { return m_SpriteState; } set { if (SetPropertyUtility.SetStruct(ref m_SpriteState, value))       OnSetProperty(); } }
 
@@ -295,6 +333,7 @@ namespace UnityEngine.UI
         /// </summary>
         /// <remarks>
         /// Modifications will not be visible if transition is not Animation.
+        /// 动画触发名称
         /// </remarks>
         public AnimationTriggers animationTriggers { get { return m_AnimationTriggers; } set { if (SetPropertyUtility.SetClass(ref m_AnimationTriggers, value)) OnSetProperty(); } }
 
@@ -319,6 +358,7 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 目标纹理 Graphic
         /// </example>
         public Graphic           targetGraphic     { get { return m_TargetGraphic; } set { if (SetPropertyUtility.SetClass(ref m_TargetGraphic, value))     OnSetProperty(); } }
 
@@ -348,6 +388,7 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 是否可交互
         /// </example>
         public bool              interactable
         {
@@ -356,6 +397,7 @@ namespace UnityEngine.UI
             {
                 if (SetPropertyUtility.SetStruct(ref m_Interactable, value))
                 {
+                    //如果m_Interactable为false,当前可交互的对象是自己，清空
                     if (!m_Interactable && EventSystem.current != null && EventSystem.current.currentSelectedGameObject == gameObject)
                         EventSystem.current.SetSelectedGameObject(null);
                     OnSetProperty();
@@ -371,6 +413,7 @@ namespace UnityEngine.UI
         {}
 
         /// <summary>
+        /// 目标纹理 Graphic
         /// Convenience function that converts the referenced Graphic to a Image, if possible.
         /// </summary>
         public Image image
@@ -400,12 +443,19 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 按钮也可设置为动画状态机控制
+        /// 存在Normal，Highlighted，Pressed，Selected，Disabled状态
         /// </example>
         public Animator animator
         {
             get { return GetComponent<Animator>(); }
         }
 
+        /// <summary>
+        /// 获取了一个Graphic的组件实例m_TargetGraphic
+        /// MaskableGraphic继承Graphic
+        /// Image组件间接继承自Graphic
+        /// </summary>
         protected override void Awake()
         {
             if (m_TargetGraphic == null)
@@ -413,6 +463,10 @@ namespace UnityEngine.UI
         }
 
         private readonly List<CanvasGroup> m_CanvasGroupCache = new List<CanvasGroup>();
+        /// <summary>
+        /// 当CanvasGroup变化时）里，会判断新的GanvasGroup的interactable，
+        /// 如果GanvasGroup的interactable为false，那么Selectable本身也就被禁用了。接着，刷新当前状态。
+        /// </summary>
         protected override void OnCanvasGroupChanged()
         {
             // Figure out if parent groups allow interaction
@@ -420,6 +474,7 @@ namespace UnityEngine.UI
             // to not do that :)
             var groupAllowInteraction = true;
             Transform t = transform;
+            //查看自身及父类，CanvasGroup是否interactable为false，或者ignoreParentGroups来判定自身是否禁用
             while (t != null)
             {
                 t.GetComponents(m_CanvasGroupCache);
@@ -473,12 +528,17 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 是否可交互
+        /// 需要CanvasGroup和自身m_Interactable都允许才可交互
         /// </example>
         public virtual bool IsInteractable()
         {
             return m_GroupsAllowInteraction && m_Interactable;
         }
 
+        /// <summary>
+        /// 动画属性发生变化
+        /// </summary>
         // Call from unity if animation properties have changed
         protected override void OnDidApplyAnimationProperties()
         {
@@ -490,22 +550,28 @@ namespace UnityEngine.UI
         {
             base.OnEnable();
 
+            //移除s_Selectables中所有无效或需要移出的
             if (s_IsDirty)
                 RemoveInvalidSelectables();
 
             m_WillRemove = false;
 
+            //检测是否需要扩张s_Selectables
             if (s_SelectableCount == s_Selectables.Length)
             {
                 Selectable[] temp = new Selectable[s_Selectables.Length * 2];
                 Array.Copy(s_Selectables, temp, s_Selectables.Length);
                 s_Selectables = temp;
             }
+            //把自己添加进去
             s_Selectables[s_SelectableCount++] = this;
             isPointerDown = false;
             DoStateTransition(currentSelectionState, true);
         }
 
+        /// <summary>
+        /// 父类发生变化，检测是否CanvasGroup变化
+        /// </summary>
         protected override void OnTransformParentChanged()
         {
             base.OnTransformParentChanged();
@@ -514,6 +580,12 @@ namespace UnityEngine.UI
             OnCanvasGroupChanged();
         }
 
+        /// <summary>
+        /// 更新动画状态
+        /// Color tintColor;
+        /// Sprite transitionSprite;
+        /// string triggerName;
+        /// </summary>
         private void OnSetProperty()
         {
 #if UNITY_EDITOR
@@ -534,10 +606,14 @@ namespace UnityEngine.UI
             base.OnDisable();
         }
 
+        /// <summary>
+        /// 移除s_Selectables中所有无效或需要移出的
+        /// </summary>
         private static void RemoveInvalidSelectables()
         {
             for (int i = s_SelectableCount - 1; i >= 0; --i)
             {
+                //把最后一个塞到移除的那个位置上，总个数减一
                 // Swap last element in array with element to be removed
                 if (s_Selectables[i] == null || s_Selectables[i].m_WillRemove)
                     s_Selectables[i] = s_Selectables[--s_SelectableCount];
@@ -577,6 +653,9 @@ namespace UnityEngine.UI
 
 #endif // if UNITY_EDITOR
 
+        /// <summary>
+        /// 获取选中当前状态
+        /// </summary>
         protected SelectionState currentSelectionState
         {
             get
@@ -593,6 +672,9 @@ namespace UnityEngine.UI
             }
         }
 
+        /// <summary>
+        /// 移除动画状态
+        /// </summary>
         protected virtual void InstantClearState()
         {
             string triggerName = m_AnimationTriggers.normalTrigger;
@@ -617,9 +699,10 @@ namespace UnityEngine.UI
 
         /// <summary>
         /// Transition the Selectable to the entered state.
+        /// SelectionState发生变化时，图片的变化
         /// </summary>
         /// <param name="state">State to transition to</param>
-        /// <param name="instant">Should the transition occur instantly.</param>
+        /// <param name="instant">Should the transition occur instantly.颜色是否立即的变化到目标颜色</param>
         protected virtual void DoStateTransition(SelectionState state, bool instant)
         {
             if (!gameObject.activeInHierarchy)
@@ -629,6 +712,7 @@ namespace UnityEngine.UI
             Sprite transitionSprite;
             string triggerName;
 
+            //随着state变化tintColor,transitionSprite,triggerName(动画状态机的触发值)发生变化
             switch (state)
             {
                 case SelectionState.Normal:
@@ -663,6 +747,7 @@ namespace UnityEngine.UI
                     break;
             }
 
+            //更新动画
             switch (m_Transition)
             {
                 case Transition.ColorTint:
@@ -678,6 +763,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 选择状态枚举体
         /// An enumeration of selected states of objects
         /// </summary>
         protected enum SelectionState
@@ -739,12 +825,28 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 查找靠近当前物体的selectable object
+        /// 上下左右方向
+        /// dir:
+        /// transform.rotation * Vector3.down
+        /// transform.rotation * Vector3.left
+        /// transform.rotation * Vector3.right
+        /// transform.rotation * Vector3.up
+        /// 
+        /// 此处假设dir为transform.rotation * Vector3.left
         /// </example>
         public Selectable FindSelectable(Vector3 dir)
         {
             dir = dir.normalized;
+            // Quaternion.Inverse 取逆运算
+            // 当dir = transform.rotation * Vector3.left
+            // localDir = Quaternion.Inverse(transform.rotation) * transform.rotation * Vector3.left
+            // localDir = Vector3.left;
             Vector3 localDir = Quaternion.Inverse(transform.rotation) * dir;
+            //GetPointOnRectEdge获取到以rect.center dir方向的点(此处方向为左)
+            //TransformPoint将本地坐标转化为世界坐标
             Vector3 pos = transform.TransformPoint(GetPointOnRectEdge(transform as RectTransform, localDir));
+            //设置初始值为负无穷
             float maxScore = Mathf.NegativeInfinity;
             Selectable bestPick = null;
 
@@ -771,11 +873,14 @@ namespace UnityEngine.UI
 
                 var selRect = sel.transform as RectTransform;
                 Vector3 selCenter = selRect != null ? (Vector3)selRect.rect.center : Vector3.zero;
+                //世界坐标系下
                 Vector3 myVector = sel.transform.TransformPoint(selCenter) - pos;
 
+                // 当前判定的selRect与自身形成的myVector与dir点乘 
                 // Value that is the distance out along the direction.
                 float dot = Vector3.Dot(dir, myVector);
 
+                //如果 <=0 表示大于90度，无视
                 // Skip elements that are in the wrong direction or which have zero distance.
                 // This also ensures that the scoring formula below will not have a division by zero error.
                 if (dot <= 0)
@@ -795,6 +900,11 @@ namespace UnityEngine.UI
                 // that touches pos and whose center is located along dir. A way to visualize the resulting functionality is this:
                 // From the position pos, blow up a circular balloon so it grows in the direction of dir.
                 // The first Selectable whose center the circular balloon touches is the one that's chosen.
+                //因为 dot = myVector * dir * Cos
+                //所以 score =  dir * Cos
+                //dir的模是1
+                //两个向量点积除以两个向量的模的乘积等于向量夹角的余弦值
+                //余弦值越大，角度越小
                 float score = dot / myVector.sqrMagnitude;
 
                 if (score > maxScore)
@@ -806,16 +916,26 @@ namespace UnityEngine.UI
             return bestPick;
         }
 
+        /// <summary>
+        /// 求得以rect.center dir方向的点(假设方向为左)
+        /// </summary>
+        /// <param name="rect"></param>
+        /// <param name="dir">假设dir是Vector3.left (-1,0,0)</param>
+        /// <returns></returns>
         private static Vector3 GetPointOnRectEdge(RectTransform rect, Vector2 dir)
         {
             if (rect == null)
                 return Vector3.zero;
             if (dir != Vector2.zero)
                 dir /= Mathf.Max(Mathf.Abs(dir.x), Mathf.Abs(dir.y));
+            //俩个向量相乘
+            //	print(Vector2.Scale(new Vector2(1, 2), new Vector2(2, 3))); = (2,6)
+            //求得以rect.center左边的点
             dir = rect.rect.center + Vector2.Scale(rect.rect.size, dir * 0.5f);
             return dir;
         }
 
+        //导航到某个Selectable
         // Convenience function -- change the selection to the specified object if it's not null and happens to be active.
         void Navigate(AxisEventData eventData, Selectable sel)
         {
@@ -846,13 +966,16 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 选择左侧Selectable
         /// </example>
         public virtual Selectable FindSelectableOnLeft()
         {
+            //指定的左侧Selectable
             if (m_Navigation.mode == Navigation.Mode.Explicit)
             {
                 return m_Navigation.selectOnLeft;
             }
+            //查找左侧Selectable
             if ((m_Navigation.mode & Navigation.Mode.Horizontal) != 0)
             {
                 return FindSelectable(transform.rotation * Vector3.left);
@@ -883,13 +1006,16 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 选择右侧Selectable
         /// </example>
         public virtual Selectable FindSelectableOnRight()
         {
+            //指定的右侧Selectable
             if (m_Navigation.mode == Navigation.Mode.Explicit)
             {
                 return m_Navigation.selectOnRight;
             }
+            //查找右侧Selectable
             if ((m_Navigation.mode & Navigation.Mode.Horizontal) != 0)
             {
                 return FindSelectable(transform.rotation * Vector3.right);
@@ -920,13 +1046,16 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 选择上方Selectable
         /// </example>
         public virtual Selectable FindSelectableOnUp()
         {
+            //指定的上方Selectable
             if (m_Navigation.mode == Navigation.Mode.Explicit)
             {
                 return m_Navigation.selectOnUp;
             }
+            //查找上方Selectable
             if ((m_Navigation.mode & Navigation.Mode.Vertical) != 0)
             {
                 return FindSelectable(transform.rotation * Vector3.up);
@@ -957,13 +1086,16 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        ///  选择下方Selectable
         /// </example>
         public virtual Selectable FindSelectableOnDown()
         {
+            //指定的下方Selectable
             if (m_Navigation.mode == Navigation.Mode.Explicit)
             {
                 return m_Navigation.selectOnDown;
             }
+            //查找下方Selectable
             if ((m_Navigation.mode & Navigation.Mode.Vertical) != 0)
             {
                 return FindSelectable(transform.rotation * Vector3.down);
@@ -995,6 +1127,8 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 导航事件可用情况下，按下上下左右键，调用IMoveHandler
+        /// OnMove处理
         /// </example>
         public virtual void OnMove(AxisEventData eventData)
         {
@@ -1018,6 +1152,11 @@ namespace UnityEngine.UI
             }
         }
 
+        /// <summary>
+        /// 颜色变化Tween
+        /// </summary>
+        /// <param name="targetColor"></param>
+        /// <param name="instant"></param>
         void StartColorTween(Color targetColor, bool instant)
         {
             if (m_TargetGraphic == null)
@@ -1026,6 +1165,10 @@ namespace UnityEngine.UI
             m_TargetGraphic.CrossFadeColor(targetColor, instant ? 0f : m_Colors.fadeDuration, true, true);
         }
 
+        /// <summary>
+        /// 图片变化
+        /// </summary>
+        /// <param name="newSprite"></param>
         void DoSpriteSwap(Sprite newSprite)
         {
             if (image == null)
@@ -1034,6 +1177,10 @@ namespace UnityEngine.UI
             image.overrideSprite = newSprite;
         }
 
+        /// <summary>
+        /// 设置状态机的触发状态
+        /// </summary>
+        /// <param name="triggername"></param>
         void TriggerAnimation(string triggername)
         {
             if (transition != Transition.Animation || animator == null || !animator.isActiveAndEnabled || !animator.hasBoundPlayables || string.IsNullOrEmpty(triggername))
@@ -1080,6 +1227,7 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 是否高亮显示
         /// </example>
         protected bool IsHighlighted()
         {
@@ -1089,7 +1237,8 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
-        /// Whether the current selectable is being pressed.
+        /// Whether the current selectable is being pressed
+        /// 是否按下
         /// </summary>
         protected bool IsPressed()
         {
@@ -1098,6 +1247,9 @@ namespace UnityEngine.UI
             return isPointerDown;
         }
 
+        /// <summary>
+        ///  SelectionState发生变化时，图片的变化
+        /// </summary>
         // Change the button to the correct state
         private void EvaluateAndTransitionToSelectionState()
         {
@@ -1126,6 +1278,7 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 按下操作
         /// </example>
         public virtual void OnPointerDown(PointerEventData eventData)
         {
@@ -1164,6 +1317,7 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// 弹起
         /// </example>
         public virtual void OnPointerUp(PointerEventData eventData)
         {

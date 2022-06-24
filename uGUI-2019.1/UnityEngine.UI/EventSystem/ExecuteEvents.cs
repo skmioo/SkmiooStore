@@ -4,6 +4,12 @@ using UnityEngine.UI;
 
 namespace UnityEngine.EventSystems
 {
+    /// <summary>
+    /// 对实现(T : IEventSystemHandler)的类进行Execute执行操作
+    /// ExecuteHierarchy 通过GetEventChain获取target的所有父对象，并对这些对象（包括target）执行Execute方法。
+    /// GetEventHandler 遍历目标对象及其父对象获取到实现(T : IEventSystemHandler)的类
+    /// 所有IEventSystemHandler定义在EventInterfaces.cs文件中
+    /// </summary>
     public static class ExecuteEvents
     {
         public delegate void EventFunction<T1>(T1 handler, BaseEventData eventData);
@@ -219,6 +225,11 @@ namespace UnityEngine.EventSystems
             get { return s_CancelHandler; }
         }
 
+        /// <summary>
+        /// 获取到所有父类Transform包括自身
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="eventChain"></param>
         private static void GetEventChain(GameObject root, IList<Transform> eventChain)
         {
             eventChain.Clear();
@@ -235,13 +246,34 @@ namespace UnityEngine.EventSystems
 
         private static readonly ObjectPool<List<IEventSystemHandler>> s_HandlerListPool = new ObjectPool<List<IEventSystemHandler>>(null, l => l.Clear());
 
+        /// <summary>
+        /// 通知所有gameobject上实现 T : IEventSystemHandler接口
+        /// 例如 点击跟移动事件
+        /// public interface IPointerClickHandler : IEventSystemHandler
+        /// {
+        ///    void OnPointerClick(PointerEventData eventData);
+        /// }
+        /// public interface IMoveHandler : IEventSystemHandler
+        /// {
+        ///     void OnMove(AxisEventData eventData);
+        /// }
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="target"></param>
+        /// <param name="eventData"></param>
+        /// <param name="functor"></param>
+        /// <returns></returns>
         public static bool Execute<T>(GameObject target, BaseEventData eventData, EventFunction<T> functor) where T : IEventSystemHandler
         {
+            //获取一个List<IEventSystemHandler> list
             var internalHandlers = s_HandlerListPool.Get();
+            //将此gameobject上所有实现(T:IEventSystemHandler)接口的类添加到internalHandlers list中
+            //此gameobject是isActiveAndEnabled的
+            //只作用于target上，其他的GameObject是不作用的
             GetEventList<T>(target, internalHandlers);
             //  if (s_InternalHandlers.Count > 0)
             //      Debug.Log("Executinng " + typeof (T) + " on " + target);
-
+            //遍历internalHandlers list 发送通知
             for (var i = 0; i < internalHandlers.Count; i++)
             {
                 T arg;
@@ -258,6 +290,11 @@ namespace UnityEngine.EventSystems
 
                 try
                 {
+                    //实际调用 arg.Func(eventData);
+                    //private static void Execute(ISelectHandler handler, BaseEventData eventData)
+                    //{
+                    //    handler.OnSelect(eventData);
+                    //}
                     functor(arg, eventData);
                 }
                 catch (Exception e)
@@ -276,8 +313,17 @@ namespace UnityEngine.EventSystems
         /// </summary>
         private static readonly List<Transform> s_InternalTransformList = new List<Transform>(30);
 
+        /// <summary>
+        /// 通过GetEventChain获取target的所有父对象，并对这些对象（包括target）执行Execute方法。
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="root"></param>
+        /// <param name="eventData"></param>
+        /// <param name="callbackFunction"></param>
+        /// <returns></returns>
         public static GameObject ExecuteHierarchy<T>(GameObject root, BaseEventData eventData, EventFunction<T> callbackFunction) where T : IEventSystemHandler
         {
+            // s_InternalTransformList获取到所有父类Transform包括自身
             GetEventChain(root, s_InternalTransformList);
 
             for (var i = 0; i < s_InternalTransformList.Count; i++)
@@ -302,6 +348,7 @@ namespace UnityEngine.EventSystems
         }
 
         /// <summary>
+        /// 获取到GameObject物体上所有实现IEventSystemHandler的类，并添加到list中,比如实现IBeginDragHandler
         /// Get the specified object's event event.
         /// </summary>
         private static void GetEventList<T>(GameObject go, IList<IEventSystemHandler> results) where T : IEventSystemHandler
@@ -328,11 +375,13 @@ namespace UnityEngine.EventSystems
         }
 
         /// <summary>
+        /// 判定GameObject是否存在实现(T : IEventSystemHandler)的类
         /// Whether the specified game object will be able to handle the specified event.
         /// </summary>
         public static bool CanHandleEvent<T>(GameObject go) where T : IEventSystemHandler
         {
             var internalHandlers = s_HandlerListPool.Get();
+            // 获取到GameObject物体上所有实现IEventSystemHandler的类，并添加到list中,比如实现IBeginDragHandler
             GetEventList<T>(go, internalHandlers);
             var handlerCount = internalHandlers.Count;
             s_HandlerListPool.Release(internalHandlers);
@@ -340,6 +389,7 @@ namespace UnityEngine.EventSystems
         }
 
         /// <summary>
+        /// 遍历目标对象及其父对象获取到实现(T : IEventSystemHandler)的类
         /// Bubble the specified event on the game object, figuring out which object will actually receive the event.
         /// </summary>
         public static GameObject GetEventHandler<T>(GameObject root) where T : IEventSystemHandler

@@ -7,6 +7,8 @@ namespace UnityEngine.EventSystems
 {
     [AddComponentMenu("Event/Event Trigger")]
     /// <summary>
+    /// EventTrigger实现了EventInterfaces.cs里的所有的继承IEventSystemHandler的接口,方便用户的调用
+    /// 当然用户也可以只继承IEndDragHandler之类的几个用来调用
     /// Receives events from the EventSystem and calls registered functions for each event.
     /// </summary>
     /// <remarks>

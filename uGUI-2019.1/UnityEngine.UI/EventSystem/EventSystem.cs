@@ -8,6 +8,11 @@ namespace UnityEngine.EventSystems
 {
     [AddComponentMenu("Event/Event System")]
     /// <summary>
+    /// EventSystem处理和管理的其实是点击、键盘输入、触摸等事件
+    /// 管理BaseInputModule，进行数据的点击检测
+    /// BaseInputModule  -  PointerInputModule   -StandaloneInputModule
+    ///                                         |-TouchInputModule
+    ///                                         
     /// Handles input, raycasting, and sending events.
     /// </summary>
     /// <remarks>
@@ -16,11 +21,19 @@ namespace UnityEngine.EventSystems
     /// </remarks>
     public class EventSystem : UIBehaviour
     {
+        //BaseInputModule是一个抽象类，PointerInputModule继承自它，同样也是抽象类，
+        //而StandaloneInputModule和TouchInputModule又继承自PointerInputModule。
+        //StandaloneInputModule是面向“PC, Mac& Linux Standalone”这个平台的输入模块，
+        //而TouchInputModule是面向“iOS”、“Android”等可触摸移动平台的输入模块。
         private List<BaseInputModule> m_SystemInputModules = new List<BaseInputModule>();
 
         private BaseInputModule m_CurrentInputModule;
 
-        private  static List<EventSystem> m_EventSystems = new List<EventSystem>();
+
+        /// <summary>
+        /// 管理所有EventSystem一般就一个
+        /// </summary>
+        private static List<EventSystem> m_EventSystems = new List<EventSystem>();
 
         /// <summary>
         /// Return the current EventSystem.
@@ -30,6 +43,7 @@ namespace UnityEngine.EventSystems
             get { return m_EventSystems.Count > 0 ? m_EventSystems[0] : null; }
             set
             {
+                //因为获取的是第0个所以插在第一个
                 int index = m_EventSystems.IndexOf(value);
 
                 if (index >= 0)
@@ -48,6 +62,7 @@ namespace UnityEngine.EventSystems
         private bool m_sendNavigationEvents = true;
 
         /// <summary>
+        /// EventSystem是否允许导航行为
         /// Should the EventSystem allow navigation events (move / submit / cancel).
         /// </summary>
         public bool sendNavigationEvents
@@ -60,6 +75,12 @@ namespace UnityEngine.EventSystems
         private int m_DragThreshold = 10;
 
         /// <summary>
+        /// 以像素为单位拖动的软区域。
+        /// 当移动达到pixelDragThreshold长度时执行OnBeginDrag
+        /// public interface IBeginDragHandler : IEventSystemHandler
+        /// {
+        ///    void OnBeginDrag(PointerEventData eventData);
+        /// }
         /// The soft area for dragging in pixels.
         /// </summary>
         public int pixelDragThreshold
@@ -104,6 +125,7 @@ namespace UnityEngine.EventSystems
         private bool m_HasFocus = true;
 
         /// <summary>
+        /// 标志表明 EventSystem 认为它是否暂停或者应该基于焦点状态。
         /// Flag to say whether the EventSystem thinks it should be paused or not based upon focused state.
         /// </summary>
         /// <remarks>
@@ -118,6 +140,8 @@ namespace UnityEngine.EventSystems
         {}
 
         /// <summary>
+        /// 默认就一个StandaloneInputModule或者
+        /// 当m_SystemInputModules里的module enable或disable时，进行模块的删除或添加
         /// Recalculate the internal list of BaseInputModules.
         /// </summary>
         public void UpdateModules()
@@ -143,6 +167,9 @@ namespace UnityEngine.EventSystems
         }
 
         /// <summary>
+        /// 将对象设置为选中。
+        /// 将发送一个 OnDeselect 旧选定对象
+        /// OnSelect 到新选定对象。
         /// Set the object as selected. Will send an OnDeselect the the old selected object and OnSelect to the new selected object.
         /// </summary>
         /// <param name="selected">GameObject to select.</param>
@@ -163,8 +190,10 @@ namespace UnityEngine.EventSystems
             }
 
             // Debug.Log("Selection: new (" + selected + ") old (" + m_CurrentSelected + ")");
+            //发送一个 OnDeselect 旧选定对象 实现IDeselectHandler接口的GameObject会发送通知
             ExecuteEvents.Execute(m_CurrentSelected, pointer, ExecuteEvents.deselectHandler);
             m_CurrentSelected = selected;
+            //OnSelect 到新选定对象。实现ISelectHandlerr接口的GameObject会发送通知
             ExecuteEvents.Execute(m_CurrentSelected, pointer, ExecuteEvents.selectHandler);
             m_SelectionGuard = false;
         }
@@ -182,6 +211,8 @@ namespace UnityEngine.EventSystems
         }
 
         /// <summary>
+        /// 设置选中对象
+        /// EventTrigger跟Selectable实现了ISelectHandler接口，进行数据的传递
         /// Set the object as selected. Will send an OnDeselect the the old selected object and OnSelect to the new selected object.
         /// </summary>
         /// <param name="selected">GameObject to select.</param>
@@ -190,6 +221,17 @@ namespace UnityEngine.EventSystems
             SetSelectedGameObject(selected, baseEventDataCache);
         }
 
+        /// <summary>
+        /// 实现射线检测的对比器
+        /// 1、比较Camera 的depth
+        /// 2、比较BaseRaycaster module里的 sortOrderPriority
+        /// 3、比较sortingLayer  (canvas.sortingOrder)
+        /// 4、depth
+        /// 5、distance
+        /// </summary>
+        /// <param name="lhs"></param>
+        /// <param name="rhs"></param>
+        /// <returns></returns>
         private static int RaycastComparer(RaycastResult lhs, RaycastResult rhs)
         {
             if (lhs.module != rhs.module)
@@ -238,6 +280,9 @@ namespace UnityEngine.EventSystems
         private static readonly Comparison<RaycastResult> s_RaycastComparer = RaycastComparer;
 
         /// <summary>
+        /// 进行所有的射线检测
+        /// GraphicRaycaster组件来检测UI元素的事件
+        /// 通过BaseRaycaster的射线检测
         /// Raycast into the scene using all configured BaseRaycasters.
         /// </summary>
         /// <param name="eventData">Current pointer data.</param>
@@ -259,6 +304,7 @@ namespace UnityEngine.EventSystems
         }
 
         /// <summary>
+        /// 检测点是否在某个GameObject
         /// Is the pointer with the given ID over an EventSystem object?
         /// </summary>
         public bool IsPointerOverGameObject()
@@ -323,6 +369,11 @@ namespace UnityEngine.EventSystems
             base.OnDisable();
         }
 
+        
+        /// <summary>
+        /// 每帧进行m_SystemInputModules的UpdateModule模块更新
+        /// 更新鼠标位置信息
+        /// </summary>
         private void TickModules()
         {
             for (var i = 0; i < m_SystemInputModules.Count; i++)
@@ -373,10 +424,15 @@ namespace UnityEngine.EventSystems
                 }
             }
 
+            //而这个方法会将各种输入事件（如点击、拖拽等事件）传递给EventSystem当前选中的GameObject（m_CurrentSelected）。
             if (!changedModule && m_CurrentInputModule != null)
                 m_CurrentInputModule.Process();
         }
 
+        /// <summary>
+        /// 更改BaseInputModule
+        /// </summary>
+        /// <param name="module"></param>
         private void ChangeEventModule(BaseInputModule module)
         {
             if (m_CurrentInputModule == module)

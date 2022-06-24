@@ -4,6 +4,8 @@ using UnityEngine.UI.Collections;
 namespace UnityEngine.UI
 {
     /// <summary>
+    /// Dictionary<Canvas, IndexedSet<Graphic>> m_Graphics
+    /// 管理所有Canvas以及每个Canvas上的Graphic List集合
     ///   Registry which maps a Graphic to the canvas it belongs to
     /// </summary>
     public class GraphicRegistry
@@ -39,6 +41,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 将graphic添加到Canvas上进行绘画
         /// Store a link between the given canvas and graphic in the registry.
         /// </summary>
         /// <param name="c">The canvas the graphic will be associated to</param>
@@ -64,6 +67,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 将graphic从Canvas上移除绘画
         /// Deregister the given Graphic from a Canvas.
         /// </summary>
         /// <param name="c">The canvas that should be associated with the graphic</param>
@@ -86,6 +90,7 @@ namespace UnityEngine.UI
         private static readonly List<Graphic> s_EmptyList = new List<Graphic>();
 
         /// <summary>
+        /// 获取某个Canvas上所有Graphic集合
         /// Get the list of associated graphics that are registered to a canvas.
         /// </summary>
         /// <param name="canvas">The canvas whose Graphics we are looking for</param>

@@ -5,6 +5,13 @@ namespace UnityEngine.UI
 {
     [Serializable]
     /// <summary>
+    /// Navigation（按钮导航）：在EventSystem中，存在⼀个当前被选中按钮，我们可以通过代码按下的上下左右，
+    /// 使被选中按钮进⾏更改。该导航有五种：
+    /// None（关闭）：关闭导航。
+    /// Automatic（⾃动导航）：⾃动识别最近的⼀个控件并导航到下⼀个控件。
+    /// Horizontal（⽔平导航）：⽔平⽅向导航到下⼀个控件。
+    /// Vertical（垂直导航）：垂直⽅向导航到下⼀个控件。
+    /// Explicit（指定导航）：特别指定在按下特定⽅向键时从此按钮导航到哪⼀个控件
     /// Structure storing details related to navigation.
     /// </summary>
     public struct Navigation : IEquatable<Navigation>
@@ -69,17 +76,19 @@ namespace UnityEngine.UI
             /// Automatic navigation.
             /// </summary>
             /// <remarks>
+            /// 尝试找到下一个要选择的“最佳”对象。这应该基于一个明智的启发式。
             /// Attempt to find the 'best' next object to select. This should be based on a sensible heuristic.
             /// </remarks>
-            Automatic   = 3,
+            Automatic = 3,
 
             /// <summary>
             /// Explicit navigation.
             /// </summary>
             /// <remarks>
             /// User should explicitly specify what is selected by each move event.
+            /// 用户应明确指定每个移动事件选择的内容。
             /// </remarks>
-            Explicit    = 4,
+            Explicit = 4,
         }
 
         // Which method of navigation will be used.

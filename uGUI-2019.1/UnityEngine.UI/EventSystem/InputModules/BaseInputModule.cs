@@ -30,6 +30,8 @@ namespace UnityEngine.EventSystems
     ///         ExecuteEvents.Execute (m_TargetObject, new BaseEventData (eventSystem), ExecuteEvents.moveHandler);
     ///     }
     /// }
+    /// BaseInputModule 添加了BaseInput
+    /// BaseInput进行输入的数据管理
     /// </code>
     /// </example>
     public abstract class BaseInputModule : UIBehaviour

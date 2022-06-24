@@ -325,6 +325,7 @@ namespace UnityEngine.EventSystems
         }
 
         /// <summary>
+        /// 处理拖拽
         /// Process the drag for the current frame with the given pointer event.
         /// </summary>
         protected virtual void ProcessDrag(PointerEventData pointerEvent)

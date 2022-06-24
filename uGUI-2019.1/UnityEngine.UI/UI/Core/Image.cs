@@ -30,6 +30,7 @@ namespace UnityEngine.UI
             Simple,
 
             /// <summary>
+            /// 9宫格图片
             /// Displays the Image as a 9-sliced graphic.
             /// </summary>
             /// <remarks>
@@ -42,6 +43,7 @@ namespace UnityEngine.UI
             Sliced,
 
             /// <summary>
+            /// 如果有图片为9宫格跟Sliced效果一样 没有边界就是多个重复的图片
             /// Displays a sliced Sprite with its resizable sections tiled instead of stretched.
             /// </summary>
             /// <remarks>
@@ -60,6 +62,7 @@ namespace UnityEngine.UI
             Tiled,
 
             /// <summary>
+            /// 进度条
             /// Displays only a portion of the Image.
             /// </summary>
             /// <remarks>
@@ -381,12 +384,16 @@ namespace UnityEngine.UI
             }
         }
 
+        /// <summary>
+        /// activeSprite 就是m_OverrideSprite 或者 m_Sprite
+        /// </summary>
         private Sprite activeSprite { get { return m_OverrideSprite != null ? m_OverrideSprite : sprite; } }
 
         /// How the Image is drawn.
         [SerializeField] private Type m_Type = Type.Simple;
 
         /// <summary>
+        /// 图片类型
         /// How to display the image.
         /// </summary>
         /// <remarks>
@@ -596,6 +603,12 @@ namespace UnityEngine.UI
         ///     }
         /// }
         /// </code>
+        /// Image类的alphaHitTestMinimumThreshold是一个浮点值，Raycast检测时只有图片中高于该值的部分会抛出点击事件。因此我们可以使用一张alpha通道的值高于该设置值的Sprite用于自定义按钮的点击相应区域。
+        /// 但这种方法有几个问题：
+        /// 由于是代码中需要读取图片的alpha值用于比较，因此图片在导入时需要开启Readable/Write Enable，这样会使运行时贴图大小翻倍，内存中会额外存储一份贴图数据，增大内存开销..。
+        /// 如果是点击区域内部需要有一些低于设置值的透明样式则无法满足。
+        /// 点击区域的调整需要修改图片资源，十分不便。
+        /// https://zhuanlan.zhihu.com/p/34204396
         /// </example>
         public float alphaHitTestMinimumThreshold { get { return m_AlphaHitTestMinimumThreshold; } set { m_AlphaHitTestMinimumThreshold = value; } }
 
@@ -614,10 +627,12 @@ namespace UnityEngine.UI
 
         protected Image()
         {
+            //新版本生成模型材质
             useLegacyMeshGeneration = false;
         }
 
         /// <summary>
+        /// 默认材质
         /// Cache of the default Canvas Ericsson Texture Compression 1 (ETC1) and alpha Material.
         /// </summary>
         /// <remarks>
@@ -635,6 +650,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 贴图
         /// Image's texture comes from the UnityEngine.Image.
         /// </summary>
         public override Texture mainTexture
@@ -655,6 +671,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 是否有边界
         /// Whether the Sprite of the image has a border to work with.
         /// </summary>
 
@@ -664,6 +681,7 @@ namespace UnityEngine.UI
             {
                 if (activeSprite != null)
                 {
+                    //X=左边框、Y=下边框、Z=右边框、W=上边框。
                     Vector4 v = activeSprite.border;
                     return v.sqrMagnitude > 0f;
                 }
@@ -717,12 +735,15 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
-        /// See ISerializationCallbackReceiver.
+        /// 序列化之前
+        /// 实现See ISerializationCallbackReceiver.
         /// </summary>
         public virtual void OnBeforeSerialize() {}
 
         /// <summary>
-        /// See ISerializationCallbackReceiver.
+        /// 序列化之后
+        /// 实现See ISerializationCallbackReceiver.
+        /// 矫正了Fill Origin和Fill Amount为有效值
         /// </summary>
         public virtual void OnAfterDeserialize()
         {
@@ -863,6 +884,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 覆写父类UpdateMaterial 更新显示图片
         /// Update the renderer's material.
         /// </summary>
 
@@ -1725,6 +1747,7 @@ namespace UnityEngine.UI
         public virtual int layoutPriority { get { return 0; } }
 
         /// <summary>
+        /// 检测是否触碰到图片
         /// Calculate if the ray location for this image is a valid hit location. Takes into account a Alpha test threshold.
         /// </summary>
         /// <param name="screenPoint">The screen point to check against</param>
@@ -1741,7 +1764,7 @@ namespace UnityEngine.UI
 
             if (activeSprite == null)
                 return true;
-
+            //获取到图片的位置(RectTransform位置)
             Vector2 local;
             if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, screenPoint, eventCamera, out local))
                 return false;
@@ -1812,6 +1835,10 @@ namespace UnityEngine.UI
         static List<Image> m_TrackedTexturelessImages = new List<Image>();
         static bool s_Initialized;
 
+        /// <summary>
+        /// 把m_TrackedTexturelessImages里可以存放到spriteAtlas上的存到spriteAtlas
+        /// </summary>
+        /// <param name="spriteAtlas"></param>
         static void RebuildImage(SpriteAtlas spriteAtlas)
         {
             for (var i = m_TrackedTexturelessImages.Count - 1; i >= 0; i--)
@@ -1825,6 +1852,10 @@ namespace UnityEngine.UI
             }
         }
 
+        /// <summary>
+        /// 保存图片引用到m_TrackedTexturelessImages或者spriteAtlas中
+        /// </summary>
+        /// <param name="g"></param>
         private static void TrackImage(Image g)
         {
             if (!s_Initialized)
@@ -1835,7 +1866,9 @@ namespace UnityEngine.UI
 
             m_TrackedTexturelessImages.Add(g);
         }
-
+        /// <summary>
+        /// 从m_TrackedTexturelessImages中移除图片
+        /// </summary>
         private static void UnTrackImage(Image g)
         {
             m_TrackedTexturelessImages.Remove(g);

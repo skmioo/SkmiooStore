@@ -60,12 +60,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\EditorTest\_02_PropertyEditor.cs" />
+    <Compile Include="Assets\Editor\EditorTest\_03_CustomListEditor.cs" />
+    <Compile Include="Assets\Editor\EditorTest\_04_ReorderableListEditor.cs" />
     <Compile Include="Assets\Editor\LOD\MyLODGroupCreator.cs" />
     <Compile Include="Assets\Editor\LOD\MyLODMatrix.cs" />
     <Compile Include="Assets\Editor\LOD\MyLODSimplify.cs" />
     <Compile Include="Assets\Editor\LOD\MyLODWindow.cs" />
     <Compile Include="Assets\Editor\TestCode\StructAndClassIns.cs" />
     <Compile Include="Assets\Editor\TestCode\TestEqualEditor.cs" />
+    <Compile Include="Assets\testShader\Editor\TestMultiCompileEditor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/SkmiooStore/HuanLing/HuanLing/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

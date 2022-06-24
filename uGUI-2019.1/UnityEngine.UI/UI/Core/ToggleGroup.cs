@@ -19,6 +19,9 @@ namespace UnityEngine.UI
 
         /// <summary>
         /// Is it allowed that no toggle is switched on?
+        /// ToggleGroup下所有Toggle只有一个可以选中，此时allowSwitchOff表示这个选中的Toggle是否可以设置为取消选中
+        /// allowSwitchOff = true 这个选中的Toggle可以设置为取消选中
+        /// allowSwitchOff = false 这个选中的Toggle不可以设置为取消选中，必须有一个选中
         /// </summary>
         /// <remarks>
         /// If this setting is enabled, pressing the toggle that is currently switched on will switch it off, so that no toggle is switched on. If this setting is disabled, pressing the toggle that is currently switched on will not change its state.
@@ -31,6 +34,10 @@ namespace UnityEngine.UI
         protected ToggleGroup()
         {}
 
+        /// <summary>
+        /// 检测该Toggle是否在此ToggleGroup上
+        /// </summary>
+        /// <param name="toggle"></param>
         private void ValidateToggleIsInGroup(Toggle toggle)
         {
             if (toggle == null || !m_Toggles.Contains(toggle))
@@ -38,6 +45,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// Toggle通知ToggleGroup该Toggle被选中
         /// Notify the group that the given toggle is enabled.
         /// </summary>
         /// <param name="toggle">The toggle that got triggered on</param>

@@ -7,6 +7,11 @@ using UnityEditor.AnimatedValues;
 
 namespace UnityEditor.UI
 {
+    /// <summary>
+    /// Unity编辑器开发之AnimBool
+    /// https://blog.csdn.net/qq_42139931/article/details/120686951
+    /// 在编辑器开发中可以使用AnimBool来为编辑器添加动态效果
+    /// </summary>
     [CustomEditor(typeof(Selectable), true)]
     /// <summary>
     ///   Custom Editor for the Selectable Component.
@@ -175,6 +180,7 @@ namespace UnityEditor.UI
 
             EditorGUILayout.PropertyField(m_NavigationProperty);
 
+            //BeginChangeCheck()和EndChangeCheck()会检测它们之间的GUI有没有被修改，如果修改了的话可以据此修改参数
             EditorGUI.BeginChangeCheck();
             Rect toggleRect = EditorGUILayout.GetControlRect();
             toggleRect.xMin += EditorGUIUtility.labelWidth;

@@ -11,6 +11,7 @@ using UnityEngine.UI.CoroutineTween;
 namespace UnityEngine.UI
 {
     /// <summary>
+    /// 最基础的图片绘制
     /// Base class for all UI components that should be derived from when creating new Graphic types.
     /// </summary>
     [DisallowMultipleComponent]
@@ -178,6 +179,10 @@ namespace UnityEngine.UI
         [NonSerialized]
         private readonly TweenRunner<ColorTween> m_ColorTweenRunner;
 
+        /// <summary>
+        /// Graphic使用旧版本Mesh生成
+        /// Text Image等使用它们的方式生成
+        /// </summary>
         protected bool useLegacyMeshGeneration { get; set; }
 
         // Called by Unity prior to deserialization,
@@ -191,6 +196,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 重新构造Layout(布局), Vertices(绘画), and Materials(材质球)
         /// Set all properties of the Graphic dirty and needing rebuilt.
         /// Dirties Layout, Vertices, and Materials.
         /// </summary>
@@ -206,6 +212,7 @@ namespace UnityEngine.UI
             }
             else
             {
+                //《RectTransform布局》
                 SetLayoutDirty();
             }
 
@@ -215,13 +222,17 @@ namespace UnityEngine.UI
             }
             else
             {
+                //设置材质球变化
                 SetMaterialDirty();
             }
-
+            //《Canvas绘画》
             SetVerticesDirty();
         }
 
         /// <summary>
+        /// 《RectTransform布局》
+        /// 重新构造layout
+        /// 根据RectTransform来调整布局
         /// Mark the layout as dirty and needing rebuilt.
         /// </summary>
         /// <remarks>
@@ -239,6 +250,10 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 《Canvas绘画》
+        /// 注册RegisterCanvasElementForGraphicRebuild进行
+        /// Rebuild(PreRender，LatePreRender)操作的实现以及 GraphicUpdateComplete()
+        /// Rebuild来自于实现ICanvasElement接口
         /// Mark the vertices as dirty and needing rebuilt.
         /// </summary>
         /// <remarks>
@@ -250,6 +265,7 @@ namespace UnityEngine.UI
                 return;
 
             m_VertsDirty = true;
+            //SetVerticesDirty 跟 SetMaterialDirty 都RegisterCanvasElementForGraphicRebuild，该内部list是唯一值的，所以重复注册没关系
             CanvasUpdateRegistry.RegisterCanvasElementForGraphicRebuild(this);
 
             if (m_OnDirtyVertsCallback != null)
@@ -257,6 +273,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 《材质球更新》
         /// Mark the material as dirty and needing rebuilt.
         /// </summary>
         /// <remarks>
@@ -268,17 +285,23 @@ namespace UnityEngine.UI
                 return;
 
             m_MaterialDirty = true;
+            //SetVerticesDirty 跟 SetMaterialDirty 都RegisterCanvasElementForGraphicRebuild，该内部list是唯一值的，所以重复注册没关系
             CanvasUpdateRegistry.RegisterCanvasElementForGraphicRebuild(this);
 
             if (m_OnDirtyMaterialCallback != null)
                 m_OnDirtyMaterialCallback();
         }
 
+        /// <summary>
+        /// RectTransform数据变化
+        /// </summary>
         protected override void OnRectTransformDimensionsChange()
         {
             if (gameObject.activeInHierarchy)
             {
                 // prevent double dirtying...
+                //如果在进行布局 设置 绘画就行
+                //先布局再绘制
                 if (CanvasUpdateRegistry.IsRebuildingLayout())
                     SetVerticesDirty();
                 else
@@ -289,12 +312,19 @@ namespace UnityEngine.UI
             }
         }
 
+        /// <summary>
+        /// 父类发生更新之前
+        /// </summary>
         protected override void OnBeforeTransformParentChanged()
         {
+            //取消绘制注册
             GraphicRegistry.UnregisterGraphicForCanvas(canvas, this);
             LayoutRebuilder.MarkLayoutForRebuild(rectTransform);
         }
 
+        /// <summary>
+        /// 父类发生更新之后
+        /// </summary>
         protected override void OnTransformParentChanged()
         {
             base.OnTransformParentChanged();
@@ -303,9 +333,12 @@ namespace UnityEngine.UI
 
             if (!IsActive())
                 return;
-
+            //从父类获取到用的Canvas并赋值到m_Canvas上
+            //有Canvas才可以绘制
             CacheCanvas();
+            //恢复绘制注册
             GraphicRegistry.RegisterGraphicForCanvas(canvas, this);
+            //更新绘制
             SetAllDirty();
         }
 
@@ -324,6 +357,11 @@ namespace UnityEngine.UI
         ///  Graphic - 5
         ///
         /// This value is used to determine draw and event ordering.
+        ///         
+        /// UI深度
+        /// 相对于根Canvas的深度，注意这里的Depth和Camera的Depth没有关系。且在没有开始渲染时为-1
+        /// https://www.jianshu.com/p/11babd26a4cb
+        /// 
         /// </example>
         public int depth { get { return canvasRenderer.absoluteDepth; } }
 
@@ -360,6 +398,9 @@ namespace UnityEngine.UI
             }
         }
 
+        /// <summary>
+        /// 从父类获取到用的Canvas并赋值到canvas(m_Canvas)上
+        /// </summary>
         private void CacheCanvas()
         {
             var list = ListPool<Canvas>.Get();
@@ -553,6 +594,7 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 绘画图片
         /// Rebuilds the graphic geometry and its material on the PreRender cycle.
         /// </summary>
         /// <param name="update">The current step of the rendering CanvasUpdate cycle.</param>
@@ -569,11 +611,13 @@ namespace UnityEngine.UI
                 case CanvasUpdate.PreRender:
                     if (m_VertsDirty)
                     {
+                        //生成Mesh 网格
                         UpdateGeometry();
                         m_VertsDirty = false;
                     }
                     if (m_MaterialDirty)
                     {
+                        //更新材质球 贴图Texture
                         UpdateMaterial();
                         m_MaterialDirty = false;
                     }
@@ -588,6 +632,7 @@ namespace UnityEngine.UI
         {}
 
         /// <summary>
+        /// Material跟Texture都在canvasRenderer上渲染
         /// Call to update the Material of the graphic onto the CanvasRenderer.
         /// </summary>
         protected virtual void UpdateMaterial()
@@ -601,22 +646,31 @@ namespace UnityEngine.UI
         }
 
         /// <summary>
+        /// 生成Mesh到workerMesh上
+        /// 根据RectTransform获取到矩形Rect(r)信息生成矩形Mesh
         /// Call to update the geometry of the Graphic onto the CanvasRenderer.
         /// </summary>
         protected virtual void UpdateGeometry()
         {
             if (useLegacyMeshGeneration)
             {
+                //旧版本Mesh生成
                 DoLegacyMeshGeneration();
             }
             else
             {
+                //新版本mesh生成
                 DoMeshGeneration();
             }
         }
 
+        /// <summary>
+        /// 新版本mesh生成
+        /// </summary>
         private void DoMeshGeneration()
         {
+            // 填充VertexHelper信息
+            //把根据RectTransform获取到矩形Rect(r)生成的Mesh需要的顶点（Vert）三角形（Triangle）color uv添加到VertexHelper上
             if (rectTransform != null && rectTransform.rect.width >= 0 && rectTransform.rect.height >= 0)
                 OnPopulateMesh(s_VertexHelper);
             else
@@ -634,6 +688,9 @@ namespace UnityEngine.UI
             canvasRenderer.SetMesh(workerMesh);
         }
 
+        /// <summary>
+        /// 旧版本mesh生成
+        /// </summary>
         private void DoLegacyMeshGeneration()
         {
             if (rectTransform != null && rectTransform.rect.width >= 0 && rectTransform.rect.height >= 0)
@@ -661,6 +718,9 @@ namespace UnityEngine.UI
             canvasRenderer.SetMesh(workerMesh);
         }
 
+        /// <summary>
+        /// 生产的Mesh
+        /// </summary>
         protected static Mesh workerMesh
         {
             get
@@ -680,6 +740,7 @@ namespace UnityEngine.UI
 
         [Obsolete("Use OnPopulateMesh(VertexHelper vh) instead.", false)]
         /// <summary>
+        /// 在Mesh上添加一个RectTransform的矩阵mesh网格
         /// Callback function when a UI element needs to generate vertices. Fills the vertex buffer data.
         /// </summary>
         /// <param name="m">Mesh to populate with UI data.</param>
@@ -688,11 +749,15 @@ namespace UnityEngine.UI
         /// </remarks>
         protected virtual void OnPopulateMesh(Mesh m)
         {
+            // 填充VertexHelper信息
             OnPopulateMesh(s_VertexHelper);
+            // 把s_VertexHelper信息填充到Mesh上
             s_VertexHelper.FillMesh(m);
         }
 
         /// <summary>
+        /// 填充VertexHelper信息
+        /// 把根据canvas，RectTransform获取到矩形Rect(r)生成的Mesh需要的顶点（Vert）三角形（Triangle）color uv添加到VertexHelper上
         /// Callback function when a UI element needs to generate vertices. Fills the vertex buffer data.
         /// </summary>
         /// <param name="vh">VertexHelper utility.</param>
@@ -701,16 +766,18 @@ namespace UnityEngine.UI
         /// </remarks>
         protected virtual void OnPopulateMesh(VertexHelper vh)
         {
+            //根据canvas，RectTransform获取到矩形Rect(r)
             var r = GetPixelAdjustedRect();
             var v = new Vector4(r.x, r.y, r.x + r.width, r.y + r.height);
 
             Color32 color32 = color;
             vh.Clear();
+            //矩形对应的四个点(顺时针)
             vh.AddVert(new Vector3(v.x, v.y), color32, new Vector2(0f, 0f));
             vh.AddVert(new Vector3(v.x, v.w), color32, new Vector2(0f, 1f));
             vh.AddVert(new Vector3(v.z, v.w), color32, new Vector2(1f, 1f));
             vh.AddVert(new Vector3(v.z, v.y), color32, new Vector2(1f, 0f));
-
+            //顺时针的三角形
             vh.AddTriangle(0, 1, 2);
             vh.AddTriangle(2, 3, 0);
         }
@@ -757,6 +824,7 @@ namespace UnityEngine.UI
         public virtual void SetNativeSize() {}
 
         /// <summary>
+        /// 当 GraphicRaycaster 将光线投射到场景中时，它会做两件事。首先，它使用它们的 RectTransform 矩形过滤元素。然后它使用这个 Raycast 函数来确定被光线投射击中的元素。
         /// When a GraphicRaycaster is raycasting into the scene it does two things. First it filters the elements using their RectTransform rect. Then it uses this Raycast function to determine the elements hit by the raycast.
         /// </summary>
         /// <param name="sp">Screen point being tested</param>
@@ -778,10 +846,12 @@ namespace UnityEngine.UI
                 t.GetComponents(components);
                 for (var i = 0; i < components.Count; i++)
                 {
+                    //从自身到父类上找Canvas
+                    //t = continueTraversal ? t.parent : null; 找到Canvas退出循环
                     var canvas = components[i] as Canvas;
                     if (canvas != null && canvas.overrideSorting)
                         continueTraversal = false;
-
+                    //Image Mask RectMask2D CanvasGroup都实现了ICanvasRaycastFilter
                     var filter = components[i] as ICanvasRaycastFilter;
 
                     if (filter == null)
@@ -792,6 +862,7 @@ namespace UnityEngine.UI
                     var group = components[i] as CanvasGroup;
                     if (group != null)
                     {
+                        //CanvasGroup
                         if (ignoreParentGroups == false && group.ignoreParentGroups)
                         {
                             ignoreParentGroups = true;
@@ -802,6 +873,7 @@ namespace UnityEngine.UI
                     }
                     else
                     {
+                        //Image Mask RectMask2D 
                         raycastValid = filter.IsRaycastLocationValid(sp, eventCamera);
                     }
 
@@ -827,12 +899,14 @@ namespace UnityEngine.UI
 #endif
 
         ///<summary>
+        ///将给定的像素调整为完美像素。
         ///Adjusts the given pixel to be pixel perfect.
         ///</summary>
-        ///<param name="point">Local space point.</param>
-        ///<returns>Pixel perfect adjusted point.</returns>
+        ///<param name="point">Local space point. 局部空间点。</param>
+        ///<returns>Pixel perfect adjusted point. 像素完美调整点。</returns>
         ///<remarks>
         ///Note: This is only accurate if the Graphic root Canvas is in Screen Space.
+        ///这仅在图形根画布位于屏幕空间中时才准确。
         ///</remarks>
         public Vector2 PixelAdjustPoint(Vector2 point)
         {
@@ -840,11 +914,16 @@ namespace UnityEngine.UI
                 return point;
             else
             {
+                //例如：Vector2 vector2 = RectTransformUtility.PixelAdjustPoint(new Vector2(30.333f, 30.9001f), trans, canvas);
+                //将返回vector2 =（30.3,30.9），将给定点四舍五入了？此处待研究。
+                
+                //将屏幕空间中的给定点转换为像素正确的点。
                 return RectTransformUtility.PixelAdjustPoint(point, transform, canvas);
             }
         }
 
         /// <summary>
+        /// 根据canvas，RectTransform获取到矩形Rect
         /// Returns a pixel perfect Rect closest to the Graphic RectTransform.
         /// </summary>
         /// <remarks>
